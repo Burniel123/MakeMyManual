@@ -56,6 +56,22 @@ public class ManualCreator
     }
 
     /**
+     * Writes the user's .tex manual, by creating a BufferedWriter, writing the preamble, writing each manual page,
+     * and ending the document.
+     * @throws OutputIOException in the event of an IOException.
+     */
+    public void writeManual() throws OutputIOException
+    {
+        createWriter();
+        writePreamble();
+
+        for(int i = 0; i < modules.size(); i++)
+            writeManualPage(i);
+
+        endFile();
+    }
+
+    /**
      * Attempts to create a BufferedWriter to write the collated manual to the tex file.
      * @return a BufferedWriter set to write to the manual tex file.
      * @throws OutputIOException in the event of an IOException.
@@ -102,6 +118,26 @@ public class ManualCreator
     }
 
     /**
+     * Writes a single manual page to the collated manual.
+     * @param moduleIndex - which module in the list of modules to write.
+     * @throws OutputIOException in the event of an IOException.
+     */
+    private void writeManualPage(int moduleIndex) throws OutputIOException
+    {
+        try
+        {
+            File manualPage = modules.get(moduleIndex).getManualLocation();
+            String moduleName = modules.get(moduleIndex).getModuleName();
+            writer.write("\\pdfbookmark{" + moduleName + "}\n" +
+                    "\\includepdf[pages=-]{\"" + manualPage.getPath() + "\"}\n");
+        }
+        catch(IOException e)
+        {
+            throw new OutputIOException(outputTexFile.getPath(), e, true);
+        }
+    }
+
+    /**
      * Writes the necessary ending commands to the tex file, most notably, ending the document section.
      * @throws OutputIOException - in the event of an IOException.
      */
@@ -110,6 +146,7 @@ public class ManualCreator
         try
         {
             writer.write("\\end{document}");
+            writer.close();
         }
         catch(IOException e)
         {

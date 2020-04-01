@@ -40,4 +40,13 @@ public class Module
     {
         return manualLocation;
     }
+
+    /**
+     * Obtains the name of this module.
+     * @return a String corresponding to this module's name.
+     */
+    public String getModuleName()
+    {
+        return moduleName;
+    }
 }
