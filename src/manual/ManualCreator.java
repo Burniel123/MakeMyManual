@@ -14,7 +14,10 @@ import java.util.ArrayList;
 public class ManualCreator
 {
     private File outputTexFile = null;
+    private BufferedWriter writer = null;
+
     private ArrayList<Module> modules = new ArrayList<Module>();
+    private String manualName = null; //TODO: check user has named their manual before creating!
 
     /**
      * Creates an instance of ManualCreator, requiring the path it will write to.
@@ -44,9 +47,18 @@ public class ManualCreator
     }
 
     /**
+     * Sets the name of the manual, to be printed on its cover.
+     * @param manualName - user-defined String to name the manual.
+     */
+    public void setManualName(String manualName)
+    {
+        this.manualName = manualName;
+    }
+
+    /**
      * Attempts to create a BufferedWriter to write the collated manual to the tex file.
      * @return a BufferedWriter set to write to the manual tex file.
-     * @throws OutputIOException - in the event of an IOException.
+     * @throws OutputIOException in the event of an IOException.
      */
     private BufferedWriter createWriter() throws OutputIOException
     {
@@ -57,9 +69,51 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            throw new OutputIOException(outputTexFile.getPath(), e);
+            throw new OutputIOException(outputTexFile.getPath(), e, false);
         }
         return writer;
     }
 
+    /**
+     * Writes the preamble of the tex file, including the title of the manual, packages to use in the document, etc.
+     * @throws OutputIOException in the event of an IOException.
+     */
+    private void writePreamble() throws OutputIOException
+    {
+        try
+        {
+            writer.write("\\documentclass{book}\n" +
+                    "\\usepackage{graphicx}\n" +
+                    "\\usepackage[margin=0.5in]{geometry}\n" +
+                    "\\usepackage[final]{pdfpages}\n" +
+                    "\\usepackage{bookmark}\n" +
+                    "\\usepackage{hyperref}\n" +
+                    "\\usepackage{cleveref}\n" +
+                    "\\title{" + manualName +
+                    "\\thanks{Produced with MakeMyManual}}" +
+                    "\\author{}\n\\date{}\n" +
+                    "\\begin{document}\n" +
+                    "\\maketitle\n");
+        }
+        catch(IOException e)
+        {
+            throw new OutputIOException(outputTexFile.getPath(), e, true);
+        }
+    }
+
+    /**
+     * Writes the necessary ending commands to the tex file, most notably, ending the document section.
+     * @throws OutputIOException - in the event of an IOException.
+     */
+    private void endFile() throws OutputIOException
+    {
+        try
+        {
+            writer.write("\\end{document}");
+        }
+        catch(IOException e)
+        {
+            throw new OutputIOException(outputTexFile.getPath(), e, true);
+        }
+    }
 }
