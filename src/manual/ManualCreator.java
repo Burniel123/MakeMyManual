@@ -1,6 +1,9 @@
 package manual;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -40,5 +43,23 @@ public class ManualCreator
         modules.clear();
     }
 
+    /**
+     * Attempts to create a BufferedWriter to write the collated manual to the tex file.
+     * @return a BufferedWriter set to write to the manual tex file.
+     * @throws OutputIOException - in the event of an IOException.
+     */
+    private BufferedWriter createWriter() throws OutputIOException
+    {
+        BufferedWriter writer = null;
+        try
+        {
+            writer = new BufferedWriter(new FileWriter(outputTexFile));
+        }
+        catch(IOException e)
+        {
+            throw new OutputIOException(outputTexFile.getPath(), e);
+        }
+        return writer;
+    }
 
 }
