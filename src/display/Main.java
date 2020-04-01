@@ -1,11 +1,16 @@
 package display;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
+import manual.InputIOException;
+import manual.ManualListReader;
+
+import java.util.ArrayList;
 
 public class Main extends Application
 {
@@ -34,7 +39,35 @@ public class Main extends Application
         primaryStage.show();
     }
 
+    /**
+     *
+     */
+    @Override
+    public void init()
+    {
+        ManualListReader reader = new ManualListReader();
+        try
+        {
+            ArrayList<manual.Module> modulesAvailable = reader.readModuleList();
+            Platform.runLater(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    //Call a method to render the available mods on-screen.
+                }
+            });
+        }
+        catch(InputIOException e)
+        {
+            //Call a method to pop up an exception alert.
+        }
+    }
 
+    /**
+     * Main method - only purpose currently is to launch the FX Application.
+     * @param args - Command line arguments.
+     */
     public static void main(String[] args)
     {
         launch(args);
