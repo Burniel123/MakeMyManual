@@ -13,6 +13,8 @@ import java.util.ArrayList;
 public class Module
 {
     private String moduleName = null;
+    private String moduleCode = null;
+    private int difficulty = 0;
     private File manualLocation = null;
     private ArrayList<String> moduleCreators = new ArrayList<String>();
     private LocalDate moduleCreationDate = null;
@@ -23,9 +25,11 @@ public class Module
      * @param moduleCreators - the module's creator's name(s), eg "Steel Crate Games"
      * @param moduleCreationDate - the module's initial release date, eg 2015-10-08.
      */
-    public Module(String moduleName, String manualPath, ArrayList<String> moduleCreators, LocalDate moduleCreationDate)
+    public Module(String moduleName, String moduleCode, int difficulty, String manualPath, ArrayList<String> moduleCreators, LocalDate moduleCreationDate)
     {
         this.moduleName = moduleName;
+        this.moduleCode = moduleCode;
+        this.difficulty = difficulty;
         this.moduleCreators = moduleCreators;
         this.moduleCreationDate = moduleCreationDate;
         manualLocation = new File(manualPath);
