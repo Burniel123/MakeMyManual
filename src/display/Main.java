@@ -28,12 +28,13 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
+        //Setting up an area for the modules:
         final FlowPane modulesPane = new FlowPane(2,2);
         final ScrollPane scrollableWindow = new ScrollPane(modulesPane);
         scrollableWindow.setFitToHeight(true);
         scrollableWindow.setFitToWidth(true);
         modulesPane.setStyle(DEFAULT_BACK_STYLE);
-
+        //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
         final TextField searchBarInput = new TextField("Search for mods...");
         searchBarInput.setMaxWidth(Double.MAX_VALUE);
@@ -45,12 +46,28 @@ public class Main extends Application
         final Button presetsButton = new Button("Presets");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
                 filterMenu, presetsButton);
-
+        //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/98");
         numSelectedBar.getChildren().add(numSelected);
         ROOT_PANE.getChildren().addAll(topMenu, numSelectedBar);
+/*
+        ROOT_PANE.setStyle("-fx-background-color: lightblue");
+*/
+        ROOT_PANE.getChildren().add(scrollableWindow);
+        renderModules();
+        final Scene scene = new Scene(ROOT_PANE);
+        primaryStage.setTitle("MakeMyManual");
+        primaryStage.setScene(scene);
+        primaryStage.setWidth(750);
+        primaryStage.setHeight(500);
+/*        primaryStage.setMaxWidth(1000);
+        primaryStage.setMaxHeight(1000);*/
+        primaryStage.show();
+    }
 
+    private void renderModules()
+    {
         for(int i = 0; i < MODULES_AVAILABLE.size(); i++)
         {
             Module module = MODULES_AVAILABLE.get(i);
@@ -65,26 +82,10 @@ public class Main extends Application
             moduleRegion.setMinSize(100, 20);
 
             modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
-            modulesPane.getChildren().add(modulePane);
+            ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
+            ((FlowPane)scroll.getContent()).getChildren().add(modulePane);
         }
-
-/*
-        ROOT_PANE.setStyle("-fx-background-color: lightblue");
-*/
-        ROOT_PANE.getChildren().add(scrollableWindow);
-        final Scene scene = new Scene(ROOT_PANE);
-        primaryStage.setTitle("MakeMyManual");
-        primaryStage.setScene(scene);
-        primaryStage.setWidth(750);
-        primaryStage.setHeight(500);
-/*        primaryStage.setMaxWidth(1000);
-        primaryStage.setMaxHeight(1000);*/
-        primaryStage.show();
     }
-
-/*
-    private void loadModules()
-*/
 
     /**
      * Sorts the modules according to a certain property.
@@ -104,7 +105,7 @@ public class Main extends Application
             {
                 int toReturn = 0;
                 switch (sortBy)
-                {
+                {//Implement a different way of comparing objects depending on the required field.
                     case 0 :
                         if(o1.getModuleName().compareTo(o2.getModuleName()) > 0)
                             toReturn = 1;
@@ -142,7 +143,7 @@ public class Main extends Application
                             toReturn = -1;break;
                     default : toReturn = 0;
                 }
-                if(reverse)
+                if(reverse)//If the user wants the list reversed, flip the comparison result.
                     toReturn = -toReturn;
                 return toReturn;
             }
