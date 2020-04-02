@@ -17,6 +17,7 @@ public class Module
     private File manualLocation = null;
     private String[] moduleCreators = null;
     private LocalDate moduleCreationDate = null;
+    private boolean active = false;
 
     /**
      * Creates an instance of Module, requiring its name, list of creators, and a creation date.
@@ -92,5 +93,30 @@ public class Module
     public LocalDate getModuleCreationDate()
     {
         return moduleCreationDate;
+    }
+
+    /**
+     * Set this Module as currently active/selected.
+     */
+    public void activate()
+    {
+        active = true;
+    }
+
+    /**
+     * Set this Module as currently inactive/deselected.
+     */
+    public void deactivate()
+    {
+        active = false;
+    }
+
+    /**
+     * Obtains whether or not this Module is currently active/selected.
+     * @return true if the module is selected, false otherwise.
+     */
+    public boolean isActive()
+    {
+        return active;
     }
 }

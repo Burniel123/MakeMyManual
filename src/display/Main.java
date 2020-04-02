@@ -24,6 +24,7 @@ public class Main extends Application
 {
     private static final VBox ROOT_PANE = new VBox(3);
     private static final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55";
+    private static final String SELECTED_MODULE_STYLE = "-fx-background-color: #669900";
     private static final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
     private static boolean exceptionOnBoot = false;
 
@@ -68,6 +69,7 @@ public class Main extends Application
         primaryStage.setMaxHeight(1000);*/
 
         sortMenu.setOnMouseClicked(e -> applyModuleSort());
+
         if(exceptionOnBoot)
         {
             Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
@@ -141,7 +143,7 @@ public class Main extends Application
         {
             @Override
             public Void call(ButtonType buttonType)
-            {
+            {//Defines what to do when the dialog is submitted.
                 if(buttonType == ButtonType.OK)
                 {
                     String sortByStr = ((RadioButton)sort.getSelectedToggle()).getText();
@@ -162,7 +164,6 @@ public class Main extends Application
                 return null;
             }
         });
-
         sortAndFilterDialog.showAndWait();
     }
 
@@ -188,8 +189,25 @@ public class Main extends Application
             modulePane.setAlignment(Pos.BOTTOM_CENTER);
             final Label moduleCode = new Label(module.getModuleCode());
             moduleCode.setFont(new Font(7));
-            moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
+            if(module.isActive())
+                moduleRegion.setStyle(SELECTED_MODULE_STYLE);
+            else
+                moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
             moduleRegion.setMinSize(100, 20);
+            //Event handling code for each module:
+            modulePane.setOnMouseClicked(e ->
+            {
+                if(moduleRegion.getStyle().equals(DEFAULT_MODULE_STYLE))
+                {
+                    moduleRegion.setStyle(SELECTED_MODULE_STYLE);
+                    module.activate();
+                }
+                else
+                {
+                    moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
+                    module.deactivate();
+                }
+            });
             //Adding the constructed module region to its pane:
             modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
             ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
