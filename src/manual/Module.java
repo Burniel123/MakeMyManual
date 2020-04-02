@@ -2,7 +2,6 @@ package manual;
 
 import java.io.File;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 /**
  * Models a single module in the game, holding its manual page and other module details.
@@ -52,5 +51,46 @@ public class Module
     public String getModuleName()
     {
         return moduleName;
+    }
+
+    /**
+     * Obtains the KTANE module code of this module.
+     * @return a String equal to the module code for this module, as used in the game.
+     */
+    public String getModuleCode()
+    {
+        return moduleCode;
+    }
+
+    /**
+     * Obtains the difficulty of this module, as defined by Timwi's manual repository.
+     * @return an integer corresponding to the difficulty (for the expert) of the module:
+     *              1 - Very Easy (eg "Wires")
+     *              2 - Easy (eg "Memory")
+     *              3 - Medium (eg "Adventure Game")
+     *              4 - Hard (eg "Forget Me Not")
+     *              5 - Very Hard (eg "Mastermind Cruel")
+     */
+    public int getDifficulty()
+    {
+        return difficulty;
+    }
+
+    /**
+     * Obtains the list of creators for this module.
+     * @return a String array of usernames of the module's creators.
+     */
+    public String[] getModuleCreators()
+    {
+        return moduleCreators;
+    }
+
+    /**
+     * Obtains the date this module was first published.
+     * @return a LocalDate containing the module's publishing date.
+     */
+    public LocalDate getModuleCreationDate()
+    {
+        return moduleCreationDate;
     }
 }

@@ -42,7 +42,7 @@ Microcontroller	Microcontroller	3	./resources/modules/Microcontroller.pdf	Flush	
 Murder	murder	3	./resources/modules/Murder.pdf	Asimir	2016-09-26
 Gamepad	TheGamepadModule	3	./resources/modules/Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06
 Tic-Tac-Toe	TicTacToeModule	4	./resources/modules/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07
-"Monsplode, Fight!"	monsplodeFight	4	"./resources/modules/Monsplode, Fight!.pdf"	clutterArranger	2016-10-08
+Monsplode, Fight!	monsplodeFight	4	"./resources/modules/Monsplode, Fight!.pdf"	clutterArranger	2016-10-08
 Shape Shift	shapeshift	3	./resources/modules/Shape Shift.pdf	Asimir	2016-10-10
 Follow The Leader	FollowTheLeaderModule	3	./resources/modules/Follow The Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18
 Friendship	FriendshipModule	3	./resources/modules/Friendship.pdf	Timwi	2016-10-24

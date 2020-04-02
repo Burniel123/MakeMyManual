@@ -1,39 +1,43 @@
 package display;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import manual.InputIOException;
 import manual.ManualListReader;
+import manual.Module;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Main extends Application
 {
-    private final VBox MAIN_PANE = new VBox(3);
-    private final String DEFAULT_STYLE = "-fx-background-color: darkred";
+    private final VBox ROOT_PANE = new VBox(3);
+    private final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55";
+    private final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
 
-    private ArrayList<manual.Module> MODULES_AVAILABLE = new ArrayList<manual.Module>();
+    private ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
 
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        /*Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));*/
         final FlowPane modulesPane = new FlowPane(2,2);
         final ScrollPane scrollableWindow = new ScrollPane(modulesPane);
         scrollableWindow.setFitToHeight(true);
         scrollableWindow.setFitToWidth(true);
+        modulesPane.setStyle(DEFAULT_BACK_STYLE);
 
         final HBox topMenu = new HBox(2);
         final TextField searchBarInput = new TextField("Search for mods...");
+        searchBarInput.setMaxWidth(Double.MAX_VALUE);
+        HBox.setHgrow(searchBarInput, Priority.ALWAYS);
         final Button searchBarSubmit = new Button("Search!");
         final Separator searchSeparator = new Separator();
         searchSeparator.setOrientation(Orientation.VERTICAL);
@@ -45,21 +49,104 @@ public class Main extends Application
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/98");
         numSelectedBar.getChildren().add(numSelected);
-        MAIN_PANE.getChildren().addAll(topMenu, numSelectedBar);
+        ROOT_PANE.getChildren().addAll(topMenu, numSelectedBar);
 
-        for(int i = 0; i < 200; i++)
+        for(int i = 0; i < MODULES_AVAILABLE.size(); i++)
         {
-            final Region sampleRegion = new Region();
-            sampleRegion.setStyle(DEFAULT_STYLE);
-            sampleRegion.setMinSize(20, 20);
-            modulesPane.getChildren().add(sampleRegion);
+            Module module = MODULES_AVAILABLE.get(i);
+            final StackPane modulePane = new StackPane();
+            final Region moduleRegion = new Region();
+            final Label moduleName = new Label(module.getModuleName() + "\n\n");
+            moduleName.setPadding(new Insets(2));
+            modulePane.setAlignment(Pos.BOTTOM_CENTER);
+            final Label moduleCode = new Label(module.getModuleCode());
+            moduleCode.setFont(new Font(7));
+            moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
+            moduleRegion.setMinSize(100, 20);
+
+            modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
+            modulesPane.getChildren().add(modulePane);
         }
 
-        MAIN_PANE.getChildren().add(scrollableWindow);
-        final Scene scene = new Scene(MAIN_PANE);
+/*
+        ROOT_PANE.setStyle("-fx-background-color: lightblue");
+*/
+        ROOT_PANE.getChildren().add(scrollableWindow);
+        final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
         primaryStage.setScene(scene);
+        primaryStage.setWidth(750);
+        primaryStage.setHeight(500);
+/*        primaryStage.setMaxWidth(1000);
+        primaryStage.setMaxHeight(1000);*/
         primaryStage.show();
+    }
+
+/*
+    private void loadModules()
+*/
+
+    /**
+     * Sorts the modules according to a certain property.
+     * @param sortBy - an integer from 0 to 4:
+     *               0 - sort by module name.
+     *               1 - sort by module code.
+     *               2 - sort by difficulty.
+     *               3 - sort by first creator's name.
+     *               4 - sort by date created.
+     */
+    private void sortModules(int sortBy, boolean reverse)
+    {
+        Collections.sort(MODULES_AVAILABLE, new Comparator<Module>()
+        {
+            @Override
+            public int compare(Module o1, Module o2)
+            {
+                int toReturn = 0;
+                switch (sortBy)
+                {
+                    case 0 :
+                        if(o1.getModuleName().compareTo(o2.getModuleName()) > 0)
+                            toReturn = 1;
+                        else if(o1.getModuleName().compareTo(o2.getModuleName()) == 0)
+                            toReturn = 0;
+                        else
+                            toReturn = -1;break;
+                    case 1 :
+                        if(o1.getModuleCode().compareTo(o2.getModuleCode()) > 0)
+                            toReturn = 1;
+                        else if(o1.getModuleCode().compareTo(o2.getModuleCode()) == 0)
+                            toReturn = 0;
+                        else
+                            toReturn = -1;break;
+                    case 2 :
+                        if(o1.getDifficulty() > o2.getDifficulty())
+                            toReturn = 1;
+                        else if(o1.getDifficulty() == o2.getDifficulty())
+                            toReturn = 0;
+                        else
+                            toReturn = -1;break;
+                    case 3 :
+                        if(o1.getModuleCreators()[0].compareTo(o2.getModuleCreators()[0]) > 0)
+                            toReturn = 1;
+                        else if(o1.getModuleCreators()[0].compareTo(o2.getModuleCreators()[0]) == 0)
+                            toReturn = 0;
+                        else
+                            toReturn = -1;break;
+                    case 4 :
+                        if(o1.getModuleCreationDate().compareTo(o2.getModuleCreationDate()) > 0)
+                            toReturn = 1;
+                        else if(o1.getModuleCreationDate().compareTo(o2.getModuleCreationDate()) == 0)
+                            toReturn = 0;
+                        else
+                            toReturn = -1;break;
+                    default : toReturn = 0;
+                }
+                if(reverse)
+                    toReturn = -toReturn;
+                return toReturn;
+            }
+        });
     }
 
     /**
@@ -72,14 +159,7 @@ public class Main extends Application
         try
         {
             MODULES_AVAILABLE = reader.readModuleList();
-/*            Platform.runLater(new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    //Call a method to render the available mods on-screen.
-                }
-            });*/
+            sortModules(0, false);
         }
         catch(InputIOException e)
         {
