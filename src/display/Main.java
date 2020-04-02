@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import manual.InputIOException;
 import manual.ManualListReader;
 import manual.Module;
@@ -17,6 +18,7 @@ import manual.Module;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Optional;
 
 public class Main extends Application
 {
@@ -44,10 +46,10 @@ public class Main extends Application
         final Button searchBarSubmit = new Button("Search!");
         final Separator searchSeparator = new Separator();
         searchSeparator.setOrientation(Orientation.VERTICAL);
-        final Button filterMenu = new Button("Filter");
+        final Button sortMenu = new Button("Sort");
         final Button presetsButton = new Button("Presets");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
-                filterMenu, presetsButton);
+                sortMenu, presetsButton);
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/98");
@@ -65,6 +67,7 @@ public class Main extends Application
 /*        primaryStage.setMaxWidth(1000);
         primaryStage.setMaxHeight(1000);*/
 
+        sortMenu.setOnMouseClicked(e -> applyModuleSort());
         if(exceptionOnBoot)
         {
             Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
@@ -78,6 +81,95 @@ public class Main extends Application
         }
         else
             primaryStage.show();
+    }
+
+    /**
+     * Launch a Dialog to handle sorting and filtering mods on the stage.
+     */
+    private void applyModuleSort()
+    {
+        //Setting up containers for the dialog:
+        Dialog<Void> sortAndFilterDialog = new Dialog<Void>();
+        DialogPane sfDialogPane = new DialogPane();
+        GridPane dialogGrid = new GridPane();
+        dialogGrid.setHgap(2);
+        dialogGrid.setVgap(2);
+        sfDialogPane.setContent(dialogGrid);
+        sortAndFilterDialog.setDialogPane(sfDialogPane);
+        sortAndFilterDialog.setTitle("Sort/Filter Modules");
+        sortAndFilterDialog.setHeaderText("Sort & Filter Modules");
+        //Setting up buttons for sorting:
+        ToggleGroup sort = new ToggleGroup();
+        RadioButton sortByName = new RadioButton("Module Name");
+        sortByName.setToggleGroup(sort);
+        dialogGrid.add(sortByName,0,2);
+        RadioButton sortByCode = new RadioButton("In-Game Module Code");
+        sortByCode.setToggleGroup(sort);
+        dialogGrid.add(sortByCode,0,3);
+        RadioButton sortByDiff = new RadioButton("Expert Difficulty");
+        sortByDiff.setToggleGroup(sort);
+        dialogGrid.add(sortByDiff,0,4);
+        RadioButton sortByCreator = new RadioButton("Module Creator");
+        sortByCreator.setToggleGroup(sort);
+        dialogGrid.add(sortByCreator,0,5);
+        RadioButton sortByDate = new RadioButton("Module Publishing Date");
+        sortByDate.setToggleGroup(sort);
+        dialogGrid.add(sortByDate,0,6);
+        //Setting up buttons for filtering:
+        CheckBox allowVanilla = new CheckBox("Regular Modules: Vanilla");
+        dialogGrid.add(allowVanilla, 2, 2);
+        CheckBox allowRegular = new CheckBox("Regular Modules: Mods");
+        dialogGrid.add(allowRegular, 2, 3);
+        CheckBox allowNeedy = new CheckBox("Needy Modules");
+        dialogGrid.add(allowNeedy, 2, 4);
+        CheckBox allowAppendices = new CheckBox("Appendices");
+        dialogGrid.add(allowAppendices, 2, 5);
+        //Miscellaneous components for the dialog:
+        Separator separator = new Separator();
+        separator.setOrientation(Orientation.VERTICAL);
+        dialogGrid.add(separator, 1, 0, 1, 7);
+        Label sortTitle = new Label("Sort Modules By:");
+        sortTitle.setStyle("-fx-font-weight: bold");
+        dialogGrid.add(sortTitle, 0, 0);
+        Label filterTitle = new Label("Include Module Types:");
+        filterTitle.setStyle("-fx-font-weight: bold");
+        dialogGrid.add(filterTitle, 2, 0);
+
+        sortAndFilterDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        sortAndFilterDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+        sortAndFilterDialog.setResultConverter(new Callback<ButtonType, Void>()
+        {
+            @Override
+            public Void call(ButtonType buttonType)
+            {
+                if(buttonType == ButtonType.OK)
+                {
+                    String sortByStr = ((RadioButton)sort.getSelectedToggle()).getText();
+                    if(sortByStr.equals("Module Name"))
+                        sortModules(0, false);
+                    else if(sortByStr.equals("In-Game Module Code"))
+                        sortModules(1, false);
+                    else if(sortByStr.equals("Expert Difficulty"))
+                        sortModules(2, false);
+                    else if(sortByStr.equals("Module Creator"))
+                        sortModules(3, false);
+                    else
+                        sortModules(4, false);
+
+                    clearModules();
+                    renderModules();
+                }
+                return null;
+            }
+        });
+
+        sortAndFilterDialog.showAndWait();
+    }
+
+    private void clearModules()
+    {
+        ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
+        ((FlowPane)scroll.getContent()).getChildren().clear();
     }
 
     /**
