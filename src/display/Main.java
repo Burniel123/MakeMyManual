@@ -1,6 +1,7 @@
 package display;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
@@ -19,9 +20,10 @@ import java.util.Comparator;
 
 public class Main extends Application
 {
-    private final VBox ROOT_PANE = new VBox(3);
-    private final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55";
-    private final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
+    private static final VBox ROOT_PANE = new VBox(3);
+    private static final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55";
+    private static final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
+    private static boolean exceptionOnBoot = false;
 
     private ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
 
@@ -51,11 +53,10 @@ public class Main extends Application
         final Label numSelected = new Label("Modules Selected: 0/98");
         numSelectedBar.getChildren().add(numSelected);
         ROOT_PANE.getChildren().addAll(topMenu, numSelectedBar);
-/*
-        ROOT_PANE.setStyle("-fx-background-color: lightblue");
-*/
         ROOT_PANE.getChildren().add(scrollableWindow);
         renderModules();
+
+
         final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
         primaryStage.setScene(scene);
@@ -63,13 +64,30 @@ public class Main extends Application
         primaryStage.setHeight(500);
 /*        primaryStage.setMaxWidth(1000);
         primaryStage.setMaxHeight(1000);*/
-        primaryStage.show();
+
+        if(exceptionOnBoot)
+        {
+            Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+            exceptionAlert.setTitle("Error loading configuration files!");
+            exceptionAlert.setHeaderText("Error encountered while loading modules.\n" +
+                    "Has it been edited or removed?");
+            exceptionAlert.setContentText("Please try rebooting the application.\n" +
+                    "If problem persists, please contact Daniel Burton.");
+            exceptionAlert.showAndWait();
+            Platform.exit();
+        }
+        else
+            primaryStage.show();
     }
 
+    /**
+     * Renders module regions to the stage.
+     */
     private void renderModules()
     {
         for(int i = 0; i < MODULES_AVAILABLE.size(); i++)
         {
+            //Components to build each module region:
             Module module = MODULES_AVAILABLE.get(i);
             final StackPane modulePane = new StackPane();
             final Region moduleRegion = new Region();
@@ -80,7 +98,7 @@ public class Main extends Application
             moduleCode.setFont(new Font(7));
             moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
             moduleRegion.setMinSize(100, 20);
-
+            //Adding the constructed module region to its pane:
             modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
             ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
             ((FlowPane)scroll.getContent()).getChildren().add(modulePane);
@@ -164,7 +182,14 @@ public class Main extends Application
         }
         catch(InputIOException e)
         {
-            //Call a method to pop up an exception alert.
+            Platform.runLater(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    exceptionOnBoot = true;
+                }
+            });
         }
     }
 
