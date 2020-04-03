@@ -42,6 +42,7 @@ public class Main extends Application
         modulesPane.setStyle(DEFAULT_BACK_STYLE);
         //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
+        topMenu.setPadding(new Insets(5));
         final TextField searchBarInput = new TextField("Search for modules...");
         searchBarInput.setMaxWidth(Double.MAX_VALUE);
         HBox.setHgrow(searchBarInput, Priority.ALWAYS);
@@ -50,8 +51,9 @@ public class Main extends Application
         searchSeparator.setOrientation(Orientation.VERTICAL);
         final Button sortMenu = new Button("Sort");
         final Button presetsButton = new Button("Presets");
+        final Button makeIt = new Button("Make My Manual!");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
-                sortMenu, presetsButton);
+                sortMenu, presetsButton, makeIt);
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/98");
@@ -116,6 +118,8 @@ public class Main extends Application
         RadioButton sortByDate = new RadioButton("Module Publishing Date");
         sortByDate.setToggleGroup(sort);
         dialogGrid.add(sortByDate,0,6);
+        CheckBox reverse = new CheckBox("Reverse Order");
+        dialogGrid.add(reverse, 0, 7);
         //Setting up buttons for filtering:
         CheckBox allowVanilla = new CheckBox("Regular Modules: Vanilla");
         dialogGrid.add(allowVanilla, 2, 2);
@@ -145,18 +149,22 @@ public class Main extends Application
             {//Defines what to do when the dialog is submitted.
                 if(buttonType == ButtonType.OK)
                 {
+                    //Deal with sorting the list first:
                     String sortByStr = ((RadioButton)sort.getSelectedToggle()).getText();
+                    boolean reverseOrder = false;
+                    if(reverse.isSelected())
+                        reverseOrder = true;
                     if(sortByStr.equals("Module Name"))
-                        sortModules(0, false);
+                        sortModules(0, reverseOrder);
                     else if(sortByStr.equals("In-Game Module Code"))
-                        sortModules(1, false);
+                        sortModules(1, reverseOrder);
                     else if(sortByStr.equals("Expert Difficulty"))
-                        sortModules(2, false);
+                        sortModules(2, reverseOrder);
                     else if(sortByStr.equals("Module Creator"))
-                        sortModules(3, false);
+                        sortModules(3, reverseOrder);
                     else
-                        sortModules(4, false);
-
+                        sortModules(4, reverseOrder);
+                    //Now deal with filtering the sorted list, as filtering is stable:
                     ArrayList<Integer> categories = new ArrayList<Integer>();
                     if(allowVanilla.isSelected())
                         categories.add(0);
@@ -175,6 +183,9 @@ public class Main extends Application
         sortAndFilterDialog.showAndWait();
     }
 
+    /**
+     * Clear all modules off the screen, generally so they can be re-rendered.
+     */
     private void clearModules()
     {
         ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
@@ -286,6 +297,10 @@ public class Main extends Application
         });
     }
 
+    /**
+     * Applies a filter based on module categories and then renders this.
+     * @param include
+     */
     private void filterModules(ArrayList<Integer> include)
     {
         ArrayList<Module> temp = new ArrayList<Module>(MODULES_AVAILABLE);

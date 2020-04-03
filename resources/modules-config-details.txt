@@ -92,3 +92,7 @@ Point Of Order	PointOfOrderModule	4	./resources/modules/Point Of Order.pdf	Timwi
 Ice Cream	iceCreamModule	3	./resources/modules/Ice Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	2017-06-26	1
 Screw	screw	3	./resources/modules/The Screw.pdf	"Ezekiel, SL7205"	2017-07-01	1
 Yahtzee	YahtzeeModule	3	./resources/modules/Yahtzee.pdf	"Timwi, Rexkix"	2017-07-02	1
+German Button	BigButtonTranslated	1	./resources/modules/German Button.pdf	"Malde, Tharagon"	2017-01-25	1
+German Morse Code	MorseCodeTranslated	2	./resources/modules/German Morse Code.pdf	"Malde, Tharagon"	2017-01-25	1
+German Password	PasswordsTranslated	2	./resources/modules/German Password.pdf	"Malde, Tharagon"	2017-01-25	1
+German Who's On First	WhosOnFirstTranslated	2	./resources/modules/German Who's On First.pdf	"Malde, Tharagon"	2017-01-25	1
