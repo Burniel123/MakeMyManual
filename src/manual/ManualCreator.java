@@ -58,8 +58,7 @@ public class ManualCreator
     /**
      * Writes the user's .tex manual, by creating a BufferedWriter, writing the preamble, writing each manual page,
      * and ending the document.
-     * @throws OutputIOException in the event of an IOException.
-     */
+     * @throws OutputIOException in the event of an IOException.     */
     public void writeManual() throws OutputIOException
     {
         createWriter();

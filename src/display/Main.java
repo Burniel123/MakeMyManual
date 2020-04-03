@@ -7,6 +7,7 @@ import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -44,7 +45,7 @@ public class Main extends Application
         //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
         topMenu.setPadding(new Insets(5));
-        final TextField searchBarInput = new TextField("Search for modules...");
+        final TextField searchBarInput = new TextField();
         searchBarInput.setMaxWidth(Double.MAX_VALUE);
         HBox.setHgrow(searchBarInput, Priority.ALWAYS);
         final Button searchBarSubmit = new Button("Search!");
@@ -58,12 +59,19 @@ public class Main extends Application
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/" + MODULES_AVAILABLE.size());
+        searchBarInput.setPromptText("Search for modules...");
         numSelectedBar.getChildren().add(numSelected);
         ROOT_PANE.getChildren().addAll(topMenu, numSelectedBar);
         ROOT_PANE.getChildren().add(scrollableWindow);
         renderModules();
 
         sortMenu.setOnMouseClicked(e -> applyModuleSort());
+        searchBarSubmit.setOnMouseClicked(e -> searchModules(searchBarInput.getText()));
+        searchBarInput.setOnKeyPressed(e ->
+        {
+            if(e.getCode() == KeyCode.ENTER)
+                searchModules(searchBarInput.getText());
+        });
 
         final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
@@ -140,7 +148,7 @@ public class Main extends Application
         Label filterTitle = new Label("Include Module Types:");
         filterTitle.setStyle("-fx-font-weight: bold");
         dialogGrid.add(filterTitle, 2, 0);
-
+        //Add buttons to the sort dialog:
         sortAndFilterDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
         sortAndFilterDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
         sortAndFilterDialog.setResultConverter(new Callback<ButtonType, Void>()
@@ -175,8 +183,8 @@ public class Main extends Application
                         categories.add(2);
                     if(allowAppendices.isSelected())
                         categories.add(3);
-
                     filterModules(categories);
+                    searchModules(((TextField)((HBox)ROOT_PANE.getChildren().get(0)).getChildren().get(0)).getText());
                 }
                 return null;
             }
@@ -312,6 +320,19 @@ public class Main extends Application
         for(Module module : temp)
         {
             if(!include.contains(module.getCategory()))
+                MODULES_AVAILABLE.remove(module);
+        }
+        clearModules();
+        renderModules();
+        MODULES_AVAILABLE = temp;
+    }
+
+    private void searchModules(String searchTerm)
+    {
+        ArrayList<Module> temp = new ArrayList<Module>(MODULES_AVAILABLE);
+        for(Module module : temp)
+        {
+            if(!module.getModuleName().toLowerCase().contains(searchTerm.toLowerCase()))
                 MODULES_AVAILABLE.remove(module);
         }
         clearModules();
