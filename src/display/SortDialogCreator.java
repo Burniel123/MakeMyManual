@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * Holds functionality relating to the sort dialog, and the sorting and filtering of the modules.
+ */
 public class SortDialogCreator
 {
     /**

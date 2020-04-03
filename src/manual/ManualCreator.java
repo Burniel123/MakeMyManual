@@ -39,7 +39,7 @@ public class ManualCreator
     }
 
     /**
-     * Clears the list of modules,
+     * Clears the list of modules.
      */
     public void clearModules()
     {
@@ -75,9 +75,9 @@ public class ManualCreator
      * @return a BufferedWriter set to write to the manual tex file.
      * @throws OutputIOException in the event of an IOException.
      */
-    private BufferedWriter createWriter() throws OutputIOException
+    private void createWriter() throws OutputIOException
     {
-        BufferedWriter writer = null;
+        writer = null;
         try
         {
             writer = new BufferedWriter(new FileWriter(outputTexFile));
@@ -86,7 +86,6 @@ public class ManualCreator
         {
             throw new OutputIOException(outputTexFile.getPath(), e, false);
         }
-        return writer;
     }
 
     /**
@@ -112,6 +111,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
+            System.out.println(e);
             throw new OutputIOException(outputTexFile.getPath(), e, true);
         }
     }
@@ -127,8 +127,11 @@ public class ManualCreator
         {
             File manualPage = modules.get(moduleIndex).getManualLocation();
             String moduleName = modules.get(moduleIndex).getModuleName();
-            writer.write("\\pdfbookmark{" + moduleName + "}\n" +
-                    "\\includepdf[pages=-]{\"" + manualPage.getPath() + "\"}\n");
+            String moduleCodeName = modules.get(moduleIndex).getModuleCode();
+            String path = editPath(manualPage.getPath());
+            writer.write("\\label{pdf:" + moduleCodeName + "}\n" +
+                    "\\pdfbookmark{" + moduleName + "}{pdf:" + moduleCodeName + "}\n" +
+                    "\\includepdf[pages=-]{\"" + path + "\"}\n");
         }
         catch(IOException e)
         {
@@ -151,5 +154,23 @@ public class ManualCreator
         {
             throw new OutputIOException(outputTexFile.getPath(), e, true);
         }
+    }
+
+    /**
+     * Edits a file path to make it LaTeX-friendly.
+     * @param path - the path to edit.
+     */
+    private String editPath(String path)
+    {
+        String editedPath = "";
+        for(int i = 0; i < path.length(); i++)
+        {
+            if(path.charAt(i) == '\\')
+                editedPath += "/";
+            else
+                editedPath += path.charAt(i);
+        }
+
+        return editedPath;
     }
 }

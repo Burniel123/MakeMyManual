@@ -21,12 +21,12 @@ public class ManualListReader
             {
                 String[] detailElements = line.split("\t");
 
-                String moduleName = detailElements[0];
-                String moduleCode = detailElements[1];
+                String moduleName = removeQuotes(detailElements[0]);
+                String moduleCode = removeQuotes(detailElements[1]);
                 String difficultyStr = detailElements[2];
-                String manualPath = detailElements[3];
-                String moduleCreatorsStr = detailElements[4];
-                String moduleCreationDateStr = detailElements[5];
+                String manualPath = removeQuotes(detailElements[3]);
+                String moduleCreatorsStr = removeQuotes(detailElements[4]);
+                String moduleCreationDateStr = removeQuotes(detailElements[5]);
                 String categoryStr = detailElements[6];
 
                 int difficulty = Integer.parseInt(difficultyStr);
@@ -48,5 +48,18 @@ public class ManualListReader
             throw new InputIOException(SUPPORTED_MODULE_FILE.getPath(), e, true);
         }
         return modules;
+    }
+
+    /**
+     * Removes the quotation marks from strings which have had them applied by conversion to TSV.
+     * @param phrase - the phrase to check for quotation marks.
+     * @return the input phrase without surrounding quotes.
+     */
+    private String removeQuotes(String phrase)
+    {
+        if(phrase.charAt(0) == '"' && phrase.charAt(phrase.length() - 1) == '"')
+            return phrase.substring(1, phrase.length()-1);
+        else
+            return phrase;
     }
 }

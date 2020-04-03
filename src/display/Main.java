@@ -68,6 +68,11 @@ public class Main extends Application
             if(e.getCode() == KeyCode.ENTER)
                 searchModules(searchBarInput.getText());
         });
+        makeIt.setOnMouseClicked(e ->
+        {
+            MakeManualDialogCreator mmdc = new MakeManualDialogCreator();
+            mmdc.generateManualDialog();
+        });
 
         final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
