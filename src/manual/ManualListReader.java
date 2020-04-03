@@ -27,12 +27,14 @@ public class ManualListReader
                 String manualPath = detailElements[3];
                 String moduleCreatorsStr = detailElements[4];
                 String moduleCreationDateStr = detailElements[5];
+                String categoryStr = detailElements[6];
 
-                int difficulty = Integer.parseInt(difficultyStr);String[] moduleCreators = moduleCreatorsStr.split(",");
+                int difficulty = Integer.parseInt(difficultyStr);
+                String[] moduleCreators = moduleCreatorsStr.split(",");
                 LocalDate moduleCreationDate = LocalDate.parse(moduleCreationDateStr);
-
+                int category = Integer.parseInt(categoryStr);
                 Module module = new Module(moduleName, moduleCode, difficulty,
-                        manualPath, moduleCreators, moduleCreationDate);
+                        manualPath, moduleCreators, moduleCreationDate, category);
 
                 modules.add(module);
             }

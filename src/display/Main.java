@@ -15,6 +15,7 @@ import manual.InputIOException;
 import manual.ManualListReader;
 import manual.Module;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -41,7 +42,7 @@ public class Main extends Application
         modulesPane.setStyle(DEFAULT_BACK_STYLE);
         //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
-        final TextField searchBarInput = new TextField("Search for mods...");
+        final TextField searchBarInput = new TextField("Search for modules...");
         searchBarInput.setMaxWidth(Double.MAX_VALUE);
         HBox.setHgrow(searchBarInput, Priority.ALWAYS);
         final Button searchBarSubmit = new Button("Search!");
@@ -59,16 +60,13 @@ public class Main extends Application
         ROOT_PANE.getChildren().add(scrollableWindow);
         renderModules();
 
+        sortMenu.setOnMouseClicked(e -> applyModuleSort());
 
         final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
         primaryStage.setScene(scene);
         primaryStage.setWidth(750);
         primaryStage.setHeight(500);
-/*        primaryStage.setMaxWidth(1000);
-        primaryStage.setMaxHeight(1000);*/
-
-        sortMenu.setOnMouseClicked(e -> applyModuleSort());
 
         if(exceptionOnBoot)
         {
@@ -104,6 +102,7 @@ public class Main extends Application
         ToggleGroup sort = new ToggleGroup();
         RadioButton sortByName = new RadioButton("Module Name");
         sortByName.setToggleGroup(sort);
+        sortByName.setSelected(true);
         dialogGrid.add(sortByName,0,2);
         RadioButton sortByCode = new RadioButton("In-Game Module Code");
         sortByCode.setToggleGroup(sort);
@@ -158,8 +157,17 @@ public class Main extends Application
                     else
                         sortModules(4, false);
 
-                    clearModules();
-                    renderModules();
+                    ArrayList<Integer> categories = new ArrayList<Integer>();
+                    if(allowVanilla.isSelected())
+                        categories.add(0);
+                    if(allowRegular.isSelected())
+                        categories.add(1);
+                    if(allowNeedy.isSelected())
+                        categories.add(2);
+                    if(allowAppendices.isSelected())
+                        categories.add(3);
+
+                    filterModules(categories);
                 }
                 return null;
             }
@@ -276,6 +284,19 @@ public class Main extends Application
                 return toReturn;
             }
         });
+    }
+
+    private void filterModules(ArrayList<Integer> include)
+    {
+        ArrayList<Module> temp = new ArrayList<Module>(MODULES_AVAILABLE);
+        for(Module module : temp)
+        {
+            if(!include.contains(module.getCategory()))
+                MODULES_AVAILABLE.remove(module);
+        }
+        clearModules();
+        renderModules();
+        MODULES_AVAILABLE = temp;
     }
 
     /**

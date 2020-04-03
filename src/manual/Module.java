@@ -17,6 +17,7 @@ public class Module
     private File manualLocation = null;
     private String[] moduleCreators = null;
     private LocalDate moduleCreationDate = null;
+    private int category = 0;
     private boolean active = false;
 
     /**
@@ -25,13 +26,15 @@ public class Module
      * @param moduleCreators - the module's creator's name(s), eg "Steel Crate Games"
      * @param moduleCreationDate - the module's initial release date, eg 2015-10-08.
      */
-    public Module(String moduleName, String moduleCode, int difficulty, String manualPath, String[] moduleCreators, LocalDate moduleCreationDate)
+    public Module(String moduleName, String moduleCode, int difficulty, String manualPath, String[] moduleCreators,
+                  LocalDate moduleCreationDate, int category)
     {
         this.moduleName = moduleName;
         this.moduleCode = moduleCode;
         this.difficulty = difficulty;
         this.moduleCreators = moduleCreators;
         this.moduleCreationDate = moduleCreationDate;
+        this.category = category;
         manualLocation = new File(manualPath);
     }
 
@@ -118,5 +121,18 @@ public class Module
     public boolean isActive()
     {
         return active;
+    }
+
+    /**
+     * Obtains the category of this Module.
+     * @return an integer from 0 to 3 as follows:
+     *              0 - Vanilla Regular
+     *              1 - Modded Regular
+     *              2 - Needy
+     *              3 - Appendix
+     */
+    public int getCategory()
+    {
+        return category;
     }
 }

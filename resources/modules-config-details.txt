@@ -1,94 +1,94 @@
-Colour Flash	ColourFlash	2	./resources/modules/Colour Flash.pdf	Bashly	2016-06-19
-Piano Keys	PianoKeys	2	./resources/modules/Piano Keys.pdf	Bashly	2016-06-26
-Semaphore	Semaphore	3	./resources/modules/Semaphore.pdf	Bashly	2016-07-13
-Emoji Math	Emoji Math	1	./resources/modules/Emoji Math.pdf	Mock Army	2016-07-21
-Switches	switchModule	3	./resources/modules/Switches.pdf	Brian Fetter	2016-07-25
-Two Bits	TwoBits	2	./resources/modules/Two Bits.pdf	kaneb	2016-07-26
-Anagrams	AnagramsModule	1	./resources/modules/Anagrams.pdf	Mock Army	2016-07-28
-Word Scramble	WordScrambleModule	1	./resources/modules/Word Scramble.pdf	Mock Army	2016-07-28
-Combination Lock	combinationLock	2	./resources/modules/Combination Lock.pdf	Mock Army	2016-08-03
-Square Button	ButtonV2	2	./resources/modules/Square Button.pdf	Hexicube	2016-08-13
-Simon States	SimonV2	2	./resources/modules/Simon States.pdf	Hexicube	2016-08-13
-Round Keypad	KeypadV2	2	./resources/modules/Round Keypad.pdf	Hexicube	2016-08-13
-Listening	Listening	2	./resources/modules/Listening.pdf	Perky	2016-08-13
-Foreign Exchange Rates	ForeignExchangeRates	2	./resources/modules/Foreign Exchange Rates.pdf	Perky	2016-08-13
-Orientation Cube	OrientationCube	3	./resources/modules/Orientation Cube.pdf	Perky	2016-08-14
-Morsematics	MorseV2	4	./resources/modules/Morsematics.pdf	Hexicube	2016-08-14
-Connection Check	graphModule	2	./resources/modules/Connection Check.pdf	clutterArranger	2016-08-14
-Letter Keys	LetterKeys	1	./resources/modules/Letter Keys.pdf	Mage of R. Jelly	2016-08-15
-Forget Me Not	MemoryV2	4	./resources/modules/Forget Me Not.pdf	Hexicube	2016-08-15
-Astrology	spwizAstrology	3	./resources/modules/Astrology.pdf	Spare Wizard	2016-08-16
-Logic	Logic	4	./resources/modules/Logic.pdf	SL7205	2016-08-17
-Crazy Talk	CrazyTalk	2	./resources/modules/Crazy Talk.pdf	Perky	2016-08-19
-Adventure Game	spwizAdventureGame	3	./resources/modules/Adventure Game.pdf	Spare Wizard	2016-08-19
-Turn The Key	TurnTheKey	1	./resources/modules/Turn The Key.pdf	Perky	2016-08-20
-Turn The Keys	TurnTheKeyAdvanced	2	./resources/modules/Turn The Keys.pdf	Perky	2016-08-20
-Mystic Square	MysticSquareModule	3	./resources/modules/Mystic Square.pdf	Konqi	2016-08-20
-Plumbing	MazeV2	3	./resources/modules/Plumbing.pdf	Hexicube	2016-08-21
-Safety Safe	PasswordV2	3	./resources/modules/Safety Safe.pdf	Hexicube	2016-08-22
-Cryptography	CryptModule	4	./resources/modules/Cryptography.pdf	Perky	2016-08-24
-Chess	ChessModule	3	./resources/modules/Chess.pdf	"MoMo, Flamanis"	2016-08-24
-Mouse In The Maze	MouseInTheMaze	3	./resources/modules/Mouse In The Maze.pdf	Konqi	2016-08-26
-3D Maze	spwiz3DMaze	4	./resources/modules/3D Maze.pdf	Spare Wizard	2016-08-26
-Silly Slots	SillySlots	4	./resources/modules/Silly Slots.pdf	Perky	2016-08-29
-Number Pad	NumberPad	4	./resources/modules/Number Pad.pdf	mitterdoo	2016-08-30
-Laundry	Laundry	4	./resources/modules/Laundry.pdf	"Hendruid, AcrylicStain, Flamanis"	2016-08-31
-Probing	Probing	3	./resources/modules/Probing.pdf	Perky	2016-09-02
-Resistors	resistors	3	./resources/modules/Resistors.pdf	Onyxite	2016-09-12
-Skewed Slots	SkewedSlotsModule	4	./resources/modules/Skewed Slots.pdf	samfun123	2016-09-15
-Caesar Cipher	CaesarCipherModule	1	./resources/modules/Caesar Cipher.pdf	Eluminate	2016-09-18
-Perspective Pegs	spwizPerspectivePegs	3	./resources/modules/Perspective Pegs.pdf	Spare Wizard	2016-09-24
-Microcontroller	Microcontroller	3	./resources/modules/Microcontroller.pdf	Flush	2016-09-24
-Murder	murder	3	./resources/modules/Murder.pdf	Asimir	2016-09-26
-Gamepad	TheGamepadModule	3	./resources/modules/Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06
-Tic-Tac-Toe	TicTacToeModule	4	./resources/modules/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07
-Monsplode, Fight!	monsplodeFight	4	"./resources/modules/Monsplode, Fight!.pdf"	clutterArranger	2016-10-08
-Shape Shift	shapeshift	3	./resources/modules/Shape Shift.pdf	Asimir	2016-10-10
-Follow The Leader	FollowTheLeaderModule	3	./resources/modules/Follow The Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18
-Friendship	FriendshipModule	3	./resources/modules/Friendship.pdf	Timwi	2016-10-24
-Bulb	TheBulbModule	2	./resources/modules/The Bulb.pdf	Timwi	2016-10-28
-Alphabet	alphabet	1	./resources/modules/Alphabet.pdf	mitterdoo	2016-10-30
-Blind Alley	BlindAlleyModule	2	./resources/modules/Blind Alley.pdf	Timwi	2016-11-03
-Sea Shells	SeaShells	3	./resources/modules/Sea Shells.pdf	Asimir	2016-11-06
-English Test	EnglishTest	1	./resources/modules/English Test.pdf	"theFIZZYnator, Lupo511"	2016-11-06
-Rock-Paper-Scissors-Lizard-Spock	RockPaperScissorsLizardSpockModule	2	./resources/modules/Rock-Paper-Scissors-Lizard-Spock.pdf	Timwi	2016-11-12
-Hexamaze	HexamazeModule	4	./resources/modules/Hexamaze.pdf	Timwi	2016-11-21
-Bitmaps	BitmapsModule	4	./resources/modules/Bitmaps.pdf	"Timwi, Lumbud84"	2016-11-23
-Colored Squares	ColoredSquaresModule	1	./resources/modules/Colored Squares.pdf	"TheAuthorOfOZ, Timwi"	2016-11-24
-Adjacent Letters	AdjacentLettersModule	3	./resources/modules/Adjacent Letters.pdf	"Lumbud84, Timwi"	2016-11-25
-Third Base	ThirdBase	4	./resources/modules/Third Base.pdf	Asimir	2016-11-27
-Souvenir	SouvenirModule	4	./resources/modules/Souvenir.pdf	"Timwi, Andrio Celos"	2016-12-02
-Word Search	WordSearchModule	2	./resources/modules/Word Search.pdf	"TheAuthorOfOZ, Timwi"	2016-12-07
-Broken Buttons	BrokenButtonsModule	2	./resources/modules/Broken Buttons.pdf	samfun123	2016-12-12
-Simon Screams	SimonScreamsModule	4	./resources/modules/Simon Screams.pdf	Timwi	2016-12-20
-Modules Against Humanity	ModuleAgainstHumanity	2	./resources/modules/Modules Against Humanity.pdf	"catnip, Flamanis"	2016-12-24
-Complicated Buttons	complicatedButtonsModule	2	./resources/modules/Complicated Buttons.pdf	ZekNikZ	2016-12-31
-Battleship	BattleshipModule	4	./resources/modules/Battleship.pdf	Timwi	2017-01-03
-Text Field	TextField	2	./resources/modules/Text Field.pdf	SL7205	2017-01-05
-Symbolic Password	symbolicPasswordModule	2	./resources/modules/Symbolic Password.pdf	ZekNikZ	2017-01-05
-Wire Placement	WirePlacementModule	2	./resources/modules/Wire Placement.pdf	"Lumbud84, Timwi"	2017-01-06
-Double-Oh	DoubleOhModule	2	./resources/modules/Double-Oh.pdf	ZekNikZ	2017-01-15
-Cheap Checkout	CheapCheckoutModule	4	./resources/modules/Cheap Checkout.pdf	samfun123	2017-01-16
-Coordinates	CoordinatesModule	4	./resources/modules/Coordinates.pdf	Timwi	2017-01-20
-Light Cycle	LightCycleModule	4	./resources/modules/Light Cycle.pdf	"Rexkix, Timwi"	2017-01-23
-Rhythms	MusicRhythms	3	./resources/modules/Rhythms.pdf	"Riverbui, Trainzack"	2017-03-05
-Color Math	colormath	3	./resources/modules/Color Math.pdf	SL7205	2017-03-05
-Only Connect	OnlyConnectModule	4	./resources/modules/Only Connect.pdf	Timwi	2017-03-17
-Neutralization	neutralization	4	./resources/modules/Neutralization.pdf	"Nanthelas, SL7205"	2017-03-23
-Web Design	webDesign	4	./resources/modules/Web Design.pdf	"theFIZZYnator, SL7205"	2017-04-03
-Chord Qualities	ChordQualities	4	./resources/modules/Chord Qualities.pdf	"Riverbui, Trainzack"	2017-04-07
-Creation	CreationModule	3	./resources/modules/Creation.pdf	"Grybo, samfun123"	2017-04-17
-Rubik's Cube	RubiksCubeModule	4	./resources/modules/Rubik's Cube.pdf	"Timwi, Freelancer1025"	2017-04-30
-FizzBuzz	fizzBuzzModule	4	./resources/modules/FizzBuzz.pdf	ZekNikZ	2017-05-10
-Clock	TheClockModule	2	./resources/modules/The Clock.pdf	"TheAuthorOfOZ, Timwi"	2017-05-11
-LED Encryption	LEDEnc	3	./resources/modules/LED Encryption.pdf	Virepri	2017-05-12
-Bitwise Operations	BitOps	3	./resources/modules/Bitwise Operations.pdf	Virepri	2017-05-14
-Fast Math	fastMath	4	./resources/modules/Fast Math.pdf	"LeGeND, SL7205"	2017-05-25
-Minesweeper	MinesweeperModule	2	./resources/modules/Minesweeper.pdf	samfun123	2017-06-12
-Zoo	ZooModule	4	./resources/modules/Zoo.pdf	Timwi	2017-06-13
-Binary LEDs	BinaryLeds	3	./resources/modules/Binary LEDs.pdf	Willowyn	2017-06-18
-Boolean Venn Diagrams	booleanVennModule	4	./resources/modules/Boolean Venn Diagrams.pdf	ZekNikZ	2017-06-22
-Point Of Order	PointOfOrderModule	4	./resources/modules/Point Of Order.pdf	Timwi	2017-06-25
-Ice Cream	iceCreamModule	3	./resources/modules/Ice Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	2017-06-26
-Screw	screw	3	./resources/modules/The Screw.pdf	"Ezekiel, SL7205"	2017-07-01
-Yahtzee	YahtzeeModule	3	./resources/modules/Yahtzee.pdf	"Timwi, Rexkix"	2017-07-02
+Colour Flash	ColourFlash	2	./resources/modules/Colour Flash.pdf	Bashly	2016-06-19	1
+Piano Keys	PianoKeys	2	./resources/modules/Piano Keys.pdf	Bashly	2016-06-26	1
+Semaphore	Semaphore	3	./resources/modules/Semaphore.pdf	Bashly	2016-07-13	1
+Emoji Math	Emoji Math	1	./resources/modules/Emoji Math.pdf	Mock Army	2016-07-21	1
+Switches	switchModule	3	./resources/modules/Switches.pdf	Brian Fetter	2016-07-25	1
+Two Bits	TwoBits	2	./resources/modules/Two Bits.pdf	kaneb	2016-07-26	1
+Anagrams	AnagramsModule	1	./resources/modules/Anagrams.pdf	Mock Army	2016-07-28	1
+Word Scramble	WordScrambleModule	1	./resources/modules/Word Scramble.pdf	Mock Army	2016-07-28	1
+Combination Lock	combinationLock	2	./resources/modules/Combination Lock.pdf	Mock Army	2016-08-03	1
+Square Button	ButtonV2	2	./resources/modules/Square Button.pdf	Hexicube	2016-08-13	1
+Simon States	SimonV2	2	./resources/modules/Simon States.pdf	Hexicube	2016-08-13	1
+Round Keypad	KeypadV2	2	./resources/modules/Round Keypad.pdf	Hexicube	2016-08-13	1
+Listening	Listening	2	./resources/modules/Listening.pdf	Perky	2016-08-13	1
+Foreign Exchange Rates	ForeignExchangeRates	2	./resources/modules/Foreign Exchange Rates.pdf	Perky	2016-08-13	1
+Orientation Cube	OrientationCube	3	./resources/modules/Orientation Cube.pdf	Perky	2016-08-14	1
+Morsematics	MorseV2	4	./resources/modules/Morsematics.pdf	Hexicube	2016-08-14	1
+Connection Check	graphModule	2	./resources/modules/Connection Check.pdf	clutterArranger	2016-08-14	1
+Letter Keys	LetterKeys	1	./resources/modules/Letter Keys.pdf	Mage of R. Jelly	2016-08-15	1
+Forget Me Not	MemoryV2	4	./resources/modules/Forget Me Not.pdf	Hexicube	2016-08-15	1
+Astrology	spwizAstrology	3	./resources/modules/Astrology.pdf	Spare Wizard	2016-08-16	1
+Logic	Logic	4	./resources/modules/Logic.pdf	SL7205	2016-08-17	1
+Crazy Talk	CrazyTalk	2	./resources/modules/Crazy Talk.pdf	Perky	2016-08-19	1
+Adventure Game	spwizAdventureGame	3	./resources/modules/Adventure Game.pdf	Spare Wizard	2016-08-19	1
+Turn The Key	TurnTheKey	1	./resources/modules/Turn The Key.pdf	Perky	2016-08-20	1
+Turn The Keys	TurnTheKeyAdvanced	2	./resources/modules/Turn The Keys.pdf	Perky	2016-08-20	1
+Mystic Square	MysticSquareModule	3	./resources/modules/Mystic Square.pdf	Konqi	2016-08-20	1
+Plumbing	MazeV2	3	./resources/modules/Plumbing.pdf	Hexicube	2016-08-21	1
+Safety Safe	PasswordV2	3	./resources/modules/Safety Safe.pdf	Hexicube	2016-08-22	1
+Cryptography	CryptModule	4	./resources/modules/Cryptography.pdf	Perky	2016-08-24	1
+Chess	ChessModule	3	./resources/modules/Chess.pdf	"MoMo, Flamanis"	2016-08-24	1
+Mouse In The Maze	MouseInTheMaze	3	./resources/modules/Mouse In The Maze.pdf	Konqi	2016-08-26	1
+3D Maze	spwiz3DMaze	4	./resources/modules/3D Maze.pdf	Spare Wizard	2016-08-26	1
+Silly Slots	SillySlots	4	./resources/modules/Silly Slots.pdf	Perky	2016-08-29	1
+Number Pad	NumberPad	4	./resources/modules/Number Pad.pdf	mitterdoo	2016-08-30	1
+Laundry	Laundry	4	./resources/modules/Laundry.pdf	"Hendruid, AcrylicStain, Flamanis"	2016-08-31	1
+Probing	Probing	3	./resources/modules/Probing.pdf	Perky	2016-09-02	1
+Resistors	resistors	3	./resources/modules/Resistors.pdf	Onyxite	2016-09-12	1
+Skewed Slots	SkewedSlotsModule	4	./resources/modules/Skewed Slots.pdf	samfun123	2016-09-15	1
+Caesar Cipher	CaesarCipherModule	1	./resources/modules/Caesar Cipher.pdf	Eluminate	2016-09-18	1
+Perspective Pegs	spwizPerspectivePegs	3	./resources/modules/Perspective Pegs.pdf	Spare Wizard	2016-09-24	1
+Microcontroller	Microcontroller	3	./resources/modules/Microcontroller.pdf	Flush	2016-09-24	1
+Murder	murder	3	./resources/modules/Murder.pdf	Asimir	2016-09-26	1
+Gamepad	TheGamepadModule	3	./resources/modules/Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
+Tic-Tac-Toe	TicTacToeModule	4	./resources/modules/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07	1
+"Monsplode, Fight!"	monsplodeFight	4	"./resources/modules/Monsplode, Fight!.pdf"	clutterArranger	2016-10-08	1
+Shape Shift	shapeshift	3	./resources/modules/Shape Shift.pdf	Asimir	2016-10-10	1
+Follow The Leader	FollowTheLeaderModule	3	./resources/modules/Follow The Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18	1
+Friendship	FriendshipModule	3	./resources/modules/Friendship.pdf	Timwi	2016-10-24	1
+Bulb	TheBulbModule	2	./resources/modules/The Bulb.pdf	Timwi	2016-10-28	1
+Alphabet	alphabet	1	./resources/modules/Alphabet.pdf	mitterdoo	2016-10-30	1
+Blind Alley	BlindAlleyModule	2	./resources/modules/Blind Alley.pdf	Timwi	2016-11-03	1
+Sea Shells	SeaShells	3	./resources/modules/Sea Shells.pdf	Asimir	2016-11-06	1
+English Test	EnglishTest	1	./resources/modules/English Test.pdf	"theFIZZYnator, Lupo511"	2016-11-06	1
+Rock-Paper-Scissors-Lizard-Spock	RockPaperScissorsLizardSpockModule	2	./resources/modules/Rock-Paper-Scissors-Lizard-Spock.pdf	Timwi	2016-11-12	1
+Hexamaze	HexamazeModule	4	./resources/modules/Hexamaze.pdf	Timwi	2016-11-21	1
+Bitmaps	BitmapsModule	4	./resources/modules/Bitmaps.pdf	"Timwi, Lumbud84"	2016-11-23	1
+Colored Squares	ColoredSquaresModule	1	./resources/modules/Colored Squares.pdf	"TheAuthorOfOZ, Timwi"	2016-11-24	1
+Adjacent Letters	AdjacentLettersModule	3	./resources/modules/Adjacent Letters.pdf	"Lumbud84, Timwi"	2016-11-25	1
+Third Base	ThirdBase	4	./resources/modules/Third Base.pdf	Asimir	2016-11-27	1
+Souvenir	SouvenirModule	4	./resources/modules/Souvenir.pdf	"Timwi, Andrio Celos"	2016-12-02	1
+Word Search	WordSearchModule	2	./resources/modules/Word Search.pdf	"TheAuthorOfOZ, Timwi"	2016-12-07	1
+Broken Buttons	BrokenButtonsModule	2	./resources/modules/Broken Buttons.pdf	samfun123	2016-12-12	1
+Simon Screams	SimonScreamsModule	4	./resources/modules/Simon Screams.pdf	Timwi	2016-12-20	1
+Modules Against Humanity	ModuleAgainstHumanity	2	./resources/modules/Modules Against Humanity.pdf	"catnip, Flamanis"	2016-12-24	1
+Complicated Buttons	complicatedButtonsModule	2	./resources/modules/Complicated Buttons.pdf	ZekNikZ	2016-12-31	1
+Battleship	BattleshipModule	4	./resources/modules/Battleship.pdf	Timwi	2017-01-03	1
+Text Field	TextField	2	./resources/modules/Text Field.pdf	SL7205	2017-01-05	1
+Symbolic Password	symbolicPasswordModule	2	./resources/modules/Symbolic Password.pdf	ZekNikZ	2017-01-05	1
+Wire Placement	WirePlacementModule	2	./resources/modules/Wire Placement.pdf	"Lumbud84, Timwi"	2017-01-06	1
+Double-Oh	DoubleOhModule	2	./resources/modules/Double-Oh.pdf	ZekNikZ	2017-01-15	1
+Cheap Checkout	CheapCheckoutModule	4	./resources/modules/Cheap Checkout.pdf	samfun123	2017-01-16	1
+Coordinates	CoordinatesModule	4	./resources/modules/Coordinates.pdf	Timwi	2017-01-20	1
+Light Cycle	LightCycleModule	4	./resources/modules/Light Cycle.pdf	"Rexkix, Timwi"	2017-01-23	1
+Rhythms	MusicRhythms	3	./resources/modules/Rhythms.pdf	"Riverbui, Trainzack"	2017-03-05	1
+Color Math	colormath	3	./resources/modules/Color Math.pdf	SL7205	2017-03-05	1
+Only Connect	OnlyConnectModule	4	./resources/modules/Only Connect.pdf	Timwi	2017-03-17	1
+Neutralization	neutralization	4	./resources/modules/Neutralization.pdf	"Nanthelas, SL7205"	2017-03-23	1
+Web Design	webDesign	4	./resources/modules/Web Design.pdf	"theFIZZYnator, SL7205"	2017-04-03	1
+Chord Qualities	ChordQualities	4	./resources/modules/Chord Qualities.pdf	"Riverbui, Trainzack"	2017-04-07	1
+Creation	CreationModule	3	./resources/modules/Creation.pdf	"Grybo, samfun123"	2017-04-17	1
+Rubik's Cube	RubiksCubeModule	4	./resources/modules/Rubik's Cube.pdf	"Timwi, Freelancer1025"	2017-04-30	1
+FizzBuzz	fizzBuzzModule	4	./resources/modules/FizzBuzz.pdf	ZekNikZ	2017-05-10	1
+Clock	TheClockModule	2	./resources/modules/The Clock.pdf	"TheAuthorOfOZ, Timwi"	2017-05-11	1
+LED Encryption	LEDEnc	3	./resources/modules/LED Encryption.pdf	Virepri	2017-05-12	1
+Bitwise Operations	BitOps	3	./resources/modules/Bitwise Operations.pdf	Virepri	2017-05-14	1
+Fast Math	fastMath	4	./resources/modules/Fast Math.pdf	"LeGeND, SL7205"	2017-05-25	1
+Minesweeper	MinesweeperModule	2	./resources/modules/Minesweeper.pdf	samfun123	2017-06-12	1
+Zoo	ZooModule	4	./resources/modules/Zoo.pdf	Timwi	2017-06-13	1
+Binary LEDs	BinaryLeds	3	./resources/modules/Binary LEDs.pdf	Willowyn	2017-06-18	1
+Boolean Venn Diagrams	booleanVennModule	4	./resources/modules/Boolean Venn Diagrams.pdf	ZekNikZ	2017-06-22	1
+Point Of Order	PointOfOrderModule	4	./resources/modules/Point Of Order.pdf	Timwi	2017-06-25	1
+Ice Cream	iceCreamModule	3	./resources/modules/Ice Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	2017-06-26	1
+Screw	screw	3	./resources/modules/The Screw.pdf	"Ezekiel, SL7205"	2017-07-01	1
+Yahtzee	YahtzeeModule	3	./resources/modules/Yahtzee.pdf	"Timwi, Rexkix"	2017-07-02	1
