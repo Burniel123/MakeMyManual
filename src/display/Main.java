@@ -28,6 +28,7 @@ public class Main extends Application
     private static final String SELECTED_MODULE_STYLE = "-fx-background-color: #669900";
     private static final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
     private static boolean exceptionOnBoot = false;
+    private static int numSelected = 0;
 
     private ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
 
@@ -56,7 +57,7 @@ public class Main extends Application
                 sortMenu, presetsButton, makeIt);
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
-        final Label numSelected = new Label("Modules Selected: 0/98");
+        final Label numSelected = new Label("Modules Selected: 0/" + MODULES_AVAILABLE.size());
         numSelectedBar.getChildren().add(numSelected);
         ROOT_PANE.getChildren().addAll(topMenu, numSelectedBar);
         ROOT_PANE.getChildren().add(scrollableWindow);
@@ -220,12 +221,16 @@ public class Main extends Application
                 {
                     moduleRegion.setStyle(SELECTED_MODULE_STYLE);
                     module.activate();
+                    numSelected++;
                 }
                 else
                 {
                     moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
                     module.deactivate();
+                    numSelected--;
                 }
+                ((Label)((HBox)ROOT_PANE.getChildren().get(1)).getChildren().get(0)).setText("Modules Selected: " +
+                        numSelected + "/" + MODULES_AVAILABLE.size());
             });
             //Adding the constructed module region to its pane:
             modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
