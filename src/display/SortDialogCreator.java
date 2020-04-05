@@ -106,8 +106,6 @@ public class SortDialogCreator
                     if(allowAppendices.isSelected())
                         categories.add(3);
                     filterModules(categories);
-                    Main.searchModules(((TextField)((HBox)Main.ROOT_PANE.getChildren().get(0)).getChildren().
-                            get(0)).getText());
                 }
                 return null;
             }
@@ -190,8 +188,10 @@ public class SortDialogCreator
             if(!include.contains(module.getCategory()))
                 Main.MODULES_AVAILABLE.remove(module);
         }
-        Main.clearModules();
-        Main.renderModules();
+        Main.searchModules(((TextField)((HBox)Main.ROOT_PANE.getChildren().get(0)).getChildren().
+                get(0)).getText());
+/*        Main.clearModules();
+        Main.renderModules();*/
         Main.MODULES_AVAILABLE = temp;
     }
 }

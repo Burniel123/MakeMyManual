@@ -96,3 +96,14 @@ German Button	BigButtonTranslated	1	modules/German Button.pdf	"Malde, Tharagon"	
 German Morse Code	MorseCodeTranslated	2	modules/German Morse Code.pdf	"Malde, Tharagon"	2017-01-25	1
 German Password	PasswordsTranslated	2	modules/German Password.pdf	"Malde, Tharagon"	2017-01-25	1
 German Who's On First	WhosOnFirstTranslated	2	modules/German Who's On First.pdf	"Malde, Tharagon"	2017-01-25	1
+Wires	Wires	1	modules/Wires.pdf	Steel Crate Games	2015-10-08	0
+Button	BigButton	1	modules/The Button.pdf	Steel Crate Games	2015-10-08	0
+Keypad	Keypad	2	modules/Keypad.pdf	Steel Crate Games	2015-10-08	0
+Simon Says	Simon	1	modules/Simon Says.pdf	Steel Crate Games	2015-10-08	0
+Who's On First	WhosOnFirst	2	modules/Who's On First.pdf	Steel Crate Games	2015-10-08	0
+Memory	Memory	2	modules/Memory.pdf	Steel Crate Games	2015-10-08	0
+Morse Code	Morse	3	modules/Morse Code.pdf	Steel Crate Games	2015-10-08	0
+Complicated Wires	Venn	3	modules/Complicated Wires.pdf	Steel Crate Games	2015-10-08	0
+Wire Sequence	WireSequence	3	modules/Wire Sequence.pdf	Steel Crate Games	2015-10-08	0
+Maze	Maze	2	modules/Maze.pdf	Steel Crate Games	2015-10-08	0
+Password	Password	2	modules/Password.pdf	Steel Crate Games	2015-10-08	0
