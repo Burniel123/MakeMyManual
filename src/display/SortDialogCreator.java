@@ -133,16 +133,16 @@ public class SortDialogCreator
                 switch (sortBy)
                 {//Implement a different way of comparing objects depending on the required field.
                     case 0 :
-                        if(o1.getModuleName().compareTo(o2.getModuleName()) > 0)
+                        if(o1.getModuleName().compareToIgnoreCase(o2.getModuleName()) > 0)
                             toReturn = 1;
-                        else if(o1.getModuleName().compareTo(o2.getModuleName()) == 0)
+                        else if(o1.getModuleName().compareToIgnoreCase(o2.getModuleName()) == 0)
                             toReturn = 0;
                         else
                             toReturn = -1;break;
                     case 1 :
-                        if(o1.getModuleCode().compareTo(o2.getModuleCode()) > 0)
+                        if(o1.getModuleCode().compareToIgnoreCase(o2.getModuleCode()) > 0)
                             toReturn = 1;
-                        else if(o1.getModuleCode().compareTo(o2.getModuleCode()) == 0)
+                        else if(o1.getModuleCode().compareToIgnoreCase(o2.getModuleCode()) == 0)
                             toReturn = 0;
                         else
                             toReturn = -1;break;
@@ -154,9 +154,9 @@ public class SortDialogCreator
                         else
                             toReturn = -1;break;
                     case 3 :
-                        if(o1.getModuleCreators()[0].compareTo(o2.getModuleCreators()[0]) > 0)
+                        if(o1.getModuleCreators()[0].compareToIgnoreCase(o2.getModuleCreators()[0]) > 0)
                             toReturn = 1;
-                        else if(o1.getModuleCreators()[0].compareTo(o2.getModuleCreators()[0]) == 0)
+                        else if(o1.getModuleCreators()[0].compareToIgnoreCase(o2.getModuleCreators()[0]) == 0)
                             toReturn = 0;
                         else
                             toReturn = -1;break;
