@@ -65,15 +65,36 @@ public class MakeManualDialogCreator
             {
                 if(buttonType == ButtonType.OK)
                 {
+                    ArrayList<Module> displayModules = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                     Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
                     SortDialogCreator sdc = new SortDialogCreator();
+                    ArrayList<Module> needySection = new ArrayList<Module>();
+                    if(splitNeedy.isSelected())
+                    {
+                        ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
+                        ArrayList<Integer> needyFilter = new ArrayList<Integer>();
+                        needyFilter.add(2);
+                        sdc.filterModules(needyFilter);
+                        for(Module module : Main.MODULES_DISPLAYED)
+                        {
+                            if(module.isActive())
+                                needySection.add(module);
+                            temp.remove(module);
+                        }
+                        Main.MODULES_DISPLAYED = temp;
+                    }
                     sdc.sortModules(0, false);
                     for(Module module : Main.MODULES_DISPLAYED)
                     {
                         if(module.isActive())
                             manual.addModule(module);
                     }
+                    for(Module module : needySection)
+                        manual.addModule(module);
                     manual.setManualName("The Centurion - Manual");
+                    Main.MODULES_DISPLAYED = displayModules;
+                    Main.clearModules();
+                    Main.renderModules();
                     Runnable compile = new Runnable()
                     {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
                         @Override
@@ -86,7 +107,6 @@ public class MakeManualDialogCreator
                                 builder.redirectErrorStream(true);
                                 Process pro = builder.start();
                                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
-                                OutputStream outStrm = pro.getOutputStream();
                                 System.out.println("Should be rolling");
                                 String line = null;
                                 while ((line = inStrm.readLine()) != null)

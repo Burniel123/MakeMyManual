@@ -184,7 +184,7 @@ public class SortDialogCreator
      * Applies a filter based on module categories and then renders this.
      * @param include
      */
-    private void filterModules(ArrayList<Integer> include)
+    void filterModules(ArrayList<Integer> include)
     {
         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
         for(Module module : temp)
