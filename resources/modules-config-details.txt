@@ -107,3 +107,6 @@ Complicated Wires	Venn	3	modules/Complicated Wires.pdf	Steel Crate Games	2015-10
 Wire Sequence	WireSequence	3	modules/Wire Sequence.pdf	Steel Crate Games	2015-10-08	0
 Maze	Maze	2	modules/Maze.pdf	Steel Crate Games	2015-10-08	0
 Password	Password	2	modules/Password.pdf	Steel Crate Games	2015-10-08	0
+Capacitor Discharge	NeedyCapacitor	1	modules/Capacitor Discharge.pdf	Steel Crate Games	2015-10-08	2
+Knob	NeedyKnob	1	modules/Knob.pdf	Steel Crate Games	2015-10-08	2
+Venting Gas	NeedyVentGas	1	modules/Venting Gas.pdf	Steel Crate Games	2015-10-08	2
