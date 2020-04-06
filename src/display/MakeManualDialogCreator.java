@@ -69,8 +69,9 @@ public class MakeManualDialogCreator
                     Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
                     SortDialogCreator sdc = new SortDialogCreator();
                     ArrayList<Module> needySection = new ArrayList<Module>();
+                    ArrayList<Module> vanillaSection = new ArrayList<Module>();
                     if(splitNeedy.isSelected())
-                    {
+                    {//Separates active needy modules.
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                         ArrayList<Integer> needyFilter = new ArrayList<Integer>();
                         needyFilter.add(2);
@@ -83,12 +84,28 @@ public class MakeManualDialogCreator
                         }
                         Main.MODULES_DISPLAYED = temp;
                     }
+                    if(splitVanilla.isSelected())
+                    {//Separates active vanilla modules.
+                        ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
+                        ArrayList<Integer> vanillaFilter = new ArrayList<Integer>();
+                        vanillaFilter.add(0);
+                        sdc.filterModules(vanillaFilter);
+                        for(Module module : Main.MODULES_DISPLAYED)
+                        {
+                            if(module.isActive())
+                                vanillaSection.add(module);
+                            temp.remove(module);
+                        }
+                        Main.MODULES_DISPLAYED = temp;
+                    }
                     sdc.sortModules(0, false);
                     for(Module module : Main.MODULES_DISPLAYED)
                     {
                         if(module.isActive())
                             manual.addModule(module);
                     }
+                    for(Module module : vanillaSection)
+                        manual.addModule(module);
                     for(Module module : needySection)
                         manual.addModule(module);
                     manual.setManualName("The Centurion - Manual");
