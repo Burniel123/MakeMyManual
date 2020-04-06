@@ -9,7 +9,10 @@ import javafx.util.Callback;
 import manual.ManualCreator;
 import manual.Module;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.security.cert.Extension;
 
 /**
@@ -43,12 +46,13 @@ public class MakeManualDialogCreator
         Button chooseDestination = new Button("Choose manual location...");
         dialogGrid.add(chooseDestination, 0, 3);
         FileChooser saveLocation = new FileChooser();
-        ExtensionFilter filter = new ExtensionFilter("Portable Document Format: pdf", ".pdf");
+        ExtensionFilter filter = new ExtensionFilter("LaTeX file: .tex", ".tex");
         saveLocation.getExtensionFilters().add(filter);
+        ManualCreator manual = new ManualCreator("resources/manual.tex");
         chooseDestination.setOnMouseClicked(e ->
         {
                 File save = saveLocation.showSaveDialog(new Stage());
-
+                manual.setOutputTexFile(save);
         });
 
         makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
@@ -61,7 +65,6 @@ public class MakeManualDialogCreator
             {
                 if(buttonType == ButtonType.OK)
                 {
-                    ManualCreator manual = new ManualCreator("resources/manual.tex");
                     for(Module module : Main.MODULES_AVAILABLE)
                     {
                         if(module.isActive())
@@ -71,8 +74,17 @@ public class MakeManualDialogCreator
                     try
                     {
                         manual.writeManual();
+                        ProcessBuilder builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
+                        builder.redirectErrorStream(true);
+                        Process pro = builder.start();
+                        BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+                        OutputStream outStrm = pro.getOutputStream();
+                        System.out.println("Should be rolling");
+                        String line = null;
+                        while((line = inStrm.readLine()) != null)
+                            System.out.print(line);
                     }
-                    catch(Exception e){}
+                    catch(Exception e){System.out.println(e);}
                 }
                 return null;
             }

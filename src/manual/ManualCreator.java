@@ -30,6 +30,24 @@ public class ManualCreator
     }
 
     /**
+     * Sets the file path to write the tex file to (and hence the pdf to).
+     * @param texFilePath - a .tex file path to write to.
+     */
+    public void setOutputTexFile(File texFilePath)
+    {
+        outputTexFile = texFilePath;
+    }
+
+    /**
+     * Obtain the path of the tex file so it can be compiled into a pdf.
+     * @return a String representing the filepath of the tex file for this manual.
+     */
+    public String getTexFilePath()
+    {
+        return outputTexFile.getPath();
+    }
+
+    /**
      * Adds a module to the list of modules to be included in this manual.
      * @param module - a Module object to add to the manual.
      */
@@ -162,6 +180,8 @@ public class ManualCreator
      */
     private String editPath(String path)
     {
+        String currentDir = System.getProperty("user.dir");
+        path = currentDir + "/resources/" + path;
         String editedPath = "";
         for(int i = 0; i < path.length(); i++)
         {
