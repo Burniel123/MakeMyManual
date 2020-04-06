@@ -1,18 +1,18 @@
 package display;
 
+import javafx.application.Platform;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import manual.InputIOException;
 import manual.ManualCreator;
 import manual.Module;
+import manual.OutputIOException;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.security.cert.Extension;
 
 /**
@@ -48,6 +48,7 @@ public class MakeManualDialogCreator
         FileChooser saveLocation = new FileChooser();
         ExtensionFilter filter = new ExtensionFilter("LaTeX file: .tex", ".tex");
         saveLocation.getExtensionFilters().add(filter);
+        saveLocation.setTitle("Choose location to save manual");
         ManualCreator manual = new ManualCreator("resources/manual.tex");
         chooseDestination.setOnMouseClicked(e ->
         {
@@ -71,20 +72,65 @@ public class MakeManualDialogCreator
                             manual.addModule(module);
                     }
                     manual.setManualName("The Centurion - Manual");
-                    try
-                    {
-                        manual.writeManual();
-                        ProcessBuilder builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
-                        builder.redirectErrorStream(true);
-                        Process pro = builder.start();
-                        BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
-                        OutputStream outStrm = pro.getOutputStream();
-                        System.out.println("Should be rolling");
-                        String line = null;
-                        while((line = inStrm.readLine()) != null)
-                            System.out.print(line);
-                    }
-                    catch(Exception e){System.out.println(e);}
+                    Runnable compile = new Runnable()
+                    {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
+                        @Override
+                        public void run()
+                        {
+                            try
+                            {
+                                manual.writeManual();
+                                ProcessBuilder builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
+                                builder.redirectErrorStream(true);
+                                Process pro = builder.start();
+                                BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+                                OutputStream outStrm = pro.getOutputStream();
+                                System.out.println("Should be rolling");
+                                String line = null;
+                                while ((line = inStrm.readLine()) != null)
+                                    System.out.print(line);
+                            }
+                            catch(OutputIOException e)
+                            {//This exception will be thrown if there was an error writing to the tex file.
+                                Platform.runLater(new Runnable()
+                                {
+                                    @Override
+                                    public void run()
+                                    {
+                                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                                        exceptionAlert.setTitle("Error writing manual!");
+                                        exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
+                                                "Do all working directories have appropriate permissions?");
+                                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                                                "If problem persists, please contact Daniel Burton.");
+                                        exceptionAlert.showAndWait();
+                                        Platform.exit();
+                                    }
+                                });
+                            }
+                            catch(IOException e)
+                            {//This exception will be thrown if there was an error compiling the pdf.
+                                Platform.runLater(new Runnable()
+                                {
+                                    @Override
+                                    public void run()
+                                    {
+                                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                                        exceptionAlert.setTitle("Error writing manual!");
+                                        exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
+                                                "Do all working directories have appropriate permissions?");
+                                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                                                "If problem persists, please contact Daniel Burton.");
+                                        exceptionAlert.showAndWait();
+                                        Platform.exit();
+                                    }
+                                });
+                            }
+                        }
+                    };
+                    Thread compileThread = new Thread(compile);
+                    compileThread.setDaemon(true);
+                    compileThread.start();
                 }
                 return null;
             }
