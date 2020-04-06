@@ -12,6 +12,7 @@ import manual.Module;
 import manual.OutputIOException;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
@@ -64,7 +65,10 @@ public class MakeManualDialogCreator
             {
                 if(buttonType == ButtonType.OK)
                 {
-                    for(Module module : Main.MODULES_AVAILABLE)
+                    Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
+                    SortDialogCreator sdc = new SortDialogCreator();
+                    sdc.sortModules(0, false);
+                    for(Module module : Main.MODULES_DISPLAYED)
                     {
                         if(module.isActive())
                             manual.addModule(module);

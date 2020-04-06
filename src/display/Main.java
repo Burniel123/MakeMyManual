@@ -2,9 +2,11 @@ package display;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
@@ -15,7 +17,6 @@ import manual.InputIOException;
 import manual.ManualListReader;
 import manual.Module;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main extends Application
@@ -53,7 +54,7 @@ public class Main extends Application
         final Button selectAll = new Button("Select All");
         final Button makeIt = new Button("Make My Manual!");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
-                sortMenu, presetsButton, makeIt);
+                sortMenu, presetsButton, selectAll, makeIt);
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/" + MODULES_AVAILABLE.size());
@@ -75,6 +76,20 @@ public class Main extends Application
             {
                 searchModules(searchBarInput.getText());
             }
+        });
+        selectAll.setOnMouseClicked(e ->
+        {
+            FlowPane fp = (FlowPane)scrollableWindow.getContent();
+            ObservableList<Node> modulePanes = fp.getChildren();
+            sdc.sortModules(0, false);
+            for(int i = 0; i < modulePanes.size(); i++)
+            {
+                StackPane modulePane = (StackPane)modulePanes.get(i);
+                modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
+                Main.numSelected++;
+                MODULES_DISPLAYED.get(i).activate();
+            }
+            numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
         });
         makeIt.setOnMouseClicked(e ->
         {
@@ -162,25 +177,16 @@ public class Main extends Application
 
     static void searchModules(String searchTerm)
     {
-/*        if(searchTerm.equals(""))
-        {
-            MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
-            SortDialogCreator sdc = new SortDialogCreator();
-            sdc.sortModules(0, false);
-        }*/
-/*        else
-        {*/
             ArrayList<Module> temp = new ArrayList<Module>(MODULES_DISPLAYED);
             for(Module module : temp)
             {
                 if(!module.getModuleName().toLowerCase().contains(searchTerm.toLowerCase()))
                     MODULES_DISPLAYED.remove(module);
             }
-/*        }*/
-    clearModules();
-    renderModules();
-    MODULES_DISPLAYED = temp;
-}
+        clearModules();
+        renderModules();
+        MODULES_DISPLAYED = temp;
+    }
 
     /**
      * Initialises the Application by reading the module list file.
