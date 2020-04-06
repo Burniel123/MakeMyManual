@@ -15,6 +15,7 @@ import manual.InputIOException;
 import manual.ManualListReader;
 import manual.Module;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main extends Application
@@ -26,7 +27,8 @@ public class Main extends Application
     static boolean exceptionOnBoot = false;
     static int numSelected = 0;
 
-    static ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
+    static ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();//Please don't change after init.
+    static ArrayList<Module> MODULES_DISPLAYED = new ArrayList<Module>();
 
     @Override
     public void start(Stage primaryStage) throws Exception
@@ -48,6 +50,7 @@ public class Main extends Application
         searchSeparator.setOrientation(Orientation.VERTICAL);
         final Button sortMenu = new Button("Sort");
         final Button presetsButton = new Button("Presets");
+        final Button selectAll = new Button("Select All");
         final Button makeIt = new Button("Make My Manual!");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
                 sortMenu, presetsButton, makeIt);
@@ -62,11 +65,16 @@ public class Main extends Application
 
         SortDialogCreator sdc = new SortDialogCreator();
         sortMenu.setOnMouseClicked(e -> sdc.applyModuleSort());
-        searchBarSubmit.setOnMouseClicked(e -> searchModules(searchBarInput.getText()));
+        searchBarSubmit.setOnMouseClicked(e ->
+        {
+            searchModules(searchBarInput.getText());
+        });
         searchBarInput.setOnKeyPressed(e ->
         {
             if(e.getCode() == KeyCode.ENTER)
+            {
                 searchModules(searchBarInput.getText());
+            }
         });
         makeIt.setOnMouseClicked(e ->
         {
@@ -111,10 +119,10 @@ public class Main extends Application
      */
     static void renderModules()
     {
-        for(int i = 0; i < MODULES_AVAILABLE.size(); i++)
+        for(int i = 0; i < MODULES_DISPLAYED.size(); i++)
         {
             //Components to build each module region:
-            Module module = MODULES_AVAILABLE.get(i);
+            Module module = MODULES_DISPLAYED.get(i);
             final StackPane modulePane = new StackPane();
             final Region moduleRegion = new Region();
             final Label moduleName = new Label(module.getModuleName() + "\n\n");
@@ -154,16 +162,25 @@ public class Main extends Application
 
     static void searchModules(String searchTerm)
     {
-        ArrayList<Module> temp = new ArrayList<Module>(MODULES_AVAILABLE);
-        for(Module module : temp)
+/*        if(searchTerm.equals(""))
         {
-            if(!module.getModuleName().toLowerCase().contains(searchTerm.toLowerCase()))
-                MODULES_AVAILABLE.remove(module);
-        }
-        clearModules();
-        renderModules();
-        MODULES_AVAILABLE = temp;
-    }
+            MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
+            SortDialogCreator sdc = new SortDialogCreator();
+            sdc.sortModules(0, false);
+        }*/
+/*        else
+        {*/
+            ArrayList<Module> temp = new ArrayList<Module>(MODULES_DISPLAYED);
+            for(Module module : temp)
+            {
+                if(!module.getModuleName().toLowerCase().contains(searchTerm.toLowerCase()))
+                    MODULES_DISPLAYED.remove(module);
+            }
+/*        }*/
+    clearModules();
+    renderModules();
+    MODULES_DISPLAYED = temp;
+}
 
     /**
      * Initialises the Application by reading the module list file.
@@ -175,6 +192,7 @@ public class Main extends Application
         try
         {
             MODULES_AVAILABLE = reader.readModuleList();
+            MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
             SortDialogCreator sdc = new SortDialogCreator();
             sdc.sortModules(0, false);
         }

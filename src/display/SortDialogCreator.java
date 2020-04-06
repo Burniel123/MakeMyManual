@@ -7,6 +7,7 @@ import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 import manual.Module;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -80,6 +81,8 @@ public class SortDialogCreator
             {//Defines what to do when the dialog is submitted.
                 if(buttonType == ButtonType.OK)
                 {
+                    Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
+
                     //Deal with sorting the list first:
                     String sortByStr = ((RadioButton)sort.getSelectedToggle()).getText();
                     boolean reverseOrder = false;
@@ -95,6 +98,7 @@ public class SortDialogCreator
                         sortModules(3, reverseOrder);
                     else
                         sortModules(4, reverseOrder);
+
                     //Now deal with filtering the sorted list, as filtering is stable:
                     ArrayList<Integer> categories = new ArrayList<Integer>();
                     if(allowVanilla.isSelected())
@@ -124,7 +128,7 @@ public class SortDialogCreator
      */
     void sortModules(int sortBy, boolean reverse)
     {
-        Collections.sort(Main.MODULES_AVAILABLE, new Comparator<Module>()
+        Collections.sort(Main.MODULES_DISPLAYED, new Comparator<Module>()
         {
             @Override
             public int compare(Module o1, Module o2)
@@ -182,16 +186,13 @@ public class SortDialogCreator
      */
     private void filterModules(ArrayList<Integer> include)
     {
-        ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_AVAILABLE);
+        ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
         for(Module module : temp)
         {
             if(!include.contains(module.getCategory()))
-                Main.MODULES_AVAILABLE.remove(module);
+                Main.MODULES_DISPLAYED.remove(module);
         }
         Main.searchModules(((TextField)((HBox)Main.ROOT_PANE.getChildren().get(0)).getChildren().
                 get(0)).getText());
-/*        Main.clearModules();
-        Main.renderModules();*/
-        Main.MODULES_AVAILABLE = temp;
     }
 }

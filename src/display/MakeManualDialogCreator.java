@@ -7,13 +7,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import manual.InputIOException;
 import manual.ManualCreator;
 import manual.Module;
 import manual.OutputIOException;
 
 import java.io.*;
-import java.security.cert.Extension;
 
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
