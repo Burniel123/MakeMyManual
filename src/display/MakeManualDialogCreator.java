@@ -1,13 +1,16 @@
 package display;
 
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.DialogPane;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import manual.ManualCreator;
 import manual.Module;
+
+import java.io.File;
+import java.security.cert.Extension;
 
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
@@ -36,6 +39,17 @@ public class MakeManualDialogCreator
         dialogGrid.add(splitNeedy, 0, 1);
         CheckBox splitVanilla = new CheckBox("Separate section for any vanilla modules after mods");
         dialogGrid.add(splitVanilla, 0, 2);
+
+        Button chooseDestination = new Button("Choose manual location...");
+        dialogGrid.add(chooseDestination, 0, 3);
+        FileChooser saveLocation = new FileChooser();
+        ExtensionFilter filter = new ExtensionFilter("Portable Document Format: pdf", ".pdf");
+        saveLocation.getExtensionFilters().add(filter);
+        chooseDestination.setOnMouseClicked(e ->
+        {
+                File save = saveLocation.showSaveDialog(new Stage());
+
+        });
 
         makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
         makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
