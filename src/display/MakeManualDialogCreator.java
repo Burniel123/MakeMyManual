@@ -61,64 +61,57 @@ public class MakeManualDialogCreator
         makeManualDialog.setResultConverter(new Callback<ButtonType, Void>()
         {
             @Override
-            public Void call(ButtonType buttonType)
-            {
-                if(buttonType == ButtonType.OK)
+            public Void call(ButtonType buttonType) {
+                if (buttonType == ButtonType.OK)
                 {
                     ArrayList<Module> displayModules = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                     Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
                     SortDialogCreator sdc = new SortDialogCreator();
                     ArrayList<Module> needySection = new ArrayList<Module>();
                     ArrayList<Module> vanillaSection = new ArrayList<Module>();
-                    if(splitNeedy.isSelected())
-                    {//Separates active needy modules.
+                    if (splitNeedy.isSelected()) {//Separates active needy modules.
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                         ArrayList<Integer> needyFilter = new ArrayList<Integer>();
                         needyFilter.add(2);
                         sdc.filterModules(needyFilter);
-                        for(Module module : Main.MODULES_DISPLAYED)
-                        {
-                            if(module.isActive())
+                        for (Module module : Main.MODULES_DISPLAYED) {
+                            if (module.isActive())
                                 needySection.add(module);
                             temp.remove(module);
                         }
                         Main.MODULES_DISPLAYED = temp;
+                        manual.setNeedyToEnd(true);
                     }
-                    if(splitVanilla.isSelected())
-                    {//Separates active vanilla modules.
+                    if (splitVanilla.isSelected()) {//Separates active vanilla modules.
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                         ArrayList<Integer> vanillaFilter = new ArrayList<Integer>();
                         vanillaFilter.add(0);
                         sdc.filterModules(vanillaFilter);
-                        for(Module module : Main.MODULES_DISPLAYED)
-                        {
-                            if(module.isActive())
+                        for (Module module : Main.MODULES_DISPLAYED) {
+                            if (module.isActive())
                                 vanillaSection.add(module);
                             temp.remove(module);
                         }
                         Main.MODULES_DISPLAYED = temp;
+                        manual.setVanillaToEnd(true);
                     }
                     sdc.sortModules(0, false);
-                    for(Module module : Main.MODULES_DISPLAYED)
-                    {
-                        if(module.isActive())
+                    for (Module module : Main.MODULES_DISPLAYED) {
+                        if (module.isActive())
                             manual.addModule(module);
                     }
-                    for(Module module : vanillaSection)
+                    for (Module module : vanillaSection)
                         manual.addModule(module);
-                    for(Module module : needySection)
+                    for (Module module : needySection)
                         manual.addModule(module);
                     manual.setManualName("The Centurion - Manual");
                     Main.MODULES_DISPLAYED = displayModules;
                     Main.clearModules();
                     Main.renderModules();
-                    Runnable compile = new Runnable()
-                    {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
+                    Runnable compile = new Runnable() {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
                         @Override
-                        public void run()
-                        {
-                            try
-                            {
+                        public void run() {
+                            try {
                                 manual.writeManual();
                                 ProcessBuilder builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
                                 builder.redirectErrorStream(true);
@@ -128,14 +121,10 @@ public class MakeManualDialogCreator
                                 String line = null;
                                 while ((line = inStrm.readLine()) != null)
                                     System.out.print(line);
-                            }
-                            catch(OutputIOException e)
-                            {//This exception will be thrown if there was an error writing to the tex file.
-                                Platform.runLater(new Runnable()
-                                {
+                            } catch (OutputIOException e) {//This exception will be thrown if there was an error writing to the tex file.
+                                Platform.runLater(new Runnable() {
                                     @Override
-                                    public void run()
-                                    {
+                                    public void run() {
                                         Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
                                         exceptionAlert.setTitle("Error writing manual!");
                                         exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
@@ -146,14 +135,10 @@ public class MakeManualDialogCreator
                                         Platform.exit();
                                     }
                                 });
-                            }
-                            catch(IOException e)
-                            {//This exception will be thrown if there was an error compiling the pdf.
-                                Platform.runLater(new Runnable()
-                                {
+                            } catch (IOException e) {//This exception will be thrown if there was an error compiling the pdf.
+                                Platform.runLater(new Runnable() {
                                     @Override
-                                    public void run()
-                                    {
+                                    public void run() {
                                         Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
                                         exceptionAlert.setTitle("Error writing manual!");
                                         exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
@@ -171,6 +156,7 @@ public class MakeManualDialogCreator
                     compileThread.setDaemon(true);
                     compileThread.start();
                 }
+
                 return null;
             }
         });

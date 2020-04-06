@@ -1,5 +1,7 @@
 package manual;
 
+import javafx.application.Platform;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -15,6 +17,8 @@ public class ManualCreator
 {
     private File outputTexFile = null;
     private BufferedWriter writer = null;
+    private boolean vanillaToEnd = false;
+    private boolean needyToEnd = false;
 
     private ArrayList<Module> modules = new ArrayList<Module>();
     private String manualName = null; //TODO: check user has named their manual before creating!
@@ -74,6 +78,24 @@ public class ManualCreator
     }
 
     /**
+     * Sets whether or not a dedicated section is being made for vanillas at the end.
+     * @param vanillaToEnd - true if a dedicated vanilla section is to be made, false otherwise.
+     */
+    public void setVanillaToEnd(boolean vanillaToEnd)
+    {
+        this.vanillaToEnd = vanillaToEnd;
+    }
+
+    /**
+     * Sets whether or not a dedicated section is being made for needy modules at the end.
+     * @param needyToEnd - true if a dedicated needy section is to be made, false otherwise.
+     */
+    public void setNeedyToEnd(boolean needyToEnd)
+    {
+        this.needyToEnd = needyToEnd;
+    }
+
+    /**
      * Writes the user's .tex manual, by creating a BufferedWriter, writing the preamble, writing each manual page,
      * and ending the document.
      * @throws OutputIOException in the event of an IOException.     */
@@ -83,7 +105,19 @@ public class ManualCreator
         writePreamble();
 
         for(int i = 0; i < modules.size(); i++)
+        {
+            if(vanillaToEnd && modules.get(i).getCategory() == 0)
+            {
+                beginVanillaSection();
+                vanillaToEnd = false;
+            }
+            if(needyToEnd && modules.get(i).getCategory() == 2)
+            {
+                beginNeedySection();
+                needyToEnd = false;
+            }
             writeManualPage(i);
+        }
 
         endFile();
     }
@@ -167,6 +201,40 @@ public class ManualCreator
         {
             writer.write("\\end{document}");
             writer.close();
+        }
+        catch(IOException e)
+        {
+            throw new OutputIOException(outputTexFile.getPath(), e, true);
+        }
+    }
+
+    /**
+     * Writes a bookmark to mark the start of a separated vanilla section.
+     * @throws OutputIOException - in the event of an IOException.
+     */
+    private void beginVanillaSection() throws OutputIOException
+    {
+        try
+        {
+            writer.write("\\label{sec:vanilla}\n" +
+                    "\\pdfbookmark{VANILLA}{sec:vanilla}\n");
+        }
+        catch(IOException e)
+        {
+            throw new OutputIOException(outputTexFile.getPath(), e, true);
+        }
+    }
+
+    /**
+     * Writes a bookmark to mark the start of a separated needy section.
+     * @throws OutputIOException - in the event of an IOException.
+     */
+    private void beginNeedySection() throws OutputIOException
+    {
+        try
+        {
+            writer.write("\\label{sec:needy}\n" +
+                    "\\pdfbookmark{NEEDY}{sec:needy}\n");
         }
         catch(IOException e)
         {
