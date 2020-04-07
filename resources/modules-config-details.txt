@@ -111,4 +111,4 @@ Capacitor Discharge	NeedyCapacitor	1	modules/Capacitor Discharge.pdf	Steel Crate
 Knob	NeedyKnob	1	modules/Knob.pdf	Steel Crate Games	2015-10-08	2
 Venting Gas	NeedyVentGas	1	modules/Venting Gas.pdf	Steel Crate Games	2015-10-08	2
 German Venting Gas	VentGasTranslated	1	modules/German Venting Gas.pdf	"Malde, Tharagon"	2017-01-25	2
-Refill That Beer!	NeedyBeer	1	modules/Refill That Beer!.pdf	scripto	2017-09-23	2
+Refill That Beer!	NeedyBeer	1	modules/Refill That Beer.pdf	scripto	2017-09-23	2

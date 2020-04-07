@@ -1,7 +1,5 @@
 package manual;
 
-import javafx.application.Platform;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -16,6 +14,7 @@ import java.util.ArrayList;
 public class ManualCreator
 {
     private File outputTexFile = null;
+    private File pdfFile = null;
     private BufferedWriter writer = null;
     private boolean vanillaToEnd = false;
     private boolean needyToEnd = false;
@@ -49,6 +48,24 @@ public class ManualCreator
     public String getTexFilePath()
     {
         return outputTexFile.getPath();
+    }
+
+    /**
+     * Sets the eventual location the user would like the compiled pdf to be located.
+     * @param pdfFilePath - a String path to the pdf's desired location.
+     */
+    public void setPdfFilePath(String pdfFilePath)
+    {
+        pdfFile = new File(pdfFilePath);
+    }
+
+    /**
+     * Obtains the location the program is compiling the pdf to.
+     * @return a String path of the eventual pdf location.
+     */
+    public String getPdfFilePath()
+    {
+        return pdfFile.getPath();
     }
 
     /**

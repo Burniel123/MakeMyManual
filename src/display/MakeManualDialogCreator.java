@@ -45,14 +45,18 @@ public class MakeManualDialogCreator
         Button chooseDestination = new Button("Choose manual location...");
         dialogGrid.add(chooseDestination, 0, 3);
         FileChooser saveLocation = new FileChooser();
-        ExtensionFilter filter = new ExtensionFilter("LaTeX file: .tex", ".tex");
+        ExtensionFilter filter = new ExtensionFilter("Protable Document Format: .pdf", ".pdf");
         saveLocation.getExtensionFilters().add(filter);
         saveLocation.setTitle("Choose location to save manual");
         ManualCreator manual = new ManualCreator("resources/manual.tex");
         chooseDestination.setOnMouseClicked(e ->
         {
                 File save = saveLocation.showSaveDialog(new Stage());
-                manual.setOutputTexFile(save);
+                manual.setPdfFilePath(save.getPath());
+                String path = save.getPath();
+                String fileName = save.getName();
+                String[] fileBroken = fileName.split("\\.");
+                manual.setOutputTexFile(new File("resources" + File.separator + fileBroken[0] + ".tex"));
         });
 
         makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
@@ -113,7 +117,10 @@ public class MakeManualDialogCreator
                         public void run() {
                             try {
                                 manual.writeManual();
-                                ProcessBuilder builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
+                                File pdf = new File(manual.getPdfFilePath());
+                                String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
+                                ProcessBuilder builder = new ProcessBuilder("pdflatex","-output-directory",
+                                        pdfDir, manual.getTexFilePath());
                                 builder.redirectErrorStream(true);
                                 Process pro = builder.start();
                                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
