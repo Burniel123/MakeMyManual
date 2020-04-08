@@ -59,6 +59,10 @@ public class MakeManualDialogCreator
                 manual.setOutputTexFile(new File("resources" + File.separator + fileBroken[0] + ".tex"));
         });
 
+        TextField nameManual = new TextField();
+        nameManual.setPromptText("Enter manual title...");
+        dialogGrid.add(nameManual, 0, 4);
+
         makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
         makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
 
@@ -108,7 +112,11 @@ public class MakeManualDialogCreator
                         manual.addModule(module);
                     for (Module module : needySection)
                         manual.addModule(module);
-                    manual.setManualName("The Centurion - Manual");
+
+                    if(nameManual.getText().equals(""))
+                        manual.setManualName("My Manual");
+                    else
+                        manual.setManualName(nameManual.getText());
                     Main.MODULES_DISPLAYED = displayModules;
                     Main.clearModules();
                     Main.renderModules();
