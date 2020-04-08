@@ -43,20 +43,8 @@ public class Main extends Application
         ROOT_PANE.setStyle(DEFAULT_BACK_STYLE);
         scrollContent.setStyle(DEFAULT_BACK_STYLE);
 
-        /*final HBox regularSeparator = new HBox();*/
         final Label regularLabel = new Label("Regular Modules");
-        /*regularLabel.setAlignment(Pos.CENTER);*/
-/*        final Separator leftSeparator = new Separator();
-        final Separator rightSeparator = new Separator();
-        regularSeparator.getChildren().addAll(leftSeparator, regularLabel, rightSeparator);
-        regularSeparator.setAlignment(Pos.CENTER);
-        final HBox needySeparator = new HBox();*/
         final Label needyLabel = new Label("Needy Modules");
-        /*needyLabel.setAlignment(Pos.CENTER);*/
-        /*final Separator leftSeparator1 = new Separator();
-        final Separator rightSeparator1 = new Separator();*/
-        /*needySeparator.getChildren().addAll(leftSeparator, needyLabel, rightSeparator);
-        needySeparator.setAlignment(Pos.CENTER);*/
 
         scrollContent.getChildren().addAll(regularLabel, modulesPane, needyLabel, needyPane);
         scrollContent.setAlignment(Pos.CENTER);
