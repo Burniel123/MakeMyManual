@@ -150,7 +150,8 @@ public class Main extends Application
     static void clearModules()
     {
         ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
-        ((FlowPane)scroll.getContent()).getChildren().clear();
+        ((FlowPane)((VBox)scroll.getContent()).getChildren().get(1)).getChildren().clear();
+        ((FlowPane)((VBox)scroll.getContent()).getChildren().get(3)).getChildren().clear();
     }
 
     /**
