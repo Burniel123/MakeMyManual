@@ -143,3 +143,13 @@ Nonogram	NonogramModule	4	modules/Nonogram.pdf	Piggered	2017-09-19	1
 S.E.T.	SetModule	4	modules/SET.pdf	"Zawu, Timwi"	2017-09-23	1
 Painting	Painting	2	modules/Painting.pdf	"Hendruid, Bashly"	2017-09-24	1
 Color Generator	Color Generator	3	modules/Color Generator.pdf	EternityShack	2017-09-24	1
+Shape Memory	needyShapeMemory	1	modules/Shape Memory.pdf	UltraCboy	2017-09-28	2
+Symbol Cycle	SymbolCycleModule	4	modules/Symbol Cycle.pdf	Timwi	2017-10-05	1
+Hunting	hunting	3	modules/Hunting.pdf	taggedjc	2017-10-09	1
+Extended Password	ExtendedPassword	3	modules/Extended Password.pdf	"taggedjc, TWGaming"	2017-10-24	1
+Curriculum	curriculum	3	modules/Curriculum.pdf	Fixdoll	2017-10-30	1
+Braille	BrailleModule	4	modules/Braille.pdf	Timwi	2017-10-31	1
+Mafia	MafiaModule	4	modules/Mafia.pdf	"MarioXTurn, Ezekiel, Timwi"	2017-11-04	1
+Festive Piano Keys	FestivePianoKeys	2	modules/Festive Piano Keys.pdf	Bashly	2017-12-07	1
+Flags	FlagsModule	3	modules/Flags.pdf	"Monopoly, Piggered"	2017-12-24	1
+Timezone	timezone	3	modules/Timezone.pdf	federan	2017-12-30	1
