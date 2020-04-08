@@ -112,3 +112,34 @@ Knob	NeedyKnob	1	modules/Knob.pdf	Steel Crate Games	2015-10-08	2
 Venting Gas	NeedyVentGas	1	modules/Venting Gas.pdf	Steel Crate Games	2015-10-08	2
 German Venting Gas	VentGasTranslated	1	modules/German Venting Gas.pdf	"Malde, Tharagon"	2017-01-25	2
 Refill That Beer!	NeedyBeer	1	modules/Refill That Beer.pdf	scripto	2017-09-23	2
+Math	Needy Math	1	modules/Math.pdf	Mock Army	2016-07-21	2
+Lights Out	LightsOut	1	modules/Lights Out.pdf	Bashly	2016-07-22	2
+Filibuster	Filibuster	1	modules/Filibuster.pdf	Mock Army	2016-08-07	2
+Motion Sense	MotionSense	1	modules/Motion Sense.pdf	Bashly	2016-08-11	2
+Answering Questions	NeedyVentV2	1	modules/Answering Questions.pdf	Hexicube	2016-08-13	2
+Rotary Phone	NeedyKnobV2	2	modules/Rotary Phone.pdf	Hexicube	2016-08-16	2
+Cruel Piano Keys	CruelPianoKeys	4	modules/Cruel Piano Keys.pdf	Bashly	2016-08-21	1
+Tetris	spwizTetris	1	modules/Tetris.pdf	Spare Wizard	2016-08-23	2
+Who's That Monsplode	monsplodeWho	2	modules/Who's That Monsplode.pdf	clutterArranger	2016-10-08	2
+HTTP Response	http	1	modules/HTTP Response.pdf	SL7205	2017-01-24	2
+Edgework	EdgeworkModule	1	modules/Edgework.pdf	"Ion Lee, ZekNikZ"	2017-05-14	2
+Hex To Decimal	EternitySDec	3	modules/Hex To Decimal.pdf	EternityShack	2017-06-30	2
+X-Ray	XRayModule	2	modules/X-Ray.pdf	Timwi	2017-07-14	1
+QR Code	QRCode	1	modules/QR Code.pdf	SL7205	2017-07-17	2
+Button Masher	buttonMasherNeedy	1	modules/Button Masher.pdf	McDude73	2017-07-19	2
+Random Number Generator	rng	1	modules/Random Number Generator.pdf	"Lumbud84, McDude73"	2017-07-21	2
+Color Morse	ColorMorseModule	3	modules/Color Morse.pdf	"SKiPP, Ezekiel, ZekNikZ"	2017-07-31	1
+Mastermind Simple	Mastermind Simple	1	modules/Mastermind Simple.pdf	Eotall	2017-08-06	1
+Mastermind Cruel	Mastermind Cruel	5	modules/Mastermind Cruel.pdf	Eotall	2017-08-06	1
+Gridlock	GridlockModule	3	modules/Gridlock.pdf	"Elias, Timwi"	2017-08-11	1
+Big Circle	BigCircle	3	modules/Big Circle.pdf	"Ezekiel, Hendruid, CaitSith2"	2017-08-14	1
+Morse-A-Maze	MorseAMaze	3	modules/Morse-A-Maze.pdf	CaitSith2	2017-08-21	1
+Colored Switches	ColoredSwitchesModule	3	modules/Colored Switches.pdf	Timwi	2017-09-03	1
+Perplexing Wires	PerplexingWiresModule	4	modules/Perplexing Wires.pdf	"MarAyzex, Ezekiel, Timwi"	2017-09-06	1
+Monsplode Trading Cards	monsplodeCards	4	modules/Monsplode Trading Cards.pdf	"clutterArranger, Grybo"	2017-09-10	1
+Game Of Life Simple	GameOfLifeSimple	4	modules/Game Of Life Simple.pdf	"Eotall, WarioLGP, samfun123"	2017-09-12	1
+Game Of Life Cruel	GameOfLifeCruel	5	modules/Game Of Life Cruel.pdf	"Eotall, WarioLGP, samfun123"	2017-09-12	1
+Nonogram	NonogramModule	4	modules/Nonogram.pdf	Piggered	2017-09-19	1
+S.E.T.	SetModule	4	modules/SET.pdf	"Zawu, Timwi"	2017-09-23	1
+Painting	Painting	2	modules/Painting.pdf	"Hendruid, Bashly"	2017-09-24	1
+Color Generator	Color Generator	3	modules/Color Generator.pdf	EternityShack	2017-09-24	1
