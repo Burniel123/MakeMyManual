@@ -36,10 +36,34 @@ public class Main extends Application
     {
         //Setting up an area for the modules:
         final FlowPane modulesPane = new FlowPane(2,2);
-        final ScrollPane scrollableWindow = new ScrollPane(modulesPane);
+        modulesPane.setPadding(new Insets(0, 0, 0, 5));
+        final FlowPane needyPane = new FlowPane(2, 2);
+        needyPane.setPadding(new Insets(0, 0, 0, 5));
+        final VBox scrollContent = new VBox(5);
+        ROOT_PANE.setStyle(DEFAULT_BACK_STYLE);
+        scrollContent.setStyle(DEFAULT_BACK_STYLE);
+
+        /*final HBox regularSeparator = new HBox();*/
+        final Label regularLabel = new Label("Regular Modules");
+        /*regularLabel.setAlignment(Pos.CENTER);*/
+/*        final Separator leftSeparator = new Separator();
+        final Separator rightSeparator = new Separator();
+        regularSeparator.getChildren().addAll(leftSeparator, regularLabel, rightSeparator);
+        regularSeparator.setAlignment(Pos.CENTER);
+        final HBox needySeparator = new HBox();*/
+        final Label needyLabel = new Label("Needy Modules");
+        /*needyLabel.setAlignment(Pos.CENTER);*/
+        /*final Separator leftSeparator1 = new Separator();
+        final Separator rightSeparator1 = new Separator();*/
+        /*needySeparator.getChildren().addAll(leftSeparator, needyLabel, rightSeparator);
+        needySeparator.setAlignment(Pos.CENTER);*/
+
+        scrollContent.getChildren().addAll(regularLabel, modulesPane, needyLabel, needyPane);
+        scrollContent.setAlignment(Pos.CENTER);
+        final ScrollPane scrollableWindow = new ScrollPane(scrollContent);
         scrollableWindow.setFitToHeight(true);
         scrollableWindow.setFitToWidth(true);
-        modulesPane.setStyle(DEFAULT_BACK_STYLE);
+        /*modulesPane.setStyle(DEFAULT_BACK_STYLE);*/
         //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
         topMenu.setPadding(new Insets(5));
@@ -134,44 +158,51 @@ public class Main extends Application
      */
     static void renderModules()
     {
-        for(int i = 0; i < MODULES_DISPLAYED.size(); i++)
+        for(int i = 0; i < 2*MODULES_DISPLAYED.size(); i++)
         {
-            //Components to build each module region:
-            Module module = MODULES_DISPLAYED.get(i);
-            final StackPane modulePane = new StackPane();
-            final Region moduleRegion = new Region();
-            final Label moduleName = new Label(module.getModuleName() + "\n\n");
-            moduleName.setPadding(new Insets(2));
-            modulePane.setAlignment(Pos.BOTTOM_CENTER);
-            final Label moduleCode = new Label(module.getModuleCode());
-            moduleCode.setFont(new Font(7));
-            if(module.isActive())
-                moduleRegion.setStyle(SELECTED_MODULE_STYLE);
-            else
-                moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
-            moduleRegion.setMinSize(100, 20);
-            //Event handling code for each module:
-            modulePane.setOnMouseClicked(e ->
-            {
-                if(moduleRegion.getStyle().equals(DEFAULT_MODULE_STYLE))
-                {
+            Module module = MODULES_DISPLAYED.get(i%MODULES_DISPLAYED.size());
+            if((module.getCategory() != 2 && i < MODULES_DISPLAYED.size()) ||
+                    (module.getCategory() == 2 && i >= MODULES_DISPLAYED.size()))
+            {//If this isn't a needy module, display it in the top half. If it is, but it in the bottom half.
+                //Components to build each module region:
+                final StackPane modulePane = new StackPane();
+                final Region moduleRegion = new Region();
+                final Label moduleName = new Label(module.getModuleName() + "\n\n");
+                moduleName.setPadding(new Insets(2));
+                modulePane.setAlignment(Pos.BOTTOM_CENTER);
+                final Label moduleCode = new Label(module.getModuleCode());
+                moduleCode.setFont(new Font(7));
+                if(module.isActive())
                     moduleRegion.setStyle(SELECTED_MODULE_STYLE);
-                    module.activate();
-                    numSelected++;
-                }
                 else
-                {
                     moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
-                    module.deactivate();
-                    numSelected--;
-                }
-                ((Label)((HBox)ROOT_PANE.getChildren().get(1)).getChildren().get(0)).setText("Modules Selected: " +
-                        numSelected + "/" + MODULES_AVAILABLE.size());
-            });
-            //Adding the constructed module region to its pane:
-            modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
-            ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
-            ((FlowPane)scroll.getContent()).getChildren().add(modulePane);
+                moduleRegion.setMinSize(100, 20);
+                //Event handling code for each module:
+                modulePane.setOnMouseClicked(e ->
+                {
+                    if(moduleRegion.getStyle().equals(DEFAULT_MODULE_STYLE))
+                    {
+                        moduleRegion.setStyle(SELECTED_MODULE_STYLE);
+                        module.activate();
+                        numSelected++;
+                    }
+                    else
+                    {
+                        moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
+                        module.deactivate();
+                        numSelected--;
+                    }
+                    ((Label)((HBox)ROOT_PANE.getChildren().get(1)).getChildren().get(0)).setText("Modules Selected: " +
+                            numSelected + "/" + MODULES_AVAILABLE.size());
+                });
+                //Adding the constructed module region to its pane:
+                modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
+                ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
+                if(module.getCategory() == 2)
+                    ((FlowPane)((VBox)scroll.getContent()).getChildren().get(3)).getChildren().add(modulePane);
+                else
+                    ((FlowPane)((VBox)scroll.getContent()).getChildren().get(1)).getChildren().add(modulePane);
+            }
         }
     }
 
