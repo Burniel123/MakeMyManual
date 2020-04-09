@@ -4,11 +4,19 @@ import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * Used to read the config TSV file, containing a list of available modules and their info/source.
+ */
 public class ManualListReader
 {
     private static final File SUPPORTED_MODULE_FILE = new File("./resources/modules-config-details.txt");
     private static final ArrayList<java.lang.Module> MODULES_AVAILABLE = new ArrayList<java.lang.Module>();
 
+    /**
+     * Reads a config file and creates Module objects based on these.
+     * @return an ArrayList of Module objects, one per line in the TSV config file.
+     * @throws InputIOException - in the event of an I/O Error when reading the config file.
+     */
     public ArrayList<Module> readModuleList() throws InputIOException
     {
         ArrayList<Module> modules = new ArrayList<Module>();
@@ -20,7 +28,7 @@ public class ManualListReader
             while((line = reader.readLine()) != null)
             {
                 String[] detailElements = line.split("\t");
-
+                //Parsing the line into module details:
                 String moduleName = removeQuotes(detailElements[0]);
                 String moduleCode = removeQuotes(detailElements[1]);
                 String difficultyStr = detailElements[2];
