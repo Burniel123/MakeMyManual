@@ -177,12 +177,13 @@ public class Main extends Application
      */
     static void renderModules()
     {
+        System.out.println("Hello there");
         for(int i = 0; i < 2*MODULES_DISPLAYED.size(); i++)
         {
             Module module = MODULES_DISPLAYED.get(i%MODULES_DISPLAYED.size());
             if((module.getCategory() != 2 && i < MODULES_DISPLAYED.size()) ||
                     (module.getCategory() == 2 && i >= MODULES_DISPLAYED.size()))
-            {//If this isn't a needy module, display it in the top half. If it is, but it in the bottom half.
+            {//If this isn't a needy module, display it in the top half. If it is, put it in the bottom half.
                 //Components to build each module region:
                 final StackPane modulePane = new StackPane();
                 final Region moduleRegion = new Region();
@@ -248,20 +249,27 @@ public class Main extends Application
     {
         SortDialogCreator sdc = new SortDialogCreator();
         sdc.sortModules(0, false);
-        for (int i = 0; i < modules.size(); i++)
+        for (int i = 0; i < MODULES_DISPLAYED.size(); i++)
         {
-            StackPane modulePane = (StackPane) modules.get(i);
-            if(select && modulePane.getChildren().get(0).getStyle().equals(DEFAULT_MODULE_STYLE))
+            for(int j = 0; j < modules.size(); j++)
             {
-                Main.numSelected++;
-                modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
-                MODULES_DISPLAYED.get(i).activate();
-            }
-            else if(!select && modulePane.getChildren().get(0).getStyle().equals(SELECTED_MODULE_STYLE))
-            {
-                Main.numSelected--;
-                modulePane.getChildren().get(0).setStyle(DEFAULT_MODULE_STYLE);
-                MODULES_DISPLAYED.get(i).deactivate();
+                StackPane modulePane = (StackPane) modules.get(j);
+                if(((Label)modulePane.getChildren().get(2)).getText().equals(MODULES_DISPLAYED.get(i).getModuleCode()))
+                {
+                    if(select && modulePane.getChildren().get(0).getStyle().equals(DEFAULT_MODULE_STYLE))
+                    {
+                        Main.numSelected++;
+                        modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
+                        MODULES_DISPLAYED.get(i).activate();
+                    }
+                    else if(!select && modulePane.getChildren().get(0).getStyle().equals(SELECTED_MODULE_STYLE))
+                    {
+                        Main.numSelected--;
+                        modulePane.getChildren().get(0).setStyle(DEFAULT_MODULE_STYLE);
+                        MODULES_DISPLAYED.get(i).deactivate();
+                    }
+                    break;
+                }
             }
         }
     }

@@ -87,7 +87,7 @@ public class MakeManualDialogCreator
                             if (module.isActive())
                             {
                                 needySection.add(module);
-                                downloadFile(module);
+                              //  downloadFile(module);
                             }
                             temp.remove(module);
                         }
@@ -104,7 +104,7 @@ public class MakeManualDialogCreator
                             if (module.isActive())
                             {
                                 vanillaSection.add(module);
-                                downloadFile(module);
+                              //  downloadFile(module);
                             }
                             temp.remove(module);
                         }
@@ -116,7 +116,7 @@ public class MakeManualDialogCreator
                         if (module.isActive())
                         {
                             manual.addModule(module);
-                            downloadFile(module);
+                           // downloadFile(module);
                         }
                     }
                     for (Module module : vanillaSection)
@@ -199,18 +199,5 @@ public class MakeManualDialogCreator
         makeManualDialog.showAndWait();
     }
 
-    private void downloadFile(Module module)
-    {
-        String destinationPath = "resources/modules/" + module.getModuleCode() + ".pdf";
-        UrlFileCloner ufc = new UrlFileCloner(module.getManualLocation(), destinationPath);
-       try
-       {
-           ufc.cloneFile();
-       }
-       catch(Exception ex)
-       {
-           System.out.println("ERROR\n" + ex);
-           //TODO: PROPER EXCEPTION HANDLING HERE!
-       }
-    }
+
 }

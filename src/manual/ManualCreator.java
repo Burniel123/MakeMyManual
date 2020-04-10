@@ -115,7 +115,8 @@ public class ManualCreator
     /**
      * Writes the user's .tex manual, by creating a BufferedWriter, writing the preamble, writing each manual page,
      * and ending the document.
-     * @throws OutputIOException in the event of an IOException.     */
+     * @throws OutputIOException in the event of an IOException.
+     */
     public void writeManual() throws OutputIOException
     {
         createWriter();
@@ -133,6 +134,7 @@ public class ManualCreator
                 beginNeedySection();
                 needyToEnd = false;
             }
+            downloadFile(modules.get(i));
             writeManualPage(i);
         }
 
@@ -277,5 +279,20 @@ public class ManualCreator
         }
 
         return editedPath;
+    }
+
+    private void downloadFile(Module module)
+    {
+        String destinationPath = "resources/modules/" + module.getModuleCode() + ".pdf";
+        UrlFileCloner ufc = new UrlFileCloner(module.getManualLocation(), destinationPath);
+        try
+        {
+            ufc.cloneFile();
+        }
+        catch(Exception ex)
+        {
+            System.out.println("ERROR\n" + ex);
+            //TODO: PROPER EXCEPTION HANDLING HERE!
+        }
     }
 }
