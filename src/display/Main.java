@@ -19,6 +19,11 @@ import manual.Module;
 
 import java.util.ArrayList;
 
+/**
+ * Main application class for MakeMyManual.
+ *
+ * @author Daniel Burton
+ */
 public class Main extends Application
 {
     static final VBox ROOT_PANE = new VBox(3);
@@ -31,8 +36,12 @@ public class Main extends Application
     static ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();//Please don't change after init.
     static ArrayList<Module> MODULES_DISPLAYED = new ArrayList<Module>();
 
+    /**
+     * Starts the application, setting up and displaying the stage.
+     * @param primaryStage - the main stage for the application.
+     */
     @Override
-    public void start(Stage primaryStage) throws Exception
+    public void start(Stage primaryStage)
     {
         //Setting up an area for the modules:
         final FlowPane modulesPane = new FlowPane(2, 2);
@@ -63,7 +72,6 @@ public class Main extends Application
         final HBox needySelectionButtons = new HBox(2);
         needySelectionButtons.getChildren().addAll(selectAllNeedy, deselectAllNeedy);
 
-        /*modulesPane.setStyle(DEFAULT_BACK_STYLE);*/
         //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
         topMenu.setPadding(new Insets(5));
@@ -93,6 +101,7 @@ public class Main extends Application
 
         SortDialogCreator sdc = new SortDialogCreator();
         sortMenu.setOnMouseClicked(e -> sdc.applyModuleSort());
+        //EVENT HANDLERS:
         searchBarSubmit.setOnMouseClicked(e ->
         {
             searchModules(searchBarInput.getText());
@@ -229,6 +238,12 @@ public class Main extends Application
         MODULES_DISPLAYED = temp;
     }
 
+    /**
+     * Highlights all modules in a given list and activates them as members of the set of modules to be
+     * included in the manual.
+     * @param modules - ObservableList of Nodes, containing modules to highlight.
+     * @param select - true if the modules are to be selected, false if they are to be deselected.
+     */
     private void highlightAll(ObservableList<Node> modules, boolean select)
     {
         SortDialogCreator sdc = new SortDialogCreator();
