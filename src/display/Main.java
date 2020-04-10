@@ -53,6 +53,16 @@ public class Main extends Application
         final ScrollPane scrollableWindow = new ScrollPane(scrollContent);
         scrollableWindow.setFitToHeight(true);
         scrollableWindow.setFitToWidth(true);
+
+        final Button selectAllRegular = new Button("Select All");
+        final Button deselectAllRegular = new Button("Deselect All");
+        final Button selectAllNeedy = new Button("Select All");
+        final Button deselectAllNeedy = new Button("Deselect All");
+        final HBox regularSelectionButtons = new HBox(2);
+        regularSelectionButtons.getChildren().addAll(selectAllRegular, deselectAllRegular);
+        final HBox needySelectionButtons = new HBox(2);
+        needySelectionButtons.getChildren().addAll(selectAllNeedy, deselectAllNeedy);
+
         /*modulesPane.setStyle(DEFAULT_BACK_STYLE);*/
         //Setting up components for the top menu bar:
         final HBox topMenu = new HBox(2);
@@ -65,8 +75,6 @@ public class Main extends Application
         searchSeparator.setOrientation(Orientation.VERTICAL);
         final Button sortMenu = new Button("Sort");
         final Button presetsButton = new Button("Presets");
-        final Button selectAll = new Button("Select All");
-        final Button selectAllNeedy = new Button("Select All");
         final Button makeIt = new Button("Make My Manual!");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
                 sortMenu, presetsButton, makeIt);
@@ -75,9 +83,9 @@ public class Main extends Application
         final Label numSelected = new Label("Modules Selected: 0/" + MODULES_AVAILABLE.size());
         searchBarInput.setPromptText("Search for modules...");
         regularTitleBox.setCenter(regularLabel);
-        regularTitleBox.setRight(selectAll);
+        regularTitleBox.setRight(regularSelectionButtons);
         needyTitleBox.setCenter(needyLabel);
-        needyTitleBox.setRight(selectAllNeedy);
+        needyTitleBox.setRight(needySelectionButtons);
         numSelectedBar.getChildren().add(numSelected);
         ROOT_PANE.getChildren().addAll(topMenu, numSelectedBar);
         ROOT_PANE.getChildren().add(scrollableWindow);
@@ -94,19 +102,30 @@ public class Main extends Application
             if (e.getCode() == KeyCode.ENTER)
                 searchModules(searchBarInput.getText());
         });
-        selectAll.setOnMouseClicked(e ->
+        selectAllRegular.setOnMouseClicked(e ->
         {
             ObservableList<Node> modulePanes = modulesPane.getChildren();
-            highlightAll(modulePanes);
+            highlightAll(modulePanes, true);
             numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
         });
         selectAllNeedy.setOnMouseClicked(e ->
         {
             ObservableList<Node> modulePanes = needyPane.getChildren();
-            highlightAll(modulePanes);
+            highlightAll(modulePanes, true);
             numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
         });
-
+        deselectAllRegular.setOnMouseClicked(e ->
+        {
+            ObservableList<Node> modulePanes = modulesPane.getChildren();
+            highlightAll(modulePanes, false);
+            numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
+        });
+        deselectAllNeedy.setOnMouseClicked(e ->
+        {
+            ObservableList<Node> modulePanes = needyPane.getChildren();
+            highlightAll(modulePanes, false);
+            numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
+        });
         makeIt.setOnMouseClicked(e ->
         {
             MakeManualDialogCreator mmdc = new MakeManualDialogCreator();
@@ -210,17 +229,25 @@ public class Main extends Application
         MODULES_DISPLAYED = temp;
     }
 
-    private void highlightAll(ObservableList<Node> modules)
+    private void highlightAll(ObservableList<Node> modules, boolean select)
     {
         SortDialogCreator sdc = new SortDialogCreator();
         sdc.sortModules(0, false);
         for (int i = 0; i < modules.size(); i++)
         {
             StackPane modulePane = (StackPane) modules.get(i);
-            if(modulePane.getChildren().get(0).getStyle().equals(DEFAULT_MODULE_STYLE))
+            if(select && modulePane.getChildren().get(0).getStyle().equals(DEFAULT_MODULE_STYLE))
+            {
                 Main.numSelected++;
-            modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
-            MODULES_DISPLAYED.get(i).activate();
+                modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
+                MODULES_DISPLAYED.get(i).activate();
+            }
+            else if(!select && modulePane.getChildren().get(0).getStyle().equals(SELECTED_MODULE_STYLE))
+            {
+                Main.numSelected--;
+                modulePane.getChildren().get(0).setStyle(DEFAULT_MODULE_STYLE);
+                MODULES_DISPLAYED.get(i).deactivate();
+            }
         }
     }
 
