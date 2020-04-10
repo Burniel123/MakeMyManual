@@ -2,3 +2,153 @@ Colour Flash	ColourFlash	2	https://raw.githubusercontent.com/Timwi/KtaneContent/
 Piano Keys	PianoKeys	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Piano%20Keys.pdf	Bashly	2016-06-26	1
 Semaphore	Semaphore	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Semaphore.pdf	Bashly	2016-07-13	1
 Emoji Math	Emoji Math	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Emoji%20Math.pdf	Mock Army	2016-07-21	1
+Switches	switchModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Switches.pdf	Brian Fetter	2016-07-25	1
+Two Bits	TwoBits	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Two%20Bits.pdf	kaneb	2016-07-26	1
+Anagrams	AnagramsModule	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Anagrams.pdf	Mock Army	2016-07-28	1
+Word Scramble	WordScrambleModule	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Word%20Scramble.pdf	Mock Army	2016-07-28	1
+Combination Lock	combinationLock	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Combination%20Lock.pdf	Mock Army	2016-08-03	1
+Square Button	ButtonV2	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Square%20Button.pdf	Hexicube	2016-08-13	1
+Simon States	SimonV2	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Simon%20States.pdf	Hexicube	2016-08-13	1
+Round Keypad	KeypadV2	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Round%20Keypad.pdf	Hexicube	2016-08-13	1
+Listening	Listening	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Listening.pdf	Perky	2016-08-13	1
+Foreign Exchange Rates	ForeignExchangeRates	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Foreign%20Exchange%20Rates.pdf	Perky	2016-08-13	1
+Orientation Cube	OrientationCube	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Orientation%20Cube.pdf	Perky	2016-08-14	1
+Morsematics	MorseV2	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Morsematics.pdf	Hexicube	2016-08-14	1
+Connection Check	graphModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Connection%20Check.pdf	clutterArranger	2016-08-14	1
+Letter Keys	LetterKeys	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Letter%20Keys.pdf	Mage of R. Jelly	2016-08-15	1
+Forget Me Not	MemoryV2	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Forget%20Me%20Not.pdf	Hexicube	2016-08-15	1
+Astrology	spwizAstrology	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Astrology.pdf	Spare Wizard	2016-08-16	1
+Logic	Logic	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Logic.pdf	SL7205	2016-08-17	1
+Crazy Talk	CrazyTalk	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Crazy%20Talk.pdf	Perky	2016-08-19	1
+Adventure Game	spwizAdventureGame	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Adventure%20Game.pdf	Spare Wizard	2016-08-19	1
+Turn The Key	TurnTheKey	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Turn%20The%20Key.pdf	Perky	2016-08-20	1
+Turn The Keys	TurnTheKeyAdvanced	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Turn%20The%20Keys.pdf	Perky	2016-08-20	1
+Mystic Square	MysticSquareModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mystic%20Square.pdf	Konqi	2016-08-20	1
+Plumbing	MazeV2	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Plumbing.pdf	Hexicube	2016-08-21	1
+Safety Safe	PasswordV2	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Safety%20Safe.pdf	Hexicube	2016-08-22	1
+Cryptography	CryptModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Cryptography.pdf	Perky	2016-08-24	1
+Chess	ChessModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Chess.pdf	"MoMo, Flamanis"	2016-08-24	1
+Mouse In The Maze	MouseInTheMaze	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mouse%20In%20The%20Maze.pdf	Konqi	2016-08-26	1
+3D Maze	spwiz3DMaze	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/3D%20Maze.pdf	Spare Wizard	2016-08-26	1
+Silly Slots	SillySlots	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Silly%20Slots.pdf	Perky	2016-08-29	1
+Number Pad	NumberPad	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Number%20Pad.pdf	mitterdoo	2016-08-30	1
+Laundry	Laundry	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Laundry.pdf	"Hendruid, AcrylicStain, Flamanis"	2016-08-31	1
+Probing	Probing	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Probing.pdf	Perky	2016-09-02	1
+Resistors	resistors	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Resistors.pdf	Onyxite	2016-09-12	1
+Skewed Slots	SkewedSlotsModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Skewed%20Slots.pdf	samfun123	2016-09-15	1
+Caesar Cipher	CaesarCipherModule	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Caesar%20Cipher.pdf	Eluminate	2016-09-18	1
+Perspective Pegs	spwizPerspectivePegs	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Perspective%20Pegs.pdf	Spare Wizard	2016-09-24	1
+Microcontroller	Microcontroller	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Microcontroller.pdf	Flush	2016-09-24	1
+Murder	murder	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Murder.pdf	Asimir	2016-09-26	1
+Gamepad	TheGamepadModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
+Tic-Tac-Toe	TicTacToeModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07	1
+"Monsplode, Fight!"	monsplodeFight	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Monsplode%2C%20Fight!.pdf	clutterArranger	2016-10-08	1
+Shape Shift	shapeshift	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Shape%20Shift.pdf	Asimir	2016-10-10	1
+Follow The Leader	FollowTheLeaderModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Follow%20the%20Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18	1
+Friendship	FriendshipModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Friendship.pdf	Timwi	2016-10-24	1
+Bulb	TheBulbModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Bulb.pdf	Timwi	2016-10-28	1
+Alphabet	alphabet	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Alphabet.pdf	mitterdoo	2016-10-30	1
+Blind Alley	BlindAlleyModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Blind%20Alley.pdf	Timwi	2016-11-03	1
+Sea Shells	SeaShells	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Sea%20Shells.pdf	Asimir	2016-11-06	1
+English Test	EnglishTest	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/English%20Test.pdf	"theFIZZYnator, Lupo511"	2016-11-06	1
+Rock-Paper-Scissors-Lizard-Spock	RockPaperScissorsLizardSpockModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Rock-Paper-Scissors-Lizard-Spock.pdf	Timwi	2016-11-12	1
+Hexamaze	HexamazeModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Hexamaze.pdf	Timwi	2016-11-21	1
+Bitmaps	BitmapsModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Bitmaps.pdf	"Timwi, Lumbud84"	2016-11-23	1
+Colored Squares	ColoredSquaresModule	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Colored%20Squares.pdf	"TheAuthorOfOZ, Timwi"	2016-11-24	1
+Adjacent Letters	AdjacentLettersModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Adjacent%20Letters.pdf	"Lumbud84, Timwi"	2016-11-25	1
+Third Base	ThirdBase	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Third%20Base.pdf	Asimir	2016-11-27	1
+Souvenir	SouvenirModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Souvenir.pdf	"Timwi, Andrio Celos"	2016-12-02	1
+Word Search	WordSearchModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Word%20Search.pdf	"TheAuthorOfOZ, Timwi"	2016-12-07	1
+Broken Buttons	BrokenButtonsModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Broken%20Buttons.pdf	samfun123	2016-12-12	1
+Simon Screams	SimonScreamsModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Simon%20Screams.pdf	Timwi	2016-12-20	1
+Modules Against Humanity	ModuleAgainstHumanity	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Modules%20Against%20Humanity.pdf	"catnip, Flamanis"	2016-12-24	1
+Complicated Buttons	complicatedButtonsModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Complicated%20Buttons.pdf	ZekNikZ	2016-12-31	1
+Battleship	BattleshipModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Battleship.pdf	Timwi	2017-01-03	1
+Text Field	TextField	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Text%20Field.pdf	SL7205	2017-01-05	1
+Symbolic Password	symbolicPasswordModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Symbolic%20Password.pdf	ZekNikZ	2017-01-05	1
+Wire Placement	WirePlacementModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Wire%20Placement.pdf	"Lumbud84, Timwi"	2017-01-06	1
+Double-Oh	DoubleOhModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Double-Oh.pdf	ZekNikZ	2017-01-15	1
+Cheap Checkout	CheapCheckoutModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Cheap%20Checkout.pdf	samfun123	2017-01-16	1
+Coordinates	CoordinatesModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Coordinates.pdf	Timwi	2017-01-20	1
+Light Cycle	LightCycleModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Light%20Cycle.pdf	"Rexkix, Timwi"	2017-01-23	1
+Rhythms	MusicRhythms	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Rhythms.pdf	"Riverbui, Trainzack"	2017-03-05	1
+Color Math	colormath	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Color%20Math.pdf	SL7205	2017-03-05	1
+Only Connect	OnlyConnectModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Only%20Connect.pdf	Timwi	2017-03-17	1
+Neutralization	neutralization	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Neutralization.pdf	"Nanthelas, SL7205"	2017-03-23	1
+Web Design	webDesign	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Web%20Design.pdf	"theFIZZYnator, SL7205"	2017-04-03	1
+Chord Qualities	ChordQualities	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Chord%20Qualities.pdf	"Riverbui, Trainzack"	2017-04-07	1
+Creation	CreationModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Creation.pdf	"Grybo, samfun123"	2017-04-17	1
+Rubik's Cube	RubiksCubeModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Rubik%E2%80%99s%20Cube.pdf	"Timwi, Freelancer1025"	2017-04-30	1
+FizzBuzz	fizzBuzzModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/FizzBuzz.pdf	ZekNikZ	2017-05-10	1
+Clock	TheClockModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Clock.pdf	"TheAuthorOfOZ, Timwi"	2017-05-11	1
+LED Encryption	LEDEnc	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/LED%20Encryption.pdf	Virepri	2017-05-12	1
+Bitwise Operations	BitOps	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Bitwise%20Operations.pdf	Virepri	2017-05-14	1
+Fast Math	fastMath	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Fast%20Math.pdf	"LeGeND, SL7205"	2017-05-25	1
+Minesweeper	MinesweeperModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Minesweeper.pdf	samfun123	2017-06-12	1
+Zoo	ZooModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Zoo.pdf	Timwi	2017-06-13	1
+Binary LEDs	BinaryLeds	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Binary%20LEDs.pdf	Willowyn	2017-06-18	1
+Boolean Venn Diagrams	booleanVennModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Boolean%20Venn%20Diagram.pdf	ZekNikZ	2017-06-22	1
+Point Of Order	PointOfOrderModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Point%20of%20Order.pdf	Timwi	2017-06-25	1
+Ice Cream	iceCreamModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Ice%20Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	2017-06-26	1
+Screw	screw	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Screw.pdf	"Ezekiel, SL7205"	2017-07-01	1
+Yahtzee	YahtzeeModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Yahtzee.pdf	"Timwi, Rexkix"	2017-07-02	1
+German Button	BigButtonTranslated	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Button%20translated%20(Deutsch%20%E2%80%94%20Der%20Knopf).pdf	"Malde, Tharagon"	2017-01-25	1
+German Morse Code	MorseCodeTranslated	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Morse%20Code%20translated%20(Deutsch%20%E2%80%94%20Morsecode).pdf	"Malde, Tharagon"	2017-01-25	1
+German Password	PasswordsTranslated	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Password%20translated%20(Deutsch%20%E2%80%94%20Passw%C3%B6rter).pdf	"Malde, Tharagon"	2017-01-25	1
+German Who's On First	WhosOnFirstTranslated	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Who%E2%80%99s%20on%20First%20translated%20(Deutsch%20%E2%80%94%20Who%E2%80%99s%20on%20First).pdf	"Malde, Tharagon"	2017-01-25	1
+Wires	Wires	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Wires.pdf	Steel Crate Games	2015-10-08	0
+Button	BigButton	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Button.pdf	Steel Crate Games	2015-10-08	0
+Keypad	Keypad	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Keypad.pdf	Steel Crate Games	2015-10-08	0
+Simon Says	Simon	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Simon%20Says.pdf	Steel Crate Games	2015-10-08	0
+Who's On First	WhosOnFirst	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Who%E2%80%99s%20on%20First.pdf	Steel Crate Games	2015-10-08	0
+Memory	Memory	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Memory.pdf	Steel Crate Games	2015-10-08	0
+Morse Code	Morse	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Morse%20Code.pdf	Steel Crate Games	2015-10-08	0
+Complicated Wires	Venn	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Complicated%20Wires.pdf	Steel Crate Games	2015-10-08	0
+Wire Sequence	WireSequence	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Wire%20Sequence.pdf	Steel Crate Games	2015-10-08	0
+Maze	Maze	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Maze.pdf	Steel Crate Games	2015-10-08	0
+Password	Password	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Password.pdf	Steel Crate Games	2015-10-08	0
+Capacitor Discharge	NeedyCapacitor	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Capacitor%20Discharge.pdf	Steel Crate Games	2015-10-08	2
+Knob	NeedyKnob	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Knob.pdf	Steel Crate Games	2015-10-08	2
+Venting Gas	NeedyVentGas	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Venting%20Gas.pdf	Steel Crate Games	2015-10-08	2
+Refill That Beer!	NeedyBeer	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Refill%20that%20Beer!.pdf	scripto	2017-09-23	2
+Math	Needy Math	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Math.pdf	Mock Army	2016-07-21	2
+Lights Out	LightsOut	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Lights%20Out.pdf	Bashly	2016-07-22	2
+Filibuster	Filibuster	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Filibuster.pdf	Mock Army	2016-08-07	2
+Motion Sense	MotionSense	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Motion%20Sense.pdf	Bashly	2016-08-11	2
+Answering Questions	NeedyVentV2	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Answering%20Questions.pdf	Hexicube	2016-08-13	2
+Rotary Phone	NeedyKnobV2	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Rotary%20Phone.pdf	Hexicube	2016-08-16	2
+Cruel Piano Keys	CruelPianoKeys	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Cruel%20Piano%20Keys.pdf	Bashly	2016-08-21	1
+Tetris	spwizTetris	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Tetris.pdf	Spare Wizard	2016-08-23	2
+Who's That Monsplode	monsplodeWho	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Who%E2%80%99s%20That%20Monsplode.pdf	clutterArranger	2016-10-08	2
+HTTP Response	http	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/HTTP%20Response.pdf	SL7205	2017-01-24	2
+Edgework	EdgeworkModule	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Edgework.pdf	"Ion Lee, ZekNikZ"	2017-05-14	2
+Hex To Decimal	EternitySDec	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Hex%20To%20Decimal.pdf	EternityShack	2017-06-30	2
+X-Ray	XRayModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/X-Ray.pdf	Timwi	2017-07-14	1
+QR Code	QRCode	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/QR%20Code.pdf	SL7205	2017-07-17	2
+Button Masher	buttonMasherNeedy	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Button%20Masher.pdf	McDude73	2017-07-19	2
+Random Number Generator	rng	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Random%20Number%20Generator.pdf	"Lumbud84, McDude73"	2017-07-21	2
+Color Morse	ColorMorseModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Color%20Morse.pdf	"SKiPP, Ezekiel, ZekNikZ"	2017-07-31	1
+Mastermind Simple	Mastermind Simple	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mastermind%20Simple.pdf	Eotall	2017-08-06	1
+Mastermind Cruel	Mastermind Cruel	5	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mastermind%20Cruel.pdf	Eotall	2017-08-06	1
+Gridlock	GridlockModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Gridlock.pdf	"Elias, Timwi"	2017-08-11	1
+Big Circle	BigCircle	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Big%20Circle.pdf	"Ezekiel, Hendruid, CaitSith2"	2017-08-14	1
+Morse-A-Maze	MorseAMaze	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Morse-A-Maze.pdf	CaitSith2	2017-08-21	1
+Colored Switches	ColoredSwitchesModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Colored%20Switches.pdf	Timwi	2017-09-03	1
+Perplexing Wires	PerplexingWiresModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Perplexing%20Wires.pdf	"MarAyzex, Ezekiel, Timwi"	2017-09-06	1
+Monsplode Trading Cards	monsplodeCards	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Monsplode%20Trading%20Cards.pdf	"clutterArranger, Grybo"	2017-09-10	1
+Game Of Life Simple	GameOfLifeSimple	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Game%20of%20Life%20Simple.pdf	"Eotall, WarioLGP, samfun123"	2017-09-12	1
+Game Of Life Cruel	GameOfLifeCruel	5	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Game%20of%20Life%20Cruel.pdf	"Eotall, WarioLGP, samfun123"	2017-09-12	1
+Nonogram	NonogramModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Nonogram.pdf	Piggered	2017-09-19	1
+S.E.T.	SetModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/S.E.T..pdf	"Zawu, Timwi"	2017-09-23	1
+Painting	Painting	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Painting.pdf	"Hendruid, Bashly"	2017-09-24	1
+Color Generator	Color Generator	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Color%20Generator.pdf	EternityShack	2017-09-24	1
+Shape Memory	needyShapeMemory	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Shape%20Memory.pdf	UltraCboy	2017-09-28	2
+Symbol Cycle	SymbolCycleModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Symbol%20Cycle.pdf	Timwi	2017-10-05	1
+Hunting	hunting	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Hunting.pdf	taggedjc	2017-10-09	1
+Extended Password	ExtendedPassword	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Extended%20Password.pdf	"taggedjc, TWGaming"	2017-10-24	1
+Curriculum	curriculum	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Curriculum.pdf	Fixdoll	2017-10-30	1
+Braille	BrailleModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Braille.pdf	Timwi	2017-10-31	1
+Mafia	MafiaModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mafia.pdf	"MarioXTurn, Ezekiel, Timwi"	2017-11-04	1
+Festive Piano Keys	FestivePianoKeys	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Festive%20Piano%20Keys.pdf	Bashly	2017-12-07	1
+Flags	FlagsModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Flags.pdf	"Monopoly, Piggered"	2017-12-24	1
+Timezone	timezone	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Timezone.pdf	federan	2017-12-30	1
