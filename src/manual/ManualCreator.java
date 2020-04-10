@@ -194,10 +194,10 @@ public class ManualCreator
     {
         try
         {
-            File manualPage = modules.get(moduleIndex).getManualLocation();
+            String manualPagePath = "modules/" + modules.get(moduleIndex).getModuleCode() + ".pdf";
             String moduleName = modules.get(moduleIndex).getModuleName();
             String moduleCodeName = modules.get(moduleIndex).getModuleCode();
-            String path = editPath(manualPage.getPath());
+            String path = editPath(manualPagePath);
             writer.write("\\label{pdf:" + moduleCodeName + "}\n" +
                     "\\pdfbookmark{" + moduleName + "}{pdf:" + moduleCodeName + "}\n" +
                     "\\includepdf[pages=-]{\"" + path + "\"}\n");

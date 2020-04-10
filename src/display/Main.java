@@ -35,7 +35,7 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception
     {
         //Setting up an area for the modules:
-        final FlowPane modulesPane = new FlowPane(2,2);
+        final FlowPane modulesPane = new FlowPane(2, 2);
         modulesPane.setPadding(new Insets(0, 0, 0, 5));
         final FlowPane needyPane = new FlowPane(2, 2);
         needyPane.setPadding(new Insets(0, 0, 0, 5));
@@ -84,19 +84,16 @@ public class Main extends Application
         });
         searchBarInput.setOnKeyPressed(e ->
         {
-            if(e.getCode() == KeyCode.ENTER)
-            {
+            if (e.getCode() == KeyCode.ENTER)
                 searchModules(searchBarInput.getText());
-            }
         });
         selectAll.setOnMouseClicked(e ->
         {
-            FlowPane fp = (FlowPane)scrollableWindow.getContent();
+            FlowPane fp = (FlowPane) scrollableWindow.getContent();
             ObservableList<Node> modulePanes = fp.getChildren();
             sdc.sortModules(0, false);
-            for(int i = 0; i < modulePanes.size(); i++)
-            {
-                StackPane modulePane = (StackPane)modulePanes.get(i);
+            for (int i = 0; i < modulePanes.size(); i++) {
+                StackPane modulePane = (StackPane) modulePanes.get(i);
                 modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
                 Main.numSelected++;
                 MODULES_DISPLAYED.get(i).activate();
@@ -115,7 +112,7 @@ public class Main extends Application
         primaryStage.setWidth(750);
         primaryStage.setHeight(500);
 
-        if(exceptionOnBoot)
+        if (exceptionOnBoot)
         {
             Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
             exceptionAlert.setTitle("Error loading configuration files!");
@@ -129,8 +126,6 @@ public class Main extends Application
         else
             primaryStage.show();
     }
-
-
 
     /**
      * Clear all modules off the screen, generally so they can be re-rendered.

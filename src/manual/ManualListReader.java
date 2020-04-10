@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class ManualListReader
 {
     private static final File SUPPORTED_MODULE_FILE = new File("./resources/modules-config-details.txt");
-    private static final ArrayList<java.lang.Module> MODULES_AVAILABLE = new ArrayList<java.lang.Module>();
+    private static final ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
 
     /**
      * Reads a config file and creates Module objects based on these.
@@ -32,7 +32,7 @@ public class ManualListReader
                 String moduleName = removeQuotes(detailElements[0]);
                 String moduleCode = removeQuotes(detailElements[1]);
                 String difficultyStr = detailElements[2];
-                String manualPath = removeQuotes(detailElements[3]);
+                String manualUrl = removeQuotes(detailElements[3]);
                 String moduleCreatorsStr = removeQuotes(detailElements[4]);
                 String moduleCreationDateStr = removeQuotes(detailElements[5]);
                 String categoryStr = detailElements[6];
@@ -42,7 +42,7 @@ public class ManualListReader
                 LocalDate moduleCreationDate = LocalDate.parse(moduleCreationDateStr);
                 int category = Integer.parseInt(categoryStr);
                 Module module = new Module(moduleName, moduleCode, difficulty,
-                        manualPath, moduleCreators, moduleCreationDate, category);
+                        manualUrl, moduleCreators, moduleCreationDate, category);
 
                 modules.add(module);
             }

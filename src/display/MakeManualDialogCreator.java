@@ -10,6 +10,7 @@ import javafx.util.Callback;
 import manual.ManualCreator;
 import manual.Module;
 import manual.OutputIOException;
+import manual.UrlFileCloner;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -84,20 +85,27 @@ public class MakeManualDialogCreator
                         sdc.filterModules(needyFilter);
                         for (Module module : Main.MODULES_DISPLAYED) {
                             if (module.isActive())
+                            {
                                 needySection.add(module);
+                                downloadFile(module);
+                            }
                             temp.remove(module);
                         }
                         Main.MODULES_DISPLAYED = temp;
                         manual.setNeedyToEnd(true);
                     }
-                    if (splitVanilla.isSelected()) {//Separates active vanilla modules.
+                    if (splitVanilla.isSelected())
+                    {//Separates active vanilla modules.
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                         ArrayList<Integer> vanillaFilter = new ArrayList<Integer>();
                         vanillaFilter.add(0);
                         sdc.filterModules(vanillaFilter);
                         for (Module module : Main.MODULES_DISPLAYED) {
                             if (module.isActive())
+                            {
                                 vanillaSection.add(module);
+                                downloadFile(module);
+                            }
                             temp.remove(module);
                         }
                         Main.MODULES_DISPLAYED = temp;
@@ -106,7 +114,10 @@ public class MakeManualDialogCreator
                     sdc.sortModules(0, false);
                     for (Module module : Main.MODULES_DISPLAYED) {
                         if (module.isActive())
+                        {
                             manual.addModule(module);
+                            downloadFile(module);
+                        }
                     }
                     for (Module module : vanillaSection)
                         manual.addModule(module);
@@ -120,10 +131,13 @@ public class MakeManualDialogCreator
                     Main.MODULES_DISPLAYED = displayModules;
                     Main.clearModules();
                     Main.renderModules();
-                    Runnable compile = new Runnable() {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
+                    Runnable compile = new Runnable()
+                    {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
                         @Override
-                        public void run() {
-                            try {
+                        public void run()
+                        {
+                            try
+                            {
                                 manual.writeManual();
                                 File pdf = new File(manual.getPdfFilePath());
                                 String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
@@ -136,10 +150,14 @@ public class MakeManualDialogCreator
                                 String line = null;
                                 while ((line = inStrm.readLine()) != null)
                                     System.out.print(line);
-                            } catch (OutputIOException e) {//This exception will be thrown if there was an error writing to the tex file.
-                                Platform.runLater(new Runnable() {
+                            }
+                            catch (OutputIOException e)
+                            {//This exception will be thrown if there was an error writing to the tex file.
+                                Platform.runLater(new Runnable()
+                                {
                                     @Override
-                                    public void run() {
+                                    public void run()
+                                    {
                                         Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
                                         exceptionAlert.setTitle("Error writing manual!");
                                         exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
@@ -150,8 +168,11 @@ public class MakeManualDialogCreator
                                         Platform.exit();
                                     }
                                 });
-                            } catch (IOException e) {//This exception will be thrown if there was an error compiling the pdf.
-                                Platform.runLater(new Runnable() {
+                            }
+                            catch (IOException e)
+                            {//This exception will be thrown if there was an error compiling the pdf.
+                                Platform.runLater(new Runnable()
+                                {
                                     @Override
                                     public void run() {
                                         Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
@@ -176,5 +197,20 @@ public class MakeManualDialogCreator
             }
         });
         makeManualDialog.showAndWait();
+    }
+
+    private void downloadFile(Module module)
+    {
+        String destinationPath = "resources/modules/" + module.getModuleCode() + ".pdf";
+        UrlFileCloner ufc = new UrlFileCloner(module.getManualLocation(), destinationPath);
+       try
+       {
+           ufc.cloneFile();
+       }
+       catch(Exception ex)
+       {
+           System.out.println("ERROR\n" + ex);
+           //TODO: PROPER EXCEPTION HANDLING HERE!
+       }
     }
 }
