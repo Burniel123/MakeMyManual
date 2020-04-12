@@ -7,7 +7,6 @@ import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 import manual.Module;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

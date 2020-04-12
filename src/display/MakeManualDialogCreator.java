@@ -1,5 +1,6 @@
 package display;
 
+import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -131,6 +132,8 @@ public class MakeManualDialogCreator
                     Main.MODULES_DISPLAYED = displayModules;
                     Main.clearModules();
                     Main.renderModules();
+                    ProgressDialogCreator pdc = new ProgressDialogCreator();
+                    pdc.displayProgressBar();
                     Runnable compile = new Runnable()
                     {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
                         @Override
@@ -198,6 +201,4 @@ public class MakeManualDialogCreator
         });
         makeManualDialog.showAndWait();
     }
-
-
 }

@@ -42,7 +42,7 @@ public class Main extends Application
      */
     @Override
     public void start(Stage primaryStage)
-    {
+    {//TODO: redesign front end to look nicer. Nicely spaced regions with corner radii?
         //Setting up an area for the modules:
         final FlowPane modulesPane = new FlowPane(2, 2);
         modulesPane.setPadding(new Insets(0, 0, 0, 5));
@@ -160,9 +160,6 @@ public class Main extends Application
         }
         else
             primaryStage.show();
-
-        ProgressDialogCreator pdc = new ProgressDialogCreator();
-        pdc.displayProgressBar();
     }
 
     /**
@@ -180,7 +177,6 @@ public class Main extends Application
      */
     static void renderModules()
     {
-        System.out.println("Hello there");
         for(int i = 0; i < 2*MODULES_DISPLAYED.size(); i++)
         {
             Module module = MODULES_DISPLAYED.get(i%MODULES_DISPLAYED.size());

@@ -1,8 +1,6 @@
 package display;
 
-import javafx.scene.control.Alert;
 import javafx.scene.control.Dialog;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.VBox;
 
@@ -13,8 +11,10 @@ import javafx.scene.layout.VBox;
  */
 public class ProgressDialogCreator
 {
-    public void displayProgressBar()
-    {
+    private ProgressBar progressBar = new ProgressBar(0);
+
+    void displayProgressBar()
+    {//TODO: Consider making static? Maybe not because one run of the program may see multiple progress bars?
         //Setting up the dialog window:
         final Dialog progressDialog = new Dialog();
         final VBox progressContent = new VBox(5);
@@ -26,6 +26,17 @@ public class ProgressDialogCreator
         ProgressBar progressBar = new ProgressBar(0);
         progressContent.getChildren().add(progressBar);
 
-        progressDialog.showAndWait();
+        progressDialog.show();
+    }
+
+    /**
+     * Updates the progress to be shown on the progress bar, in accordance with how far through compilation we are.
+     * @param progress - double between 0 and 1 indicating what proportion of the way through compilation
+     *                 the program is.
+     */
+    void setProgress(double progress)
+    {//TODO: Maybe throw here?
+        if(progress >= 0 && progress <= 1)
+            progressBar.setProgress(progress);
     }
 }

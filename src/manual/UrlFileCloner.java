@@ -39,5 +39,6 @@ public class UrlFileCloner
         fileUrl = new URL(url);
         InputStream in = fileUrl.openStream();
         Files.copy(in, Paths.get(destinationFilePath), StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("Done");
     }
 }
