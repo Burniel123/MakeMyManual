@@ -160,6 +160,9 @@ public class Main extends Application
         }
         else
             primaryStage.show();
+
+        ProgressDialogCreator pdc = new ProgressDialogCreator();
+        pdc.displayProgressBar();
     }
 
     /**
