@@ -206,14 +206,10 @@ public class MakeManualDialogCreator
                             try
                             {
                                 int numModules = manual.getModules().size();
-                                for(int i = 1; i <= 10; i++)
-                                {
-                                    Thread.sleep(1000);
-                                    pm.setProgress(i/(10d));
-                                    //updateProgress(i, 10);
-                                }
+
                                 //updateProgress(10,10);
                                 manual.writeManual();
+                                pm.setProgress(0.5);
                                 //pdc.getProgressBar().progressProperty().unbind();
                                 //pdc.getProgressBar().progressProperty().bind(pm.getProgressProperty());
                                 File pdf = new File(manual.getPdfFilePath());
@@ -227,6 +223,7 @@ public class MakeManualDialogCreator
                                 String line = null;
                                 while ((line = inStrm.readLine()) != null)
                                     System.out.print(line);
+                                pm.setProgress(1);
                                 /*pm.setProgress(1.0);
                                 pdc.getProgressBar().progressProperty().unbind();
                                 pdc.getProgressBar().progressProperty().bind(pm.getProgressProperty());*/
