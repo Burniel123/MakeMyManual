@@ -110,6 +110,7 @@ Password	Password	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/
 Capacitor Discharge	NeedyCapacitor	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Capacitor%20Discharge.pdf	Steel Crate Games	2015-10-08	2
 Knob	NeedyKnob	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Knob.pdf	Steel Crate Games	2015-10-08	2
 Venting Gas	NeedyVentGas	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Venting%20Gas.pdf	Steel Crate Games	2015-10-08	2
+German Venting Gas	VentGasTranslated	1	modules/German Venting Gas.pdf	"Malde, Tharagon"	2017-01-25	2
 Refill That Beer!	NeedyBeer	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Refill%20that%20Beer!.pdf	scripto	2017-09-23	2
 Math	Needy Math	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Math.pdf	Mock Army	2016-07-21	2
 Lights Out	LightsOut	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Lights%20Out.pdf	Bashly	2016-07-22	2
@@ -152,3 +153,29 @@ Mafia	MafiaModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/
 Festive Piano Keys	FestivePianoKeys	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Festive%20Piano%20Keys.pdf	Bashly	2017-12-07	1
 Flags	FlagsModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Flags.pdf	"Monopoly, Piggered"	2017-12-24	1
 Timezone	timezone	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Timezone.pdf	federan	2017-12-30	1
+Polyhedral Maze	PolyhedralMazeModule	5	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Polyhedral%20Maze.pdf	Timwi	2018-01-01	1
+Symbolic Coordinates	symbolicCoordinates	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Symbolic%20Coordinates.pdf	Royal_Flu$h	2018-01-09	1
+Poker	Poker	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Poker.pdf	Royal_Flu$h	2018-01-09	1
+Sonic the Hedgehog	sonic	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Sonic%20the%20Hedgehog.pdf	Royal_Flu$h	2018-01-14	1
+Poetry	poetry	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Poetry.pdf	clutterArranger	2018-01-14	1
+Button Sequence	buttonSequencesModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Button%20Sequence.pdf	ZekNikZ	2018-01-15	1
+Algebra	algebra	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Algebra.pdf	Royal_Flu$h	2018-01-17	1
+Visual Impairment	visual_impairment	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Visual%20Impairment.pdf	KingBranBran	2018-01-20	1
+Jukebox	jukebox	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Jukebox.pdf	Royal_Flu$h	2018-01-23	1
+Identity Parade	identityParade	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Identity%20Parade.pdf	Royal_Flu$h	2018-01-25	1
+Maintenance	maintenance	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Maintenance.pdf	Royal_Flu$h	2018-01-30	1
+Blind Maze	BlindMaze	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Blind%20Maze.pdf	"Riverbui, McNiko67"	2018-01-30	1
+Backgrounds	Backgrounds	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Backgrounds.pdf	McNiko67	2018-01-30	1
+Mortal Kombat	mortalKombat	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mortal%20Kombat.pdf	Royal_Flu$h	2018-02-02	1
+Mashematics	mashematics	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Mashematics.pdf	Marksam32	2018-02-03	1
+Faulty Backgrounds	FaultyBackgrounds	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Faulty%20Backgrounds.pdf	McNiko67	2018-02-03	1
+Radiator	radiator	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Radiator.pdf	"red031000, Inova"	2018-02-04	1
+Modern Cipher	modernCipher	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Modern%20Cipher.pdf	TheFe	2018-02-04	1
+LED Grid	LED Grid	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/LED%20Grid.pdf	Royal_Flu$h	2018-02-06	1
+Sink	Sink	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Sink.pdf	McNiko67	2018-02-09	1
+iPhone	iPhone	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20iPhone.pdf	Royal_Flu$h	2018-02-20	1
+Swan	theSwan	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Swan.pdf	Royal_Flu$h	2018-02-22	1
+Waste Management	wastemanagement	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Waste%20Management.pdf	"red031000, Inova, AppleSlice"	2018-02-23	1
+Human Resources	HumanResourcesModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Human%20Resources.pdf	"Elias, Timwi"	2018-02-26	1
+Skyrim	skyrim	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Skyrim.pdf	Royal_Flu$h	2018-03-02	1
+Burglar Alarm	burglarAlarm	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Burglar%20Alarm.pdf	Marksam32	2018-03-03	1
