@@ -208,8 +208,7 @@ public class MakeManualDialogCreator
                                 int numModules = manual.getModules().size();
 
                                 //updateProgress(10,10);
-                                manual.writeManual();
-                                pm.setProgress(0.5);
+                                manual.writeManual(pm);
                                 //pdc.getProgressBar().progressProperty().unbind();
                                 //pdc.getProgressBar().progressProperty().bind(pm.getProgressProperty());
                                 File pdf = new File(manual.getPdfFilePath());

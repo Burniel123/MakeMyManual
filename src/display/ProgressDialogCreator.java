@@ -3,16 +3,11 @@ package display;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.concurrent.Task;
-import javafx.scene.Scene;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.converter.DoubleStringConverter;
 
 /**
  * Manages the dialog which informs the user of the program's process in creating their manual.

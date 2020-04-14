@@ -1,5 +1,6 @@
 package manual;
 
+import display.ProgressManager;
 import javafx.application.Platform;
 
 import java.io.BufferedWriter;
@@ -124,7 +125,7 @@ public class ManualCreator
      * and ending the document.
      * @throws OutputIOException in the event of an IOException.
      */
-    public void writeManual() throws OutputIOException
+    public void writeManual(ProgressManager pm) throws OutputIOException
     {
         createWriter();
         writePreamble();
@@ -140,6 +141,7 @@ public class ManualCreator
             }
             downloadFile(modules.get(i));
             writeManualPage(i);
+            pm.setProgress((((double)i+1)/(double)modules.size())*0.7);
         }
         endFile();
     }
