@@ -20,8 +20,11 @@ public class ProgressDialogCreator
     private final Dialog progressDialog = new Dialog();
     private final ProgressManager pm = new ProgressManager();
 
+    /**
+     * Creates a dialog containing a progress bar, linked to a ProgressManager.
+     */
     void createProgressBar()
-    {//TODO: Consider making static? Maybe not because one run of the program may see multiple progress bars?
+    {
         //Setting up the dialog window:
         final VBox progressContent = new VBox(5);
         progressDialog.getDialogPane().setContent(progressContent);
@@ -35,26 +38,37 @@ public class ProgressDialogCreator
         progressDialog.initStyle(StageStyle.UTILITY);
 
         pm.getProgressProperty().addListener(new ChangeListener<Number>()
-        {//TODO: document this properly.
+        {//Responds to changes in the progress of the task being executed and updates the progress bar accordingly.
             @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1)
+            public void changed(ObservableValue<? extends Number> ov, Number n, Number n1)
             {
                 progressBar.setProgress(pm.getProgress());
             }
         });
     }
 
+    /**
+     * Adds binding properties to the progress bar.
+     * @param dp - the property to bind the progress bar's progress to.
+     */
     void initBinding(DoubleProperty dp)
     {
         progressBar.progressProperty().unbind();
         progressBar.progressProperty().bind(dp);
     }
 
+    /**
+     * Displays the progress bar dialog to the screen.
+     */
     void displayProgressBar()
     {
         progressDialog.show();
     }
 
+    /**
+     * Obtains the ProgressManager controlling a progress bar.
+     * @return the ProgressManager which is managing this progress bar.
+     */
     ProgressManager getProgressManager()
     {
         return pm;
@@ -71,6 +85,10 @@ public class ProgressDialogCreator
             progressBar.setProgress(progress);
     }
 
+    /**
+     * Obtains the progress bar being displayed
+     * @return the ProgressBar corresponding to this Dialog.
+     */
     ProgressBar getProgressBar()
     {
         return progressBar;

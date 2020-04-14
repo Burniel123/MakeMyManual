@@ -160,32 +160,6 @@ public class Main extends Application
         }
         else
             primaryStage.show();
-
-        /*StackPane root = new StackPane();
-        Task<Void> task = new Task<Void>(){
-            @Override
-            public Void call(){
-                for (int i = 1; i < 10; i++)    {
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println(i);
-                    updateProgress(i , 10);
-                }
-                return null;
-            }
-        };
-
-        ProgressBar updProg = new ProgressBar();
-        updProg.progressProperty().bind(task.progressProperty());
-        root.getChildren().add(updProg);
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-        Thread th = new Thread(task);
-        th.setDaemon(true);
-        th.start();*/
     }
 
     /**
@@ -251,6 +225,10 @@ public class Main extends Application
         }
     }
 
+    /**
+     * Filters modules displayed by a provided search term.
+     * @param searchTerm - term to search by - only modules whose names contain this term will be featured.
+     */
     static void searchModules(String searchTerm)
     {
             ArrayList<Module> temp = new ArrayList<Module>(MODULES_DISPLAYED);
@@ -316,7 +294,7 @@ public class Main extends Application
         catch(InputIOException e)
         {
             Platform.runLater(new Runnable()
-            {
+            {//If an exception was thrown, flag that an exception should be thrown.
                 @Override
                 public void run()
                 {

@@ -1,7 +1,6 @@
 package manual;
 
 import display.ProgressManager;
-import javafx.application.Platform;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -141,7 +140,7 @@ public class ManualCreator
             }
             downloadFile(modules.get(i));
             writeManualPage(i);
-            pm.setProgress((((double)i+1)/(double)modules.size())*0.7);
+            pm.setProgress((((double)i+1)/(double)modules.size())*0.7); //Update the progress bar.
         }
         endFile();
     }
@@ -286,6 +285,10 @@ public class ManualCreator
         return editedPath;
     }
 
+    /**
+     * Downloads a manual page from the KTANE repository to a temporary file on the user's machine.
+     * @param module - the module whose manual page should be downloaded.
+     */
     private void downloadFile(Module module)
     {
         String destinationPath = "resources/modules/" + module.getModuleCode() + ".pdf";
