@@ -1,7 +1,7 @@
 package display;
 
-import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
@@ -11,9 +11,11 @@ import javafx.util.Callback;
 import manual.ManualCreator;
 import manual.Module;
 import manual.OutputIOException;
-import manual.UrlFileCloner;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -21,6 +23,10 @@ import java.util.ArrayList;
  */
 public class MakeManualDialogCreator
 {
+    private ManualCreator manual = null;
+    private ProgressDialogCreator pdc = null;
+    //private Task pBarTask = pBarTaskCreator();
+
     /**
      * Creates the dialog to generate a manual.
      */
@@ -50,7 +56,7 @@ public class MakeManualDialogCreator
         ExtensionFilter filter = new ExtensionFilter("Protable Document Format: .pdf", ".pdf");
         saveLocation.getExtensionFilters().add(filter);
         saveLocation.setTitle("Choose location to save manual");
-        ManualCreator manual = new ManualCreator("resources/manual.tex");
+        manual = new ManualCreator("resources/manual.tex");
         chooseDestination.setOnMouseClicked(e ->
         {
                 File save = saveLocation.showSaveDialog(new Stage());
@@ -132,9 +138,10 @@ public class MakeManualDialogCreator
                     Main.MODULES_DISPLAYED = displayModules;
                     Main.clearModules();
                     Main.renderModules();
-                    ProgressDialogCreator pdc = new ProgressDialogCreator();
-                    pdc.displayProgressBar();
-                    Runnable compile = new Runnable()
+                    pdc = new ProgressDialogCreator();
+                    pdc.createProgressBar();
+                    ProgressManager pm = pdc.getProgressManager();
+                    /*Runnable compile = new Runnable()
                     {//tex file creation and compilation will happen in a separate thread as it takes ages and is risky.
                         @Override
                         public void run()
@@ -190,8 +197,86 @@ public class MakeManualDialogCreator
                                 });
                             }
                         }
+                    };*/
+                    Task<Void> pBarTask = new Task<Void>()
+                    {//TODO: document this properly.
+                        @Override
+                        public Void call() throws Exception
+                        {
+                            try
+                            {
+                                int numModules = manual.getModules().size();
+                                for(int i = 1; i <= 10; i++)
+                                {
+                                    Thread.sleep(1000);
+                                    pm.setProgress(i/(10d));
+                                    //updateProgress(i, 10);
+                                }
+                                //updateProgress(10,10);
+                                manual.writeManual();
+                                //pdc.getProgressBar().progressProperty().unbind();
+                                //pdc.getProgressBar().progressProperty().bind(pm.getProgressProperty());
+                                File pdf = new File(manual.getPdfFilePath());
+                                String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
+                                ProcessBuilder builder = new ProcessBuilder("pdflatex","-output-directory",
+                                        pdfDir, manual.getTexFilePath());
+                                builder.redirectErrorStream(true);
+                                Process pro = builder.start();
+                                BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+                                System.out.println("Should be rolling");
+                                String line = null;
+                                while ((line = inStrm.readLine()) != null)
+                                    System.out.print(line);
+                                /*pm.setProgress(1.0);
+                                pdc.getProgressBar().progressProperty().unbind();
+                                pdc.getProgressBar().progressProperty().bind(pm.getProgressProperty());*/
+                            }
+                            catch (OutputIOException e)
+                            {//This exception will be thrown if there was an error writing to the tex file.
+                                Platform.runLater(new Runnable()
+                                {
+                                    @Override
+                                    public void run()
+                                    {
+                                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                                        exceptionAlert.setTitle("Error writing manual!");
+                                        exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
+                                                "Do all working directories have appropriate permissions?");
+                                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                                                "If problem persists, please contact Daniel Burton.");
+                                        exceptionAlert.showAndWait();
+                                        Platform.exit();
+                                    }
+                                });
+                            }
+                            catch (IOException e)
+                            {//This exception will be thrown if there was an error compiling the pdf.
+                                Platform.runLater(new Runnable()
+                                {
+                                    @Override
+                                    public void run()
+                                    {
+                                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                                        exceptionAlert.setTitle("Error writing manual!");
+                                        exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
+                                                "Do all working directories have appropriate permissions?");
+                                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                                                "If problem persists, please contact Daniel Burton.");
+                                        exceptionAlert.showAndWait();
+                                        Platform.exit();
+                                    }
+                                });
+                            }
+                            return null;
+                        }
                     };
-                    Thread compileThread = new Thread(compile);
+/*
+                    pdc.getProgressBar().progressProperty().unbind();
+                    pdc.getProgressBar().progressProperty().bind(pBarTask.progressProperty());
+*/
+                    pdc.initBinding(pm.getProgressProperty());
+                    pdc.displayProgressBar();
+                    Thread compileThread = new Thread(pBarTask);
                     compileThread.setDaemon(true);
                     compileThread.start();
                 }
@@ -201,4 +286,6 @@ public class MakeManualDialogCreator
         });
         makeManualDialog.showAndWait();
     }
+
+    /*private*/
 }

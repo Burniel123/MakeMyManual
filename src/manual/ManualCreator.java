@@ -79,6 +79,11 @@ public class ManualCreator
         modules.add(module);
     }
 
+    public ArrayList<Module> getModules()
+    {//TODO: properly document!
+        return modules;
+    }
+
     /**
      * Clears the list of modules.
      */
@@ -124,22 +129,18 @@ public class ManualCreator
         createWriter();
         writePreamble();
 
-        for(int i = 0; i < modules.size(); i++)
-        {
-            if(vanillaToEnd && modules.get(i).getCategory() == 0)
-            {
+        for(int i = 0; i < modules.size(); i++) {
+            if (vanillaToEnd && modules.get(i).getCategory() == 0) {
                 beginVanillaSection();
                 vanillaToEnd = false;
             }
-            if(needyToEnd && modules.get(i).getCategory() == 2)
-            {
+            if (needyToEnd && modules.get(i).getCategory() == 2) {
                 beginNeedySection();
                 needyToEnd = false;
             }
             downloadFile(modules.get(i));
             writeManualPage(i);
         }
-
         endFile();
     }
 

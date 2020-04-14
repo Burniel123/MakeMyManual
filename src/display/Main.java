@@ -3,6 +3,7 @@ package display;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
@@ -160,6 +161,32 @@ public class Main extends Application
         }
         else
             primaryStage.show();
+
+        /*StackPane root = new StackPane();
+        Task<Void> task = new Task<Void>(){
+            @Override
+            public Void call(){
+                for (int i = 1; i < 10; i++)    {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(i);
+                    updateProgress(i , 10);
+                }
+                return null;
+            }
+        };
+
+        ProgressBar updProg = new ProgressBar();
+        updProg.progressProperty().bind(task.progressProperty());
+        root.getChildren().add(updProg);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+        Thread th = new Thread(task);
+        th.setDaemon(true);
+        th.start();*/
     }
 
     /**
