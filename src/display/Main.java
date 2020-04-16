@@ -30,11 +30,13 @@ public class Main extends Application
     static final VBox ROOT_PANE = new VBox(3);
     /*static final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55;fx-background-radius: 5px";
     static final String SELECTED_MODULE_STYLE = "-fx-background-color: #669900";*/
-    static final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
-    static final Background DEFAULT_MODULE_BACK = new Background(new BackgroundFill(Color.web("0xf25d55"),
+    static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
+    static final Background DEFAULT_MODULE_BACK = new Background(new BackgroundFill(Color.WHITE,
             new CornerRadii(3), new Insets(2)));
     static final Background SELECTED_MODULE_BACK = new Background(new BackgroundFill(Color.web("0x669900"),
             new CornerRadii(3), new Insets(2)));
+    static final Border DEFAULT_BORDER = new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,
+            new CornerRadii(3), BorderWidths.DEFAULT));
     static boolean exceptionOnBoot = false;
     static int numSelected = 0;
 
@@ -196,12 +198,9 @@ public class Main extends Application
                 modulePane.setAlignment(Pos.BOTTOM_CENTER);
                 final Label moduleCode = new Label(module.getModuleCode());
                 moduleCode.setFont(new Font(7));
-                /*if(module.isActive())
-                    moduleRegion.setStyle(SELECTED_MODULE_STYLE);
-                else
-                    moduleRegion.setStyle(DEFAULT_MODULE_STYLE);*/
                 moduleRegion.setMinSize(100, 20);
                 moduleRegion.setBackground(DEFAULT_MODULE_BACK);
+                moduleRegion.setBorder(DEFAULT_BORDER);
                 //Event handling code for each module:
                 modulePane.setOnMouseClicked(e ->
                 {
@@ -213,7 +212,7 @@ public class Main extends Application
                     }
                     else
                     {
-                        moduleRegion.setStyle(DEFAULT_BACK_STYLE);
+                        moduleRegion.setBackground(DEFAULT_MODULE_BACK);
                         module.deactivate();
                         numSelected--;
                     }
