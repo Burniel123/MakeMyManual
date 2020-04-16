@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import manual.InputIOException;
@@ -27,9 +28,13 @@ import java.util.ArrayList;
 public class Main extends Application
 {
     static final VBox ROOT_PANE = new VBox(3);
-    static final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55";
-    static final String SELECTED_MODULE_STYLE = "-fx-background-color: #669900";
+    /*static final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55;fx-background-radius: 5px";
+    static final String SELECTED_MODULE_STYLE = "-fx-background-color: #669900";*/
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #e5cb90";
+    static final Background DEFAULT_MODULE_BACK = new Background(new BackgroundFill(Color.web("0xf25d55"),
+            new CornerRadii(3), new Insets(2)));
+    static final Background SELECTED_MODULE_BACK = new Background(new BackgroundFill(Color.web("0x669900"),
+            new CornerRadii(3), new Insets(2)));
     static boolean exceptionOnBoot = false;
     static int numSelected = 0;
 
@@ -191,23 +196,24 @@ public class Main extends Application
                 modulePane.setAlignment(Pos.BOTTOM_CENTER);
                 final Label moduleCode = new Label(module.getModuleCode());
                 moduleCode.setFont(new Font(7));
-                if(module.isActive())
+                /*if(module.isActive())
                     moduleRegion.setStyle(SELECTED_MODULE_STYLE);
                 else
-                    moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
+                    moduleRegion.setStyle(DEFAULT_MODULE_STYLE);*/
                 moduleRegion.setMinSize(100, 20);
+                moduleRegion.setBackground(DEFAULT_MODULE_BACK);
                 //Event handling code for each module:
                 modulePane.setOnMouseClicked(e ->
                 {
-                    if(moduleRegion.getStyle().equals(DEFAULT_MODULE_STYLE))
+                    if(moduleRegion.getBackground().equals(DEFAULT_MODULE_BACK))
                     {
-                        moduleRegion.setStyle(SELECTED_MODULE_STYLE);
+                        moduleRegion.setBackground(SELECTED_MODULE_BACK);
                         module.activate();
                         numSelected++;
                     }
                     else
                     {
-                        moduleRegion.setStyle(DEFAULT_MODULE_STYLE);
+                        moduleRegion.setStyle(DEFAULT_BACK_STYLE);
                         module.deactivate();
                         numSelected--;
                     }
@@ -259,16 +265,16 @@ public class Main extends Application
                 StackPane modulePane = (StackPane) modules.get(j);
                 if(((Label)modulePane.getChildren().get(2)).getText().equals(MODULES_DISPLAYED.get(i).getModuleCode()))
                 {
-                    if(select && modulePane.getChildren().get(0).getStyle().equals(DEFAULT_MODULE_STYLE))
+                    if(select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(DEFAULT_MODULE_BACK))
                     {
                         Main.numSelected++;
-                        modulePane.getChildren().get(0).setStyle(SELECTED_MODULE_STYLE);
+                        ((Region)modulePane.getChildren().get(0)).setBackground(SELECTED_MODULE_BACK);
                         MODULES_DISPLAYED.get(i).activate();
                     }
-                    else if(!select && modulePane.getChildren().get(0).getStyle().equals(SELECTED_MODULE_STYLE))
+                    else if(!select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(SELECTED_MODULE_BACK))
                     {
                         Main.numSelected--;
-                        modulePane.getChildren().get(0).setStyle(DEFAULT_MODULE_STYLE);
+                        ((Region)modulePane.getChildren().get(0)).setBackground(DEFAULT_MODULE_BACK);
                         MODULES_DISPLAYED.get(i).deactivate();
                     }
                     break;
