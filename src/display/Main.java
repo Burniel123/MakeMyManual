@@ -28,8 +28,6 @@ import java.util.ArrayList;
 public class Main extends Application
 {
     static final VBox ROOT_PANE = new VBox(3);
-    /*static final String DEFAULT_MODULE_STYLE = "-fx-background-color: #f25d55;fx-background-radius: 5px";
-    static final String SELECTED_MODULE_STYLE = "-fx-background-color: #669900";*/
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
     static final Background DEFAULT_MODULE_BACK = new Background(new BackgroundFill(Color.WHITE,
             new CornerRadii(3), new Insets(2)));
@@ -37,6 +35,8 @@ public class Main extends Application
             new CornerRadii(3), new Insets(2)));
     static final Border DEFAULT_BORDER = new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,
             new CornerRadii(3), BorderWidths.DEFAULT));
+    static final Font TITLES_FONT = new Font("Arial Bold", 16);
+
     static boolean exceptionOnBoot = false;
     static int numSelected = 0;
 
@@ -60,8 +60,10 @@ public class Main extends Application
         scrollContent.setStyle(DEFAULT_BACK_STYLE);
 
         final Label regularLabel = new Label("Regular Modules");
+        regularLabel.setFont(TITLES_FONT);
         final BorderPane regularTitleBox = new BorderPane();
         final Label needyLabel = new Label("Needy Modules");
+        needyLabel.setFont(TITLES_FONT);
         final BorderPane needyTitleBox = new BorderPane();
 
         scrollContent.getChildren().addAll(regularTitleBox, modulesPane, needyTitleBox, needyPane);
@@ -69,6 +71,7 @@ public class Main extends Application
         final ScrollPane scrollableWindow = new ScrollPane(scrollContent);
         scrollableWindow.setFitToHeight(true);
         scrollableWindow.setFitToWidth(true);
+        scrollableWindow.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
 
         final Button selectAllRegular = new Button("Select All");
         final Button deselectAllRegular = new Button("Deselect All");
@@ -96,6 +99,8 @@ public class Main extends Application
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/" + MODULES_AVAILABLE.size());
+        numSelectedBar.setPadding(new Insets(0, 5, 0, 5));
+        numSelected.setFont(TITLES_FONT);
         searchBarInput.setPromptText("Search for modules...");
         regularTitleBox.setCenter(regularLabel);
         regularTitleBox.setRight(regularSelectionButtons);
