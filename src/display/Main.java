@@ -49,7 +49,7 @@ public class Main extends Application
      */
     @Override
     public void start(Stage primaryStage)
-    {//TODO: redesign front end to look nicer. Nicely spaced regions with corner radii?
+    {
         //Setting up an area for the modules:
         final FlowPane modulesPane = new FlowPane(2, 2);
         modulesPane.setPadding(new Insets(0, 0, 0, 5));

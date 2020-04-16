@@ -67,7 +67,10 @@ public class ManualCreator
      */
     public String getPdfFilePath()
     {
-        return pdfFile.getPath();
+        if(pdfFile != null)
+            return pdfFile.getPath();
+        else
+            return null;
     }
 
     /**
@@ -129,12 +132,15 @@ public class ManualCreator
         createWriter();
         writePreamble();
 
-        for(int i = 0; i < modules.size(); i++) {
-            if (vanillaToEnd && modules.get(i).getCategory() == 0) {
+        for(int i = 0; i < modules.size(); i++)
+        {
+            if (vanillaToEnd && modules.get(i).getCategory() == 0)
+            {
                 beginVanillaSection();
                 vanillaToEnd = false;
             }
-            if (needyToEnd && modules.get(i).getCategory() == 2) {
+            if (needyToEnd && modules.get(i).getCategory() == 2)
+            {
                 beginNeedySection();
                 needyToEnd = false;
             }

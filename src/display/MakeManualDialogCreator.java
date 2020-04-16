@@ -30,7 +30,8 @@ public class MakeManualDialogCreator
     /**
      * Creates the dialog to generate a manual.
      */
-    void generateManualDialog() {
+    void generateManualDialog()
+    {
         Dialog<Void> makeManualDialog = new Dialog<Void>();
         DialogPane mmDialogPane = new DialogPane();
         GridPane dialogGrid = new GridPane();
@@ -143,17 +144,26 @@ public class MakeManualDialogCreator
                     pdc.createProgressBar();
                     ProgressManager pm = pdc.getProgressManager();
 
-                    Task<Void> pBarTask = new Task<Void>() {//Task holding pdf creation and compilation code to be executed on a separate thread.
+                    Task<Void> pBarTask = new Task<Void>()
+                    {//Task holding pdf creation and compilation code to be executed on a separate thread.
                         @Override
-                        public Void call() throws Exception {
-                            try {
+                        public Void call() throws Exception
+                        {
+                            try
+                            {
                                 int numModules = manual.getModules().size();
-
+                                ProcessBuilder builder = null;
                                 manual.writeManual(pm);
-                                File pdf = new File(manual.getPdfFilePath());
-                                String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
-                                ProcessBuilder builder = new ProcessBuilder("pdflatex", "-output-directory",
-                                        pdfDir, manual.getTexFilePath());
+                                if(manual.getPdfFilePath() == null)
+                                   builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
+                                else
+                                {
+                                    File pdf = new File(manual.getPdfFilePath());
+                                    String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
+                                    builder = new ProcessBuilder("pdflatex", "-output-directory",
+                                            pdfDir, manual.getTexFilePath());
+                                }
+
                                 builder.redirectErrorStream(true);
                                 Process pro = builder.start();
                                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
@@ -162,10 +172,14 @@ public class MakeManualDialogCreator
                                 while ((line = inStrm.readLine()) != null)
                                     System.out.print(line);
                                 pm.setProgress(1);
-                            } catch (OutputIOException e) {//This exception will be thrown if there was an error writing to the tex file.
-                                Platform.runLater(new Runnable() {//Alert to the presented on the Application thread whenever possible.
+                            }
+                            catch (OutputIOException e)
+                            {//This exception will be thrown if there was an error writing to the tex file.
+                                Platform.runLater(new Runnable()
+                                {//Alert to the presented on the Application thread whenever possible.
                                     @Override
-                                    public void run() {
+                                    public void run()
+                                    {
                                         Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
                                         exceptionAlert.setTitle("Error writing manual!");
                                         exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
@@ -176,10 +190,14 @@ public class MakeManualDialogCreator
                                         Platform.exit();
                                     }
                                 });
-                            } catch (IOException e) {//This exception will be thrown if there was an error compiling the pdf.
-                                Platform.runLater(new Runnable() {//Alert to be presented on the Application thread whenever next possible.
+                            }
+                            catch (IOException e)
+                            {//This exception will be thrown if there was an error compiling the pdf.
+                                Platform.runLater(new Runnable()
+                                {//Alert to be presented on the Application thread whenever next possible.
                                     @Override
-                                    public void run() {
+                                    public void run()
+                                    {
                                         Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
                                         exceptionAlert.setTitle("Error writing manual!");
                                         exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
