@@ -149,8 +149,9 @@ public class Main extends Application
         });
         makeIt.setOnMouseClicked(e ->
         {
-            MakeManualDialogCreator mmdc = new MakeManualDialogCreator();
-            mmdc.generateManualDialog();
+            MakeManualDialog mmd = new MakeManualDialog();
+            mmd.setupResultConverter();
+            mmd.showAndWait();
         });
 
         final Scene scene = new Scene(ROOT_PANE);

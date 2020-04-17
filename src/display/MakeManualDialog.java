@@ -21,36 +21,41 @@ import java.util.ArrayList;
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
  */
-public class MakeManualDialogCreator
+public class MakeManualDialog extends Dialog<Void>
 {
     private ManualCreator manual = null;
     private ProgressDialog pd = null;
-    //private Task pBarTask = pBarTaskCreator();
+    private ProgressManager pm = null;
+
+    private CheckBox splitVanilla = null;
+    private CheckBox splitNeedy = null;
+    private TextField nameManual = null;
+
 
     /**
      * Creates the dialog to generate a manual.
      */
-    void generateManualDialog()
+    MakeManualDialog()
     {
-        Dialog<Void> makeManualDialog = new Dialog<Void>();
+        //Dialog<Void> makeManualDialog = new Dialog<Void>();
         DialogPane mmDialogPane = new DialogPane();
         GridPane dialogGrid = new GridPane();
         dialogGrid.setHgap(5);
         dialogGrid.setVgap(5);
         mmDialogPane.setContent(dialogGrid);
-        makeManualDialog.setDialogPane(mmDialogPane);
-        makeManualDialog.setTitle("Export Manual");
-        makeManualDialog.setHeaderText("Export Manual");
-        makeManualDialog.setContentText("Choose your preferences below and hit OK.");
+        setDialogPane(mmDialogPane);
+        setTitle("Export Manual");
+        setHeaderText("Export Manual");
+        setContentText("Choose your preferences below and hit OK.");
 
         CheckBox subcategories = new CheckBox("Create a category per letter");
         dialogGrid.add(subcategories, 0, 0);
-        CheckBox splitNeedy = new CheckBox("Separate section for any needy modules at end");
+        splitNeedy = new CheckBox("Separate section for any needy modules at end");
         dialogGrid.add(splitNeedy, 0, 1);
-        CheckBox splitVanilla = new CheckBox("Separate section for any vanilla modules after mods");
+        splitVanilla = new CheckBox("Separate section for any vanilla modules after mods");
         dialogGrid.add(splitVanilla, 0, 2);
 
-        Button chooseDestination = new Button("Choose manual location...");
+        final Button chooseDestination = new Button("Choose manual location...");
         dialogGrid.add(chooseDestination, 0, 3);
         FileChooser saveLocation = new FileChooser();
         ExtensionFilter filter = new ExtensionFilter("Protable Document Format: .pdf", ".pdf");
@@ -67,14 +72,20 @@ public class MakeManualDialogCreator
             manual.setOutputTexFile(new File("resources" + File.separator + fileBroken[0] + ".tex"));
         });
 
-        TextField nameManual = new TextField();
+        nameManual = new TextField();
         nameManual.setPromptText("Enter manual title...");
         dialogGrid.add(nameManual, 0, 4);
 
-        makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
-        makeManualDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+        getDialogPane().getButtonTypes().add(ButtonType.OK);
+        getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+    }
 
-        makeManualDialog.setResultConverter(new Callback<ButtonType, Void>()
+    /**
+     * Sets up the actions of the dialog following submission.
+     */
+    void setupResultConverter()
+    {
+        setResultConverter(new Callback<ButtonType, Void>()
         {
             @Override
             public Void call(ButtonType buttonType)
@@ -141,77 +152,9 @@ public class MakeManualDialogCreator
                     Main.clearModules();
                     Main.renderModules();
                     pd = new ProgressDialog();
+                    pm = pd.getProgressManager();
                     //pd.createProgressBar();
-                    ProgressManager pm = pd.getProgressManager();
 
-                    Task<Void> pBarTask = new Task<Void>()
-                    {//Task holding pdf creation and compilation code to be executed on a separate thread.
-                        @Override
-                        public Void call() throws Exception
-                        {
-                            try
-                            {
-                                ProcessBuilder builder = null;
-                                manual.writeManual(pm);
-                                if(manual.getPdfFilePath() == null)
-                                   builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
-                                else
-                                {
-                                    File pdf = new File(manual.getPdfFilePath());
-                                    String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
-                                    builder = new ProcessBuilder("pdflatex", "-output-directory",
-                                            pdfDir, manual.getTexFilePath());
-                                }
-
-                                builder.redirectErrorStream(true);
-                                Process pro = builder.start();
-                                BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
-                                System.out.println("Should be rolling");
-                                String line = null;
-                                while ((line = inStrm.readLine()) != null)
-                                    System.out.print(line);
-                                pm.setProgress(1);
-                                Platform.runLater(() -> pd.closeProgressBar());
-                            }
-                            catch (OutputIOException e)
-                            {//This exception will be thrown if there was an error writing to the tex file.
-                                Platform.runLater(new Runnable()
-                                {//Alert to the presented on the Application thread whenever possible.
-                                    @Override
-                                    public void run()
-                                    {
-                                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                                        exceptionAlert.setTitle("Error writing manual!");
-                                        exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
-                                                "Do all working directories have appropriate permissions?");
-                                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                                                "If problem persists, please contact Daniel Burton.");
-                                        exceptionAlert.showAndWait();
-                                        Platform.exit();
-                                    }
-                                });
-                            }
-                            catch (IOException e)
-                            {//This exception will be thrown if there was an error compiling the pdf.
-                                Platform.runLater(new Runnable()
-                                {//Alert to be presented on the Application thread whenever next possible.
-                                    @Override
-                                    public void run()
-                                    {
-                                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                                        exceptionAlert.setTitle("Error writing manual!");
-                                        exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
-                                                "Do all working directories have appropriate permissions?");
-                                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                                                "If problem persists, please contact Daniel Burton.");
-                                        exceptionAlert.showAndWait();
-                                        Platform.exit();
-                                    }
-                                });
-                            }
-                            return null;
-                        }
-                    };
                     pd.initBinding(pm.getProgressProperty());
                     pd.displayProgressBar();
                     Thread compileThread = new Thread(pBarTask);
@@ -221,6 +164,77 @@ public class MakeManualDialogCreator
                 return null;
             }
         });
-        makeManualDialog.showAndWait();
     }
+
+    /**
+     * Task holding everything that will happen after the user submits the MakeManualDialog.
+     */
+    Task<Void> pBarTask = new Task<Void>()
+    {//Task holding pdf creation and compilation code to be executed on a separate thread.
+        @Override
+        public Void call() throws Exception
+        {
+            try
+            {
+                ProcessBuilder builder = null;
+                manual.writeManual(pm);
+                if(manual.getPdfFilePath() == null)
+                    builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
+                else
+                {
+                    File pdf = new File(manual.getPdfFilePath());
+                    String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
+                    builder = new ProcessBuilder("pdflatex", "-output-directory",
+                            pdfDir, manual.getTexFilePath());
+                }
+
+                builder.redirectErrorStream(true);
+                Process pro = builder.start();
+                BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+                System.out.println("Should be rolling");
+                String line = null;
+                while ((line = inStrm.readLine()) != null)
+                    System.out.print(line);
+                pm.setProgress(1);
+                Platform.runLater(() -> pd.closeProgressBar());
+            }
+            catch (OutputIOException e)
+            {//This exception will be thrown if there was an error writing to the tex file.
+                Platform.runLater(new Runnable()
+                {//Alert to the presented on the Application thread whenever possible.
+                    @Override
+                    public void run()
+                    {
+                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                        exceptionAlert.setTitle("Error writing manual!");
+                        exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
+                                "Do all working directories have appropriate permissions?");
+                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                                "If problem persists, please contact Daniel Burton.");
+                        exceptionAlert.showAndWait();
+                        Platform.exit();
+                    }
+                });
+            }
+            catch (IOException e)
+            {//This exception will be thrown if there was an error compiling the pdf.
+                Platform.runLater(new Runnable()
+                {//Alert to be presented on the Application thread whenever next possible.
+                    @Override
+                    public void run()
+                    {
+                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                        exceptionAlert.setTitle("Error writing manual!");
+                        exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
+                                "Do all working directories have appropriate permissions?");
+                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                                "If problem persists, please contact Daniel Burton.");
+                        exceptionAlert.showAndWait();
+                        Platform.exit();
+                    }
+                });
+            }
+            return null;
+        }
+    };
 }
