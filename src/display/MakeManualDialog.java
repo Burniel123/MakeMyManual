@@ -183,6 +183,8 @@ public class MakeManualDialog extends Dialog<Void>
                 else
                 {
                     File pdf = new File(manual.getPdfFilePath());
+                    File aux = new File(manual.getPdfFilePath().replace(".pdf", ".aux"));
+                    aux.delete();//I don't think(?) I care about the result for now.
                     String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
                     builder = new ProcessBuilder("pdflatex", "-output-directory",
                             pdfDir, manual.getTexFilePath());
