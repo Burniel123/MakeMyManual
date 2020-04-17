@@ -15,28 +15,25 @@ import javafx.stage.StageStyle;
  *
  * @author Daniel Burton
  */
-public class ProgressDialogCreator
+public class ProgressDialog extends Dialog<Void>
 {
     private final ProgressBar progressBar = new ProgressBar();
-    private final Dialog progressDialog = new Dialog();
+    //private final Dialog<Void> progressDialog = new Dialog<Void>();
     private final ProgressManager pm = new ProgressManager();
 
-    /**
-     * Creates a dialog containing a progress bar, linked to a ProgressManager.
-     */
-    void createProgressBar()
+    ProgressDialog()
     {
         //Setting up the dialog window:
         final VBox progressContent = new VBox(5);
-        progressDialog.getDialogPane().setContent(progressContent);
+        getDialogPane().setContent(progressContent);
 
         //Setting basic dialog properties:
-        progressDialog.setTitle("Creating your manual...");
-        progressDialog.setHeaderText("Your custom manual is being created.\nThis may take some time.");
+        setTitle("Creating your manual...");
+        setHeaderText("Your custom manual is being created.\nThis may take some time.");
         ProgressBar progressBar = new ProgressBar(0);
         progressContent.getChildren().add(progressBar);
-        progressDialog.initModality(Modality.APPLICATION_MODAL);
-        progressDialog.initStyle(StageStyle.UTILITY);
+        initModality(Modality.APPLICATION_MODAL);
+        initStyle(StageStyle.UTILITY);
 
         pm.getProgressProperty().addListener(new ChangeListener<Number>()
         {//Responds to changes in the progress of the task being executed and updates the progress bar accordingly.
@@ -63,7 +60,7 @@ public class ProgressDialogCreator
      */
     void displayProgressBar()
     {
-        progressDialog.show();
+        show();
     }
 
     /**
@@ -72,8 +69,8 @@ public class ProgressDialogCreator
     void closeProgressBar()
     {
         //A "dummy" cancel button must be added before window can be closed.
-        progressDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
-        progressDialog.close();
+        getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+        close();
     }
 
     /**
@@ -83,25 +80,5 @@ public class ProgressDialogCreator
     ProgressManager getProgressManager()
     {
         return pm;
-    }
-
-    /**
-     * Updates the progress to be shown on the progress bar, in accordance with how far through compilation we are.
-     * @param progress - double between 0 and 1 indicating what proportion of the way through compilation
-     *                 the program is.
-     */
-    void setProgress(double progress)
-    {//TODO: Maybe throw here?
-        if(progress >= 0 && progress <= 1)
-            progressBar.setProgress(progress);
-    }
-
-    /**
-     * Obtains the progress bar being displayed
-     * @return the ProgressBar corresponding to this Dialog.
-     */
-    ProgressBar getProgressBar()
-    {
-        return progressBar;
     }
 }

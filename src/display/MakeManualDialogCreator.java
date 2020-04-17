@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class MakeManualDialogCreator
 {
     private ManualCreator manual = null;
-    private ProgressDialogCreator pdc = null;
+    private ProgressDialog pd = null;
     //private Task pBarTask = pBarTaskCreator();
 
     /**
@@ -140,9 +140,9 @@ public class MakeManualDialogCreator
                     Main.MODULES_DISPLAYED = displayModules;
                     Main.clearModules();
                     Main.renderModules();
-                    pdc = new ProgressDialogCreator();
-                    pdc.createProgressBar();
-                    ProgressManager pm = pdc.getProgressManager();
+                    pd = new ProgressDialog();
+                    //pd.createProgressBar();
+                    ProgressManager pm = pd.getProgressManager();
 
                     Task<Void> pBarTask = new Task<Void>()
                     {//Task holding pdf creation and compilation code to be executed on a separate thread.
@@ -151,7 +151,6 @@ public class MakeManualDialogCreator
                         {
                             try
                             {
-                                int numModules = manual.getModules().size();
                                 ProcessBuilder builder = null;
                                 manual.writeManual(pm);
                                 if(manual.getPdfFilePath() == null)
@@ -172,7 +171,7 @@ public class MakeManualDialogCreator
                                 while ((line = inStrm.readLine()) != null)
                                     System.out.print(line);
                                 pm.setProgress(1);
-                                Platform.runLater(() -> pdc.closeProgressBar());
+                                Platform.runLater(() -> pd.closeProgressBar());
                             }
                             catch (OutputIOException e)
                             {//This exception will be thrown if there was an error writing to the tex file.
@@ -213,13 +212,12 @@ public class MakeManualDialogCreator
                             return null;
                         }
                     };
-                    pdc.initBinding(pm.getProgressProperty());
-                    pdc.displayProgressBar();
+                    pd.initBinding(pm.getProgressProperty());
+                    pd.displayProgressBar();
                     Thread compileThread = new Thread(pBarTask);
                     compileThread.setDaemon(true);
                     compileThread.start();
                 }
-
                 return null;
             }
         });
