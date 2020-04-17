@@ -183,10 +183,6 @@ public class MakeManualDialog extends Dialog<Void>
                 else
                 {
                     File pdf = new File(manual.getPdfFilePath());
-                    File aux = new File(manual.getPdfFilePath().replace(".pdf", ".aux"));
-                    File log = new File(manual.getPdfFilePath().replace(".pdf", ".log"));
-                    aux.delete();//I don't think(?) I care about the result for now.
-                    log.delete();
                     String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
                     builder = new ProcessBuilder("pdflatex", "-output-directory",
                             pdfDir, manual.getTexFilePath());
@@ -199,6 +195,10 @@ public class MakeManualDialog extends Dialog<Void>
                 String line = null;
                 while ((line = inStrm.readLine()) != null)
                     System.out.print(line);
+                File aux = new File(manual.getPdfFilePath().replace(".pdf", ".aux"));
+                File log = new File(manual.getPdfFilePath().replace(".pdf", ".log"));
+                aux.delete();//I don't think(?) I care about the result for now.
+                log.delete();
                 pm.setProgress(1);
                 Platform.runLater(() -> pd.closeProgressBar());
             }
