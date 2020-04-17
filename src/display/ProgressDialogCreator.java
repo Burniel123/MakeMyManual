@@ -3,6 +3,7 @@ package display;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.VBox;
@@ -63,6 +64,16 @@ public class ProgressDialogCreator
     void displayProgressBar()
     {
         progressDialog.show();
+    }
+
+    /**
+     * Closes the progress bar window, to be used once the task is complete.
+     */
+    void closeProgressBar()
+    {
+        //A "dummy" cancel button must be added before window can be closed.
+        progressDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+        progressDialog.close();
     }
 
     /**

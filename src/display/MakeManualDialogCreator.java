@@ -172,6 +172,7 @@ public class MakeManualDialogCreator
                                 while ((line = inStrm.readLine()) != null)
                                     System.out.print(line);
                                 pm.setProgress(1);
+                                Platform.runLater(() -> pdc.closeProgressBar());
                             }
                             catch (OutputIOException e)
                             {//This exception will be thrown if there was an error writing to the tex file.
