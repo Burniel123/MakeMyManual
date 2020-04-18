@@ -25,7 +25,7 @@ import java.util.ArrayList;
  *
  * @author Daniel Burton
  */
-public class Main extends Application
+public class Main extends Application implements Sortable
 {
     static final VBox ROOT_PANE = new VBox(3);
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
@@ -111,8 +111,12 @@ public class Main extends Application
         ROOT_PANE.getChildren().add(scrollableWindow);
         renderModules();
 
-        SortDialogCreator sdc = new SortDialogCreator();
-        sortMenu.setOnMouseClicked(e -> sdc.applyModuleSort());
+        sortMenu.setOnMouseClicked(e ->
+        {
+            SortDialog sd = new SortDialog();
+            sd.setResultConversion();
+            sd.showAndWait();
+        });
         //EVENT HANDLERS:
         searchBarSubmit.setOnMouseClicked(e ->
         {
@@ -261,8 +265,7 @@ public class Main extends Application
      */
     private void highlightAll(ObservableList<Node> modules, boolean select)
     {
-        SortDialogCreator sdc = new SortDialogCreator();
-        sdc.sortModules(0, false);
+        sortModules(0, false);
         for (int i = 0; i < MODULES_DISPLAYED.size(); i++)
         {
             for(int j = 0; j < modules.size(); j++)
@@ -299,8 +302,8 @@ public class Main extends Application
         {
             MODULES_AVAILABLE = reader.readModuleList();
             MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
-            SortDialogCreator sdc = new SortDialogCreator();
-            sdc.sortModules(0, false);
+            /*SortDialogCreator sdc = new SortDialogCreator();*/
+            sortModules(0, false);
         }
         catch(InputIOException e)
         {

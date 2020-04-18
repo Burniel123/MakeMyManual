@@ -21,7 +21,7 @@ import java.util.ArrayList;
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
  */
-public class MakeManualDialog extends Dialog<Void>
+public class MakeManualDialog extends Dialog<Void> implements Sortable
 {
     private ManualCreator manual = null;
     private ProgressDialog pd = null;
@@ -94,7 +94,7 @@ public class MakeManualDialog extends Dialog<Void>
                 {
                     ArrayList<Module> displayModules = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                     Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
-                    SortDialogCreator sdc = new SortDialogCreator();
+                    /*SortDialogCreator sdc = new SortDialogCreator();*/
                     ArrayList<Module> needySection = new ArrayList<Module>();
                     ArrayList<Module> vanillaSection = new ArrayList<Module>();
                     if (splitNeedy.isSelected())
@@ -102,7 +102,7 @@ public class MakeManualDialog extends Dialog<Void>
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                         ArrayList<Integer> needyFilter = new ArrayList<Integer>();
                         needyFilter.add(2);
-                        sdc.filterModules(needyFilter);
+                        filterModules(needyFilter);
                         for (Module module : Main.MODULES_DISPLAYED)
                         {
                             if (module.isActive())
@@ -119,7 +119,7 @@ public class MakeManualDialog extends Dialog<Void>
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                         ArrayList<Integer> vanillaFilter = new ArrayList<Integer>();
                         vanillaFilter.add(0);
-                        sdc.filterModules(vanillaFilter);
+                        filterModules(vanillaFilter);
                         for (Module module : Main.MODULES_DISPLAYED)
                         {
                             if (module.isActive())
@@ -131,7 +131,7 @@ public class MakeManualDialog extends Dialog<Void>
                         Main.MODULES_DISPLAYED = temp;
                         manual.setVanillaToEnd(true);
                     }
-                    sdc.sortModules(0, false);
+                    sortModules(0, false);
                     for (Module module : Main.MODULES_DISPLAYED)
                     {
                         if (module.isActive())
