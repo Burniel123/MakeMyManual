@@ -10,15 +10,31 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Reads and manages a profile.json file, to be used as module input.
+ *
+ * @author Daniel Burton
+ */
 public class ProfileReader
 {
     private File jsonFile = null;
 
+    /**
+     * Creates a new instance of ProfileReader using a json file to be read.
+     * @param jsonFile - a File object for a profile.json.
+     */
     public ProfileReader(File jsonFile)
     {
         this.jsonFile = jsonFile;
     }
 
+    /**
+     * Reads a profile.json file to obtain a list of enabled modules.
+     * @return an ArrayList of Strings corresponding to module codes which are enabled in the profile.
+     * @throws ParseException - if the json file cannot be parsed.
+     * @throws IOException - in the event of an IOException.
+     * @throws ProfileException - if the parser cannot find an "enabled" list in the profile.
+     */
     public ArrayList<String> readJson() throws ParseException, IOException, ProfileException
     {
         JSONObject content = (JSONObject)(new JSONParser().parse(new FileReader(jsonFile)));
@@ -29,31 +45,28 @@ public class ProfileReader
 
         ArrayList<String> moduleCodesEnabled = new ArrayList<String>();
 
-        for (Object o : array)
-        {
+        for(Object o : array)
+        {//Add the module code for each object in the JSONArray to the list to return.
             System.out.println((String) o);
             moduleCodesEnabled.add((String) o);
         }
 
         return moduleCodesEnabled;
     }
-
-    public static void main(String[] args) throws Exception
-    {
-        ProfileReader pr = new ProfileReader(new File("test.json"));
-        try
-        {
-            pr.readJson();
-        }
-        catch(ProfileException e)
-        {
-            System.out.println(e.getMessage());
-        }
-    }
 }
 
+/**
+ * Custom exception to be thrown when a provided profile does not have an "enabled" list.
+ *
+ * @author Daniel Burton
+ */
 class ProfileException extends Exception
 {
+
+    /**
+     * Creates a ProfileException to be thrown, with an error message.
+     * @param message - the message associated with the exception.
+     */
     public ProfileException(String message)
     {
         super(message);
