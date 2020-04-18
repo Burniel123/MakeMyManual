@@ -13,12 +13,17 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import manual.InputIOException;
 import manual.ManualListReader;
 import manual.Module;
+import manual.ProfileReader;
 
+import java.io.File;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Main application class for MakeMyManual.
@@ -92,10 +97,11 @@ public class Main extends Application implements Sortable
         final Separator searchSeparator = new Separator();
         searchSeparator.setOrientation(Orientation.VERTICAL);
         final Button sortMenu = new Button("Sort");
+        final Button importProfile = new Button("Import Profile");
         final Button presetsButton = new Button("Presets");
         final Button makeIt = new Button("Make My Manual!");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator,
-                sortMenu, presetsButton, makeIt);
+                sortMenu, importProfile, presetsButton, makeIt);
         //Setting up components for the "num selected" bar.
         final HBox numSelectedBar = new HBox(2);
         final Label numSelected = new Label("Modules Selected: 0/" + MODULES_AVAILABLE.size());
@@ -111,13 +117,69 @@ public class Main extends Application implements Sortable
         ROOT_PANE.getChildren().add(scrollableWindow);
         renderModules();
 
+        //EVENT HANDLERS:
         sortMenu.setOnMouseClicked(e ->
         {
             SortDialog sd = new SortDialog();
             sd.setResultConversion();
             sd.showAndWait();
         });
-        //EVENT HANDLERS:
+        importProfile.setOnMouseClicked(e ->
+        {
+            FileChooser fileToImport = new FileChooser();
+            FileChooser.ExtensionFilter ef = new FileChooser.ExtensionFilter("JSON Profiles", ".json");
+            ProfileReader jsonReader = new ProfileReader(fileToImport.showOpenDialog(primaryStage));
+            try
+            {//TODO: thread the json read?
+                ArrayList<String> moduleCodes = jsonReader.readJson();
+                Collections.sort(moduleCodes);
+                ArrayList<Module> temp = new ArrayList<Module>(MODULES_DISPLAYED);
+                MODULES_DISPLAYED = new ArrayList<Module>();
+                for(int i = 0; i < moduleCodes.size(); i++)
+                {//For every module code to be used, locate it and add it to the list of modules to be displayed.
+                    for(int j = 0; j < MODULES_AVAILABLE.size(); j++)
+                    {
+                        if(MODULES_AVAILABLE.get(j).getModuleCode().equals(moduleCodes.get(i)))
+                        {
+                            MODULES_DISPLAYED.add(MODULES_AVAILABLE.get(j));
+                            break;
+                        }
+
+                    }
+                }
+                clearModules();
+                renderModules();
+                ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
+                ObservableList<Node> modulePanes = ((FlowPane)((VBox)scroll.getContent()).getChildren().get(1)).getChildren();
+                ObservableList<Node> needyPanes = ((FlowPane)((VBox)scroll.getContent()).getChildren().get(3)).getChildren();
+                highlightAll(modulePanes, true);
+                highlightAll(needyPanes, true);
+                numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
+                /*int moduleIndex = 0;
+                ArrayList<Integer> indicesToUse = new ArrayList<Integer>();
+
+                for(int i = 0; i < moduleCodes.size(); i++)
+                {
+                    for(int j = moduleIndex; j < MODULES_DISPLAYED.size(); j++)
+                    {
+                        if(MODULES_DISPLAYED.get(j).getModuleCode().equals(moduleCodes.get(i)))
+                        {
+                            indicesToUse.add(j);
+                            moduleIndex = j;
+                            break;
+                        }
+                    }
+                }
+                for(int i = 0; i < indicesToUse.size(); i++)
+                {
+                    Collections.
+                }*/
+            }
+            catch(Exception ex)
+            {//TODO: do this properly kthx.
+                System.out.println(ex.getMessage());
+            }
+        });
         searchBarSubmit.setOnMouseClicked(e ->
         {
             searchModules(searchBarInput.getText());

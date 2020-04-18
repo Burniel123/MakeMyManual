@@ -37,7 +37,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
      */
     MakeManualDialog()
     {
-        //Dialog<Void> makeManualDialog = new Dialog<Void>();
         DialogPane mmDialogPane = new DialogPane();
         GridPane dialogGrid = new GridPane();
         dialogGrid.setHgap(5);
