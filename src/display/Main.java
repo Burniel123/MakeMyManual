@@ -127,6 +127,7 @@ public class Main extends Application implements Sortable
         importProfile.setOnMouseClicked(e ->
         {
             FileChooser fileToImport = new FileChooser();
+            fileToImport.setTitle("Choose a profile to import");
             FileChooser.ExtensionFilter ef = new FileChooser.ExtensionFilter("JSON Profiles", ".json");
             ProfileReader jsonReader = new ProfileReader(fileToImport.showOpenDialog(primaryStage));
             try
@@ -155,25 +156,6 @@ public class Main extends Application implements Sortable
                 highlightAll(modulePanes, true);
                 highlightAll(needyPanes, true);
                 numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
-                /*int moduleIndex = 0;
-                ArrayList<Integer> indicesToUse = new ArrayList<Integer>();
-
-                for(int i = 0; i < moduleCodes.size(); i++)
-                {
-                    for(int j = moduleIndex; j < MODULES_DISPLAYED.size(); j++)
-                    {
-                        if(MODULES_DISPLAYED.get(j).getModuleCode().equals(moduleCodes.get(i)))
-                        {
-                            indicesToUse.add(j);
-                            moduleIndex = j;
-                            break;
-                        }
-                    }
-                }
-                for(int i = 0; i < indicesToUse.size(); i++)
-                {
-                    Collections.
-                }*/
             }
             catch(Exception ex)
             {//TODO: do this properly kthx.
