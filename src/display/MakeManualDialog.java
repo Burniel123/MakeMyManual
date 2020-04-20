@@ -202,7 +202,10 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 aux.delete();//I don't think(?) I care about the result for now.
                 log.delete();
                 pm.setProgress(1);
-                Platform.runLater(() -> pd.closeProgressBar());
+                Platform.runLater(() ->
+                {
+                    pd.closeProgressBar();
+                });
             }
             catch (OutputIOException e)
             {//This exception will be thrown if there was an error writing to the tex file.

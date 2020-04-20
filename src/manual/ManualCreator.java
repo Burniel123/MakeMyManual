@@ -146,6 +146,7 @@ public class ManualCreator
             }
             downloadFile(modules.get(i));
             writeManualPage(i);
+            modules.get(i).deactivate();
             pm.setProgress((((double)i+1)/(double)modules.size())*0.7); //Update the progress bar.
         }
         endFile();

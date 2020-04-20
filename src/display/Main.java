@@ -3,7 +3,6 @@ package display;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
@@ -16,11 +15,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import manual.*;
 import manual.Module;
+import manual.*;
 
-import java.io.File;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -232,6 +229,8 @@ public class Main extends Application implements Sortable
             MakeManualDialog mmd = new MakeManualDialog();
             mmd.setupResultConverter();
             mmd.showAndWait();
+            Main.numSelected = 0;
+            numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
         });
 
         final Scene scene = new Scene(ROOT_PANE);
