@@ -3,6 +3,7 @@ package display;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
@@ -130,24 +131,9 @@ public class Main extends Application implements Sortable
             fileToImport.setTitle("Choose a profile to import");
             FileChooser.ExtensionFilter ef = new FileChooser.ExtensionFilter("JSON Profiles", ".json");
             ProfileReader jsonReader = new ProfileReader(fileToImport.showOpenDialog(primaryStage));
-            try
-            {//TODO: thread the json read?
-                ArrayList<String> moduleCodes = jsonReader.readJson();
-                Collections.sort(moduleCodes);
-                ArrayList<Module> temp = new ArrayList<Module>(MODULES_DISPLAYED);
-                MODULES_DISPLAYED = new ArrayList<Module>();
-                for(int i = 0; i < moduleCodes.size(); i++)
-                {//For every module code to be used, locate it and add it to the list of modules to be displayed.
-                    for(int j = 0; j < MODULES_AVAILABLE.size(); j++)
-                    {
-                        if(MODULES_AVAILABLE.get(j).getModuleCode().equals(moduleCodes.get(i)))
-                        {
-                            MODULES_DISPLAYED.add(MODULES_AVAILABLE.get(j));
-                            break;
-                        }
 
-                    }
-                }
+            Runnable highlightFromProfile = () ->
+            {
                 clearModules();
                 renderModules();
                 ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
@@ -156,11 +142,36 @@ public class Main extends Application implements Sortable
                 highlightAll(modulePanes, true);
                 highlightAll(needyPanes, true);
                 numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
-            }
-            catch(Exception ex)
-            {//TODO: do this properly kthx.
-                System.out.println(ex.getMessage());
-            }
+            };
+
+            Thread jsonReadThread = new Thread(() ->
+            {
+                try
+                {
+                    ArrayList<String> moduleCodes = jsonReader.readJson();
+                    Collections.sort(moduleCodes);
+                    ArrayList<Module> temp = new ArrayList<Module>(MODULES_DISPLAYED);
+                    MODULES_DISPLAYED = new ArrayList<Module>();
+                    for(int i = 0; i < moduleCodes.size(); i++)
+                    {//For every module code to be used, locate it and add it to the list of modules to be displayed.
+                        for(int j = 0; j < MODULES_AVAILABLE.size(); j++)
+                        {
+                            if(MODULES_AVAILABLE.get(j).getModuleCode().equals(moduleCodes.get(i)))
+                            {
+                                MODULES_DISPLAYED.add(MODULES_AVAILABLE.get(j));
+                                break;
+                            }
+                        }
+                    }
+                    Platform.runLater(highlightFromProfile);
+                }
+                catch(Exception ex)
+                {//TODO: do this properly kthx.
+                    System.out.println(ex.getMessage());
+                }
+            });
+            jsonReadThread.setDaemon(true);
+            jsonReadThread.start();
         });
         searchBarSubmit.setOnMouseClicked(e ->
         {
