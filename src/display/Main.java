@@ -16,10 +16,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import manual.InputIOException;
-import manual.ManualListReader;
+import manual.*;
 import manual.Module;
-import manual.ProfileReader;
 
 import java.io.File;
 import java.lang.reflect.Array;
@@ -165,9 +163,32 @@ public class Main extends Application implements Sortable
                     }
                     Platform.runLater(highlightFromProfile);
                 }
+                catch(ProfileException pe)
+                {//This exception occurs when there is no "enabled" list in the profile.
+                    Platform.runLater(() ->
+                    {
+                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                        exceptionAlert.setTitle("Error loading profile!");
+                        exceptionAlert.setHeaderText("Could not find an \"enabled\" list in your profile.\n" +
+                                "MakeMyManual will only work with profiles created after enabled lists were added.");
+                        exceptionAlert.setContentText("Please try re-downloading your profile.\n" +
+                                "If problem persists, please contact Daniel Burton.");
+                        exceptionAlert.showAndWait();
+                    });
+                }
                 catch(Exception ex)
-                {//TODO: do this properly kthx.
-                    System.out.println(ex.getMessage());
+                {//This exception occurs when the json file cannot be read at all.
+                    Platform.runLater(() ->
+                    {
+                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                        exceptionAlert.setTitle("Error loading profile!");
+                        exceptionAlert.setHeaderText("Error encountered while reading profile.\n" +
+                                "Has it been edited or removed?");
+                        exceptionAlert.setContentText("Please try re-downloading your profile.\n" +
+                                "If problem persists, please contact Daniel Burton.");
+                        exceptionAlert.showAndWait();
+                        Platform.exit();
+                    });
                 }
             });
             jsonReadThread.setDaemon(true);
