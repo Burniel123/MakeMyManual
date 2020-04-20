@@ -194,6 +194,9 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 String line = null;
                 while ((line = inStrm.readLine()) != null)
                     System.out.print(line);
+                File manualsDir = new File("resources/modules");
+                for(File file : manualsDir.listFiles())
+                    file.delete();
                 File aux = new File(manual.getPdfFilePath().replace(".pdf", ".aux"));
                 File log = new File(manual.getPdfFilePath().replace(".pdf", ".log"));
                 aux.delete();//I don't think(?) I care about the result for now.
