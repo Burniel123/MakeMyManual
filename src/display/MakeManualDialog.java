@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 
 /**
@@ -57,7 +58,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         final Button chooseDestination = new Button("Choose manual location...");
         dialogGrid.add(chooseDestination, 0, 3);
         FileChooser saveLocation = new FileChooser();
-        ExtensionFilter filter = new ExtensionFilter("Protable Document Format: .pdf", ".pdf");
+        ExtensionFilter filter = new ExtensionFilter("Portable Document Format: .pdf", ".pdf");
         saveLocation.getExtensionFilters().add(filter);
         saveLocation.setTitle("Choose location to save manual");
         manual = new ManualCreator("resources/manual.tex");
@@ -177,14 +178,19 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             {
                 ProcessBuilder builder = null;
                 manual.writeManual(pm);
+                boolean specified = false;
                 if(manual.getPdfFilePath() == null)
+                {
                     builder = new ProcessBuilder("pdflatex", manual.getTexFilePath());
+                    manual.setPdfFilePath(System.getProperty("user.dir") + "/manual.pdf");
+                }
                 else
                 {
                     File pdf = new File(manual.getPdfFilePath());
                     String pdfDir = manual.getPdfFilePath().replace(pdf.getName(), "");
                     builder = new ProcessBuilder("pdflatex", "-output-directory",
                             pdfDir, manual.getTexFilePath());
+                    specified = true;
                 }
 
                 builder.redirectErrorStream(true);
@@ -202,10 +208,10 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 aux.delete();//I don't think(?) I care about the result for now.
                 log.delete();
                 pm.setProgress(1);
-                Platform.runLater(() ->
-                {
-                    pd.closeProgressBar();
-                });
+                String test = manual.getPdfFilePath();
+                System.out.println(test);
+                Platform.runLater(() -> pd.closeProgressBar());
+                createCompletedAlert(specified);
             }
             catch (OutputIOException e)
             {//This exception will be thrown if there was an error writing to the tex file.
@@ -227,23 +233,39 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             }
             catch (IOException e)
             {//This exception will be thrown if there was an error compiling the pdf.
-                Platform.runLater(new Runnable()
+                Platform.runLater(() ->
                 {//Alert to be presented on the Application thread whenever next possible.
-                    @Override
-                    public void run()
-                    {
-                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                        exceptionAlert.setTitle("Error writing manual!");
-                        exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
-                                "Do all working directories have appropriate permissions?");
-                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                                "If problem persists, please contact Daniel Burton.");
-                        exceptionAlert.showAndWait();
-                        Platform.exit();
-                    }
+                    Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                    exceptionAlert.setTitle("Error writing manual!");
+                    exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
+                            "Do all working directories have appropriate permissions?");
+                    exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
+                            "If problem persists, please contact Daniel Burton.");
+                    exceptionAlert.showAndWait();
+                    Platform.exit();
                 });
             }
             return null;
         }
     };
+
+    /**
+     * Creates and displays an alert to point the user to their newly-created manual.
+     * @param specified - true if the user specified a path, false if the default path is being used.
+     */
+    private void createCompletedAlert(boolean specified)
+    {
+        Platform.runLater(() ->
+        {//To make absolutely sure this method's content is run on the FX Application Thread.
+            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+            successAlert.setTitle("Manual created successfully!");
+            successAlert.setHeaderText("Your custom manual, " + manual.getManualName() + ", has been created.");
+            if(specified)
+                successAlert.setContentText("Location: " + manual.getPdfFilePath());
+            else
+                successAlert.setContentText("Location: in this program's directory.");
+            successAlert.setGraphic(null);
+            successAlert.showAndWait();
+        });
+    }
 }

@@ -63,7 +63,7 @@ public class ManualCreator
 
     /**
      * Obtains the location the program is compiling the pdf to.
-     * @return a String path of the eventual pdf location.
+     * @return a String path of the eventual pdf location (null if user did not specify one).
      */
     public String getPdfFilePath()
     {
@@ -93,6 +93,15 @@ public class ManualCreator
     public void clearModules()
     {
         modules.clear();
+    }
+
+    /**
+     * Obtains the name of this manual.
+     * @return this manual's name (title for the front page).
+     */
+    public String getManualName()
+    {
+        return manualName;
     }
 
     /**
