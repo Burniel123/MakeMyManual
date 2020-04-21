@@ -38,7 +38,8 @@ public class Main extends Application implements Sortable
             new CornerRadii(3), BorderWidths.DEFAULT));
     static final Font TITLES_FONT = new Font("Arial Bold", 16);
 
-    static boolean exceptionOnBoot = false;
+    private static boolean exceptionOnBoot = false;
+    private static InputIOException bootException = null;
     static int numSelected = 0;
 
     static ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();//Please don't change after init.
@@ -164,12 +165,13 @@ public class Main extends Application implements Sortable
                 {//This exception occurs when there is no "enabled" list in the profile.
                     Platform.runLater(() ->
                     {
-                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
+                        /*Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
                         exceptionAlert.setTitle("Error loading profile!");
                         exceptionAlert.setHeaderText("Could not find an \"enabled\" list in your profile.\n" +
                                 "MakeMyManual will only work with profiles created after enabled lists were added.");
                         exceptionAlert.setContentText("Please try re-downloading your profile.\n" +
-                                "If problem persists, please contact Daniel Burton.");
+                                "If problem persists, please contact Daniel Burton.");*/
+                        ExceptionAlert exceptionAlert = new ExceptionAlert(pe);
                         exceptionAlert.showAndWait();
                     });
                 }
@@ -177,14 +179,14 @@ public class Main extends Application implements Sortable
                 {//This exception occurs when the json file cannot be read at all.
                     Platform.runLater(() ->
                     {
-                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                        exceptionAlert.setTitle("Error loading profile!");
+                        ExceptionAlert exceptionAlert = new ExceptionAlert("Error loading profile!",
+                                "Has it been edited or removed?");
+                        /*exceptionAlert.setTitle("Error loading profile!");
                         exceptionAlert.setHeaderText("Error encountered while reading profile.\n" +
                                 "Has it been edited or removed?");
                         exceptionAlert.setContentText("Please try re-downloading your profile.\n" +
-                                "If problem persists, please contact Daniel Burton.");
+                                "If problem persists, please contact Daniel Burton.");*/
                         exceptionAlert.showAndWait();
-                        Platform.exit();
                     });
                 }
             });
@@ -241,12 +243,12 @@ public class Main extends Application implements Sortable
 
         if (exceptionOnBoot)
         {
-            Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-            exceptionAlert.setTitle("Error loading configuration files!");
+            ExceptionAlert exceptionAlert = new ExceptionAlert(bootException);
+            /*exceptionAlert.setTitle("Error loading configuration files!");
             exceptionAlert.setHeaderText("Error encountered while loading modules.\n" +
                     "Has it been edited or removed?");
             exceptionAlert.setContentText("Please try rebooting the application.\n" +
-                    "If problem persists, please contact Daniel Burton.");
+                    "If problem persists, please contact Daniel Burton.");*/
             exceptionAlert.showAndWait();
             Platform.exit();
         }
@@ -388,6 +390,7 @@ public class Main extends Application implements Sortable
                 public void run()
                 {
                     exceptionOnBoot = true;
+                    bootException = e;
                 }
             });
         }

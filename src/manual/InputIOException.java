@@ -1,7 +1,5 @@
 package manual;
 
-import java.io.IOException;
-
 /**
  * An exception specifically relating to the read of the module list config file.
  *

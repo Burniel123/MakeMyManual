@@ -16,7 +16,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.FileSystems;
 import java.util.ArrayList;
 
 /**
@@ -220,14 +219,13 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     @Override
                     public void run()
                     {
-                        Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                        exceptionAlert.setTitle("Error writing manual!");
+                        ExceptionAlert exceptionAlert = new ExceptionAlert(e);
+                        /*exceptionAlert.setTitle("Error writing manual!");
                         exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
                                 "Do all working directories have appropriate permissions?");
                         exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                                "If problem persists, please contact Daniel Burton.");
+                                "If problem persists, please contact Daniel Burton.");*/
                         exceptionAlert.showAndWait();
-                        Platform.exit();
                     }
                 });
             }
@@ -235,14 +233,14 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             {//This exception will be thrown if there was an error compiling the pdf.
                 Platform.runLater(() ->
                 {//Alert to be presented on the Application thread whenever next possible.
-                    Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                    exceptionAlert.setTitle("Error writing manual!");
+                    ExceptionAlert exceptionAlert = new ExceptionAlert("Error compiling pdf!",
+                            "Do all working directories have appropriate permissions?");
+/*                    exceptionAlert.setTitle("Error writing manual!");
                     exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
                             "Do all working directories have appropriate permissions?");
                     exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                            "If problem persists, please contact Daniel Burton.");
+                            "If problem persists, please contact Daniel Burton.");*/
                     exceptionAlert.showAndWait();
-                    Platform.exit();
                 });
             }
             return null;
