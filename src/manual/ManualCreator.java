@@ -175,7 +175,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            throw new OutputIOException(outputTexFile.getPath(), e, false);
+            throwOutIO();
         }
     }
 
@@ -202,8 +202,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            System.out.println(e);
-            throw new OutputIOException(outputTexFile.getPath(), e, true);
+            throwOutIO();
         }
     }
 
@@ -226,7 +225,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            throw new OutputIOException(outputTexFile.getPath(), e, true);
+            throwOutIO();
         }
     }
 
@@ -243,7 +242,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            throw new OutputIOException(outputTexFile.getPath(), e, true);
+            throwOutIO();
         }
     }
 
@@ -260,7 +259,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            throw new OutputIOException(outputTexFile.getPath(), e, true);
+            throwOutIO();
         }
     }
 
@@ -277,7 +276,7 @@ public class ManualCreator
         }
         catch(IOException e)
         {
-            throw new OutputIOException(outputTexFile.getPath(), e, true);
+            throwOutIO();
         }
     }
 
@@ -318,5 +317,14 @@ public class ManualCreator
             System.out.println("ERROR\n" + ex);
             //TODO: PROPER EXCEPTION HANDLING HERE!
         }
+    }
+
+    private void throwOutIO() throws OutputIOException
+    {
+        OutputIOException oioe = new OutputIOException();
+        oioe.addPossibleCause("Cannot write a file to this program's location.");
+        oioe.addPossibleResolution("Retry with a different manual file name.");
+        oioe.addPossibleResolution("Reinstall the application in a different location.");
+        throw oioe;
     }
 }

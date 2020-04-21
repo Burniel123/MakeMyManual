@@ -41,7 +41,13 @@ public class ProfileReader
         JSONArray array = (JSONArray) content.get("EnabledList");
 
         if(array == null)
-            throw new ProfileException("No enabled list found in profile!");
+        {
+            ProfileException pe =  new ProfileException();
+            pe.addPossibleCause("No enabled list in your profile.");
+            pe.addPossibleCause("Profile is poorly formatted.");
+            pe.addPossibleResolution("Download a fresh profile and try again.");
+            throw pe;
+        }
 
         ArrayList<String> moduleCodesEnabled = new ArrayList<String>();
 

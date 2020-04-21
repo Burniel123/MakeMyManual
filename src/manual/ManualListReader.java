@@ -49,11 +49,19 @@ public class ManualListReader
         }
         catch(IOException e)
         {//Throw with false if some kind of input exception.
-            throw new InputIOException(SUPPORTED_MODULE_FILE.getPath(), e, false);
+            InputIOException iioe = new InputIOException();
+            iioe.addPossibleCause("Module config file has been incorrectly moved or removed.");
+            iioe.addPossibleResolution("Reinstall the application.");
+            iioe.addPossibleResolution("Try again later.");
+            throw iioe;
         }
         catch(Exception e)
         {//Throw with true if some kind of formatting or miscellaneous exception.
-            throw new InputIOException(SUPPORTED_MODULE_FILE.getPath(), e, true);
+            InputIOException iioe = new InputIOException();
+            iioe.addPossibleCause("Module config file has been incorrectly edited or removed.");
+            iioe.addPossibleResolution("Reinstall the application.");
+            iioe.addPossibleResolution("Try again later.");
+            throw iioe;
         }
         return modules;
     }

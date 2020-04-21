@@ -1,31 +1,24 @@
 package manual;
 
-import java.io.IOException;
-
 /**
- * Wraps IOException to create an exception specifically relating to the creation of the collated manual.
+ * An exception specifically relating to the creation of the collated manual.
  */
-public class OutputIOException extends IOException
+public class OutputIOException extends ManualException
 {
-    private boolean created = false;
     /**
-     * Creates an instance of OutputIOException, requiring an error to detail the problem.
-     * @param fileName - name of the file which caused the exception to be thrown.
-     * @param err - Throwable detailing the problem which has caused the exception to be thrown.
-     * @param created - whether or not the file had already successfully been created when the exception was thrown.
+     * Creates an instance of OutputIOException with an appropriate title.
      */
-    public OutputIOException(String fileName, Throwable err, boolean created)
+    public OutputIOException()
     {
-        super(fileName, err);
-        this.created = created;
+        setExceptionTitle("Error creating manual!");
     }
-
-    /**
+/*
+    *//**
      * Obtains whether or not the exception occurred after creation of the file (ie during writing).
      * @return true if exception occurred while writing to the file, false if it occurred while creating the file.
-     */
+     *//*
     public boolean wasCreated()
     {
         return created;
-    }
+    }*/
 }

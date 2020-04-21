@@ -5,15 +5,14 @@ package manual;
  *
  * @author Daniel Burton
  */
-public class ProfileException extends Exception
+public class ProfileException extends ManualException
 {
 
     /**
-     * Creates a ProfileException to be thrown, with an error message.
-     * @param message - the message associated with the exception.
+     * Creates a ProfileException to be thrown with appropriate title.
      */
-    public ProfileException(String message)
+    public ProfileException()
     {
-        super(message);
+        setExceptionTitle("Error reading profile!");
     }
 }
