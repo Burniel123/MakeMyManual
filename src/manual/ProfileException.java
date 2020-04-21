@@ -7,12 +7,11 @@ package manual;
  */
 public class ProfileException extends ManualException
 {
-
     /**
      * Creates a ProfileException to be thrown with appropriate title.
      */
     public ProfileException()
     {
-        setExceptionTitle("Error reading profile!");
+        super("Error reading profile!");
     }
 }

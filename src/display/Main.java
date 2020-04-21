@@ -165,12 +165,6 @@ public class Main extends Application implements Sortable
                 {//This exception occurs when there is no "enabled" list in the profile.
                     Platform.runLater(() ->
                     {
-                        /*Alert exceptionAlert = new Alert(Alert.AlertType.ERROR);
-                        exceptionAlert.setTitle("Error loading profile!");
-                        exceptionAlert.setHeaderText("Could not find an \"enabled\" list in your profile.\n" +
-                                "MakeMyManual will only work with profiles created after enabled lists were added.");
-                        exceptionAlert.setContentText("Please try re-downloading your profile.\n" +
-                                "If problem persists, please contact Daniel Burton.");*/
                         ExceptionAlert exceptionAlert = new ExceptionAlert(pe);
                         exceptionAlert.showAndWait();
                     });
@@ -181,11 +175,6 @@ public class Main extends Application implements Sortable
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert("Error loading profile!",
                                 "Has it been edited or removed?");
-                        /*exceptionAlert.setTitle("Error loading profile!");
-                        exceptionAlert.setHeaderText("Error encountered while reading profile.\n" +
-                                "Has it been edited or removed?");
-                        exceptionAlert.setContentText("Please try re-downloading your profile.\n" +
-                                "If problem persists, please contact Daniel Burton.");*/
                         exceptionAlert.showAndWait();
                     });
                 }
@@ -244,11 +233,6 @@ public class Main extends Application implements Sortable
         if (exceptionOnBoot)
         {
             ExceptionAlert exceptionAlert = new ExceptionAlert(bootException);
-            /*exceptionAlert.setTitle("Error loading configuration files!");
-            exceptionAlert.setHeaderText("Error encountered while loading modules.\n" +
-                    "Has it been edited or removed?");
-            exceptionAlert.setContentText("Please try rebooting the application.\n" +
-                    "If problem persists, please contact Daniel Burton.");*/
             exceptionAlert.showAndWait();
             Platform.exit();
         }

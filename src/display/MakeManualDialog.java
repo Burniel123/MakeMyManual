@@ -220,11 +220,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     public void run()
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert(e);
-                        /*exceptionAlert.setTitle("Error writing manual!");
-                        exceptionAlert.setHeaderText("Error encountered while writing pdf.\n" +
-                                "Do all working directories have appropriate permissions?");
-                        exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                                "If problem persists, please contact Daniel Burton.");*/
                         exceptionAlert.showAndWait();
                     }
                 });
@@ -235,11 +230,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 {//Alert to be presented on the Application thread whenever next possible.
                     ExceptionAlert exceptionAlert = new ExceptionAlert("Error compiling pdf!",
                             "Do all working directories have appropriate permissions?");
-/*                    exceptionAlert.setTitle("Error writing manual!");
-                    exceptionAlert.setHeaderText("Error encountered while compiling pdf.\n" +
-                            "Do all working directories have appropriate permissions?");
-                    exceptionAlert.setContentText("Please try rebooting and/or reinstalling the application.\n" +
-                            "If problem persists, please contact Daniel Burton.");*/
                     exceptionAlert.showAndWait();
                 });
             }

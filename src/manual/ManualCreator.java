@@ -319,6 +319,11 @@ public class ManualCreator
         }
     }
 
+    /**
+     * Throws an OutputIOException when there has been an IOException at some point in the file writing process.
+     * Avoids repetition of adding identical causes when exceptions are thrown for very similar problems.
+     * @throws OutputIOException - Exception with details about possible causes and resolutions.
+     */
     private void throwOutIO() throws OutputIOException
     {
         OutputIOException oioe = new OutputIOException();

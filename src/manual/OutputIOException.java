@@ -10,15 +10,6 @@ public class OutputIOException extends ManualException
      */
     public OutputIOException()
     {
-        setExceptionTitle("Error creating manual!");
+        super("Error creating manual!");
     }
-/*
-    *//**
-     * Obtains whether or not the exception occurred after creation of the file (ie during writing).
-     * @return true if exception occurred while writing to the file, false if it occurred while creating the file.
-     *//*
-    public boolean wasCreated()
-    {
-        return created;
-    }*/
 }
