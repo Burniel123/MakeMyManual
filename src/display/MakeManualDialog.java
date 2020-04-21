@@ -61,7 +61,8 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         chooseDestination.setOnMouseClicked(e ->
         {
             File save = saveLocation.showSaveDialog(new Stage());
-            manual.setPdfFilePath(save.getPath());
+            if(save != null)
+                manual.setPdfFilePath(save.getPath());
             String path = save.getPath();
             String fileName = save.getName();
             String[] fileBroken = fileName.split("\\.");
@@ -184,6 +185,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 {
                     ExceptionAlert ea = new ExceptionAlert("Error writing log file!",
                             "Do all working directories have appropriate permissions?");
+                    ea.initOwner(getDialogPane().getScene().getWindow());
                     ea.showAndWait();
                     pd.closeProgressBar();
                 });
@@ -240,6 +242,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert(e);
                         exceptionAlert.showAndWait();
+                        pd.initOwner(getDialogPane().getScene().getWindow());
                         pd.closeProgressBar();
                     }
                 });
@@ -250,6 +253,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 {//Alert to be presented on the Application thread whenever next possible.
                     ExceptionAlert exceptionAlert = new ExceptionAlert("Error compiling pdf!",
                             "Do all working directories have appropriate permissions?");
+                    exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
                     exceptionAlert.showAndWait();
                     pd.closeProgressBar();
                 });
@@ -274,6 +278,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             else
                 successAlert.setContentText("Location: in this program's directory.");
             successAlert.setGraphic(null);
+            //successAlert.initOwner(getDialogPane().getScene().getWindow());
             successAlert.showAndWait();
         });
     }

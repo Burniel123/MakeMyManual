@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -37,6 +38,7 @@ public class Main extends Application implements Sortable
     static final Border DEFAULT_BORDER = new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,
             new CornerRadii(3), BorderWidths.DEFAULT));
     static final Font TITLES_FONT = new Font("Arial Bold", 16);
+    static final Image DEFAULT_ICON = new Image("file:resources/icon.png");
 
     private static boolean exceptionOnBoot = false;
     private static InputIOException bootException = null;
@@ -119,6 +121,7 @@ public class Main extends Application implements Sortable
         {
             SortDialog sd = new SortDialog();
             sd.setResultConversion();
+            sd.initOwner(primaryStage);
             sd.showAndWait();
         });
         importProfile.setOnMouseClicked(e ->
@@ -126,6 +129,7 @@ public class Main extends Application implements Sortable
             FileChooser fileToImport = new FileChooser();
             fileToImport.setTitle("Choose a profile to import");
             FileChooser.ExtensionFilter ef = new FileChooser.ExtensionFilter("JSON Profiles", ".json");
+            fileToImport.getExtensionFilters().add(ef);
             ProfileReader jsonReader = new ProfileReader(fileToImport.showOpenDialog(primaryStage));
 
             Runnable highlightFromProfile = () ->
@@ -166,6 +170,7 @@ public class Main extends Application implements Sortable
                     Platform.runLater(() ->
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert(pe);
+                        exceptionAlert.initOwner(primaryStage);
                         exceptionAlert.showAndWait();
                     });
                 }
@@ -175,6 +180,7 @@ public class Main extends Application implements Sortable
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert("Error loading profile!",
                                 "Has it been edited or removed?");
+                        exceptionAlert.initOwner(primaryStage);
                         exceptionAlert.showAndWait();
                     });
                 }
@@ -219,6 +225,7 @@ public class Main extends Application implements Sortable
         {
             MakeManualDialog mmd = new MakeManualDialog();
             mmd.setupResultConverter();
+            mmd.initOwner(primaryStage);
             mmd.showAndWait();
             Main.numSelected = 0;
             numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
@@ -229,10 +236,12 @@ public class Main extends Application implements Sortable
         primaryStage.setScene(scene);
         primaryStage.setWidth(750);
         primaryStage.setHeight(500);
+        primaryStage.getIcons().add(DEFAULT_ICON);
 
         if (exceptionOnBoot)
         {
             ExceptionAlert exceptionAlert = new ExceptionAlert(bootException);
+            exceptionAlert.initOwner(primaryStage);
             exceptionAlert.showAndWait();
             Platform.exit();
         }

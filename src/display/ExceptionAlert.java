@@ -2,6 +2,8 @@ package display;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import manual.ManualException;
@@ -11,7 +13,7 @@ public class ExceptionAlert extends Alert
     public ExceptionAlert(ManualException exception)
     {
         super(AlertType.ERROR);
-       // setGraphic(null); //TODO: Use actual logo here?
+        setGraphic(null); //TODO: Use actual logo here?
         setTitle(exception.getExceptionTitle());
         setHeaderText(exception.getExceptionTitle());
 
