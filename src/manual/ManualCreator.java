@@ -138,9 +138,11 @@ public class ManualCreator
     /**
      * Writes the user's .tex manual, by creating a BufferedWriter, writing the preamble, writing each manual page,
      * and ending the document.
+     * @param pm - ProgressManager to report progress to the progress bar.
+     * @param logWriter - FileWriter to write updates to the log file.
      * @throws OutputIOException in the event of an IOException.
      */
-    public void writeManual(ProgressManager pm) throws OutputIOException
+    public void writeManual(ProgressManager pm, FileWriter logWriter) throws OutputIOException, IOException
     {
         createWriter();
         writePreamble();
@@ -158,6 +160,7 @@ public class ManualCreator
                 needyToEnd = false;
             }
             downloadFile(modules.get(i));
+            logWriter.write("\nSuccessfully downloaded manual for: " + modules.get(i).getModuleName().toUpperCase());
             writeManualPage(i);
             modules.get(i).deactivate();
             pm.setProgress((((double)i+1)/(double)modules.size())*0.7); //Update the progress bar.

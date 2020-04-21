@@ -12,10 +12,7 @@ import manual.ManualCreator;
 import manual.Module;
 import manual.OutputIOException;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -173,10 +170,30 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         @Override
         public Void call() throws Exception
         {
+            File log = null;
+            FileWriter logWriter = null;
+            try
+            {//Open log file for diagnostic purposes.
+                log = new File("resources/ManualLog.txt");
+                logWriter = new FileWriter(log);
+                logWriter.write("***BEGIN PDF CREATION***");
+            }
+            catch(IOException e)
+            {
+                Platform.runLater(() ->
+                {
+                    ExceptionAlert ea = new ExceptionAlert("Error writing log file!",
+                            "Do all working directories have appropriate permissions?");
+                    ea.showAndWait();
+                    pd.closeProgressBar();
+                });
+                return null;
+            }
+
             try
             {
                 ProcessBuilder builder = null;
-                manual.writeManual(pm);
+                manual.writeManual(pm, logWriter);
                 boolean specified = false;
                 if(manual.getPdfFilePath() == null)
                 {
@@ -197,18 +214,20 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
                 System.out.println("Should be rolling");
                 String line = null;
+                logWriter.write("\n\n***BEGIN COMPILATION***");
+                logWriter.write("\nOutput from pdflatex as follows: \n\n");
                 while ((line = inStrm.readLine()) != null)
-                    System.out.print(line);
+                    logWriter.write(line + "\n");
                 File manualsDir = new File("resources/modules");
                 for(File file : manualsDir.listFiles())
                     file.delete();
                 File aux = new File(manual.getPdfFilePath().replace(".pdf", ".aux"));
-                File log = new File(manual.getPdfFilePath().replace(".pdf", ".log"));
+                File pdflatexLog = new File(manual.getPdfFilePath().replace(".pdf", ".log"));
                 aux.delete();//I don't think(?) I care about the result for now.
-                log.delete();
+                pdflatexLog.delete();
                 pm.setProgress(1);
-                String test = manual.getPdfFilePath();
-                System.out.println(test);
+                logWriter.write("\nManual success, located at " + manual.getPdfFilePath());
+                logWriter.close();
                 Platform.runLater(() -> pd.closeProgressBar());
                 createCompletedAlert(specified);
             }
@@ -221,6 +240,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert(e);
                         exceptionAlert.showAndWait();
+                        pd.closeProgressBar();
                     }
                 });
             }
@@ -231,6 +251,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     ExceptionAlert exceptionAlert = new ExceptionAlert("Error compiling pdf!",
                             "Do all working directories have appropriate permissions?");
                     exceptionAlert.showAndWait();
+                    pd.closeProgressBar();
                 });
             }
             return null;
