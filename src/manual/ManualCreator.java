@@ -82,8 +82,12 @@ public class ManualCreator
         modules.add(module);
     }
 
+    /**
+     * Obtains the list of modules being made into a manual.
+     * @return ArrayList of Modules currently in the creator.
+     */
     public ArrayList<Module> getModules()
-    {//TODO: properly document!
+    {
         return modules;
     }
 
