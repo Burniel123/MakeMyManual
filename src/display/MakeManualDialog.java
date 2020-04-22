@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Region;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
@@ -43,12 +44,17 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         setTitle("Export Manual");
         setHeaderText("Export Manual");
         setContentText("Choose your preferences below and hit OK.");
+        getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        dialogGrid.setMinSize(350, 350);
 
         CheckBox subcategories = new CheckBox("Create a category per letter");
+        subcategories.setMinWidth(300);
         dialogGrid.add(subcategories, 0, 0);
         splitNeedy = new CheckBox("Separate section for any needy modules at end");
+        splitNeedy.setMinWidth(300);
         dialogGrid.add(splitNeedy, 0, 1);
         splitVanilla = new CheckBox("Separate section for any vanilla modules after mods");
+        splitVanilla.setMinWidth(300);
         dialogGrid.add(splitVanilla, 0, 2);
 
         final Button chooseDestination = new Button("Choose manual location...");
@@ -273,10 +279,11 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
             successAlert.setTitle("Manual created successfully!");
             successAlert.setHeaderText("Your custom manual, " + manual.getManualName() + ", has been created.");
+            successAlert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
             if(specified)
                 successAlert.setContentText("Location: " + manual.getPdfFilePath());
             else
-                successAlert.setContentText("Location: in this program's directory.");
+                successAlert.setContentText("Location: " + manual.getPdfFilePath());
             successAlert.setGraphic(null);
             //successAlert.initOwner(getDialogPane().getScene().getWindow());
             successAlert.showAndWait();
