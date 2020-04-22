@@ -29,7 +29,7 @@ import java.util.Collections;
  */
 public class Main extends Application implements Sortable
 {
-    static final VBox ROOT_PANE = new VBox(3);
+    static RootPane ROOT_PANE = null;
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
     static final Background DEFAULT_MODULE_BACK = new Background(new BackgroundFill(Color.WHITE,
             new CornerRadii(3), new Insets(2)));
@@ -54,7 +54,8 @@ public class Main extends Application implements Sortable
     @Override
     public void start(Stage primaryStage)
     {
-        //Setting up an area for the modules:
+        ROOT_PANE = new RootPane();
+        /*//Setting up an area for the modules:
         final FlowPane modulesPane = new FlowPane(2, 2);
         modulesPane.setPadding(new Insets(0, 0, 0, 5));
         final FlowPane needyPane = new FlowPane(2, 2);
@@ -229,7 +230,7 @@ public class Main extends Application implements Sortable
             mmd.showAndWait();
             Main.numSelected = 0;
             numSelected.setText("Modules Selected: " + Main.numSelected + "/" + MODULES_AVAILABLE.size());
-        });
+        });*/
 
         final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
@@ -249,9 +250,9 @@ public class Main extends Application implements Sortable
             primaryStage.show();
     }
 
-    /**
+ /*   *//**
      * Clear all modules off the screen, generally so they can be re-rendered.
-     */
+     *//*
     static void clearModules()
     {
         ScrollPane scroll = (ScrollPane)ROOT_PANE.getChildren().get(2);
@@ -259,9 +260,9 @@ public class Main extends Application implements Sortable
         ((FlowPane)((VBox)scroll.getContent()).getChildren().get(3)).getChildren().clear();
     }
 
-    /**
+    *//**
      * Renders module regions to the stage.
-     */
+     *//*
     static void renderModules()
     {
         for(int i = 0; i < 2*MODULES_DISPLAYED.size(); i++)
@@ -308,7 +309,7 @@ public class Main extends Application implements Sortable
                     ((FlowPane)((VBox)scroll.getContent()).getChildren().get(1)).getChildren().add(modulePane);
             }
         }
-    }
+    }*/
 
     /**
      * Filters modules displayed by a provided search term.
@@ -322,17 +323,17 @@ public class Main extends Application implements Sortable
                 if(!module.getModuleName().toLowerCase().contains(searchTerm.toLowerCase()))
                     MODULES_DISPLAYED.remove(module);
             }
-        clearModules();
-        renderModules();
+        ROOT_PANE.clearModules();
+        ROOT_PANE.renderModules();
         MODULES_DISPLAYED = temp;
     }
 
-    /**
+   /* *//**
      * Highlights all modules in a given list and activates them as members of the set of modules to be
      * included in the manual.
      * @param modules - ObservableList of Nodes, containing modules to highlight.
      * @param select - true if the modules are to be selected, false if they are to be deselected.
-     */
+     *//*
     private void highlightAll(ObservableList<Node> modules, boolean select)
     {
         sortModules(0, false);
@@ -359,7 +360,7 @@ public class Main extends Application implements Sortable
                 }
             }
         }
-    }
+    }*/
 
     /**
      * Initialises the Application by reading the module list file.
@@ -397,4 +398,5 @@ public class Main extends Application implements Sortable
     {
         launch(args);
     }
+
 }

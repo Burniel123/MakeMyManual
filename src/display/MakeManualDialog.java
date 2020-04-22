@@ -152,8 +152,8 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     else
                         manual.setManualName(nameManual.getText());
                     Main.MODULES_DISPLAYED = displayModules;
-                    Main.clearModules();
-                    Main.renderModules();
+                    Main.ROOT_PANE.clearModules();
+                    Main.ROOT_PANE.renderModules();
                     pd = new ProgressDialog();
                     pm = pd.getProgressManager();
                     //pd.createProgressBar();
