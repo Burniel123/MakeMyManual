@@ -1,6 +1,8 @@
 package display;
 
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
@@ -104,6 +106,7 @@ public class RootPane extends VBox implements Sortable
 
         //"Num Selected" bar setup:
         numSelectedBar.setPadding(new Insets(0,5,0,5));
+        numSelectedBar.getChildren().addAll(numSelectedLabel);
         numSelectedLabel.setFont(TITLES_FONT);
 
         setStyle(DEFAULT_BACK_STYLE);
@@ -129,7 +132,7 @@ public class RootPane extends VBox implements Sortable
         {//Opens a file selection window and imports the profile selected.
             FileChooser fileToImport = new FileChooser();
             fileToImport.setTitle("Choose a profile to import");
-            FileChooser.ExtensionFilter ef = new FileChooser.ExtensionFilter("JSON Profiles", ".json");
+            FileChooser.ExtensionFilter ef = new FileChooser.ExtensionFilter("JSON Profiles", "*.json");
             fileToImport.getExtensionFilters().add(ef);
             ProfileReader jsonReader = new ProfileReader(fileToImport.showOpenDialog(getScene().getWindow()));
 
@@ -139,7 +142,7 @@ public class RootPane extends VBox implements Sortable
                 renderModules();
                 highlightAll(modulesPane.getChildren(), true);
                 highlightAll(needyPane.getChildren(), true);
-                numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+                //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
             };
 
             Thread jsonReadThread = new Thread(() ->
@@ -197,22 +200,22 @@ public class RootPane extends VBox implements Sortable
         selectAllRegular.setOnMouseClicked(e ->
         {//Selects all solvable modules when the "Select All" button is pressed.
             highlightAll(modulesPane.getChildren(), true);
-            numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+            //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
         });
         selectAllNeedy.setOnMouseClicked(e ->
         {//Selects all needy modules when the "Select All" button is pressed.
-            highlightAll(modulesPane.getChildren(), true);
-            numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+            highlightAll(needyPane.getChildren(), true);
+            //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
         });
         deselectAllRegular.setOnMouseClicked(e ->
         {//Deselects any selected solvable modules when the "Deselect All" button is pressed.
             highlightAll(modulesPane.getChildren(), false);
-            numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+            //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
         });
         deselectAllNeedy.setOnMouseClicked(e ->
         {//Deselects any selected needy modules when the "Deselect All" button is pressed.
-            highlightAll(modulesPane.getChildren(), false);
-            numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+            highlightAll(needyPane.getChildren(), false);
+            //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
         });
         makeIt.setOnMouseClicked(e ->
         {//Opens a dialog with options for pdf compilation when the "Make Manual" button is pressed.
@@ -221,7 +224,16 @@ public class RootPane extends VBox implements Sortable
             mmd.initOwner(getScene().getWindow());
             mmd.showAndWait();
             Main.numSelected = 0;
-            numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+            //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+        });
+
+        Main.numSelectedProperty.addListener(new ChangeListener<Number>()
+        {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1)
+            {
+                numSelectedLabel.setText("Modules Selected: " + t1 + "/" + Main.MODULES_AVAILABLE.size());
+            }
         });
     }
 
@@ -263,16 +275,18 @@ public class RootPane extends VBox implements Sortable
                     {
                         moduleRegion.setBackground(SELECTED_MODULE_BACK);
                         module.activate();
-                        Main.numSelected++;
+                        //Main.numSelected++;
+                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
                     }
                     else
                     {
                         moduleRegion.setBackground(DEFAULT_MODULE_BACK);
                         module.deactivate();
-                        Main.numSelected--;
+                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
+                        //Main.numSelected--;
                     }
-                    numSelectedLabel.setText("Modules Selected: " +
-                            Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
+                   // numSelectedLabel.setText("Modules Selected: " +
+                        //    Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
                 });
                 //Adding the constructed module region to its pane:
                 modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
@@ -302,13 +316,15 @@ public class RootPane extends VBox implements Sortable
                 {
                     if(select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(DEFAULT_MODULE_BACK))
                     {
-                        Main.numSelected++;
+                        //Main.numSelected++;
+                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
                         ((Region)modulePane.getChildren().get(0)).setBackground(SELECTED_MODULE_BACK);
                         Main.MODULES_DISPLAYED.get(i).activate();
                     }
                     else if(!select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(SELECTED_MODULE_BACK))
                     {
-                        Main.numSelected--;
+                        //Main.numSelected--;
+                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
                         ((Region)modulePane.getChildren().get(0)).setBackground(DEFAULT_MODULE_BACK);
                         Main.MODULES_DISPLAYED.get(i).deactivate();
                     }

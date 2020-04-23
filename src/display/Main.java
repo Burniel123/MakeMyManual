@@ -2,6 +2,8 @@ package display;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -23,6 +25,7 @@ public class Main extends Application implements Sortable
 
     private static boolean exceptionOnBoot = false;
     private static InputIOException bootException = null;
+    static IntegerProperty numSelectedProperty = new SimpleIntegerProperty(0);
     static int numSelected = 0;
 
     static ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();//Please don't change after init.

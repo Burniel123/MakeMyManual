@@ -60,7 +60,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         final Button chooseDestination = new Button("Choose manual location...");
         dialogGrid.add(chooseDestination, 0, 3);
         FileChooser saveLocation = new FileChooser();
-        ExtensionFilter filter = new ExtensionFilter("Portable Document Format: .pdf", ".pdf");
+        ExtensionFilter filter = new ExtensionFilter("Portable Document Format: .pdf", "*.pdf");
         saveLocation.getExtensionFilters().add(filter);
         saveLocation.setTitle("Choose location to save manual");
         manual = new ManualCreator("resources/manual.tex");
@@ -68,11 +68,12 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         {
             File save = saveLocation.showSaveDialog(new Stage());
             if(save != null)
+            {
                 manual.setPdfFilePath(save.getPath());
-            String path = save.getPath();
-            String fileName = save.getName();
-            String[] fileBroken = fileName.split("\\.");
-            manual.setOutputTexFile(new File("resources" + File.separator + fileBroken[0] + ".tex"));
+                String fileName = save.getName();
+                String[] fileBroken = fileName.split("\\.");
+                manual.setOutputTexFile(new File("resources" + File.separator + fileBroken[0] + ".tex"));
+            }
         });
 
         nameManual = new TextField();
