@@ -19,6 +19,11 @@ import manual.ProfileReader;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Wraps a VBox to design and manage the main frontend for the application.
+ *
+ * @author Daniel Burton
+ */
 public class RootPane extends VBox implements Sortable
 {
     private final HBox topMenu = new HBox(2);
@@ -48,6 +53,11 @@ public class RootPane extends VBox implements Sortable
             new CornerRadii(3), BorderWidths.DEFAULT));
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
 
+    /**
+     * Creates an instance of the RootPane.
+     * Note this does not display that instance (this is primarily done by the start(Stage) method), it merely
+     * creates a Scene graph to be used.
+     */
     RootPane()
     {
         //Labels setup:
@@ -102,6 +112,9 @@ public class RootPane extends VBox implements Sortable
         renderModules();
     }
 
+    /**
+     * Adds event handlers to interactive elements of the display.
+     */
     private void attachEventHandlers()
     {
         launchSortMenu.setOnMouseClicked(e ->
