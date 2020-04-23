@@ -228,7 +228,7 @@ public class RootPane extends VBox implements Sortable
         });
 
         Main.numSelectedProperty.addListener(new ChangeListener<Number>()
-        {
+        {//Update the "Num Selected" label whenever the numSelectedProperty changes.
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1)
             {
@@ -257,39 +257,7 @@ public class RootPane extends VBox implements Sortable
             if((module.getCategory() != 2 && i < Main.MODULES_DISPLAYED.size()) ||
                     (module.getCategory() == 2 && i >= Main.MODULES_DISPLAYED.size()))
             {//If this isn't a needy module, display it in the top half. If it is, put it in the bottom half.
-                //Components to build each module region:
-                final StackPane modulePane = new StackPane();
-                final Region moduleRegion = new Region();
-                final Label moduleName = new Label(module.getModuleName() + "\n\n");
-                moduleName.setPadding(new Insets(2));
-                modulePane.setAlignment(Pos.BOTTOM_CENTER);
-                final Label moduleCode = new Label(module.getModuleCode());
-                moduleCode.setFont(new Font(7));
-                moduleRegion.setMinSize(100, 20);
-                moduleRegion.setBackground(DEFAULT_MODULE_BACK);
-                moduleRegion.setBorder(DEFAULT_BORDER);
-                //Event handling code for each module:
-                modulePane.setOnMouseClicked(e ->
-                {
-                    if(moduleRegion.getBackground().equals(DEFAULT_MODULE_BACK))
-                    {
-                        moduleRegion.setBackground(SELECTED_MODULE_BACK);
-                        module.activate();
-                        //Main.numSelected++;
-                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
-                    }
-                    else
-                    {
-                        moduleRegion.setBackground(DEFAULT_MODULE_BACK);
-                        module.deactivate();
-                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
-                        //Main.numSelected--;
-                    }
-                   // numSelectedLabel.setText("Modules Selected: " +
-                        //    Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
-                });
-                //Adding the constructed module region to its pane:
-                modulePane.getChildren().addAll(moduleRegion, moduleName, moduleCode);
+                ModulePane modulePane = new ModulePane(module);
                 if(module.getCategory() == 2)
                     needyPane.getChildren().add(modulePane);
                 else
@@ -311,21 +279,19 @@ public class RootPane extends VBox implements Sortable
         {
             for(int j = 0; j < modules.size(); j++)
             {
-                StackPane modulePane = (StackPane) modules.get(j);
-                if(((Label)modulePane.getChildren().get(2)).getText().equals(Main.MODULES_DISPLAYED.get(i).getModuleCode()))
+                ModulePane modulePane = (ModulePane)modules.get(j);
+                if(modulePane.getModuleCodeContent().equals(Main.MODULES_DISPLAYED.get(i).getModuleCode()))
                 {
-                    if(select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(DEFAULT_MODULE_BACK))
+                    if(select && !modulePane.isSelected())
                     {
-                        //Main.numSelected++;
+                        modulePane.invertCol();
                         Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
-                        ((Region)modulePane.getChildren().get(0)).setBackground(SELECTED_MODULE_BACK);
                         Main.MODULES_DISPLAYED.get(i).activate();
                     }
                     else if(!select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(SELECTED_MODULE_BACK))
                     {
-                        //Main.numSelected--;
+                        modulePane.invertCol();
                         Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
-                        ((Region)modulePane.getChildren().get(0)).setBackground(DEFAULT_MODULE_BACK);
                         Main.MODULES_DISPLAYED.get(i).deactivate();
                     }
                     break;
