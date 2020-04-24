@@ -16,6 +16,9 @@ public class ExceptionAlert extends Alert
         setGraphic(null); //TODO: Use actual logo here?
         setTitle(exception.getExceptionTitle());
         setHeaderText(exception.getExceptionTitle());
+        getDialogPane().getStylesheets().add(getClass().getResource("exceptionAlertStyle.css").
+                toExternalForm());
+        getDialogPane().getStyleClass().add("exceptionAlertStyle");
 
         Label causesLabel = new Label("Possible Causes:");
         causesLabel.setFont(new Font("Arial Bold", 16));
@@ -31,7 +34,8 @@ public class ExceptionAlert extends Alert
             resolutions += (resolution + "\n");
         Label resolutionsContent = new Label(resolutions);
 
-        Label contactLabel = new Label("\nIf issues persist, please contact Daniel Burton");
+        Label contactLabel = new Label("\nIf issues persist, please contact Daniel Burton.s");
+        contactLabel.setStyle("-fx-font-style: italic");
         VBox content = new VBox(3);
         content.getChildren().addAll(causesLabel, causesContent, resolutionsLabel, resolutionsContent, contactLabel);
 

@@ -1,0 +1,17 @@
+.exceptionAlertStyle
+{
+    -fx-background-color: #A9A9A9;
+}
+.exceptionAlertStyle > *.button-bar > *.container
+{
+    -fx-background-color: #A9A9A9;
+}
+.exceptionAlertStyle:header *.header-panel
+{
+    -fx-background-color: #000000;
+}
+.exceptionAlertStyle:header *.header-panel *.label
+{
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
