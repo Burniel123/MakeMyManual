@@ -2,8 +2,6 @@ package display;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import manual.ManualException;
@@ -34,7 +32,7 @@ public class ExceptionAlert extends Alert
             resolutions += (resolution + "\n");
         Label resolutionsContent = new Label(resolutions);
 
-        Label contactLabel = new Label("\nIf issues persist, please contact Daniel Burton.s");
+        Label contactLabel = new Label("\nIf issues persist, please contact Daniel Burton.");
         contactLabel.setStyle("-fx-font-style: italic");
         VBox content = new VBox(3);
         content.getChildren().addAll(causesLabel, causesContent, resolutionsLabel, resolutionsContent, contactLabel);

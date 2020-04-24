@@ -228,10 +228,17 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 logWriter.write("\n\n***BEGIN COMPILATION***");
                 logWriter.write("\nOutput from pdflatex as follows: \n\n");
                 logWriter.write("[Some known irrelevant warnings removed]\n");
+                int lineNum = 0;
                 while ((line = inStrm.readLine()) != null)
                 {
-                    if(!line.contains("ProcSets"))
+                    if(!(line.contains("ProcSets") || line.contains("invalid other resource")))
+                    {//Ignore certain unavoidable pdf compilation warnings which are of no help.
+                        lineNum++;
                         logWriter.write(line + "\n");
+                        System.out.println(line + "\n");
+                        float proportion = (float)lineNum/(Main.MODULES_DISPLAYED.size()*1.5f)*0.3f;
+                        pm.setProgress(0.7 + proportion);
+                    }
                 }
                 File manualsDir = new File("resources/modules");
                 for(File file : manualsDir.listFiles())

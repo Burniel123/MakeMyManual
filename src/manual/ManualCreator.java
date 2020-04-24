@@ -204,7 +204,7 @@ public class ManualCreator
                     "\\title{" + manualName +
                     "\\thanks{Produced with MakeMyManual}}" +
                     "\\author{}\n\\date{}\n" +
-                    "\\pdfminorversion=6\n" +
+                    "\\pdfminorversion=7\n" +
                     "\\begin{document}\n" +
                     "\\maketitle\n");
         }
