@@ -1,17 +1,23 @@
-.dialogStyle{
+.dialogStyle
+{
     -fx-background-color: #A9A9A9;
     -fx-font: 12px Arial;
 }
-.dialogStyle > *.button-bar > *.container{
+.dialogStyle > *.button-bar > *.container
+{
     -fx-background-color: #A9A9A9;
 }
-.dialogStyle > *.label.content{
-    -fx-font-size: 14px;
-}
-.dialogStyle:header *.header-panel{
+.dialogStyle:header *.header-panel
+{
     -fx-background-color: #000000;
 }
-.dialogStyle:header *.header-panel *.label{
+.dialogStyle:header *.header-panel *.label
+{
     -fx-font-size: 18px;
     -fx-text-fill: white;
+}
+.progress-bar
+{
+    -fx-box-border: #000000;
+    -fx-accent: #D3D3D3;
 }

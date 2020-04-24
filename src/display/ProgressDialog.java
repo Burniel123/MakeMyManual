@@ -33,6 +33,7 @@ public class ProgressDialog extends Dialog<Void>
         setTitle("Creating your manual...");
         setHeaderText("Your custom manual is being created.\nThis may take some time.");
         ProgressBar progressBar = new ProgressBar(0);
+        progressBar.setMinWidth(300);
         progressContent.getChildren().add(progressBar);
         initModality(Modality.APPLICATION_MODAL);
         initStyle(StageStyle.UTILITY);
