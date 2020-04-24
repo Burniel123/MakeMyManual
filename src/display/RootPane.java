@@ -11,7 +11,6 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import manual.Module;
@@ -47,12 +46,6 @@ public class RootPane extends VBox implements Sortable
     private final Button makeIt = new Button("Make Manual");
 
     private static final Font TITLES_FONT = new Font("Arial Bold", 16);
-    static final Background DEFAULT_MODULE_BACK = new Background(new BackgroundFill(Color.WHITE,
-            new CornerRadii(3), new Insets(2)));
-    static final Background SELECTED_MODULE_BACK = new Background(new BackgroundFill(Color.web("0x669900"),
-            new CornerRadii(3), new Insets(2)));
-    static final Border DEFAULT_BORDER = new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,
-            new CornerRadii(3), BorderWidths.DEFAULT));
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
 
     /**
@@ -142,7 +135,6 @@ public class RootPane extends VBox implements Sortable
                 renderModules();
                 highlightAll(modulesPane.getChildren(), true);
                 highlightAll(needyPane.getChildren(), true);
-                //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
             };
 
             Thread jsonReadThread = new Thread(() ->
@@ -288,7 +280,7 @@ public class RootPane extends VBox implements Sortable
                         Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
                         Main.MODULES_DISPLAYED.get(i).activate();
                     }
-                    else if(!select && ((Region)modulePane.getChildren().get(0)).getBackground().equals(SELECTED_MODULE_BACK))
+                    else if(!select && modulePane.isSelected())
                     {
                         modulePane.invertCol();
                         Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);

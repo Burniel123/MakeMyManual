@@ -44,7 +44,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         setTitle("Export Manual");
         setHeaderText("Export Manual");
         setContentText("Choose your preferences below and hit OK.");
-        getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        mmDialogPane.setMinHeight(Region.USE_PREF_SIZE);
         dialogGrid.setMinSize(350, 350);
 
         CheckBox subcategories = new CheckBox("Create a category per letter");
@@ -79,6 +79,8 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         nameManual = new TextField();
         nameManual.setPromptText("Enter manual title...");
         dialogGrid.add(nameManual, 0, 4);
+        mmDialogPane.getStylesheets().add(getClass().getResource("dialogStyle.css").toExternalForm());
+        mmDialogPane.getStyleClass().add("dialogStyle");
 
         getDialogPane().getButtonTypes().add(ButtonType.OK);
         getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
@@ -278,6 +280,9 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         Platform.runLater(() ->
         {//To make absolutely sure this method's content is run on the FX Application Thread.
             Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+            successAlert.getDialogPane().getStylesheets().add(getClass().getResource("dialogStyle.css").
+                    toExternalForm());
+            successAlert.getDialogPane().getStyleClass().add("dialogStyle");
             successAlert.setTitle("Manual created successfully!");
             successAlert.setHeaderText("Your custom manual, " + manual.getManualName() + ", has been created.");
             successAlert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
