@@ -46,9 +46,17 @@ public class ModulePane extends StackPane
         //Event handler for clicking on this module pane:
         setOnMouseClicked(e ->
         {
+            if(!isSelected())
+            {
+                module.activate();
+                Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
+            }
+            else
+            {
+                module.deactivate();
+                Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
+            }
             invertCol();
-            module.activate();
-            Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
         });
 
         //Configure module pane as a whole:

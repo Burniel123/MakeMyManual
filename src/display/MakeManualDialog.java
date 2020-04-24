@@ -227,8 +227,12 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 String line = null;
                 logWriter.write("\n\n***BEGIN COMPILATION***");
                 logWriter.write("\nOutput from pdflatex as follows: \n\n");
+                logWriter.write("[Some known irrelevant warnings removed]\n");
                 while ((line = inStrm.readLine()) != null)
-                    logWriter.write(line + "\n");
+                {
+                    if(!line.contains("ProcSets"))
+                        logWriter.write(line + "\n");
+                }
                 File manualsDir = new File("resources/modules");
                 for(File file : manualsDir.listFiles())
                     file.delete();
@@ -279,6 +283,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
     {
         Platform.runLater(() ->
         {//To make absolutely sure this method's content is run on the FX Application Thread.
+            Main.numSelectedProperty.set(0);
             Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
             successAlert.getDialogPane().getStylesheets().add(getClass().getResource("dialogStyle.css").
                     toExternalForm());
