@@ -194,3 +194,16 @@ Forget Everything	HexiEvilFMN	5	https://raw.githubusercontent.com/Timwi/KtaneCon
 Grid Matching	GridMatching	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Grid%20Matching.pdf	Windesign	2018-04-07	1
 Color Decoding	Color Decoding	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Color%20Decoding.pdf	Windesign	2018-04-07	1
 The Sun	sun	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Sun.pdf	"Pruz, Royal_Flu$h"	2018-04-09	1
+Playfair Cipher	Playfair	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Playfair%20Cipher.pdf	"Maca, Groover"	2018-04-10	1
+Tangrams	Tangrams	5	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Tangrams.pdf	Bashly	2018-04-12	1
+The Number	theNumber	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Number.pdf	"red031000, Felix"	2018-04-13	1
+Cooking	cooking	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Cooking.pdf	"Marksam32, James"	2018-04-13	1
+Superlogic	SuperlogicModule	5	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Superlogic.pdf	Timwi	2018-04-17	1
+The Moon	moon	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Moon.pdf	"Pruz, Royal_Flu$h"	2018-04-20	1
+The Cube	cube	5	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Cube.pdf	Royal_Flu$h	2018-04-22	1
+Dr. Doctor	DrDoctorModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Dr.%20Doctor.pdf	"Timwi, Daniell, Livio, Rexkix"	2018-04-23	1
+Tax Returns	taxReturns	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Tax%20Returns.pdf	Royal_Flu$h	2018-04-25	1
+The Jewel Vault	jewelVault	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Jewel%20Vault.pdf	"MarioXTurn, Royal_Flu$h"	2018-05-02	1
+Digital Root	digitalRoot	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Digital%20Root.pdf	"red031000, CyanLights"	2018-05-03	1
+Graffiti Numbers	graffitiNumbers	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Graffiti%20Numbers.pdf	Royal_Flu$h	2018-05-04	1
+Marble Tumble	MarbleTumbleModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Marble%20Tumble.pdf	Timwi	2018-05-07	1
