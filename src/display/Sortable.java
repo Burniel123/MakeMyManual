@@ -35,9 +35,9 @@ public interface Sortable
                 switch (sortBy)
                 {//Implement a different way of comparing objects depending on the required field.
                     case 0 :
-                        if(o1.getModuleName().compareToIgnoreCase(o2.getModuleName()) > 0)
+                        if(removeThe(o1.getModuleName()).compareToIgnoreCase(removeThe(o2.getModuleName())) > 0)
                             toReturn = 1;
-                        else if(o1.getModuleName().compareToIgnoreCase(o2.getModuleName()) == 0)
+                        else if(removeThe(o1.getModuleName()).compareToIgnoreCase(removeThe(o2.getModuleName())) == 0)
                             toReturn = 0;
                         else
                             toReturn = -1;break;
@@ -76,6 +76,18 @@ public interface Sortable
                 return toReturn;
             }
         });
+    }
+
+    /**
+     * Removes the word "the" from any module names so the word can be ignored for sorting.
+     * @param toRemove - the module name to remove "the" from.
+     * @return a String with any starting "the" removed.
+     */
+    private String removeThe(String toRemove)
+    {
+        if(toRemove.startsWith("The "))
+            toRemove.substring(3);
+        return toRemove;
     }
 
     /**

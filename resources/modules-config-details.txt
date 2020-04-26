@@ -40,13 +40,13 @@ Caesar Cipher	CaesarCipherModule	1	https://raw.githubusercontent.com/Timwi/Ktane
 Perspective Pegs	spwizPerspectivePegs	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Perspective%20Pegs.pdf	Spare Wizard	2016-09-24	1
 Microcontroller	Microcontroller	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Microcontroller.pdf	Flush	2016-09-24	1
 Murder	murder	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Murder.pdf	Asimir	2016-09-26	1
-Gamepad	TheGamepadModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
+The Gamepad	TheGamepadModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
 Tic-Tac-Toe	TicTacToeModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07	1
 "Monsplode, Fight!"	monsplodeFight	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Monsplode%2C%20Fight!.pdf	clutterArranger	2016-10-08	1
 Shape Shift	shapeshift	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Shape%20Shift.pdf	Asimir	2016-10-10	1
 Follow The Leader	FollowTheLeaderModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Follow%20the%20Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18	1
 Friendship	FriendshipModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Friendship.pdf	Timwi	2016-10-24	1
-Bulb	TheBulbModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Bulb.pdf	Timwi	2016-10-28	1
+The Bulb	TheBulbModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Bulb.pdf	Timwi	2016-10-28	1
 Alphabet	alphabet	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Alphabet.pdf	mitterdoo	2016-10-30	1
 Blind Alley	BlindAlleyModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Blind%20Alley.pdf	Timwi	2016-11-03	1
 Sea Shells	SeaShells	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Sea%20Shells.pdf	Asimir	2016-11-06	1
@@ -80,7 +80,7 @@ Chord Qualities	ChordQualities	4	https://raw.githubusercontent.com/Timwi/KtaneCo
 Creation	CreationModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Creation.pdf	"Grybo, samfun123"	2017-04-17	1
 Rubik's Cube	RubiksCubeModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Rubik%E2%80%99s%20Cube.pdf	"Timwi, Freelancer1025"	2017-04-30	1
 FizzBuzz	fizzBuzzModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/FizzBuzz.pdf	ZekNikZ	2017-05-10	1
-Clock	TheClockModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Clock.pdf	"TheAuthorOfOZ, Timwi"	2017-05-11	1
+The Clock	TheClockModule	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Clock.pdf	"TheAuthorOfOZ, Timwi"	2017-05-11	1
 LED Encryption	LEDEnc	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/LED%20Encryption.pdf	Virepri	2017-05-12	1
 Bitwise Operations	BitOps	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Bitwise%20Operations.pdf	Virepri	2017-05-14	1
 Fast Math	fastMath	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Fast%20Math.pdf	"LeGeND, SL7205"	2017-05-25	1
@@ -90,14 +90,14 @@ Binary LEDs	BinaryLeds	3	https://raw.githubusercontent.com/Timwi/KtaneContent/ma
 Boolean Venn Diagrams	booleanVennModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Boolean%20Venn%20Diagram.pdf	ZekNikZ	2017-06-22	1
 Point Of Order	PointOfOrderModule	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Point%20of%20Order.pdf	Timwi	2017-06-25	1
 Ice Cream	iceCreamModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Ice%20Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	2017-06-26	1
-Screw	screw	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Screw.pdf	"Ezekiel, SL7205"	2017-07-01	1
+The Screw	screw	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Screw.pdf	"Ezekiel, SL7205"	2017-07-01	1
 Yahtzee	YahtzeeModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Yahtzee.pdf	"Timwi, Rexkix"	2017-07-02	1
 German Button	BigButtonTranslated	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Button%20translated%20(Deutsch%20%E2%80%94%20Der%20Knopf).pdf	"Malde, Tharagon"	2017-01-25	1
 German Morse Code	MorseCodeTranslated	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Morse%20Code%20translated%20(Deutsch%20%E2%80%94%20Morsecode).pdf	"Malde, Tharagon"	2017-01-25	1
 German Password	PasswordsTranslated	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Password%20translated%20(Deutsch%20%E2%80%94%20Passw%C3%B6rter).pdf	"Malde, Tharagon"	2017-01-25	1
 German Who's On First	WhosOnFirstTranslated	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Who%E2%80%99s%20on%20First%20translated%20(Deutsch%20%E2%80%94%20Who%E2%80%99s%20on%20First).pdf	"Malde, Tharagon"	2017-01-25	1
 Wires	Wires	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Wires.pdf	Steel Crate Games	2015-10-08	0
-Button	BigButton	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Button.pdf	Steel Crate Games	2015-10-08	0
+The Button	BigButton	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Button.pdf	Steel Crate Games	2015-10-08	0
 Keypad	Keypad	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Keypad.pdf	Steel Crate Games	2015-10-08	0
 Simon Says	Simon	1	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Simon%20Says.pdf	Steel Crate Games	2015-10-08	0
 Who's On First	WhosOnFirst	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Who%E2%80%99s%20on%20First.pdf	Steel Crate Games	2015-10-08	0
@@ -172,8 +172,8 @@ Radiator	radiator	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/
 Modern Cipher	modernCipher	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Modern%20Cipher.pdf	TheFe	2018-02-04	1
 LED Grid	LED Grid	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/LED%20Grid.pdf	Royal_Flu$h	2018-02-06	1
 Sink	Sink	2	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Sink.pdf	McNiko67	2018-02-09	1
-iPhone	iPhone	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20iPhone.pdf	Royal_Flu$h	2018-02-20	1
-Swan	theSwan	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Swan.pdf	Royal_Flu$h	2018-02-22	1
+The iPhone	iPhone	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20iPhone.pdf	Royal_Flu$h	2018-02-20	1
+The Swan	theSwan	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/The%20Swan.pdf	Royal_Flu$h	2018-02-22	1
 Waste Management	wastemanagement	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Waste%20Management.pdf	"red031000, Inova, AppleSlice"	2018-02-23	1
 Human Resources	HumanResourcesModule	3	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Human%20Resources.pdf	"Elias, Timwi"	2018-02-26	1
 Skyrim	skyrim	4	https://raw.githubusercontent.com/Timwi/KtaneContent/master/PDF/Skyrim.pdf	Royal_Flu$h	2018-03-02	1
