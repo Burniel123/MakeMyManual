@@ -306,6 +306,8 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
     {
         Platform.runLater(() ->
         {//To make absolutely sure this method's content is run on the FX Application Thread.
+            Main.ROOT_PANE.clearModules();
+            Main.ROOT_PANE.renderModules();
             Main.numSelectedProperty.set(0);
             Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
             successAlert.getDialogPane().getStylesheets().add(getClass().getResource("dialogStyle.css").

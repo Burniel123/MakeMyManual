@@ -145,7 +145,7 @@ public class RootPane extends VBox implements Sortable
                     ArrayList<String> moduleCodes = jsonReader.readJson();
                     Collections.sort(moduleCodes);
                     ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
-                    Main.MODULES_DISPLAYED = new ArrayList<Module>();
+                    //Main.MODULES_DISPLAYED = new ArrayList<Module>();
                     for(int i = 0; i < moduleCodes.size(); i++)
                     {//For every module code to be used, locate it and add it to the list of modules to be displayed.
                         /*for(int j = 0; j < Main.MODULES_AVAILABLE.size(); j++)
