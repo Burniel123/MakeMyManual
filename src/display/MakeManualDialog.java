@@ -69,10 +69,16 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             File save = saveLocation.showSaveDialog(new Stage());
             if(save != null)
             {
+                //File save = new File(chosen.getPath() + ".pdf");
                 manual.setPdfFilePath(save.getPath());
                 String fileName = save.getName();
                 String[] fileBroken = fileName.split("\\.");
-                manual.setOutputTexFile(new File("resources" + File.separator + fileBroken[0] + ".tex"));
+                String toUse = fileName;
+                if(fileBroken[fileBroken.length-1].equals("pdf"))
+                    toUse = fileName.substring(0, fileName.lastIndexOf("." + fileBroken[fileBroken.length-1]));
+                else
+                    manual.setPdfFilePath(save.getPath() + ".pdf");
+                manual.setOutputTexFile(new File("resources" + File.separator + toUse + ".tex"));
             }
         });
 
@@ -192,8 +198,12 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             {
                 Platform.runLater(() ->
                 {
-                    ExceptionAlert ea = new ExceptionAlert("Error writing log file!",
-                            "Do all working directories have appropriate permissions?");
+                    OutputIOException oe = new OutputIOException();
+                    oe.addPossibleCause("Desired log file directory has insufficient permissions.");
+                    oe.addPossibleCause("Existing log file is currently open.");
+                    oe.addPossibleResolution("Close any log files currently open.");
+                    oe.addPossibleResolution("Reinstall the application in a directory you can write to.");
+                    ExceptionAlert ea = new ExceptionAlert(oe);
                     ea.initOwner(getDialogPane().getScene().getWindow());
                     ea.showAndWait();
                     pd.closeProgressBar();
@@ -236,7 +246,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                         lineNum++;
                         logWriter.write(line + "\n");
                         System.out.println(line + "\n");
-                        float proportion = (float)lineNum/(Main.MODULES_DISPLAYED.size()*1.5f)*0.3f;
+                        float proportion = (float)lineNum/(Main.MODULES_DISPLAYED.size())*0.3f;
                         pm.setProgress(0.7 + proportion);
                     }
                 }
@@ -271,8 +281,12 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             {//This exception will be thrown if there was an error compiling the pdf.
                 Platform.runLater(() ->
                 {//Alert to be presented on the Application thread whenever next possible.
-                    ExceptionAlert exceptionAlert = new ExceptionAlert("Error compiling pdf!",
-                            "Do all working directories have appropriate permissions?");
+                    OutputIOException oe = new OutputIOException();
+                    oe.addPossibleCause("A corrupted file is preventing pdf compilation.");
+                    oe.addPossibleCause("Application pre-requisites have not been met.");
+                    oe.addPossibleResolution("Ensure you have all required pre-requisites installed.");
+                    oe.addPossibleResolution("Delete any existing auxiliary and log files in the application's directory.");
+                    ExceptionAlert exceptionAlert = new ExceptionAlert(oe);
                     exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
                     exceptionAlert.showAndWait();
                     pd.closeProgressBar();
