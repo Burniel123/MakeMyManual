@@ -136,6 +136,10 @@ public class ManualCreator
         this.needyToEnd = needyToEnd;
     }
 
+    /**
+     * Sets whether or not a dedicated section is being made for each letter.
+     * @param alphaSubs - true if bookmarks are to be subcategorised by letter.
+     */
     public void setAlphaSubs(boolean alphaSubs)
     {
         this.alphaSubs = alphaSubs;
@@ -173,12 +177,16 @@ public class ManualCreator
             }
             if (vanillaToEnd && modules.get(i).getCategory() == 0)
             {
-                beginVanillaSection();
+                //beginVanillaSection();
+                writer.write("\\label{vanilla}\n" +
+                        "\\pdfbookmark[0]{Vanilla}{vanilla}\n");
                 vanillaToEnd = false;
             }
             if (needyToEnd && modules.get(i).getCategory() == 2)
             {
-                beginNeedySection();
+                //beginNeedySection();
+                writer.write("\\label{needy}\n" +
+                        "\\pdfbookmark[0]{Needy}{needy}\n");
                 needyToEnd = false;
             }
             downloadFile(modules.get(i));
@@ -250,11 +258,7 @@ public class ManualCreator
             String moduleCodeName = modules.get(moduleIndex).getModuleCode();
             String path = editPath(manualPagePath);
             writer.write("\\label{pdf:" + moduleCodeName + "}\n");
-            if(alphaSubs)
-                writer.write("\\pdfbookmark[1]{" + moduleName + "}{pdf:" + moduleCodeName + "}\n");
-            else
-                writer.write("\\pdfbookmark{" + moduleName + "}{pdf:" + moduleCodeName + "}\n");
-
+            writer.write("\\pdfbookmark[1]{" + moduleName + "}{pdf:" + moduleCodeName + "}\n");
             writer.write("\\includepdf[pages=-]{\"" + path + "\"}\n");
         }
         catch(IOException e)
@@ -280,10 +284,10 @@ public class ManualCreator
         }
     }
 
-    /**
+/*    *//**
      * Writes a bookmark to mark the start of a separated vanilla section.
      * @throws OutputIOException - in the event of an IOException.
-     */
+     *//*
     private void beginVanillaSection() throws OutputIOException
     {
         try
@@ -295,12 +299,12 @@ public class ManualCreator
         {
             throwOutIO();
         }
-    }
+    }*/
 
-    /**
+/*    *//**
      * Writes a bookmark to mark the start of a separated needy section.
      * @throws OutputIOException - in the event of an IOException.
-     */
+     *//*
     private void beginNeedySection() throws OutputIOException
     {
         try
@@ -312,7 +316,7 @@ public class ManualCreator
         {
             throwOutIO();
         }
-    }
+    }*/
 
     /**
      * Edits a file path to make it LaTeX-friendly.
