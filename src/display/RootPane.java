@@ -131,10 +131,11 @@ public class RootPane extends VBox implements Sortable
 
             Runnable highlightFromProfile = () ->
             {
-                clearModules();
+                /*clearModules();
                 renderModules();
                 highlightAll(modulesPane.getChildren(), true);
-                highlightAll(needyPane.getChildren(), true);
+                highlightAll(needyPane.getChildren(), true);*/
+
             };
 
             Thread jsonReadThread = new Thread(() ->
@@ -147,16 +148,57 @@ public class RootPane extends VBox implements Sortable
                     Main.MODULES_DISPLAYED = new ArrayList<Module>();
                     for(int i = 0; i < moduleCodes.size(); i++)
                     {//For every module code to be used, locate it and add it to the list of modules to be displayed.
-                        for(int j = 0; j < Main.MODULES_AVAILABLE.size(); j++)
+                        /*for(int j = 0; j < Main.MODULES_AVAILABLE.size(); j++)
                         {
                             if(Main.MODULES_AVAILABLE.get(j).getModuleCode().equals(moduleCodes.get(i)))
                             {
                                 Main.MODULES_DISPLAYED.add(Main.MODULES_AVAILABLE.get(j));
                                 break;
                             }
+                        }*/
+
+                        for(Node n : modulesPane.getChildren())
+                        {
+                            if(moduleCodes.get(i).equals(((ModulePane)n).getModuleCodeContent()))
+                            {
+                                Platform.runLater(() ->
+                                {
+                                    if(!((ModulePane) n).isSelected())
+                                    {
+                                        ((ModulePane) n).invertCol();
+                                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
+                                    }
+                                });
+                                break;
+                            }
+                        }
+
+                        for(Node n : needyPane.getChildren())
+                        {
+                            if(moduleCodes.get(i).equals(((ModulePane)n).getModuleCodeContent()))
+                            {
+                                Platform.runLater(() ->
+                                {
+                                    if(!((ModulePane) n).isSelected())
+                                    {
+                                        ((ModulePane) n).invertCol();
+                                        Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
+                                    }
+                                });
+                                break;
+                            }
+                        }
+
+                        for(Module m : Main.MODULES_AVAILABLE)
+                        {
+                            if(m.getModuleCode().equals(moduleCodes.get(i)))
+                            {
+                                m.activate();
+                                break;
+                            }
                         }
                     }
-                    Platform.runLater(highlightFromProfile);
+                    //Platform.runLater(highlightFromProfile);
                 }
                 catch(ProfileException pe)
                 {//This exception occurs when there is no "enabled" list in the profile.
@@ -250,6 +292,8 @@ public class RootPane extends VBox implements Sortable
                     (module.getCategory() == 2 && i >= Main.MODULES_DISPLAYED.size()))
             {//If this isn't a needy module, display it in the top half. If it is, put it in the bottom half.
                 ModulePane modulePane = new ModulePane(module);
+                if(module.isActive())
+                    modulePane.invertCol();
                 if(module.getCategory() == 2)
                     needyPane.getChildren().add(modulePane);
                 else
