@@ -27,6 +27,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
 
     private CheckBox splitVanilla = null;
     private CheckBox splitNeedy = null;
+    private CheckBox subcategories = null;
     private TextField nameManual = null;
 
 
@@ -47,7 +48,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         mmDialogPane.setMinHeight(Region.USE_PREF_SIZE);
         dialogGrid.setMinSize(350, 350);
 
-        CheckBox subcategories = new CheckBox("Create a category per letter");
+        subcategories = new CheckBox("Create a category per letter");
         subcategories.setMinWidth(300);
         dialogGrid.add(subcategories, 0, 0);
         splitNeedy = new CheckBox("Separate section for any needy modules at end");
@@ -109,6 +110,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     /*SortDialogCreator sdc = new SortDialogCreator();*/
                     ArrayList<Module> needySection = new ArrayList<Module>();
                     ArrayList<Module> vanillaSection = new ArrayList<Module>();
+                    manual.setAlphaSubs(subcategories.isSelected());
                     if (splitNeedy.isSelected())
                     {//Separates active needy modules.
                         ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);

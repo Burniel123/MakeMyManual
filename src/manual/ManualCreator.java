@@ -20,6 +20,7 @@ public class ManualCreator
     private BufferedWriter writer = null;
     private boolean vanillaToEnd = false;
     private boolean needyToEnd = false;
+    private boolean alphaSubs = false;
 
     private ArrayList<Module> modules = new ArrayList<Module>();
     private String manualName = null; //TODO: check user has named their manual before creating!
@@ -135,6 +136,11 @@ public class ManualCreator
         this.needyToEnd = needyToEnd;
     }
 
+    public void setAlphaSubs(boolean alphaSubs)
+    {
+        this.alphaSubs = alphaSubs;
+    }
+
     /**
      * Writes the user's .tex manual, by creating a BufferedWriter, writing the preamble, writing each manual page,
      * and ending the document.
@@ -146,9 +152,25 @@ public class ManualCreator
     {
         createWriter();
         writePreamble();
+        char firstChar = modules.get(0).getModuleName().charAt(0);
+        char currentChar = (char)(firstChar - 32);
+
+        if(alphaSubs && (firstChar >= 48 && firstChar <= 57))
+            writer.write("\\label{alpha:09}\n" +
+                    "\\pdfbookmark[0]{0-9}{alpha:09}\n");
+        else if(alphaSubs)
+            writer.write("\\label{alpha:" + firstChar + "}\n" +
+                    "\\pdfbookmark[0]{" + firstChar + "}{alpha:" + firstChar + "}\n");
 
         for(int i = 0; i < modules.size(); i++)
         {
+            if(alphaSubs && modules.get(i).getModuleName().charAt(0) != currentChar
+            && modules.get(i).getModuleName().charAt(0) > 57 && modules.get(i).getCategory() == 1)
+            {
+                currentChar = modules.get(i).getModuleName().charAt(0);
+                writer.write("\\label{alpha:" + currentChar + "}\n" +
+                        "\\pdfbookmark[0]{" + currentChar + "}{alpha:" + currentChar + "}\n");
+            }
             if (vanillaToEnd && modules.get(i).getCategory() == 0)
             {
                 beginVanillaSection();
@@ -227,9 +249,13 @@ public class ManualCreator
             String moduleName = modules.get(moduleIndex).getModuleName();
             String moduleCodeName = modules.get(moduleIndex).getModuleCode();
             String path = editPath(manualPagePath);
-            writer.write("\\label{pdf:" + moduleCodeName + "}\n" +
-                    "\\pdfbookmark{" + moduleName + "}{pdf:" + moduleCodeName + "}\n" +
-                    "\\includepdf[pages=-]{\"" + path + "\"}\n");
+            writer.write("\\label{pdf:" + moduleCodeName + "}\n");
+            if(alphaSubs)
+                writer.write("\\pdfbookmark[1]{" + moduleName + "}{pdf:" + moduleCodeName + "}\n");
+            else
+                writer.write("\\pdfbookmark{" + moduleName + "}{pdf:" + moduleCodeName + "}\n");
+
+            writer.write("\\includepdf[pages=-]{\"" + path + "\"}\n");
         }
         catch(IOException e)
         {
