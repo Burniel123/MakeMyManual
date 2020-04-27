@@ -1,6 +1,7 @@
 package manual;
 
 import display.ProgressManager;
+import display.Sortable;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author Daniel Burton
  */
-public class ManualCreator
+public class ManualCreator implements Sortable
 {
     private File outputTexFile = null;
     private File pdfFile = null;
@@ -168,10 +169,10 @@ public class ManualCreator
 
         for(int i = 0; i < modules.size(); i++)
         {
-            if(alphaSubs && modules.get(i).getModuleName().charAt(0) != currentChar
+            if(alphaSubs && removeThe(modules.get(i).getModuleName()).charAt(0) != currentChar
             && modules.get(i).getModuleName().charAt(0) > 57 && modules.get(i).getCategory() == 1)
             {
-                currentChar = modules.get(i).getModuleName().charAt(0);
+                currentChar = removeThe(modules.get(i).getModuleName()).charAt(0);
                 writer.write("\\label{alpha:" + currentChar + "}\n" +
                         "\\pdfbookmark[0]{" + currentChar + "}{alpha:" + currentChar + "}\n");
             }

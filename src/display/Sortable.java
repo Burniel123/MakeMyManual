@@ -83,10 +83,12 @@ public interface Sortable
      * @param toRemove - the module name to remove "the" from.
      * @return a String with any starting "the" removed.
      */
-    private String removeThe(String toRemove)
+    default String removeThe(String toRemove)
     {
         if(toRemove.startsWith("The "))
-            toRemove.substring(3);
+        {
+            return toRemove.substring(4);
+        }
         return toRemove;
     }
 
