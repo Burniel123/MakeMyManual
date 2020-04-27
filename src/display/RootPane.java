@@ -27,10 +27,6 @@ import java.util.Collections;
  */
 public class RootPane extends VBox implements Sortable
 {
-    private final HBox topMenu = new HBox(2);
-    private final HBox numSelectedBar = new HBox(2);
-    private final VBox scrollContent = new VBox(5);
-    private final ScrollPane scrollableWindow = new ScrollPane(scrollContent);
     private final FlowPane modulesPane = new FlowPane(2, 2);
     private final FlowPane needyPane = new FlowPane(2, 2);
     private final Label numSelectedLabel = new Label("Modules Selected");
@@ -42,7 +38,6 @@ public class RootPane extends VBox implements Sortable
     private final Button searchBarSubmit = new Button("Search!");
     private final Button launchSortMenu = new Button("Sort");
     private final Button importProfile = new Button("Import Profile");
-    private final Button presetsButton = new Button("Presets");
     private final Button makeIt = new Button("Make Manual");
 
     private static final Font TITLES_FONT = new Font("Arial Bold", 16);
@@ -68,8 +63,10 @@ public class RootPane extends VBox implements Sortable
         needyPane.setPadding(new Insets(0,0,0,5));
 
         //Scroll bar setup:
+        VBox scrollContent = new VBox(5);
         scrollContent.setAlignment(Pos.CENTER);
         scrollContent.setStyle(DEFAULT_BACK_STYLE);
+        ScrollPane scrollableWindow = new ScrollPane(scrollContent);
         scrollableWindow.setFitToHeight(true);
         scrollableWindow.setFitToWidth(true);
         scrollableWindow.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
@@ -89,15 +86,18 @@ public class RootPane extends VBox implements Sortable
 
         //Top control menu setup:
         final Separator searchSeparator = new Separator();
+        HBox topMenu = new HBox(2);
         topMenu.setPadding(new Insets(5));
         searchBarInput.setMaxWidth(Double.MAX_VALUE);
         searchBarInput.setPromptText("Search for modules...");
         HBox.setHgrow(searchBarInput, Priority.ALWAYS);
         searchSeparator.setOrientation(Orientation.VERTICAL);
+        Button presetsButton = new Button("Presets");
         topMenu.getChildren().addAll(searchBarInput, searchBarSubmit, searchSeparator, launchSortMenu,
                 importProfile, presetsButton, makeIt);
 
         //"Num Selected" bar setup:
+        HBox numSelectedBar = new HBox(2);
         numSelectedBar.setPadding(new Insets(0,5,0,5));
         numSelectedBar.getChildren().addAll(numSelectedLabel);
         numSelectedLabel.setFont(TITLES_FONT);
