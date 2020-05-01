@@ -160,14 +160,14 @@ public class ManualCreator implements Sortable
         char firstChar = ' ';
         if(!modules.isEmpty())
             firstChar = modules.get(0).getModuleName().charAt(0);
-        char currentChar = (char)(firstChar - 32);
+        char currentChar = Character.toUpperCase(firstChar);
 
         if(alphaSubs && (firstChar >= 48 && firstChar <= 57))
             writer.write("\\label{alpha:09}\n" +
                     "\\pdfbookmark[0]{0-9}{alpha:09}\n");
         else if(alphaSubs)
-            writer.write("\\label{alpha:" + firstChar + "}\n" +
-                    "\\pdfbookmark[0]{" + firstChar + "}{alpha:" + firstChar + "}\n");
+            writer.write("\\label{alpha:" + currentChar + "}\n" +
+                    "\\pdfbookmark[0]{" + currentChar + "}{alpha:" + currentChar + "}\n");
 
         for(int i = 0; i < modules.size(); i++)
         {
