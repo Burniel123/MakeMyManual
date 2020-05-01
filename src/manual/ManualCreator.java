@@ -157,7 +157,9 @@ public class ManualCreator implements Sortable
     {
         createWriter();
         writePreamble();
-        char firstChar = modules.get(0).getModuleName().charAt(0);
+        char firstChar = ' ';
+        if(!modules.isEmpty())
+            firstChar = modules.get(0).getModuleName().charAt(0);
         char currentChar = (char)(firstChar - 32);
 
         if(alphaSubs && (firstChar >= 48 && firstChar <= 57))

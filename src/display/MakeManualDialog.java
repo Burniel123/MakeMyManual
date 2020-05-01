@@ -198,6 +198,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             }
             catch(IOException e)
             {
+                resetWhenCompleteOrException();
                 Platform.runLater(() ->
                 {
                     OutputIOException oe = new OutputIOException();
@@ -243,6 +244,14 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 int lineNum = 0;
                 while ((line = inStrm.readLine()) != null)
                 {
+                    if(line.contains("I can't write on file"))
+                    {
+                        OutputIOException oioe = new OutputIOException();
+                        oioe.addPossibleCause("Destination pdf file is open.");
+                        oioe.addPossibleResolution("Close the pdf and restart the application.");
+                        oioe.addPossibleResolution("Choose a different destination for your manual.");
+                        throw oioe;
+                    }
                     if(!(line.contains("ProcSets") || line.contains("invalid other resource")))
                     {//Ignore certain unavoidable pdf compilation warnings which are of no help.
                         lineNum++;
@@ -267,6 +276,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             }
             catch (OutputIOException e)
             {//This exception will be thrown if there was an error writing to the tex file.
+                resetWhenCompleteOrException();
                 Platform.runLater(new Runnable()
                 {//Alert to the presented on the Application thread whenever possible.
                     @Override
@@ -274,13 +284,14 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     {
                         ExceptionAlert exceptionAlert = new ExceptionAlert(e);
                         exceptionAlert.showAndWait();
-                        pd.initOwner(getDialogPane().getScene().getWindow());
+                        //exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
                         pd.closeProgressBar();
                     }
                 });
             }
             catch (IOException e)
             {//This exception will be thrown if there was an error compiling the pdf.
+                resetWhenCompleteOrException();
                 Platform.runLater(() ->
                 {//Alert to be presented on the Application thread whenever next possible.
                     OutputIOException oe = new OutputIOException();
@@ -304,11 +315,9 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
      */
     private void createCompletedAlert(boolean specified)
     {
+        resetWhenCompleteOrException();
         Platform.runLater(() ->
         {//To make absolutely sure this method's content is run on the FX Application Thread.
-            Main.ROOT_PANE.clearModules();
-            Main.ROOT_PANE.renderModules();
-            Main.numSelectedProperty.set(0);
             Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
             successAlert.getDialogPane().getStylesheets().add(getClass().getResource("dialogStyle.css").
                     toExternalForm());
@@ -323,6 +332,16 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             successAlert.setGraphic(null);
             //successAlert.initOwner(getDialogPane().getScene().getWindow());
             successAlert.showAndWait();
+        });
+    }
+
+    private void resetWhenCompleteOrException()
+    {
+        Platform.runLater(() ->
+        {
+            Main.ROOT_PANE.clearModules();
+            Main.ROOT_PANE.renderModules();
+            Main.numSelectedProperty.set(0);
         });
     }
 }
