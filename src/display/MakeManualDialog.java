@@ -14,6 +14,9 @@ import manual.Module;
 import manual.OutputIOException;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 /**
@@ -233,6 +236,12 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     specified = true;
                 }
 
+                Path aux = Paths.get(manual.getPdfFilePath().replace(".pdf", ".aux"));
+                Path pdflatexLog = Paths.get(manual.getPdfFilePath().replace(".pdf", ".log"));
+                Files.deleteIfExists(aux);
+                Files.deleteIfExists(pdflatexLog);
+                //aux.delete();//I don't think(?) I care about the result for now.
+                //pdflatexLog.delete();
                 builder.redirectErrorStream(true);
                 Process pro = builder.start();
                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
@@ -264,11 +273,9 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 File manualsDir = new File("resources/modules");
                 for(File file : manualsDir.listFiles())
                     file.delete();
-                File aux = new File(manual.getPdfFilePath().replace(".pdf", ".aux"));
-                File pdflatexLog = new File(manual.getPdfFilePath().replace(".pdf", ".log"));
-                aux.delete();//I don't think(?) I care about the result for now.
-                pdflatexLog.delete();
                 pm.setProgress(1);
+                Files.deleteIfExists(aux);
+                Files.deleteIfExists(pdflatexLog);
                 logWriter.write("\nManual success, located at " + manual.getPdfFilePath());
                 logWriter.close();
                 Platform.runLater(() -> pd.closeProgressBar());
@@ -300,7 +307,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     oe.addPossibleResolution("Ensure you have all required pre-requisites installed.");
                     oe.addPossibleResolution("Delete any existing auxiliary and log files in the application's directory.");
                     ExceptionAlert exceptionAlert = new ExceptionAlert(oe);
-                    exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
+//                    exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
                     exceptionAlert.showAndWait();
                     pd.closeProgressBar();
                 });
