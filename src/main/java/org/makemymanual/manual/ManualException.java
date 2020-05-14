@@ -1,4 +1,4 @@
-package manual;
+package org.makemymanual.manual;
 
 import java.util.ArrayList;
 

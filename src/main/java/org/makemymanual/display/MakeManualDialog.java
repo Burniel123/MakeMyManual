@@ -1,4 +1,4 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -9,9 +9,9 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import manual.ManualCreator;
-import manual.Module;
-import manual.OutputIOException;
+import org.makemymanual.manual.ManualCreator;
+import org.makemymanual.manual.Module;
+import org.makemymanual.manual.OutputIOException;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -67,7 +67,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         ExtensionFilter filter = new ExtensionFilter("Portable Document Format: .pdf", "*.pdf");
         saveLocation.getExtensionFilters().add(filter);
         saveLocation.setTitle("Choose location to save manual");
-        manual = new ManualCreator("resources/manual.tex");
+        manual = new ManualCreator("manual.tex");
         chooseDestination.setOnMouseClicked(e ->
         {
             File save = saveLocation.showSaveDialog(new Stage());
@@ -89,7 +89,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         nameManual = new TextField();
         nameManual.setPromptText("Enter manual title...");
         dialogGrid.add(nameManual, 0, 4);
-        mmDialogPane.getStylesheets().add(getClass().getResource("dialogStyle.css").toExternalForm());
+        mmDialogPane.getStylesheets().add(getClass().getResource("/dialogStyle.css").toExternalForm());
         mmDialogPane.getStyleClass().add("dialogStyle");
 
         getDialogPane().getButtonTypes().add(ButtonType.OK);
@@ -195,7 +195,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             FileWriter logWriter = null;
             try
             {//Open log file for diagnostic purposes.
-                log = new File("resources/ManualLog.txt");
+                log = new File("ManualLog.txt");
                 logWriter = new FileWriter(log);
                 logWriter.write("***BEGIN PDF CREATION***");
             }
@@ -210,7 +210,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     oe.addPossibleResolution("Close any log files currently open.");
                     oe.addPossibleResolution("Reinstall the application in a directory you can write to.");
                     ExceptionAlert ea = new ExceptionAlert(oe);
-                    ea.initOwner(getDialogPane().getScene().getWindow());
+//                    ea.initOwner(getDialogPane().getScene().getWindow());
                     ea.showAndWait();
                     pd.closeProgressBar();
                 });
@@ -270,7 +270,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                         pm.setProgress(0.7 + proportion);
                     }
                 }
-                File manualsDir = new File("resources/modules");
+                File manualsDir = new File("manuals");
                 for(File file : manualsDir.listFiles())
                     file.delete();
                 pm.setProgress(1);
@@ -326,7 +326,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         Platform.runLater(() ->
         {//To make absolutely sure this method's content is run on the FX Application Thread.
             Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-            successAlert.getDialogPane().getStylesheets().add(getClass().getResource("dialogStyle.css").
+            successAlert.getDialogPane().getStylesheets().add(getClass().getResource("/dialogStyle.css").
                     toExternalForm());
             successAlert.getDialogPane().getStyleClass().add("dialogStyle");
             successAlert.setTitle("Manual created successfully!");

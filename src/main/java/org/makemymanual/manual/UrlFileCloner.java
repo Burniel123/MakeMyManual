@@ -1,4 +1,4 @@
-package manual;
+package org.makemymanual.manual;
 
 import java.io.IOException;
 import java.io.InputStream;

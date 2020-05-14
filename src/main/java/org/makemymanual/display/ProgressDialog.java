@@ -1,4 +1,4 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
@@ -26,7 +26,7 @@ public class ProgressDialog extends Dialog<Void>
         //Setting up the dialog window:
         final VBox progressContent = new VBox(5);
         getDialogPane().setContent(progressContent);
-        getDialogPane().getStylesheets().add(getClass().getResource("dialogStyle.css").toExternalForm());
+        getDialogPane().getStylesheets().add(getClass().getResource("/dialogStyle.css").toExternalForm());
         getDialogPane().getStyleClass().add("dialogStyle");
 
         //Setting basic dialog properties:

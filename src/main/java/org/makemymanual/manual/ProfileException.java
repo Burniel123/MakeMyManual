@@ -1,4 +1,4 @@
-package manual;
+package org.makemymanual.manual;
 
 /**
  * Custom exception to be thrown when a provided profile does not have an "enabled" list.

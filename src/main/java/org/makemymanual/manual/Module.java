@@ -1,4 +1,4 @@
-package manual;
+package org.makemymanual.manual;
 
 import java.net.URL;
 import java.time.LocalDate;

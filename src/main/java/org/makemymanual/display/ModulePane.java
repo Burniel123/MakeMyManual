@@ -1,4 +1,4 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import manual.Module;
+import org.makemymanual.manual.Module;
 
 /**
  * Wraps a StackPane to design and manage the display for a module.

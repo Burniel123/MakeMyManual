@@ -1,4 +1,4 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -6,10 +6,11 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import manual.InputIOException;
-import manual.ManualListReader;
-import manual.Module;
+import org.makemymanual.manual.InputIOException;
+import org.makemymanual.manual.ManualListReader;
+import org.makemymanual.manual.Module;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,8 @@ import java.util.ArrayList;
 public class Main extends Application implements Sortable
 {
     static RootPane ROOT_PANE = null;
-    static final Image DEFAULT_ICON = new Image("file:resources/icon.png");
+    static final Image DEFAULT_ICON = new Image("file:" + System.getProperty("user.dir") +
+            "/target/classes/icon.png");
 
     private static boolean exceptionOnBoot = false;
     private static InputIOException bootException = null;
@@ -86,7 +88,7 @@ public class Main extends Application implements Sortable
         {
             MODULES_AVAILABLE = reader.readModuleList();
             MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
-            /*SortDialogCreator sdc = new SortDialogCreator();*/
+            //SortDialogCreator sdc = new SortDialogCreator();
             sortModules(0, false);
         }
         catch(InputIOException e)

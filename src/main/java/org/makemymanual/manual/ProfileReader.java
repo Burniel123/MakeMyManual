@@ -1,10 +1,6 @@
-package manual;
+package org.makemymanual.manual;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -28,13 +24,13 @@ public class ProfileReader
         this.jsonFile = jsonFile;
     }
 
-    /**
+/*    *//**
      * Reads a profile.json file to obtain a list of enabled modules.
      * @return an ArrayList of Strings corresponding to module codes which are enabled in the profile.
      * @throws ParseException - if the json file cannot be parsed.
      * @throws IOException - in the event of an IOException.
      * @throws ProfileException - if the parser cannot find an "enabled" list in the profile.
-     */
+     *//*
     public ArrayList<String> readJson() throws ParseException, IOException, ProfileException
     {
         JSONObject content = (JSONObject)(new JSONParser().parse(new FileReader(jsonFile)));
@@ -55,6 +51,36 @@ public class ProfileReader
         {//Add the module code for each object in the JSONArray to the list to return.
             System.out.println((String) o);
             moduleCodesEnabled.add((String) o);
+        }
+
+        return moduleCodesEnabled;
+    }*/
+
+    public ArrayList<String> readJson() throws IOException, ProfileException
+    {
+        BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
+        String line = null;
+        String innerLine = null;
+        ArrayList<String> moduleCodesEnabled = new ArrayList<String>();
+        while((line = reader.readLine()) != null)
+        {
+            if(line.contains("\"EnabledList\": "))
+            {
+                while(!(innerLine = reader.readLine()).contains("]"))
+                {
+                    moduleCodesEnabled.add(innerLine.substring(innerLine.indexOf("\"")+1, innerLine.lastIndexOf("\"")));
+                }
+                break;
+            }
+        }
+
+        if(moduleCodesEnabled.isEmpty())
+        {
+            ProfileException pe =  new ProfileException();
+            pe.addPossibleCause("No enabled list in your profile.");
+            pe.addPossibleCause("Profile is poorly formatted.");
+            pe.addPossibleResolution("Download a fresh profile and try again.");
+            throw pe;
         }
 
         return moduleCodesEnabled;

@@ -1,11 +1,11 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.util.Callback;
-import manual.Module;
+import org.makemymanual.manual.Module;
 
 import java.util.ArrayList;
 
@@ -28,7 +28,7 @@ public class SortDialog extends Dialog<Void> implements Sortable
     {
         //Setting up containers for the dialog:
         DialogPane sfDialogPane = new DialogPane();
-        sfDialogPane.getStylesheets().add(getClass().getResource("dialogStyle.css").toExternalForm());
+        sfDialogPane.getStylesheets().add(getClass().getResource("/dialogStyle.css").toExternalForm());
         sfDialogPane.getStyleClass().add("dialogStyle");
         GridPane dialogGrid = new GridPane();
         dialogGrid.setHgap(2);

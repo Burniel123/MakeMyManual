@@ -1,7 +1,7 @@
-package manual;
+package org.makemymanual.manual;
 
-import display.ProgressManager;
-import display.Sortable;
+import org.makemymanual.display.ProgressManager;
+import org.makemymanual.display.Sortable;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -256,7 +256,7 @@ public class ManualCreator implements Sortable
     {
         try
         {
-            String manualPagePath = "modules/" + modules.get(moduleIndex).getModuleCode() + ".pdf";
+            String manualPagePath = "/manuals/" + modules.get(moduleIndex).getModuleCode() + ".pdf";
             String moduleName = modules.get(moduleIndex).getModuleName();
             String moduleCodeName = modules.get(moduleIndex).getModuleCode();
             String path = editPath(manualPagePath);
@@ -328,7 +328,7 @@ public class ManualCreator implements Sortable
     private String editPath(String path)
     {
         String currentDir = System.getProperty("user.dir");
-        path = currentDir + "/resources/" + path;
+        path = currentDir + path;
         String editedPath = "";
         for(int i = 0; i < path.length(); i++)
         {
@@ -347,7 +347,7 @@ public class ManualCreator implements Sortable
      */
     private void downloadFile(Module module)
     {
-        String destinationPath = "resources/modules/" + module.getModuleCode() + ".pdf";
+        String destinationPath = "manuals/" + module.getModuleCode() + ".pdf";
         UrlFileCloner ufc = new UrlFileCloner(module.getManualLocation(), destinationPath);
         try
         {

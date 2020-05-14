@@ -1,4 +1,4 @@
-package manual;
+package org.makemymanual.manual;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class ManualListReader
 {
-    private static final File SUPPORTED_MODULE_FILE = new File("./resources/modules-config-details.txt");
+   // private static final File SUPPORTED_MODULE_FILE = new File(ManualListReader.class.getResource("/modules-config-details.txt").getPath());
     private static final ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
 
     /**
@@ -22,7 +22,7 @@ public class ManualListReader
         ArrayList<Module> modules = new ArrayList<Module>();
         try
         {
-            BufferedReader reader = new BufferedReader(new FileReader(SUPPORTED_MODULE_FILE));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/modules-config-details.txt")));
             String line = null;
 
             while((line = reader.readLine()) != null)

@@ -1,4 +1,4 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;

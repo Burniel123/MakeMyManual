@@ -1,10 +1,10 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-import manual.ManualException;
+import org.makemymanual.manual.ManualException;
 
 public class ExceptionAlert extends Alert
 {
@@ -14,8 +14,10 @@ public class ExceptionAlert extends Alert
         setGraphic(null); //TODO: Use actual logo here?
         setTitle(exception.getExceptionTitle());
         setHeaderText(exception.getExceptionTitle());
-        getDialogPane().getStylesheets().add(getClass().getResource("exceptionAlertStyle.css").
-                toExternalForm());
+        getDialogPane().getStylesheets().add(getClass().getResource
+                ("/exceptionAlertStyle.css").toExternalForm());
+                //getClass().getResource("target/classes/exceptionAlertStyle.css").
+               // toExternalForm());
         getDialogPane().getStyleClass().add("exceptionAlertStyle");
 
         Label causesLabel = new Label("Possible Causes:");

@@ -1,4 +1,4 @@
-package manual;
+package org.makemymanual.manual;
 
 /**
  * An exception specifically relating to the read of the module list config file.

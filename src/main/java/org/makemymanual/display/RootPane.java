@@ -1,4 +1,4 @@
-package display;
+package org.makemymanual.display;
 
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -13,9 +13,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
-import manual.Module;
-import manual.ProfileException;
-import manual.ProfileReader;
+import org.makemymanual.manual.Module;
+import org.makemymanual.manual.ProfileException;
+import org.makemymanual.manual.ProfileReader;
 
 import java.util.ArrayList;
 import java.util.Collections;
