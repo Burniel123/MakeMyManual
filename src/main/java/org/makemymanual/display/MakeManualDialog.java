@@ -304,8 +304,10 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     OutputIOException oe = new OutputIOException();
                     oe.addPossibleCause("A corrupted file is preventing pdf compilation.");
                     oe.addPossibleCause("Application pre-requisites have not been met.");
+                    oe.addPossibleCause("Program does not have sufficient permissions to create your manual.");
                     oe.addPossibleResolution("Ensure you have all required pre-requisites installed.");
                     oe.addPossibleResolution("Delete any existing auxiliary and log files in the application's directory.");
+                    oe.addPossibleResolution("Reinstall the program in a directory with permissions.");
                     ExceptionAlert exceptionAlert = new ExceptionAlert(oe);
 //                    exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
                     exceptionAlert.showAndWait();

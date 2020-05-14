@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 
 /**
@@ -168,7 +169,8 @@ public class ManualCreator implements Sortable
         else if(alphaSubs)
             writer.write("\\label{alpha:" + currentChar + "}\n" +
                     "\\pdfbookmark[0]{" + currentChar + "}{alpha:" + currentChar + "}\n");
-
+        File manualsDir = new File("manuals");
+        manualsDir.mkdir();
         for(int i = 0; i < modules.size(); i++)
         {
             if(alphaSubs && removeThe(modules.get(i).getModuleName()).charAt(0) != currentChar
