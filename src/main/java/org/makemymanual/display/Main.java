@@ -12,6 +12,8 @@ import org.makemymanual.manual.InputIOException;
 import org.makemymanual.manual.ManualListReader;
 import org.makemymanual.manual.Module;
 
+import java.io.*;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 /**
@@ -84,8 +86,25 @@ public class Main extends Application implements Sortable
     public void init()
     {
         ManualListReader reader = new ManualListReader();
+        InputStream packageMaint = getClass().getResourceAsStream("/packagemaintainer.tex");
         try
         {
+            File maintainerFile = new File("packmaint.tex");
+            //maintainerFile.createNewFile();
+            BufferedWriter fw = new BufferedWriter(new FileWriter(maintainerFile));
+            String maintLine = null;
+            BufferedReader packageReader = new BufferedReader(new InputStreamReader(packageMaint));
+            while((maintLine = packageReader.readLine()) != null)
+                fw.write(maintLine + "\n");
+            fw.close();
+            ProcessBuilder pb = new ProcessBuilder("pdflatex", maintainerFile.getPath());
+            pb.redirectErrorStream(true);
+            Process pro = pb.start();
+            BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+            String line = null;
+            while((line = inStrm.readLine()) != null)
+                System.out.println(line);
+            System.out.println("Successfully maintained packages");
             MODULES_AVAILABLE = reader.readModuleList();
             MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
             //SortDialogCreator sdc = new SortDialogCreator();
@@ -100,6 +119,22 @@ public class Main extends Application implements Sortable
                 {
                     exceptionOnBoot = true;
                     bootException = e;
+                }
+            });
+        }
+        catch(IOException e)
+        {
+            Platform.runLater(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    InputIOException iioe = new InputIOException();
+                    iioe.addPossibleCause("Package maintainer moved, interrupted, or corrupted");
+                    iioe.addPossibleResolution("Reboot the application");
+                    iioe.addPossibleResolution("Reinstall the application");
+                    exceptionOnBoot = true;
+                    bootException = iioe;
                 }
             });
         }
