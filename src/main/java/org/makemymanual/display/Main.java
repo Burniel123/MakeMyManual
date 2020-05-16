@@ -39,8 +39,10 @@ public class Main extends Application implements Sortable
     @Override
     public void start(Stage primaryStage)
     {
+        //Outsource creating the main display of the application to the RootPane class:
         ROOT_PANE = new RootPane();
 
+        //Build the scene and stage:
         final Scene scene = new Scene(ROOT_PANE);
         primaryStage.setTitle("MakeMyManual");
         primaryStage.setScene(scene);
@@ -49,13 +51,13 @@ public class Main extends Application implements Sortable
         primaryStage.getIcons().add(DEFAULT_ICON);
 
         if (exceptionOnBoot)
-        {
+        {//If an exception was encountered on init, don't show the main display and show an error dialog instead.
             ExceptionAlert exceptionAlert = new ExceptionAlert(bootException);
             exceptionAlert.initOwner(primaryStage);
             exceptionAlert.showAndWait();
             Platform.exit();
         }
-        else
+        else //If initialised successfully, show the main stage.
             primaryStage.show();
     }
 
@@ -83,28 +85,11 @@ public class Main extends Application implements Sortable
     public void init()
     {
         ManualListReader reader = new ManualListReader();
-        InputStream packageMaint = getClass().getResourceAsStream("/packagemaintainer.tex");
         try
         {
-            File maintainerFile = new File("packmaint.tex");
-            //maintainerFile.createNewFile();
-            BufferedWriter fw = new BufferedWriter(new FileWriter(maintainerFile));
-            String maintLine = null;
-            BufferedReader packageReader = new BufferedReader(new InputStreamReader(packageMaint));
-            while((maintLine = packageReader.readLine()) != null)
-                fw.write(maintLine + "\n");
-            fw.close();
-            ProcessBuilder pb = new ProcessBuilder("pdflatex", maintainerFile.getPath());
-            pb.redirectErrorStream(true);
-            Process pro = pb.start();
-            BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
-            String line = null;
-            while((line = inStrm.readLine()) != null)
-                System.out.println(line);
-            System.out.println("Successfully maintained packages");
+            updateLatexPackages();
             MODULES_AVAILABLE = reader.readModuleList();
             MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
-            //SortDialogCreator sdc = new SortDialogCreator();
             sortModules(0, false);
         }
         catch(InputIOException e)
@@ -122,7 +107,7 @@ public class Main extends Application implements Sortable
         catch(IOException e)
         {
             Platform.runLater(new Runnable()
-            {
+            {//If an exception was thrown, flag that an exception should be thrown.
                 @Override
                 public void run()
                 {
@@ -135,6 +120,32 @@ public class Main extends Application implements Sortable
                 }
             });
         }
+    }
+
+    /**
+     * To be called at the init() stage, checks all required LaTeX packages are installed and up-to-date
+     * on startup.
+     * @throws IOException - in case of file reading/writing error when writing and compiling dummy LaTeX.
+     */
+    private void updateLatexPackages() throws IOException
+    {
+        //Obtain the dummy code to write as a stream:
+        InputStream packageMaint = getClass().getResourceAsStream("/packagemaintainer.tex");
+        File maintainerFile = new File("packmaint.tex");
+        BufferedWriter fw = new BufferedWriter(new FileWriter(maintainerFile));
+        String maintLine = null;
+        BufferedReader packageReader = new BufferedReader(new InputStreamReader(packageMaint));
+        while((maintLine = packageReader.readLine()) != null)//Write the dummy code to a TeX file.
+            fw.write(maintLine + "\n");
+        fw.close();
+        ProcessBuilder pb = new ProcessBuilder("pdflatex", maintainerFile.getPath());
+        pb.redirectErrorStream(true);
+        Process pro = pb.start();//Compile the dummy LaTeX to force-update packages.
+        BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+        String line = null;
+        while((line = inStrm.readLine()) != null)
+            System.out.println(line);
+        System.out.println("Successfully maintained packages");
     }
 
     /**
