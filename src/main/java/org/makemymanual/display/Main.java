@@ -6,14 +6,12 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import org.makemymanual.manual.InputIOException;
 import org.makemymanual.manual.ManualListReader;
 import org.makemymanual.manual.Module;
 
 import java.io.*;
-import java.nio.file.Path;
 import java.util.ArrayList;
 
 /**
@@ -24,8 +22,7 @@ import java.util.ArrayList;
 public class Main extends Application implements Sortable
 {
     static RootPane ROOT_PANE = null;
-    static final Image DEFAULT_ICON = new Image("file:" + System.getProperty("user.dir") +
-            "/target/classes/icon.png");
+    static final Image DEFAULT_ICON = new Image(Main.class.getResource("/icon.png").toExternalForm());
 
     private static boolean exceptionOnBoot = false;
     private static InputIOException bootException = null;
