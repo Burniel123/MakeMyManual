@@ -82,7 +82,9 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     toUse = fileName.substring(0, fileName.lastIndexOf("." + fileBroken[fileBroken.length-1]));
                 else
                     manual.setPdfFilePath(save.getPath() + ".pdf");
-                manual.setOutputTexFile(new File("resources" + File.separator + toUse + ".tex"));
+                File texDir = new File("tex");
+                texDir.mkdir();
+                manual.setOutputTexFile(new File("tex" + File.separator + toUse + ".tex"));
             }
         });
 
