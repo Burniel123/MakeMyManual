@@ -10,7 +10,7 @@ import org.makemymanual.manual.Module;
 import java.util.ArrayList;
 
 /**
- * Holds functionality relating to the sort/filter dialog, to pop up as requested.
+ * Holds functionality relating to the sort/filter dialog, to render as requested.
  */
 public class SortDialog extends Dialog<Void> implements Sortable
 {
@@ -98,6 +98,7 @@ public class SortDialog extends Dialog<Void> implements Sortable
         appPane.setAlignment(Pos.CENTER_LEFT);
         dialogGrid.add(appPane, 2, 5);
         dialogGrid.getColumnConstraints().addAll(new ColumnConstraints(), new ColumnConstraints(160));
+
         //Miscellaneous components for the dialog:
         Separator separator = new Separator();
         separator.setOrientation(Orientation.VERTICAL);

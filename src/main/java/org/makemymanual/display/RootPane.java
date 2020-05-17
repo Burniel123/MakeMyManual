@@ -129,40 +129,21 @@ public class RootPane extends VBox implements Sortable
             fileToImport.getExtensionFilters().add(ef);
             ProfileReader jsonReader = new ProfileReader(fileToImport.showOpenDialog(getScene().getWindow()));
 
-            Runnable highlightFromProfile = () ->
-            {
-                /*clearModules();
-                renderModules();
-                highlightAll(modulesPane.getChildren(), true);
-                highlightAll(needyPane.getChildren(), true);*/
-
-            };
-
             Thread jsonReadThread = new Thread(() ->
-            {
+            {//Separate reading a profile into a separate thread to prevent frontend freezing.
                 try
                 {
                     ArrayList<String> moduleCodes = jsonReader.readJson();
                     Collections.sort(moduleCodes);
-                    ArrayList<Module> temp = new ArrayList<Module>(Main.MODULES_DISPLAYED);
-                    //Main.MODULES_DISPLAYED = new ArrayList<Module>();
+
                     for(int i = 0; i < moduleCodes.size(); i++)
                     {//For every module code to be used, locate it and add it to the list of modules to be displayed.
-                        /*for(int j = 0; j < Main.MODULES_AVAILABLE.size(); j++)
-                        {
-                            if(Main.MODULES_AVAILABLE.get(j).getModuleCode().equals(moduleCodes.get(i)))
-                            {
-                                Main.MODULES_DISPLAYED.add(Main.MODULES_AVAILABLE.get(j));
-                                break;
-                            }
-                        }*/
-
                         for(Node n : modulesPane.getChildren())
                         {
                             if(moduleCodes.get(i).equals(((ModulePane)n).getModuleCodeContent()))
                             {
                                 Platform.runLater(() ->
-                                {
+                                {//Now return to the JavaFX Application thread to update modules' displays.
                                     if(!((ModulePane) n).isSelected())
                                     {
                                         ((ModulePane) n).invertCol();
@@ -174,11 +155,11 @@ public class RootPane extends VBox implements Sortable
                         }
 
                         for(Node n : needyPane.getChildren())
-                        {
+                        {//Exactly as above for the pane of needy modules.
                             if(moduleCodes.get(i).equals(((ModulePane)n).getModuleCodeContent()))
                             {
                                 Platform.runLater(() ->
-                                {
+                                {//Now return to the JavaFX Application thread to update modules' displays.
                                     if(!((ModulePane) n).isSelected())
                                     {
                                         ((ModulePane) n).invertCol();
@@ -188,9 +169,8 @@ public class RootPane extends VBox implements Sortable
                                 break;
                             }
                         }
-
                         for(Module m : Main.MODULES_AVAILABLE)
-                        {
+                        {//"Activate" all Module objects which were included in the profile.
                             if(m.getModuleCode().equals(moduleCodes.get(i)))
                             {
                                 m.activate();
@@ -198,7 +178,6 @@ public class RootPane extends VBox implements Sortable
                             }
                         }
                     }
-                    //Platform.runLater(highlightFromProfile);
                 }
                 catch(ProfileException pe)
                 {//This exception occurs when there is no "enabled" list in the profile.
@@ -312,7 +291,7 @@ public class RootPane extends VBox implements Sortable
     {
         sortModules(0, false);
         for (int i = 0; i < Main.MODULES_DISPLAYED.size(); i++)
-        {
+        {//For each module on the screen, determine whether we want it highlighted and if it is already highlighted.
             for(int j = 0; j < modules.size(); j++)
             {
                 ModulePane modulePane = (ModulePane)modules.get(j);
@@ -334,5 +313,14 @@ public class RootPane extends VBox implements Sortable
                 }
             }
         }
+    }
+
+    /**
+     * Obtains the contents of the search bar, for use in filtering.
+     * @return the String contained within the search bar.
+     */
+    String getSearchBarContents()
+    {
+        return searchBarInput.getText();
     }
 }

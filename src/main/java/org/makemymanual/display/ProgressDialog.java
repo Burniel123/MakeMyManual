@@ -18,9 +18,12 @@ import javafx.stage.StageStyle;
 public class ProgressDialog extends Dialog<Void>
 {
     private final ProgressBar progressBar = new ProgressBar();
-    //private final Dialog<Void> progressDialog = new Dialog<Void>();
     private final ProgressManager pm = new ProgressManager();
 
+    /**
+     * Create a dialog on which to display the progress bar, to be rendered by an event handler
+     * attached to a manual compilation button.
+     */
     ProgressDialog()
     {
         //Setting up the dialog window:

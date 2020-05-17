@@ -8,6 +8,8 @@ import org.makemymanual.manual.ManualException;
 
 /**
  * Wraps a JavaFX Alert to present an error dialog to the user when an error is encountered.
+ *
+ * @author Daniel Burton
  */
 public class ExceptionAlert extends Alert
 {

@@ -104,7 +104,6 @@ public interface Sortable
             if(!include.contains(module.getCategory()))
                 Main.MODULES_DISPLAYED.remove(module);
         }
-        Main.searchModules(((TextField)((HBox)Main.ROOT_PANE.getChildren().get(0)).getChildren().
-                get(0)).getText());
+        Main.searchModules(Main.ROOT_PANE.getSearchBarContents());
     }
 }

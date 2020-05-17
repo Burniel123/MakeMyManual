@@ -21,6 +21,8 @@ import java.util.ArrayList;
 
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
+ * 
+ * @author Daniel Burton
  */
 public class MakeManualDialog extends Dialog<Void> implements Sortable
 {
@@ -35,10 +37,11 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
 
 
     /**
-     * Creates the dialog to generate a manual.
+     * Creates the dialog to generate a manual, to be rendered by the event handler associated with a button.
      */
     MakeManualDialog()
     {
+        //Configure the dialog pane to hold manual configuration options:
         DialogPane mmDialogPane = new DialogPane();
         GridPane dialogGrid = new GridPane();
         dialogGrid.setHgap(5);
@@ -51,6 +54,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         mmDialogPane.setMinHeight(Region.USE_PREF_SIZE);
         dialogGrid.setMinSize(350, 350);
 
+        //Create checkboxes for optional features:
         subcategories = new CheckBox("Create a category per letter");
         subcategories.setMinWidth(300);
         dialogGrid.add(subcategories, 0, 0);
@@ -61,6 +65,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         splitVanilla.setMinWidth(300);
         dialogGrid.add(splitVanilla, 0, 2);
 
+        //Create options to choose target file for the compiled manual.
         final Button chooseDestination = new Button("Choose manual location...");
         dialogGrid.add(chooseDestination, 0, 3);
         FileChooser saveLocation = new FileChooser();
@@ -69,11 +74,10 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
         saveLocation.setTitle("Choose location to save manual");
         manual = new ManualCreator("manual.tex");
         chooseDestination.setOnMouseClicked(e ->
-        {
+        {//Launch an OS-managed file chooser to choose where the compiled pdf should be located.
             File save = saveLocation.showSaveDialog(new Stage());
             if(save != null)
             {
-                //File save = new File(chosen.getPath() + ".pdf");
                 manual.setPdfFilePath(save.getPath());
                 String fileName = save.getName();
                 String[] fileBroken = fileName.split("\\.");
@@ -83,17 +87,18 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 else
                     manual.setPdfFilePath(save.getPath() + ".pdf");
                 File texDir = new File("tex");
-                texDir.mkdir();
+                texDir.mkdir(); //Double check there's a directory available to avoid NoSuchFile exceptions.
                 manual.setOutputTexFile(new File("tex" + File.separator + toUse + ".tex"));
             }
         });
 
+        //Create box to name the manual (only affects the front page).
         nameManual = new TextField();
         nameManual.setPromptText("Enter manual title...");
         dialogGrid.add(nameManual, 0, 4);
         mmDialogPane.getStylesheets().add(getClass().getResource("/dialogStyle.css").toExternalForm());
         mmDialogPane.getStyleClass().add("dialogStyle");
-
+        //Add buttons to the bottom of the pane:
         getDialogPane().getButtonTypes().add(ButtonType.OK);
         getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
     }
