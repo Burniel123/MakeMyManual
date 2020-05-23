@@ -7,7 +7,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 
 /**
@@ -25,11 +24,10 @@ public class ManualCreator implements Sortable
     private boolean alphaSubs = false;
 
     private ArrayList<Module> modules = new ArrayList<Module>();
-    private String manualName = null; //TODO: check user has named their manual before creating!
+    private String manualName = null;
 
     /**
      * Creates an instance of ManualCreator, requiring the path it will write to.
-     * TODO: make sure this only ever contains a tex file!
      * @param texFilePath - path to a .tex file to write manual pages to.
      */
     public ManualCreator(String texFilePath)
@@ -95,14 +93,6 @@ public class ManualCreator implements Sortable
     }
 
     /**
-     * Clears the list of modules.
-     */
-    public void clearModules()
-    {
-        modules.clear();
-    }
-
-    /**
      * Obtains the name of this manual.
      * @return this manual's name (title for the front page).
      */
@@ -154,7 +144,7 @@ public class ManualCreator implements Sortable
      * @param logWriter - FileWriter to write updates to the log file.
      * @throws OutputIOException in the event of an IOException.
      */
-    public void writeManual(ProgressManager pm, FileWriter logWriter) throws OutputIOException, IOException
+    public void writeManual(ProgressManager pm, FileWriter logWriter) throws FileDownloadException, OutputIOException, IOException
     {
         createWriter();
         writePreamble();
@@ -163,7 +153,7 @@ public class ManualCreator implements Sortable
             firstChar = modules.get(0).getModuleName().charAt(0);
         char currentChar = Character.toUpperCase(firstChar);
 
-        if(alphaSubs && (firstChar >= 48 && firstChar <= 57))
+        if(alphaSubs && (firstChar >= 48 && firstChar <= 57))//Only include 0-9 if one starting with this exists.
             writer.write("\\label{alpha:09}\n" +
                     "\\pdfbookmark[0]{0-9}{alpha:09}\n");
         else if(alphaSubs)
@@ -175,21 +165,20 @@ public class ManualCreator implements Sortable
         {
             if(alphaSubs && removeThe(modules.get(i).getModuleName()).charAt(0) != currentChar
             && modules.get(i).getModuleName().charAt(0) > 57 && modules.get(i).getCategory() == 1)
-            {
+            {//Add a new letter separator bookmark if the user has asked for it, the first character of the
+             //module's name has changed, and it's a regular modded module.
                 currentChar = removeThe(modules.get(i).getModuleName()).charAt(0);
                 writer.write("\\label{alpha:" + currentChar + "}\n" +
                         "\\pdfbookmark[0]{" + currentChar + "}{alpha:" + currentChar + "}\n");
             }
             if (vanillaToEnd && modules.get(i).getCategory() == 0)
             {
-                //beginVanillaSection();
                 writer.write("\\label{vanilla}\n" +
                         "\\pdfbookmark[0]{Vanilla}{vanilla}\n");
                 vanillaToEnd = false;
             }
             if (needyToEnd && modules.get(i).getCategory() == 2)
             {
-                //beginNeedySection();
                 writer.write("\\label{needy}\n" +
                         "\\pdfbookmark[0]{Needy}{needy}\n");
                 needyToEnd = false;
@@ -198,7 +187,8 @@ public class ManualCreator implements Sortable
             logWriter.write("\nSuccessfully downloaded manual for: " + modules.get(i).getModuleName().toUpperCase());
             writeManualPage(i);
             modules.get(i).deactivate();
-            pm.setProgress((((double)i+1)/(double)modules.size())*0.7); //Update the progress bar.
+            //Update progress bar. 0.7 used as roughly 70% of the processing time for a manual is in this phase:
+            pm.setProgress((((double)i+1)/(double)modules.size())*0.7);
         }
         endFile();
     }
@@ -257,7 +247,7 @@ public class ManualCreator implements Sortable
     private void writeManualPage(int moduleIndex) throws OutputIOException
     {
         try
-        {
+        {//Each manual page needs a label, bookmark to that label, and a pdf page.
             String manualPagePath = "/manuals/" + modules.get(moduleIndex).getModuleCode() + ".pdf";
             String moduleName = modules.get(moduleIndex).getModuleName();
             String moduleCodeName = modules.get(moduleIndex).getModuleCode();
@@ -289,40 +279,6 @@ public class ManualCreator implements Sortable
         }
     }
 
-/*    *//**
-     * Writes a bookmark to mark the start of a separated vanilla section.
-     * @throws OutputIOException - in the event of an IOException.
-     *//*
-    private void beginVanillaSection() throws OutputIOException
-    {
-        try
-        {
-            writer.write("\\label{sec:vanilla}\n" +
-                    "\\pdfbookmark{VANILLA}{sec:vanilla}\n");
-        }
-        catch(IOException e)
-        {
-            throwOutIO();
-        }
-    }*/
-
-/*    *//**
-     * Writes a bookmark to mark the start of a separated needy section.
-     * @throws OutputIOException - in the event of an IOException.
-     *//*
-    private void beginNeedySection() throws OutputIOException
-    {
-        try
-        {
-            writer.write("\\label{sec:needy}\n" +
-                    "\\pdfbookmark{NEEDY}{sec:needy}\n");
-        }
-        catch(IOException e)
-        {
-            throwOutIO();
-        }
-    }*/
-
     /**
      * Edits a file path to make it LaTeX-friendly.
      * @param path - the path to edit.
@@ -347,7 +303,7 @@ public class ManualCreator implements Sortable
      * Downloads a manual page from the KTANE repository to a temporary file on the user's machine.
      * @param module - the module whose manual page should be downloaded.
      */
-    private void downloadFile(Module module)
+    private void downloadFile(Module module) throws FileDownloadException
     {
         String destinationPath = "manuals/" + module.getModuleCode() + ".pdf";
         UrlFileCloner ufc = new UrlFileCloner(module.getManualLocation(), destinationPath);
@@ -357,8 +313,13 @@ public class ManualCreator implements Sortable
         }
         catch(Exception ex)
         {
-            System.out.println("ERROR\n" + ex);
-            //TODO: PROPER EXCEPTION HANDLING HERE!
+            FileDownloadException fde = new FileDownloadException();
+            fde.addPossibleCause("The repository of manual pages is offline");
+            fde.addPossibleCause("The MakeMyManual config list is offline");
+            fde.addPossibleCause("Poor internet connection is preventing access to required repositories");
+            fde.addPossibleResolution("Check your internet connection");
+            fde.addPossibleCause("Try again later");
+            throw fde;
         }
     }
 

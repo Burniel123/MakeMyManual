@@ -9,9 +9,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import org.makemymanual.manual.ManualCreator;
+import org.makemymanual.manual.*;
 import org.makemymanual.manual.Module;
-import org.makemymanual.manual.OutputIOException;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -117,7 +116,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 {
                     ArrayList<Module> displayModules = new ArrayList<Module>(Main.MODULES_DISPLAYED);
                     Main.MODULES_DISPLAYED = new ArrayList<Module>(Main.MODULES_AVAILABLE);
-                    /*SortDialogCreator sdc = new SortDialogCreator();*/
                     ArrayList<Module> needySection = new ArrayList<Module>();
                     ArrayList<Module> vanillaSection = new ArrayList<Module>();
                     manual.setAlphaSubs(subcategories.isSelected());
@@ -177,7 +175,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     Main.ROOT_PANE.renderModules();
                     pd = new ProgressDialog();
                     pm = pd.getProgressManager();
-                    //pd.createProgressBar();
 
                     pd.initBinding(pm.getProgressProperty());
                     pd.displayProgressBar();
@@ -217,7 +214,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     oe.addPossibleResolution("Close any log files currently open.");
                     oe.addPossibleResolution("Reinstall the application in a directory you can write to.");
                     ExceptionAlert ea = new ExceptionAlert(oe);
-//                    ea.initOwner(getDialogPane().getScene().getWindow());
                     ea.showAndWait();
                     pd.closeProgressBar();
                 });
@@ -247,8 +243,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 Path pdflatexLog = Paths.get(manual.getPdfFilePath().replace(".pdf", ".log"));
                 Files.deleteIfExists(aux);
                 Files.deleteIfExists(pdflatexLog);
-                //aux.delete();//I don't think(?) I care about the result for now.
-                //pdflatexLog.delete();
                 builder.redirectErrorStream(true);
                 Process pro = builder.start();
                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
@@ -279,7 +273,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 }
                 File manualsDir = new File("manuals");
                 for(File file : manualsDir.listFiles())
-                    file.delete();
+                    file.delete();//To avoid clogging the user's hard drive, delete all downloaded manual pages.
                 pm.setProgress(1);
                 Files.deleteIfExists(aux);
                 Files.deleteIfExists(pdflatexLog);
@@ -288,21 +282,11 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 Platform.runLater(() -> pd.closeProgressBar());
                 createCompletedAlert(specified);
             }
-            catch (OutputIOException e)
-            {//This exception will be thrown if there was an error writing to the tex file.
-                resetWhenCompleteOrException();
-                Platform.runLater(new Runnable()
-                {//Alert to the presented on the Application thread whenever possible.
-                    @Override
-                    public void run()
-                    {
-                        ExceptionAlert exceptionAlert = new ExceptionAlert(e);
-                        exceptionAlert.showAndWait();
-                        //exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
-                        pd.closeProgressBar();
-                    }
-                });
+            catch (OutputIOException | FileDownloadException e)
+            {//These exceptions will be thrown if there was an error downloading manuals or writing to the tex file.
+                displayExceptionAlert(e);
             }
+            //This exception will be thrown if there was an error downloading manual pages.
             catch (IOException e)
             {//This exception will be thrown if there was an error compiling the pdf.
                 resetWhenCompleteOrException();
@@ -316,7 +300,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     oe.addPossibleResolution("Delete any existing auxiliary and log files in the application's directory.");
                     oe.addPossibleResolution("Reinstall the program in a directory with permissions.");
                     ExceptionAlert exceptionAlert = new ExceptionAlert(oe);
-//                    exceptionAlert.initOwner(getDialogPane().getScene().getWindow());
                     exceptionAlert.showAndWait();
                     pd.closeProgressBar();
                 });
@@ -346,11 +329,34 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             else
                 successAlert.setContentText("Location: " + manual.getPdfFilePath());
             successAlert.setGraphic(null);
-            //successAlert.initOwner(getDialogPane().getScene().getWindow());
             successAlert.showAndWait();
         });
     }
 
+    /**
+     * Initialises and displays an instance of ExceptionAlert when an exception has been encountered
+     * while making a custom manual.
+     * @param e - the exception that was thrown.
+     */
+    private void displayExceptionAlert(ManualException e)
+    {
+        resetWhenCompleteOrException();
+        Platform.runLater(new Runnable()
+        {//Alert to the presented on the Application thread whenever possible.
+            @Override
+            public void run()
+            {
+                ExceptionAlert exceptionAlert = new ExceptionAlert(e);
+                exceptionAlert.showAndWait();
+                pd.closeProgressBar();
+            }
+        });
+    }
+
+    /**
+     * Resets the display and modules selected for when manual creation has terminated,
+     * either because of a successful compilation or an exception being thrown.
+     */
     private void resetWhenCompleteOrException()
     {
         Platform.runLater(() ->
