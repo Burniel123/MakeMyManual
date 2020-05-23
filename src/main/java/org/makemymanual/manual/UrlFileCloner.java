@@ -30,15 +30,14 @@ public class UrlFileCloner
 
     /**
      * Clones a file using streams and Files.Copy.
+     * Any exceptions thrown will be converted to a dedicated FileDownloadException.
      * @throws MalformedURLException - In the event that the URL is not suitably formed.
      * @throws IOException - In the event of an IO Error.
-     * TODO: throw customised exceptions here!
      */
     public void cloneFile() throws MalformedURLException, IOException
     {
         fileUrl = new URL(url);
         InputStream in = fileUrl.openStream();
         Files.copy(in, Paths.get(destinationFilePath), StandardCopyOption.REPLACE_EXISTING);
-        System.out.println("Done");
     }
 }

@@ -11,8 +11,8 @@ import java.util.ArrayList;
 public abstract class ManualException extends Exception
 {
     private String exceptionTitle = null;
-    private ArrayList<String> possibleCauses = new ArrayList<String>();
-    private ArrayList<String> possibleResolutions = new ArrayList<String>();
+    private final ArrayList<String> possibleCauses = new ArrayList<String>();
+    private final ArrayList<String> possibleResolutions = new ArrayList<String>();
 
     /**
      * Constructor used to create a new instance of a subclass of ManualException.

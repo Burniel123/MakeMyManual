@@ -1,6 +1,5 @@
 package org.makemymanual.manual;
 
-import java.net.URL;
 import java.time.LocalDate;
 
 /**
@@ -15,7 +14,6 @@ public class Module
     private String moduleCode = null;
     private int difficulty = 0;
     private String manualLocation = null;
-    private URL manualUrl = null;
     private String[] moduleCreators = null;
     private LocalDate moduleCreationDate = null;
     private int category = 0;

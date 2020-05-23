@@ -6,12 +6,11 @@ import java.util.ArrayList;
 
 /**
  * Used to read the config TSV file, containing a list of available modules and their info/source.
+ *
+ * Eventually to be refactored to obtain this file from the repository.
  */
 public class ManualListReader
 {
-   // private static final File SUPPORTED_MODULE_FILE = new File(ManualListReader.class.getResource("/modules-config-details.txt").getPath());
-    private static final ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();
-
     /**
      * Reads a config file and creates Module objects based on these.
      * @return an ArrayList of Module objects, one per line in the TSV config file.
