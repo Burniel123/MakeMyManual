@@ -23,8 +23,7 @@ To avoid any suspicion that this software violates the rules of the game or atte
 ### What will it do in the future?
 Ideas currently being considered for the future include:
 * Ability to sort the manual by properties other than module name.
-* Ability to create more sophisticated indexing structures, including multi-tiered bookmarks for even faster navigation.
-* Read information from a profile.json and generate a manual based on this.
+* Ability to create more sophisticated indexing structures, including multi-tiered bookmarks based on various criteria for even faster navigation.
 
 ### Where can I get it?
 MakeMyManual is not currently available publicly, but volunteer beta testers are likely to be requested shortly.
