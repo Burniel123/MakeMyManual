@@ -141,10 +141,6 @@ public class Main extends Application implements Sortable
         ProcessBuilder pb = new ProcessBuilder("pdflatex", maintainerFile.getPath());
         pb.redirectErrorStream(true);
         Process pro = pb.start();//Compile the dummy LaTeX to force-update packages.
-        BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
-        String line = null;
-        while((line = inStrm.readLine()) != null)
-            System.out.println(line);
         System.out.println("Successfully maintained packages");
     }
 

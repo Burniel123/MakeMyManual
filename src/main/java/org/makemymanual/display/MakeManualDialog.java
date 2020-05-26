@@ -246,7 +246,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                 builder.redirectErrorStream(true);
                 Process pro = builder.start();
                 BufferedReader inStrm = new BufferedReader(new InputStreamReader(pro.getInputStream()));
-                System.out.println("Should be rolling");
                 String line = null;
                 logWriter.write("\n\n***BEGIN COMPILATION***");
                 logWriter.write("\nOutput from pdflatex as follows: \n\n");
@@ -266,7 +265,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     {//Ignore certain unavoidable pdf compilation warnings which are of no help.
                         lineNum++;
                         logWriter.write(line + "\n");
-                        System.out.println(line + "\n");
                         float proportion = (float)lineNum/(Main.MODULES_DISPLAYED.size())*0.3f;
                         pm.setProgress(0.7 + proportion);
                     }
