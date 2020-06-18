@@ -1,454 +1,847 @@
-Colour Flash	ColourFlash	2	https://ktane.timwi.de/PDF/Colour%20Flash.pdf	Bashly	19/06/2016	1
-Piano Keys	PianoKeys	2	https://ktane.timwi.de/PDF/Piano%20Keys.pdf	Bashly	26/06/2016	1
-Semaphore	Semaphore	3	https://ktane.timwi.de/PDF/Semaphore.pdf	Bashly	13/07/2016	1
-Emoji Math	Emoji Math	1	https://ktane.timwi.de/PDF/Emoji%20Math.pdf	Mock Army	21/07/2016	1
-Switches	switchModule	3	https://ktane.timwi.de/PDF/Switches.pdf	Brian Fetter	25/07/2016	1
-Two Bits	TwoBits	2	https://ktane.timwi.de/PDF/Two%20Bits.pdf	kaneb	26/07/2016	1
-Anagrams	AnagramsModule	1	https://ktane.timwi.de/PDF/Anagrams.pdf	Mock Army	28/07/2016	1
-Word Scramble	WordScrambleModule	1	https://ktane.timwi.de/PDF/Word%20Scramble.pdf	Mock Army	28/07/2016	1
-Combination Lock	combinationLock	2	https://ktane.timwi.de/PDF/Combination%20Lock.pdf	Mock Army	03/08/2016	1
-Square Button	ButtonV2	2	https://ktane.timwi.de/PDF/Square%20Button.pdf	Hexicube	13/08/2016	1
-Simon States	SimonV2	2	https://ktane.timwi.de/PDF/Simon%20States.pdf	Hexicube	13/08/2016	1
-Round Keypad	KeypadV2	2	https://ktane.timwi.de/PDF/Round%20Keypad.pdf	Hexicube	13/08/2016	1
-Listening	Listening	2	https://ktane.timwi.de/PDF/Listening.pdf	Perky	13/08/2016	1
-Foreign Exchange Rates	ForeignExchangeRates	2	https://ktane.timwi.de/PDF/Foreign%20Exchange%20Rates.pdf	Perky	13/08/2016	1
-Orientation Cube	OrientationCube	3	https://ktane.timwi.de/PDF/Orientation%20Cube.pdf	Perky	14/08/2016	1
-Morsematics	MorseV2	4	https://ktane.timwi.de/PDF/Morsematics.pdf	Hexicube	14/08/2016	1
-Connection Check	graphModule	2	https://ktane.timwi.de/PDF/Connection%20Check.pdf	clutterArranger	14/08/2016	1
-Letter Keys	LetterKeys	1	https://ktane.timwi.de/PDF/Letter%20Keys.pdf	Mage of R. Jelly	15/08/2016	1
-Forget Me Not	MemoryV2	4	https://ktane.timwi.de/PDF/Forget%20Me%20Not.pdf	Hexicube	15/08/2016	1
-Astrology	spwizAstrology	3	https://ktane.timwi.de/PDF/Astrology.pdf	Spare Wizard	16/08/2016	1
-Logic	Logic	4	https://ktane.timwi.de/PDF/Logic.pdf	SL7205	17/08/2016	1
-Crazy Talk	CrazyTalk	2	https://ktane.timwi.de/PDF/Crazy%20Talk.pdf	Perky	19/08/2016	1
-Adventure Game	spwizAdventureGame	3	https://ktane.timwi.de/PDF/Adventure%20Game.pdf	Spare Wizard	19/08/2016	1
-Turn The Key	TurnTheKey	1	https://ktane.timwi.de/PDF/Turn%20The%20Key.pdf	Perky	20/08/2016	1
-Turn The Keys	TurnTheKeyAdvanced	2	https://ktane.timwi.de/PDF/Turn%20The%20Keys.pdf	Perky	20/08/2016	1
-Mystic Square	MysticSquareModule	3	https://ktane.timwi.de/PDF/Mystic%20Square.pdf	Konqi	20/08/2016	1
-Plumbing	MazeV2	3	https://ktane.timwi.de/PDF/Plumbing.pdf	Hexicube	21/08/2016	1
-Safety Safe	PasswordV2	3	https://ktane.timwi.de/PDF/Safety%20Safe.pdf	Hexicube	22/08/2016	1
-Cryptography	CryptModule	4	https://ktane.timwi.de/PDF/Cryptography.pdf	Perky	24/08/2016	1
-Chess	ChessModule	3	https://ktane.timwi.de/PDF/Chess.pdf	"MoMo, Flamanis"	24/08/2016	1
-Mouse In The Maze	MouseInTheMaze	3	https://ktane.timwi.de/PDF/Mouse%20In%20The%20Maze.pdf	Konqi	26/08/2016	1
-3D Maze	spwiz3DMaze	4	https://ktane.timwi.de/PDF/3D%20Maze.pdf	Spare Wizard	26/08/2016	1
-Silly Slots	SillySlots	4	https://ktane.timwi.de/PDF/Silly%20Slots.pdf	Perky	29/08/2016	1
-Number Pad	NumberPad	4	https://ktane.timwi.de/PDF/Number%20Pad.pdf	mitterdoo	30/08/2016	1
-Laundry	Laundry	4	https://ktane.timwi.de/PDF/Laundry.pdf	"Hendruid, AcrylicStain, Flamanis"	31/08/2016	1
-Probing	Probing	3	https://ktane.timwi.de/PDF/Probing.pdf	Perky	02/09/2016	1
-Resistors	resistors	3	https://ktane.timwi.de/PDF/Resistors.pdf	Onyxite	12/09/2016	1
-Skewed Slots	SkewedSlotsModule	4	https://ktane.timwi.de/PDF/Skewed%20Slots.pdf	samfun123	15/09/2016	1
-Caesar Cipher	CaesarCipherModule	1	https://ktane.timwi.de/PDF/Caesar%20Cipher.pdf	Eluminate	18/09/2016	1
-Perspective Pegs	spwizPerspectivePegs	3	https://ktane.timwi.de/PDF/Perspective%20Pegs.pdf	Spare Wizard	24/09/2016	1
-Microcontroller	Microcontroller	3	https://ktane.timwi.de/PDF/Microcontroller.pdf	Flush	24/09/2016	1
-Murder	murder	3	https://ktane.timwi.de/PDF/Murder.pdf	Asimir	26/09/2016	1
-The Gamepad	TheGamepadModule	3	https://ktane.timwi.de/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	06/10/2016	1
-Tic-Tac-Toe	TicTacToeModule	4	https://ktane.timwi.de/PDF/Tic-Tac-Toe.pdf	"Moon, Timwi"	07/10/2016	1
-"Monsplode, Fight!"	monsplodeFight	4	https://ktane.timwi.de/PDF/Monsplode%2C%20Fight!.pdf	clutterArranger	08/10/2016	1
-Shape Shift	shapeshift	3	https://ktane.timwi.de/PDF/Shape%20Shift.pdf	Asimir	10/10/2016	1
-Follow The Leader	FollowTheLeaderModule	3	https://ktane.timwi.de/PDF/Follow%20the%20Leader.pdf	"TheAuthorOfOZ, Timwi"	18/10/2016	1
-Friendship	FriendshipModule	3	https://ktane.timwi.de/PDF/Friendship.pdf	Timwi	24/10/2016	1
-The Bulb	TheBulbModule	2	https://ktane.timwi.de/PDF/The%20Bulb.pdf	Timwi	28/10/2016	1
-Alphabet	alphabet	1	https://ktane.timwi.de/PDF/Alphabet.pdf	mitterdoo	30/10/2016	1
-Blind Alley	BlindAlleyModule	2	https://ktane.timwi.de/PDF/Blind%20Alley.pdf	Timwi	03/11/2016	1
-Sea Shells	SeaShells	3	https://ktane.timwi.de/PDF/Sea%20Shells.pdf	Asimir	06/11/2016	1
-English Test	EnglishTest	1	https://ktane.timwi.de/PDF/English%20Test.pdf	"theFIZZYnator, Lupo511"	06/11/2016	1
-Rock-Paper-Scissors-Lizard-Spock	RockPaperScissorsLizardSpockModule	2	https://ktane.timwi.de/PDF/Rock-Paper-Scissors-Lizard-Spock.pdf	Timwi	12/11/2016	1
-Hexamaze	HexamazeModule	4	https://ktane.timwi.de/PDF/Hexamaze.pdf	Timwi	21/11/2016	1
-Bitmaps	BitmapsModule	4	https://ktane.timwi.de/PDF/Bitmaps.pdf	"Timwi, Lumbud84"	23/11/2016	1
-Colored Squares	ColoredSquaresModule	1	https://ktane.timwi.de/PDF/Colored%20Squares.pdf	"TheAuthorOfOZ, Timwi"	24/11/2016	1
-Adjacent Letters	AdjacentLettersModule	3	https://ktane.timwi.de/PDF/Adjacent%20Letters.pdf	"Lumbud84, Timwi"	25/11/2016	1
-Third Base	ThirdBase	4	https://ktane.timwi.de/PDF/Third%20Base.pdf	Asimir	27/11/2016	1
-Souvenir	SouvenirModule	4	https://ktane.timwi.de/PDF/Souvenir.pdf	"Timwi, Andrio Celos"	02/12/2016	1
-Word Search	WordSearchModule	2	https://ktane.timwi.de/PDF/Word%20Search.pdf	"TheAuthorOfOZ, Timwi"	07/12/2016	1
-Broken Buttons	BrokenButtonsModule	2	https://ktane.timwi.de/PDF/Broken%20Buttons.pdf	samfun123	12/12/2016	1
-Simon Screams	SimonScreamsModule	4	https://ktane.timwi.de/PDF/Simon%20Screams.pdf	Timwi	20/12/2016	1
-Modules Against Humanity	ModuleAgainstHumanity	2	https://ktane.timwi.de/PDF/Modules%20Against%20Humanity.pdf	"catnip, Flamanis"	24/12/2016	1
-Complicated Buttons	complicatedButtonsModule	2	https://ktane.timwi.de/PDF/Complicated%20Buttons.pdf	ZekNikZ	31/12/2016	1
-Battleship	BattleshipModule	4	https://ktane.timwi.de/PDF/Battleship.pdf	Timwi	03/01/2017	1
-Text Field	TextField	2	https://ktane.timwi.de/PDF/Text%20Field.pdf	SL7205	05/01/2017	1
-Symbolic Password	symbolicPasswordModule	2	https://ktane.timwi.de/PDF/Symbolic%20Password.pdf	ZekNikZ	05/01/2017	1
-Wire Placement	WirePlacementModule	2	https://ktane.timwi.de/PDF/Wire%20Placement.pdf	"Lumbud84, Timwi"	06/01/2017	1
-Double-Oh	DoubleOhModule	2	https://ktane.timwi.de/PDF/Double-Oh.pdf	ZekNikZ	15/01/2017	1
-Cheap Checkout	CheapCheckoutModule	4	https://ktane.timwi.de/PDF/Cheap%20Checkout.pdf	samfun123	16/01/2017	1
-Coordinates	CoordinatesModule	4	https://ktane.timwi.de/PDF/Coordinates.pdf	Timwi	20/01/2017	1
-Light Cycle	LightCycleModule	4	https://ktane.timwi.de/PDF/Light%20Cycle.pdf	"Rexkix, Timwi"	23/01/2017	1
-Rhythms	MusicRhythms	3	https://ktane.timwi.de/PDF/Rhythms.pdf	"Riverbui, Trainzack"	05/03/2017	1
-Color Math	colormath	3	https://ktane.timwi.de/PDF/Color%20Math.pdf	SL7205	05/03/2017	1
-Only Connect	OnlyConnectModule	4	https://ktane.timwi.de/PDF/Only%20Connect.pdf	Timwi	17/03/2017	1
-Neutralization	neutralization	4	https://ktane.timwi.de/PDF/Neutralization.pdf	"Nanthelas, SL7205"	23/03/2017	1
-Web Design	webDesign	4	https://ktane.timwi.de/PDF/Web%20Design.pdf	"theFIZZYnator, SL7205"	03/04/2017	1
-Chord Qualities	ChordQualities	4	https://ktane.timwi.de/PDF/Chord%20Qualities.pdf	"Riverbui, Trainzack"	07/04/2017	1
-Creation	CreationModule	3	https://ktane.timwi.de/PDF/Creation.pdf	"Grybo, samfun123"	17/04/2017	1
-Rubik's Cube	RubiksCubeModule	4	https://ktane.timwi.de/PDF/Rubik%E2%80%99s%20Cube.pdf	"Timwi, Freelancer1025"	30/04/2017	1
-FizzBuzz	fizzBuzzModule	4	https://ktane.timwi.de/PDF/FizzBuzz.pdf	ZekNikZ	10/05/2017	1
-The Clock	TheClockModule	2	https://ktane.timwi.de/PDF/The%20Clock.pdf	"TheAuthorOfOZ, Timwi"	11/05/2017	1
-LED Encryption	LEDEnc	3	https://ktane.timwi.de/PDF/LED%20Encryption.pdf	Virepri	12/05/2017	1
-Bitwise Operations	BitOps	3	https://ktane.timwi.de/PDF/Bitwise%20Operations.pdf	Virepri	14/05/2017	1
-Fast Math	fastMath	4	https://ktane.timwi.de/PDF/Fast%20Math.pdf	"LeGeND, SL7205"	25/05/2017	1
-Minesweeper	MinesweeperModule	2	https://ktane.timwi.de/PDF/Minesweeper.pdf	samfun123	12/06/2017	1
-Zoo	ZooModule	4	https://ktane.timwi.de/PDF/Zoo.pdf	Timwi	13/06/2017	1
-Binary LEDs	BinaryLeds	3	https://ktane.timwi.de/PDF/Binary%20LEDs.pdf	Willowyn	18/06/2017	1
-Boolean Venn Diagrams	booleanVennModule	4	https://ktane.timwi.de/PDF/Boolean%20Venn%20Diagram.pdf	ZekNikZ	22/06/2017	1
-Point Of Order	PointOfOrderModule	4	https://ktane.timwi.de/PDF/Point%20of%20Order.pdf	Timwi	25/06/2017	1
-Ice Cream	iceCreamModule	3	https://ktane.timwi.de/PDF/Ice%20Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	26/06/2017	1
-The Screw	screw	3	https://ktane.timwi.de/PDF/The%20Screw.pdf	"Ezekiel, SL7205"	01/07/2017	1
-Yahtzee	YahtzeeModule	3	https://ktane.timwi.de/PDF/Yahtzee.pdf	"Timwi, Rexkix"	02/07/2017	1
-German Button	BigButtonTranslated	1	https://ktane.timwi.de/PDF/The%20Button%20translated%20(Deutsch%20%E2%80%94%20Der%20Knopf).pdf	"Malde, Tharagon"	25/01/2017	1
-German Morse Code	MorseCodeTranslated	2	https://ktane.timwi.de/PDF/Morse%20Code%20translated%20(Deutsch%20%E2%80%94%20Morsecode).pdf	"Malde, Tharagon"	25/01/2017	1
-German Password	PasswordsTranslated	2	https://ktane.timwi.de/PDF/Password%20translated%20(Deutsch%20%E2%80%94%20Passw%C3%B6rter).pdf	"Malde, Tharagon"	25/01/2017	1
-German Who's On First	WhosOnFirstTranslated	2	https://ktane.timwi.de/PDF/Who%E2%80%99s%20on%20First%20translated%20(Deutsch%20%E2%80%94%20Who%E2%80%99s%20on%20First).pdf	"Malde, Tharagon"	25/01/2017	1
-Wires	Wires	1	https://ktane.timwi.de/PDF/Wires.pdf	Steel Crate Games	08/10/2015	0
-The Button	BigButton	1	https://ktane.timwi.de/PDF/The%20Button.pdf	Steel Crate Games	08/10/2015	0
-Keypad	Keypad	2	https://ktane.timwi.de/PDF/Keypad.pdf	Steel Crate Games	08/10/2015	0
-Simon Says	Simon	1	https://ktane.timwi.de/PDF/Simon%20Says.pdf	Steel Crate Games	08/10/2015	0
-Who's On First	WhosOnFirst	2	https://ktane.timwi.de/PDF/Who%E2%80%99s%20on%20First.pdf	Steel Crate Games	08/10/2015	0
-Memory	Memory	2	https://ktane.timwi.de/PDF/Memory.pdf	Steel Crate Games	08/10/2015	0
-Morse Code	Morse	3	https://ktane.timwi.de/PDF/Morse%20Code.pdf	Steel Crate Games	08/10/2015	0
-Complicated Wires	Venn	3	https://ktane.timwi.de/PDF/Complicated%20Wires.pdf	Steel Crate Games	08/10/2015	0
-Wire Sequence	WireSequence	3	https://ktane.timwi.de/PDF/Wire%20Sequence.pdf	Steel Crate Games	08/10/2015	0
-Maze	Maze	2	https://ktane.timwi.de/PDF/Maze.pdf	Steel Crate Games	08/10/2015	0
-Password	Password	2	https://ktane.timwi.de/PDF/Password.pdf	Steel Crate Games	08/10/2015	0
-Capacitor Discharge	NeedyCapacitor	1	https://ktane.timwi.de/PDF/Capacitor%20Discharge.pdf	Steel Crate Games	08/10/2015	2
-Knob	NeedyKnob	1	https://ktane.timwi.de/PDF/Knob.pdf	Steel Crate Games	08/10/2015	2
-Venting Gas	NeedyVentGas	1	https://ktane.timwi.de/PDF/Venting%20Gas.pdf	Steel Crate Games	08/10/2015	2
-Refill That Beer!	NeedyBeer	1	https://ktane.timwi.de/PDF/Refill%20that%20Beer!.pdf	scripto	23/09/2017	2
-Math	Needy Math	1	https://ktane.timwi.de/PDF/Math.pdf	Mock Army	21/07/2016	2
-Lights Out	LightsOut	1	https://ktane.timwi.de/PDF/Lights%20Out.pdf	Bashly	22/07/2016	2
-Filibuster	Filibuster	1	https://ktane.timwi.de/PDF/Filibuster.pdf	Mock Army	07/08/2016	2
-Motion Sense	MotionSense	1	https://ktane.timwi.de/PDF/Motion%20Sense.pdf	Bashly	11/08/2016	2
-Answering Questions	NeedyVentV2	1	https://ktane.timwi.de/PDF/Answering%20Questions.pdf	Hexicube	13/08/2016	2
-Rotary Phone	NeedyKnobV2	2	https://ktane.timwi.de/PDF/Rotary%20Phone.pdf	Hexicube	16/08/2016	2
-Cruel Piano Keys	CruelPianoKeys	4	https://ktane.timwi.de/PDF/Cruel%20Piano%20Keys.pdf	Bashly	21/08/2016	1
-Tetris	spwizTetris	1	https://ktane.timwi.de/PDF/Tetris.pdf	Spare Wizard	23/08/2016	2
-Who's That Monsplode	monsplodeWho	2	https://ktane.timwi.de/PDF/Who%E2%80%99s%20That%20Monsplode.pdf	clutterArranger	08/10/2016	2
-HTTP Response	http	1	https://ktane.timwi.de/PDF/HTTP%20Response.pdf	SL7205	24/01/2017	2
-Edgework	EdgeworkModule	1	https://ktane.timwi.de/PDF/Edgework.pdf	"Ion Lee, ZekNikZ"	14/05/2017	2
-Hex To Decimal	EternitySDec	3	https://ktane.timwi.de/PDF/Hex%20To%20Decimal.pdf	EternityShack	30/06/2017	2
-X-Ray	XRayModule	2	https://ktane.timwi.de/PDF/X-Ray.pdf	Timwi	14/07/2017	1
-QR Code	QRCode	1	https://ktane.timwi.de/PDF/QR%20Code.pdf	SL7205	17/07/2017	2
-Button Masher	buttonMasherNeedy	1	https://ktane.timwi.de/PDF/Button%20Masher.pdf	McDude73	19/07/2017	2
-Random Number Generator	rng	1	https://ktane.timwi.de/PDF/Random%20Number%20Generator.pdf	"Lumbud84, McDude73"	21/07/2017	2
-Color Morse	ColorMorseModule	3	https://ktane.timwi.de/PDF/Color%20Morse.pdf	"SKiPP, Ezekiel, ZekNikZ"	31/07/2017	1
-Mastermind Simple	Mastermind Simple	1	https://ktane.timwi.de/PDF/Mastermind%20Simple.pdf	Eotall	06/08/2017	1
-Mastermind Cruel	Mastermind Cruel	5	https://ktane.timwi.de/PDF/Mastermind%20Cruel.pdf	Eotall	06/08/2017	1
-Gridlock	GridlockModule	3	https://ktane.timwi.de/PDF/Gridlock.pdf	"Elias, Timwi"	11/08/2017	1
-Big Circle	BigCircle	3	https://ktane.timwi.de/PDF/Big%20Circle.pdf	"Ezekiel, Hendruid, CaitSith2"	14/08/2017	1
-Morse-A-Maze	MorseAMaze	3	https://ktane.timwi.de/PDF/Morse-A-Maze.pdf	CaitSith2	21/08/2017	1
-Colored Switches	ColoredSwitchesModule	3	https://ktane.timwi.de/PDF/Colored%20Switches.pdf	Timwi	03/09/2017	1
-Perplexing Wires	PerplexingWiresModule	4	https://ktane.timwi.de/PDF/Perplexing%20Wires.pdf	"MarAyzex, Ezekiel, Timwi"	06/09/2017	1
-Monsplode Trading Cards	monsplodeCards	4	https://ktane.timwi.de/PDF/Monsplode%20Trading%20Cards.pdf	"clutterArranger, Grybo"	10/09/2017	1
-Game Of Life Simple	GameOfLifeSimple	4	https://ktane.timwi.de/PDF/Game%20of%20Life%20Simple.pdf	"Eotall, WarioLGP, samfun123"	12/09/2017	1
-Game Of Life Cruel	GameOfLifeCruel	5	https://ktane.timwi.de/PDF/Game%20of%20Life%20Cruel.pdf	"Eotall, WarioLGP, samfun123"	12/09/2017	1
-Nonogram	NonogramModule	4	https://ktane.timwi.de/PDF/Nonogram.pdf	Piggered	19/09/2017	1
-S.E.T.	SetModule	4	https://ktane.timwi.de/PDF/S.E.T..pdf	"Zawu, Timwi"	23/09/2017	1
-Painting	Painting	2	https://ktane.timwi.de/PDF/Painting.pdf	"Hendruid, Bashly"	24/09/2017	1
-Color Generator	Color Generator	3	https://ktane.timwi.de/PDF/Color%20Generator.pdf	EternityShack	24/09/2017	1
-Shape Memory	needyShapeMemory	1	https://ktane.timwi.de/PDF/Shape%20Memory.pdf	UltraCboy	28/09/2017	2
-Symbol Cycle	SymbolCycleModule	4	https://ktane.timwi.de/PDF/Symbol%20Cycle.pdf	Timwi	05/10/2017	1
-Hunting	hunting	3	https://ktane.timwi.de/PDF/Hunting.pdf	taggedjc	09/10/2017	1
-Extended Password	ExtendedPassword	3	https://ktane.timwi.de/PDF/Extended%20Password.pdf	"taggedjc, TWGaming"	24/10/2017	1
-Curriculum	curriculum	3	https://ktane.timwi.de/PDF/Curriculum.pdf	Fixdoll	30/10/2017	1
-Braille	BrailleModule	4	https://ktane.timwi.de/PDF/Braille.pdf	Timwi	31/10/2017	1
-Mafia	MafiaModule	4	https://ktane.timwi.de/PDF/Mafia.pdf	"MarioXTurn, Ezekiel, Timwi"	04/11/2017	1
-Festive Piano Keys	FestivePianoKeys	2	https://ktane.timwi.de/PDF/Festive%20Piano%20Keys.pdf	Bashly	07/12/2017	1
-Flags	FlagsModule	3	https://ktane.timwi.de/PDF/Flags.pdf	"Monopoly, Piggered"	24/12/2017	1
-Timezone	timezone	3	https://ktane.timwi.de/PDF/Timezone.pdf	federan	30/12/2017	1
-Polyhedral Maze	PolyhedralMazeModule	5	https://ktane.timwi.de/PDF/Polyhedral%20Maze.pdf	Timwi	01/01/2018	1
-Symbolic Coordinates	symbolicCoordinates	2	https://ktane.timwi.de/PDF/Symbolic%20Coordinates.pdf	Royal_Flu$h	09/01/2018	1
-Poker	Poker	3	https://ktane.timwi.de/PDF/Poker.pdf	Royal_Flu$h	09/01/2018	1
-Sonic the Hedgehog	sonic	3	https://ktane.timwi.de/PDF/Sonic%20the%20Hedgehog.pdf	Royal_Flu$h	14/01/2018	1
-Poetry	poetry	3	https://ktane.timwi.de/PDF/Poetry.pdf	clutterArranger	14/01/2018	1
-Button Sequence	buttonSequencesModule	3	https://ktane.timwi.de/PDF/Button%20Sequence.pdf	ZekNikZ	15/01/2018	1
-Algebra	algebra	3	https://ktane.timwi.de/PDF/Algebra.pdf	Royal_Flu$h	17/01/2018	1
-Visual Impairment	visual_impairment	3	https://ktane.timwi.de/PDF/Visual%20Impairment.pdf	KingBranBran	20/01/2018	1
-Jukebox	jukebox	2	https://ktane.timwi.de/PDF/The%20Jukebox.pdf	Royal_Flu$h	23/01/2018	1
-Identity Parade	identityParade	2	https://ktane.timwi.de/PDF/Identity%20Parade.pdf	Royal_Flu$h	25/01/2018	1
-Maintenance	maintenance	4	https://ktane.timwi.de/PDF/Maintenance.pdf	Royal_Flu$h	30/01/2018	1
-Blind Maze	BlindMaze	4	https://ktane.timwi.de/PDF/Blind%20Maze.pdf	"Riverbui, McNiko67"	30/01/2018	1
-Backgrounds	Backgrounds	2	https://ktane.timwi.de/PDF/Backgrounds.pdf	McNiko67	30/01/2018	1
-Mortal Kombat	mortalKombat	3	https://ktane.timwi.de/PDF/Mortal%20Kombat.pdf	Royal_Flu$h	02/02/2018	1
-Mashematics	mashematics	2	https://ktane.timwi.de/PDF/Mashematics.pdf	Marksam32	03/02/2018	1
-Faulty Backgrounds	FaultyBackgrounds	2	https://ktane.timwi.de/PDF/Faulty%20Backgrounds.pdf	McNiko67	03/02/2018	1
-Radiator	radiator	2	https://ktane.timwi.de/PDF/Radiator.pdf	"red031000, Inova"	04/02/2018	1
-Modern Cipher	modernCipher	3	https://ktane.timwi.de/PDF/Modern%20Cipher.pdf	TheFe	04/02/2018	1
-LED Grid	LED Grid	2	https://ktane.timwi.de/PDF/LED%20Grid.pdf	Royal_Flu$h	06/02/2018	1
-Sink	Sink	2	https://ktane.timwi.de/PDF/Sink.pdf	McNiko67	09/02/2018	1
-The iPhone	iPhone	4	https://ktane.timwi.de/PDF/The%20iPhone.pdf	Royal_Flu$h	20/02/2018	1
-The Swan	theSwan	4	https://ktane.timwi.de/PDF/The%20Swan.pdf	Royal_Flu$h	22/02/2018	1
-Waste Management	wastemanagement	4	https://ktane.timwi.de/PDF/Waste%20Management.pdf	"red031000, Inova, AppleSlice"	23/02/2018	1
-Human Resources	HumanResourcesModule	3	https://ktane.timwi.de/PDF/Human%20Resources.pdf	"Elias, Timwi"	26/02/2018	1
-Skyrim	skyrim	4	https://ktane.timwi.de/PDF/Skyrim.pdf	Royal_Flu$h	02/03/2018	1
-Burglar Alarm	burglarAlarm	3	https://ktane.timwi.de/PDF/Burglar%20Alarm.pdf	Marksam32	03/03/2018	1
-Press X	PressX	3	https://ktane.timwi.de/PDF/Press%20X.pdf	ThatGuyCalledJules	07/03/2018	1
-European Travel	europeanTravel	2	https://ktane.timwi.de/PDF/European%20Travel.pdf	"Monopoly, Royal_Flu$h"	10/03/2018	1
-Error Codes	errorCodes	2	https://ktane.timwi.de/PDF/Error%20Codes.pdf	mookieg849	10/03/2018	1
-Rapid Buttons	rapidButtons	2	https://ktane.timwi.de/PDF/Rapid%20Buttons.pdf	"CoolkibKakadu, Bashly, Royal_Flu$h"	12/03/2018	2
-LEGOs	LEGOModule	5	https://ktane.timwi.de/PDF/LEGOs.pdf	ZekNikZ	13/03/2018	1
-Rubik's Clock	rubiksClock	5	https://ktane.timwi.de/PDF/Rubik%E2%80%99s%20Clock.pdf	Groover	16/03/2018	1
-Font Select	FontSelect	3	https://ktane.timwi.de/PDF/Font%20Select.pdf	McNiko67	18/03/2018	1
-The Stopwatch	stopwatch	3	https://ktane.timwi.de/PDF/The%20Stopwatch.pdf	"SpaceScrew, Royal_Flu$h"	19/03/2018	1
-Pie	pieModule	3	https://ktane.timwi.de/PDF/Pie.pdf	KingBranBran	19/03/2018	1
-The Wire	wire	4	https://ktane.timwi.de/PDF/The%20Wire.pdf	Royal_Flu$h	04/04/2018	1
-The London Underground	londonUnderground	3	https://ktane.timwi.de/PDF/The%20London%20Underground.pdf	Royal_Flu$h	04/04/2018	1
-Logic Gates	logicGates	4	https://ktane.timwi.de/PDF/Logic%20Gates.pdf	"Groover, Maca"	04/04/2018	1
-Forget Everything	HexiEvilFMN	5	https://ktane.timwi.de/PDF/Forget%20Everything.pdf	Hexicube	04/04/2018	1
-Grid Matching	GridMatching	4	https://ktane.timwi.de/PDF/Grid%20Matching.pdf	Windesign	07/04/2018	1
-Color Decoding	Color Decoding	3	https://ktane.timwi.de/PDF/Color%20Decoding.pdf	Windesign	07/04/2018	1
-The Sun	sun	4	https://ktane.timwi.de/PDF/The%20Sun.pdf	"Pruz, Royal_Flu$h"	09/04/2018	1
-Playfair Cipher	Playfair	4	https://ktane.timwi.de/PDF/Playfair%20Cipher.pdf	"Maca, Groover"	10/04/2018	1
-Tangrams	Tangrams	5	https://ktane.timwi.de/PDF/Tangrams.pdf	Bashly	12/04/2018	1
-The Number	theNumber	3	https://ktane.timwi.de/PDF/The%20Number.pdf	"red031000, Felix"	13/04/2018	1
-Cooking	cooking	3	https://ktane.timwi.de/PDF/Cooking.pdf	"Marksam32, James"	13/04/2018	1
-Superlogic	SuperlogicModule	5	https://ktane.timwi.de/PDF/Superlogic.pdf	Timwi	17/04/2018	1
-The Moon	moon	4	https://ktane.timwi.de/PDF/The%20Moon.pdf	"Pruz, Royal_Flu$h"	20/04/2018	1
-The Cube	cube	5	https://ktane.timwi.de/PDF/The%20Cube.pdf	Royal_Flu$h	22/04/2018	1
-Dr. Doctor	DrDoctorModule	3	https://ktane.timwi.de/PDF/Dr.%20Doctor.pdf	"Timwi, Daniell, Livio, Rexkix"	23/04/2018	1
-Tax Returns	taxReturns	4	https://ktane.timwi.de/PDF/Tax%20Returns.pdf	Royal_Flu$h	25/04/2018	1
-The Jewel Vault	jewelVault	3	https://ktane.timwi.de/PDF/The%20Jewel%20Vault.pdf	"MarioXTurn, Royal_Flu$h"	02/05/2018	1
-Digital Root	digitalRoot	1	https://ktane.timwi.de/PDF/Digital%20Root.pdf	"red031000, CyanLights"	03/05/2018	1
-Graffiti Numbers	graffitiNumbers	3	https://ktane.timwi.de/PDF/Graffiti%20Numbers.pdf	Royal_Flu$h	04/05/2018	1
-Marble Tumble	MarbleTumbleModule	4	https://ktane.timwi.de/PDF/Marble%20Tumble.pdf	Timwi	07/05/2018	1
-X01	X01	4	https://ktane.timwi.de/PDF/X01.pdf	SillyPuppy	09/05/2018	1
-Logical Buttons	logicalButtonsModule	4	https://ktane.timwi.de/PDF/Logical%20Buttons.pdf	"Marksam32, SpaceScrew"	11/05/2018	1
-The Code	theCodeModule	2	https://ktane.timwi.de/PDF/The%20Code.pdf	"LeGeND, Livio"	11/05/2018	1
-Tap Code	tapCode	3	https://ktane.timwi.de/PDF/Tap%20Code.pdf	KingBranBran	24/05/2018	1
-Simon Sings	SimonSingsModule	3	https://ktane.timwi.de/PDF/Simon%20Sings.pdf	"MarioXTurn, Timwi"	29/05/2018	1
-Simon Sends	SimonSendsModule	5	https://ktane.timwi.de/PDF/Simon%20Sends.pdf	Timwi	29/05/2018	1
-Synonyms	synonyms	2	https://ktane.timwi.de/PDF/Synonyms.pdf	"ThatGuyCalledJules, limbojim"	31/05/2018	1
-Greek Calculus	greekCalculus	4	https://ktane.timwi.de/PDF/Greek%20Calculus.pdf	billy_bao	31/05/2018	1
-Simon Shrieks	SimonShrieksModule	3	https://ktane.timwi.de/PDF/Simon%20Shrieks.pdf	"IFBeetle, Timwi"	01/06/2018	1
-Complex Keypad	complexKeypad	2	https://ktane.timwi.de/PDF/Complex%20Keypad.pdf	AAces	03/06/2018	1
-Subways	subways	1	https://ktane.timwi.de/PDF/Subways.pdf	AAces	06/06/2018	1
-Lasers	lasers	3	https://ktane.timwi.de/PDF/Lasers.pdf	"Elias, Riverbui, Timwi"	06/06/2018	1
-Turtle Robot	turtleRobot	5	https://ktane.timwi.de/PDF/Turtle%20Robot.pdf	Groover	08/06/2018	1
-Guitar Chords	guitarChords	3	https://ktane.timwi.de/PDF/Guitar%20Chords.pdf	Royal_Flu$h	13/06/2018	1
-Calendar	calendar	2	https://ktane.timwi.de/PDF/Calendar.pdf	"MarioXTurn, AAces"	14/06/2018	1
-USA Maze	USA	3	https://ktane.timwi.de/PDF/USA%20Maze.pdf	"Blananas2, Riverbui"	17/06/2018	1
-Binary Tree	binaryTree	3	https://ktane.timwi.de/PDF/Binary%20Tree.pdf	billy_bao	18/06/2018	1
-The Time Keeper	timeKeeper	4	https://ktane.timwi.de/PDF/The%20Time%20Keeper.pdf	AAces	21/06/2018	1
-Lightspeed	lightspeed	4	https://ktane.timwi.de/PDF/Lightspeed.pdf	Royal_Flu$h	22/06/2018	1
-Black Hole	BlackHoleModule	3	https://ktane.timwi.de/PDF/Black%20Hole.pdf	Timwi	22/06/2018	1
-Simon's Star	simonsStar	3	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Star.pdf	Royal_Flu$h	25/06/2018	1
-Morse War	MorseWar	2	https://ktane.timwi.de/PDF/Morse%20War.pdf	"Brandon, Flamanis"	27/06/2018	1
-The Stock Market	stockMarket	4	https://ktane.timwi.de/PDF/The%20Stock%20Market.pdf	Royal_Flu$h	29/06/2018	1
-Mineseeker	mineseeker	3	https://ktane.timwi.de/PDF/Mineseeker.pdf	"Riverbui, Pruz"	29/06/2018	1
-Maze Scrambler	MazeScrambler	2	https://ktane.timwi.de/PDF/Maze%20Scrambler.pdf	"McNiko67, Riverbui"	29/06/2018	1
-The Number Cipher	numberCipher	3	https://ktane.timwi.de/PDF/The%20Number%20Cipher.pdf	Royal_Flu$h	01/07/2018	1
-Alphabet Numbers	alphabetNumbers	3	https://ktane.timwi.de/PDF/Alphabet%20Numbers.pdf	"WhiteShadowZz, Royal_Flu$h"	02/07/2018	1
-British Slang	britishSlang	2	https://ktane.timwi.de/PDF/British%20Slang.pdf	Royal_Flu$h	04/07/2018	1
-Double Color	doubleColor	1	https://ktane.timwi.de/PDF/Double%20Color.pdf	"Brandon, AAces"	06/07/2018	1
-Maritime Flags	MaritimeFlagsModule	3	https://ktane.timwi.de/PDF/Maritime%20Flags.pdf	Timwi	10/07/2018	1
-Equations	equations	3	https://ktane.timwi.de/PDF/Equations.pdf	AAces	10/07/2018	1
-Determinants	determinant	3	https://ktane.timwi.de/PDF/Determinants.pdf	sw3aterCS	22/07/2018	2
-Pattern Cube	PatternCubeModule	5	https://ktane.timwi.de/PDF/Pattern%20Cube.pdf	Timwi	28/07/2018	1
-Know Your Way	KnowYourWay	4	https://ktane.timwi.de/PDF/Know%20Your%20Way.pdf	"Blananas2, Joostoos"	01/08/2018	1
-Splitting The Loot	SplittingTheLootModule	5	https://ktane.timwi.de/PDF/Splitting%20The%20Loot.pdf	"Marksam32, Elias"	04/08/2018	1
-Simon Samples	simonSamples	2	https://ktane.timwi.de/PDF/Simon%20Samples.pdf	Groover	07/08/2018	1
-Character Shift	characterShift	3	https://ktane.timwi.de/PDF/Character%20Shift.pdf	"AAces, Vantastic"	07/08/2018	1
-Uncolored Squares	UncoloredSquaresModule	2	https://ktane.timwi.de/PDF/Uncolored%20Squares.pdf	Timwi	08/08/2018	1
-Dragon Energy	dragonEnergy	5	https://ktane.timwi.de/PDF/Dragon%20Energy.pdf	"Brandon, AAces"	08/08/2018	1
-Flashing Lights	flashingLights	2	https://ktane.timwi.de/PDF/Flashing%20Lights.pdf	Royal_Flu$h	09/08/2018	1
-3D Tunnels	3dTunnels	5	https://ktane.timwi.de/PDF/3D%20Tunnels.pdf	"Groover, Timwi"	13/08/2018	1
-Synchronization	SynchronizationModule	2	https://ktane.timwi.de/PDF/Synchronization.pdf	"TheAuthorOfOZ, samfun123"	17/08/2018	1
-The Switch	BigSwitch	1	https://ktane.timwi.de/PDF/The%20Switch.pdf	McNiko67	18/08/2018	1
-Reverse Morse	reverseMorse	3	https://ktane.timwi.de/PDF/Reverse%20Morse.pdf	Royal_Flu$h	23/08/2018	1
-Manometers	manometers	3	https://ktane.timwi.de/PDF/Manometers.pdf	ThePhenix33	03/09/2018	1
-Shikaku	shikaku	2	https://ktane.timwi.de/PDF/Shikaku.pdf	Groover	04/09/2018	1
-Wire Spaghetti	wireSpaghetti	4	https://ktane.timwi.de/PDF/Wire%20Spaghetti.pdf	Royal_Flu$h	05/09/2018	1
-Tennis	TennisModule	4	https://ktane.timwi.de/PDF/Tennis.pdf	Timwi	08/09/2018	1
-Module Homework	KritHomework	4	https://ktane.timwi.de/PDF/Module%20Homework.pdf	Kritzy	08/09/2018	1
-Benedict Cumberbatch	benedictCumberbatch	3	https://ktane.timwi.de/PDF/Benedict%20Cumberbatch.pdf	"Arlas, Royal_Flu$h"	11/09/2018	1
-Signals	Signals	3	https://ktane.timwi.de/PDF/Signals.pdf	mkmk	14/09/2018	1
-Horrible Memory	horribleMemory	3	https://ktane.timwi.de/PDF/Horrible%20Memory.pdf	Royal_Flu$h	14/09/2018	1
-Boggle	boggle	3	https://ktane.timwi.de/PDF/Boggle.pdf	AAces	14/09/2018	1
-Command Prompt	KritCMDPrompt	2	https://ktane.timwi.de/PDF/Command%20Prompt.pdf	Kritzy	15/09/2018	2
-Boolean Maze	boolMaze	3	https://ktane.timwi.de/PDF/Boolean%20Maze.pdf	Theta	17/09/2018	1
-Sonic & Knuckles	sonicKnuckles	3	https://ktane.timwi.de/PDF/Sonic%20%26%20Knuckles.pdf	Royal_Flu$h	19/09/2018	1
-Quintuples	quintuples	4	https://ktane.timwi.de/PDF/Quintuples.pdf	Royal_Flu$h	23/09/2018	1
-The Sphere	sphere	4	https://ktane.timwi.de/PDF/The%20Sphere.pdf	Royal_Flu$h	29/09/2018	1
-Coffeebucks	coffeebucks	3	https://ktane.timwi.de/PDF/Coffeebucks.pdf	Royal_Flu$h	03/10/2018	1
-Colorful Madness	ColorfulMadness	3	https://ktane.timwi.de/PDF/Colorful%20Madness.pdf	KingSlendy	05/10/2018	1
-Bases	bases	3	https://ktane.timwi.de/PDF/Bases.pdf	AAces	06/10/2018	1
-Lion's Share	LionsShareModule	4	https://ktane.timwi.de/PDF/Lion%E2%80%99s%20Share.pdf	Timwi	08/10/2018	1
-Snooker	snooker	3	https://ktane.timwi.de/PDF/Snooker.pdf	Royal_Flu$h	10/10/2018	1
-Blackjack	KritBlackjack	3	https://ktane.timwi.de/PDF/Blackjack.pdf	Kritzy	17/10/2018	1
-Party Time	PartyTime	1	https://ktane.timwi.de/PDF/Party%20Time.pdf	KingSlendy	18/10/2018	1
-Accumulation	accumulation	3	https://ktane.timwi.de/PDF/Accumulation.pdf	Royal_Flu$h	19/10/2018	1
-The Plunger Button	plungerButton	2	https://ktane.timwi.de/PDF/The%20Plunger%20Button.pdf	Royal_Flu$h	21/10/2018	1
-The Digit	TheDigitModule	2	https://ktane.timwi.de/PDF/The%20Digit.pdf	"Marksam32, Danny7007"	23/10/2018	1
-The Jack-O'-Lantern	jackOLantern	2	https://ktane.timwi.de/PDF/The%20Jack-O%E2%80%99-Lantern.pdf	"LeGeND, Royal_Flu$h"	24/10/2018	1
-T-Words	tWords	3	https://ktane.timwi.de/PDF/T-Words.pdf	Royal_Flu$h	25/10/2018	1
-Divided Squares	DividedSquaresModule	2	https://ktane.timwi.de/PDF/Divided%20Squares.pdf	Timwi	30/10/2018	1
-Connection Device	KritConnectionDev	2	https://ktane.timwi.de/PDF/Connection%20Device.pdf	Kritzy	31/10/2018	1
-Instructions	instructions	1	https://ktane.timwi.de/PDF/Instructions.pdf	EpicToast	03/11/2018	1
-Valves	valves	3	https://ktane.timwi.de/PDF/Valves.pdf	KingBranBran	05/11/2018	1
-Encrypted Morse	crystalMaze	5	https://ktane.timwi.de/PDF/The%20Crystal%20Maze.pdf	BlockWorker	06/11/2018	1
-The Crystal Maze	EncryptedMorse	3	https://ktane.timwi.de/PDF/Encrypted%20Morse.pdf	Royal_Flu$h	06/11/2018	1
-Countdown	countdown	2	https://ktane.timwi.de/PDF/Countdown.pdf	Royal_Flu$h	06/11/2018	1
-Cruel Countdown	cruelCountdown	4	https://ktane.timwi.de/PDF/Cruel%20Countdown.pdf	Royal_Flu$h	06/11/2018	1
-Catchphrase	catchphrase	3	https://ktane.timwi.de/PDF/Catchphrase.pdf	Royal_Flu$h	06/11/2018	1
-Blockbusters	blockbusters	2	https://ktane.timwi.de/PDF/Blockbusters.pdf	Royal_Flu$h	06/11/2018	1
-IKEA	qSwedishMaze	4	https://ktane.timwi.de/PDF/IKEA.pdf	JerryEris	07/11/2018	1
-Retirement	retirement	3	https://ktane.timwi.de/PDF/Retirement.pdf	Royal_Flu$h	08/11/2018	1
-Periodic Table	periodicTable	3	https://ktane.timwi.de/PDF/Periodic%20Table.pdf	MrSpekCraft	12/11/2018	1
-101 Dalmations	OneHundredAndOneDalmationsModule	3	https://ktane.timwi.de/PDF/101%20Dalmatians.pdf	Timwi	12/11/2018	1
-Schlag den Bomb	qSchlagDenBomb	4	https://ktane.timwi.de/PDF/101%20Dalmatians.pdf	JerryEris	13/11/2018	1
-Mahjong	MahjongModule	4	https://ktane.timwi.de/PDF/Mahjong.pdf	Timwi	20/11/2018	1
-Kudosudoku	KudosudokuModule	4	https://ktane.timwi.de/PDF/Kudosudoku.pdf	Timwi	21/11/2018	1
-The Radio	KritRadio	2	https://ktane.timwi.de/PDF/The%20Radio.pdf	Kritzy	26/11/2018	1
-Modulo	modulo	1	https://ktane.timwi.de/PDF/Modulo.pdf	Royal_Flu$h	28/11/2018	1
-Number Nimbleness	numberNimbleness	2	https://ktane.timwi.de/PDF/Number%20Nimbleness.pdf	"KingBranBran, Elias"	29/11/2018	1
-Pay Respects	lgndPayRespects	1	https://ktane.timwi.de/PDF/Pay%20Respects.pdf	LeGeND	30/11/2018	2
-Challenge & Contact	challengeAndContact	2	https://ktane.timwi.de/PDF/Challenge%20%26%20Contact.pdf	EpicToast	30/11/2018	1
-The Triangle	triangle	2	https://ktane.timwi.de/PDF/The%20Triangle.pdf	Royal_Flu$h	01/12/2018	1
-Sueet Wall	SueetWall	2	https://ktane.timwi.de/PDF/Sueet%20Wall.pdf	KingSlendy	02/12/2018	1
-Hot Potato	HotPotato	1	https://ktane.timwi.de/PDF/Hot%20Potato.pdf	"red031000, yabbaguy"	03/12/2018	2
-Christmas Presents	christmasPresents	3	https://ktane.timwi.de/PDF/Christmas%20Presents.pdf	Royal_Flu$h	03/12/2018	1
-Hieroglyphics	hieroglyphics	4	https://ktane.timwi.de/PDF/Hieroglyphics.pdf	"Royal_Flu$h, Elias"	05/12/2018	1
-Functions	qFunctions	4	https://ktane.timwi.de/PDF/Functions.pdf	JerryEris	05/12/2018	1
-Scripting	KritScripts	4	https://ktane.timwi.de/PDF/Scripting.pdf	Kritzy	06/12/2018	1
-Needy Mrs Bob	needyMrsBob	2	https://ktane.timwi.de/PDF/Needy%20Mrs%20Bob.pdf	"Royal_Flu$h, Mrs_Flu$h"	06/12/2018	2
-Simon Spins	SimonSpinsModule	4	https://ktane.timwi.de/PDF/Simon%20Spins.pdf	Timwi	09/12/2018	1
-Ten-Button Color Code	TenButtonColorCode	3	https://ktane.timwi.de/PDF/Ten-Button%20Color%20Code.pdf	"KingSlendy, Lumbud84"	10/12/2018	1
-Cursed Double-Oh	CursedDoubleOhModule	4	https://ktane.timwi.de/PDF/Cursed%20Double-Oh.pdf	"Elias, Timwi"	10/12/2018	1
-Crackbox	CrackboxModule	3	https://ktane.timwi.de/PDF/Crackbox.pdf	"Marksam32, Pruz"	15/12/2018	1
-Street Fighter	streetFighter	3	https://ktane.timwi.de/PDF/Street%20Fighter.pdf	Royal_Flu$h	17/12/2018	1
-The Labyrinth	labyrinth	3	https://ktane.timwi.de/PDF/The%20Labyrinth.pdf	Royal_Flu$h	18/12/2018	1
-Spinning Buttons	spinningButtons	2	https://ktane.timwi.de/PDF/Spinning%20Buttons.pdf	Royal_Flu$h	19/12/2018	1
-Color Match	lgndColorMatch	1	https://ktane.timwi.de/PDF/Color%20Match.pdf	LeGeND	19/12/2018	2
-The Festive Jukebox	festiveJukebox	2	https://ktane.timwi.de/PDF/The%20Festive%20Jukebox.pdf	Royal_Flu$h	21/12/2018	1
-Skinny Wires	skinnyWires	2	https://ktane.timwi.de/PDF/Skinny%20Wires.pdf	Royal_Flu$h	24/12/2018	1
-The Hangover	hangover	3	https://ktane.timwi.de/PDF/The%20Hangover.pdf	Royal_Flu$h	26/12/2018	1
-Factory Maze	factoryMaze	5	https://ktane.timwi.de/PDF/Factory%20Maze.pdf	EpicToast	27/12/2018	1
-Binary Puzzle	BinaryPuzzleModule	3	https://ktane.timwi.de/PDF/Binary%20Puzzle.pdf	Timwi	27/12/2018	1
-Broken Guitar Chords	BrokenGuitarChordsModule	3	https://ktane.timwi.de/PDF/Broken%20Guitar%20Chords.pdf	"Timwi, Royal_Flu$h"	28/12/2018	1
-Regular Crazy Talk	RegularCrazyTalkModule	3	https://ktane.timwi.de/PDF/Regular%20Crazy%20Talk.pdf	Timwi	29/12/2018	1
-Hogwarts	HogwartsModule	3	https://ktane.timwi.de/PDF/Hogwarts.pdf	"Timwi, Mickeylover, J?m??H"	29/12/2018	1
-Dominoes	dominoes	2	https://ktane.timwi.de/PDF/Dominoes.pdf	"Gee, Blananas2"	29/12/2018	1
-Simon Speaks	SimonSpeaksModule	3	https://ktane.timwi.de/PDF/Simon%20Speaks.pdf	"Timwi, Danny7007"	30/12/2018	1
-Discolored Squares	DiscoloredSquaresModule	4	https://ktane.timwi.de/PDF/Discolored%20Squares.pdf	Timwi	31/12/2018	1
-Krazy Talk	krazyTalk	3	https://ktane.timwi.de/PDF/Krazy%20Talk.pdf	EpicToast	01/01/2019	1
-Numbers	Numbers	2	https://ktane.timwi.de/PDF/Numbers.pdf	Waluigi	02/01/2019	1
-Flip The Coin	KritFlipTheCoin	2	https://ktane.timwi.de/PDF/Flip%20The%20Coin.pdf	Kritzy	02/01/2019	2
-Varicolored Squares	VaricoloredSquaresModule	3	https://ktane.timwi.de/PDF/Varicolored%20Squares.pdf	ZekNikZ	03/01/2019	1
-Simon's Stages	simonsStages	5	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Stages.pdf	Royal_Flu$h	03/01/2019	1
-Free Parking	freeParking	3	https://ktane.timwi.de/PDF/Free%20Parking.pdf	"StKildaFan, Royal_Flu$h"	03/01/2019	1
-Cookie Jars	cookieJars	2	https://ktane.timwi.de/PDF/Cookie%20Jars.pdf	EpicToast	03/01/2019	1
-Alchemy	JuckAlchemy	2	https://ktane.timwi.de/PDF/Alchemy.pdf	"Juck869, KingSlendy"	03/01/2019	1
-Zoni	lgndZoni	2	https://ktane.timwi.de/PDF/Zoni.pdf	LeGeND	05/01/2019	1
-Simon Squawks	simonSquawks	2	https://ktane.timwi.de/PDF/Simon%20Squawks.pdf	Royal_Flu$h	05/01/2019	2
-Unrelated Anagrams	unrelatedAnagrams	2	https://ktane.timwi.de/PDF/Unrelated%20Anagrams.pdf	"DVD, eXish"	06/01/2019	1
-Mad Memory	madMemory	3	https://ktane.timwi.de/PDF/Mad%20Memory.pdf	"DVD, eXish"	06/01/2019	1
-Bartending	BartendingModule	3	https://ktane.timwi.de/PDF/Bartending.pdf	Rockdood	07/01/2019	1
-Question Mark	QuestionMark	2	https://ktane.timwi.de/PDF/Question%20Mark.pdf	"DVD, Mirage Xel, eXish"	08/01/2019	1
-Shapes And Bombs	ShapesBombs	4	https://ktane.timwi.de/PDF/Shapes%20And%20Bombs.pdf	KingSlendy	09/01/2019	1
-Flavor Text	FlavorText	2	https://ktane.timwi.de/PDF/Flavor%20Text.pdf	"DVD, eXish"	09/01/2019	1
-Flavor Text EX	FlavorTextCruel	2	https://ktane.timwi.de/PDF/Flavor%20Text%20EX.pdf	"DVD, eXish"	09/01/2019	1
-Decolored Squares	DecoloredSquaresModule	2	https://ktane.timwi.de/PDF/Decolored%20Squares.pdf	Timwi	09/01/2019	1
-Homophones	homophones	2	https://ktane.timwi.de/PDF/Homophones.pdf	Royal_Flu$h	10/01/2019	1
-DetoNATO	Detonato	2	https://ktane.timwi.de/PDF/DetoNATO.pdf	"DVD, Kusane, eXish"	11/01/2019	1
-Air Traffic Controller	NeedyAirTrafficController	4	https://ktane.timwi.de/PDF/Air%20Traffic%20Controller.pdf	Incognito	12/01/2019	2
-SYNC-125 [3]	sync125_3	3	https://ktane.timwi.de/PDF/SYNC-125%20%5B3%5D.pdf	"DVD, eXish"	13/01/2019	1
-Westeros	westeros	3	https://ktane.timwi.de/PDF/Westeros.pdf	Royal_Flu$h	14/01/2019	1
-Morse Identification	lgndMorseIdentification	1	https://ktane.timwi.de/PDF/Morse%20Identification.pdf	"Draykien Cyndrak, LeGeND"	14/01/2019	2
-Pigpen Rotations	pigpenRotations	3	https://ktane.timwi.de/PDF/Pigpen%20Rotations.pdf	noahcoolboy	17/01/2019	1
-LED Math	lgndLEDMath	2	https://ktane.timwi.de/PDF/LED%20Math.pdf	LeGeND	17/01/2019	1
-Alphabetical Order	alphabeticOrder	1	https://ktane.timwi.de/PDF/Alphabetical%20Order.pdf	noahcoolboy	19/01/2019	2
-Simon Sounds	simonSounds	2	https://ktane.timwi.de/PDF/Simon%20Sounds.pdf	Goofy	20/01/2019	1
-The Fidget Spinner	theFidgetSpinner	1	https://ktane.timwi.de/PDF/The%20Fidget%20Spinner.pdf	noahcoolboy	20/01/2019	2
-Simon's Sequence	simonsSequence	1	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Sequence.pdf	noahcoolboy	21/01/2019	2
-Simon Scrambles	simonScrambles	3	https://ktane.timwi.de/PDF/Simon%20Scrambles.pdf	noahcoolboy	22/01/2019	1
-Harmony Sequence	harmonySequence	3	https://ktane.timwi.de/PDF/Harmony%20Sequence.pdf	Goofy	22/01/2019	1
-Unfair Cipher	unfairCipher	5	https://ktane.timwi.de/PDF/Unfair%20Cipher.pdf	Maca	23/01/2019	1
-Melody Sequencer	melodySequencer	3	https://ktane.timwi.de/PDF/Melody%20Sequencer.pdf	Goofy	27/01/2019	1
-Colorful Insanity	ColorfulInsanity	3	https://ktane.timwi.de/PDF/Colorful%20Insanity.pdf	KingSlendy	29/01/2019	1
-Passport Control	passportControl	3	https://ktane.timwi.de/PDF/Passport%20Control.pdf	Crystlack	30/01/2019	1
-Left and Right	leftandRight	3	https://ktane.timwi.de/PDF/Left%20and%20Right.pdf	Goofy	30/01/2019	1
-Gadgetron Vendor	lgndGadgetronVendor	2	https://ktane.timwi.de/PDF/Gadgetron%20Vendor.pdf	LeGeND	30/01/2019	1
-Wingdings	WingdingsModule	3	https://ktane.timwi.de/PDF/Wingdings.pdf	Crystlack	31/01/2019	2
-The Hexabutton	hexabutton	3	https://ktane.timwi.de/PDF/The%20Hexabutton.pdf	"EpicToast, ryaninator81"	05/02/2019	1
-Genetic Sequence	geneticSequence	4	https://ktane.timwi.de/PDF/Genetic%20Sequence.pdf	"Vflyer, TheThirdMan"	07/02/2019	1
-Micro-Modules	KritMicroModules	4	https://ktane.timwi.de/PDF/Micro-Modules.pdf	Kritzy	08/02/2019	1
-Module Maze	ModuleMaze	3	https://ktane.timwi.de/PDF/Module%20Maze.pdf	"Blananas2, Riverbui"	09/02/2019	1
-Elder Futhark	elderFuthark	4	https://ktane.timwi.de/PDF/Elder%20Futhark.pdf	Goofy	09/02/2019	1
-Tasha Squeals	tashaSqueals	2	https://ktane.timwi.de/PDF/Tasha%20Squeals.pdf	"EpicToast, Pruz"	11/02/2019	1
-Forget This	forgetThis	4	https://ktane.timwi.de/PDF/Forget%20This.pdf	JerryEris	12/02/2019	1
-Digital Cipher	digitalCipher	2	https://ktane.timwi.de/PDF/Digital%20Cipher.pdf	Goofy	16/02/2019	1
-Subscribe to Pewdiepie	subscribeToPewdiepie	2	https://ktane.timwi.de/PDF/Subscribe%20to%20Pewdiepie.pdf	EpicToast	18/02/2019	1
-Grocery Store	groceryStore	2	https://ktane.timwi.de/PDF/Grocery%20Store.pdf	TheRealWitch	18/02/2019	1
-Draw	draw	1	https://ktane.timwi.de/PDF/Draw.pdf	TheRealWitch	18/02/2019	2
-Burger Alarm	burgerAlarm	4	https://ktane.timwi.de/PDF/Burger%20Alarm.pdf	EpicToast	18/02/2019	1
-Purgatory	PurgatoryModule	3	https://ktane.timwi.de/PDF/Purgatory.pdf	"red031000, 3D, cerulean"	20/02/2019	1
-Mega Man 2	megaMan2	2	https://ktane.timwi.de/PDF/Mega%20Man%202.pdf	Goofy	20/02/2019	1
-Lombax Cubes	lgndlLombaxCubes	4	https://ktane.timwi.de/PDF/Lombax%20Cubes.pdf	LeGeND	20/02/2019	1
-The Stare	StareModule	4	https://ktane.timwi.de/PDF/The%20Stare.pdf	"DVD, eXish"	22/02/2019	1
-Graphic Memory	graphicMemory	3	https://ktane.timwi.de/PDF/Graphic%20Memory.pdf	TheThirdMan	23/02/2019	1
-Quiz Buzz	quizBuzz	3	https://ktane.timwi.de/PDF/Quiz%20Buzz.pdf	JerryEris	24/02/2019	1
-Wavetapping	Wavetapping	4	https://ktane.timwi.de/PDF/Wavetapping.pdf	"KingSlendy, Lumbud84"	25/02/2019	1
-The Hypercube	TheHypercubeModule	2	https://ktane.timwi.de/PDF/The%20Hypercube.pdf	Timwi	26/02/2019	1
-Speak English	speakEnglish	2	https://ktane.timwi.de/PDF/Speak%20English.pdf	"TheRealWitch, Blananas2"	27/02/2019	2
-Stack'em	stackem	2	https://ktane.timwi.de/PDF/Stack%E2%80%98em.pdf	Goofy	02/03/2019	1
-Seven Wires	sevenWires	2	https://ktane.timwi.de/PDF/Seven%20Wires.pdf	"Atomik, ryaninator81"	02/03/2019	1
-Colored Keys	lgndColoredKeys	2	https://ktane.timwi.de/PDF/Colored%20Keys.pdf	LeGeND	05/03/2019	1
-The Troll	troll	3	https://ktane.timwi.de/PDF/The%20Troll.pdf	Royal_Flu$h	09/03/2019	1
-Planets	planets	3	https://ktane.timwi.de/PDF/Planets.pdf	"MrMelon, KingSlendy"	10/03/2019	1
-The Necronomicon	necronomicon	3	https://ktane.timwi.de/PDF/The%20Necronomicon.pdf	TheThirdMan	20/03/2019	1
-Four-Card Monte	Krit4CardMonte	4	https://ktane.timwi.de/PDF/Four-Card%20Monte.pdf	"Qkrisi, Kritzy"	24/03/2019	1
-Aa	aa	4	https://ktane.timwi.de/PDF/Aa.pdf	"Riverbui, Ryaninator81"	27/03/2019	2
-The Giant's Drink	giantsDrink	2	https://ktane.timwi.de/PDF/The%20Giant%E2%80%99s%20Drink.pdf	TheThirdMan	03/04/2019	1
-Digit String	digitString	2	https://ktane.timwi.de/PDF/Digit%20String.pdf	JerryEris	03/04/2019	1
-Alpha	lgndAlpha	1	https://ktane.timwi.de/PDF/Alpha.pdf	"edderiofer, LeGeND"	03/04/2019	2
-Snap!	lgndSnap	1	https://ktane.timwi.de/PDF/Snap!.pdf	LeGeND	05/04/2019	2
-Hidden Colors	lgndHiddenColors	2	https://ktane.timwi.de/PDF/Hidden%20Colors.pdf	LeGeND	05/04/2019	1
-Colour Code	colourcode	4	https://ktane.timwi.de/PDF/Colour%20Code.pdf	"MrMelon, TheBrewer32, KingSlendy"	06/04/2019	1
-Vexillology	vexillology	3	https://ktane.timwi.de/PDF/Vexillology.pdf	MrSpekCraft	07/04/2019	1
-Brush Strokes	brushStrokes	3	https://ktane.timwi.de/PDF/Brush%20Strokes.pdf	"EpicToast, Blananas2, TasThing"	07/04/2019	1
-Odd One Out	OddOneOutModule	4	https://ktane.timwi.de/PDF/Odd%20One%20Out.pdf	Timwi	08/04/2019	1
-The Triangle Button	theTriangleButton	2	https://ktane.timwi.de/PDF/The%20Triangle%20Button.pdf	JerryEris	11/04/2019	1
-Mazematics	mazematics	3	https://ktane.timwi.de/PDF/Mazematics.pdf	Skyeward	11/04/2019	1
-Equations X	equationsXModule	3	https://ktane.timwi.de/PDF/Equations%20X.pdf	eXish	13/04/2019	1
-Maze?	maze3	4	https://ktane.timwi.de/PDF/Maze%C2%B3.pdf	"Pruz, TheThirdMan"	19/04/2019	1
-Gryphons	gryphons	3	https://ktane.timwi.de/PDF/Gryphons.pdf	JerryEris	28/04/2019	1
-Arithmelogic	arithmelogic	4	https://ktane.timwi.de/PDF/Arithmelogic.pdf	JerryEris	03/05/2019	1
-Roman Art	romanArtModule	4	https://ktane.timwi.de/PDF/Roman%20Art.pdf	eXish	05/05/2019	1
-Faulty Sink	FaultySink	2	https://ktane.timwi.de/PDF/Faulty%20Sink.pdf	Riverbui	06/05/2019	1
-Simon Stops	simonStops	3	https://ktane.timwi.de/PDF/Simon%20Stops.pdf	JerryEris	07/05/2019	1
-Morse Buttons	morseButtons	3	https://ktane.timwi.de/PDF/Morse%20Buttons.pdf	"TheThirdMan, Vflyer"	09/05/2019	1
-Terraria Quiz	lgndTerrariaQuiz	2	https://ktane.timwi.de/PDF/Terraria%20Quiz.pdf	"TasThing, LeGeND"	11/05/2019	2
-Baba Is Who?	babaIsWho	3	https://ktane.timwi.de/PDF/Baba%20Is%20Who.pdf	Haddad5	13/05/2019	1
-Triangle Buttons	triangleButtons	2	https://ktane.timwi.de/PDF/Triangle%20Buttons.pdf	"hockeygoalie78, Pruz"	16/05/2019	2
-Simon Stores	simonStores	5	https://ktane.timwi.de/PDF/Simon%20Stores.pdf	Speakingevil	16/05/2019	1
-Risky Wires	riskyWires	3	https://ktane.timwi.de/PDF/Risky%20Wires.pdf	hockeygoalie78	16/05/2019	1
-Modulus Manipulation	modulusManipulation	4	https://ktane.timwi.de/PDF/Modulus%20Manipulation.pdf	hockeygoalie78	16/05/2019	1
-Daylight Directions	daylightDirections	2	https://ktane.timwi.de/PDF/Daylight%20Directions.pdf	hockeygoalie78	16/05/2019	1
-Cryptic Password	CrypticPassword	2	https://ktane.timwi.de/PDF/Cryptic%20Password.pdf	"hockeygoalie78, KingSlendy"	19/05/2019	1
-Stained Glass	stainedGlass	2	https://ktane.timwi.de/PDF/Stained%20Glass.pdf	"Pruz, Royal_Flu$h"	21/05/2019	1
-The Block	theBlock	2	https://ktane.timwi.de/PDF/The%20Block.pdf	EggFriedCheese	22/05/2019	1
-Bamboozling Button	bamboozlingButton	4	https://ktane.timwi.de/PDF/Bamboozling%20Button.pdf	Speakingevil	23/05/2019	1
-Insane Talk	insaneTalk	3	https://ktane.timwi.de/PDF/Insane%20Talk.pdf	"Riverbui, Ryaninator81"	26/05/2019	1
-Transmitted Morse	transmittedMorseModule	3	https://ktane.timwi.de/PDF/Transmitted%20Morse.pdf	eXish	27/05/2019	1
-A Mistake	MistakeModule	2	https://ktane.timwi.de/PDF/A%20Mistake.pdf	Espik	30/05/2019	1
-Red Arrows	redArrowsModule	1	https://ktane.timwi.de/PDF/Red%20Arrows.pdf	"Kusane, eXish"	31/05/2019	1
-Green Arrows	greenArrowsModule	1	https://ktane.timwi.de/PDF/Green%20Arrows.pdf	"Kusane, eXish"	31/05/2019	1
-Yellow Arrows	yellowArrowsModule	2	https://ktane.timwi.de/PDF/Yellow%20Arrows.pdf	"Kusane, eXish"	01/06/2019	1
-Encrypted Values	EncryptedValuesModule	2	https://ktane.timwi.de/PDF/Encrypted%20Values.pdf	"Lumbud84, samfun123"	01/06/2019	2
-Encrypted Equations	EncryptedEquationsModule	3	https://ktane.timwi.de/PDF/Encrypted%20Equations.pdf	"Lumbud84, samfun123"	01/06/2019	1
-Forget Them All	forgetThemAll	4	https://ktane.timwi.de/PDF/Forget%20Them%20All.pdf	"TheThirdMan, Vflyer"	03/06/2019	1
-Ordered Keys	orderedKeys	3	https://ktane.timwi.de/PDF/Ordered%20Keys.pdf	Speakingevil	05/06/2019	1
-Blue Arrows	blueArrowsModule	4	https://ktane.timwi.de/PDF/Blue%20Arrows.pdf	eXish	06/06/2019	1
-Sticky Notes	stickyNotes	3	https://ktane.timwi.de/PDF/Sticky%20Notes.pdf	EggFriedCheese	07/06/2019	1
-Unordered Keys	unorderedKeys	3	https://ktane.timwi.de/PDF/Unordered%20Keys.pdf	Speakingevil	08/06/2019	1
-Orange Arrows	orangeArrowsModule	1	https://ktane.timwi.de/PDF/Orange%20Arrows.pdf	eXish	08/06/2019	1
-Hyperactive Numbers	lgndHyperactiveNumbers	1	https://ktane.timwi.de/PDF/Hyperactive%20Numbers.pdf	LeGeND	08/06/2019	1
-Reordered Keys	reorderedKeys	4	https://ktane.timwi.de/PDF/Reordered%20Keys.pdf	Speakingevil	10/06/2019	1
-Button Grid	buttonGrid	1	https://ktane.timwi.de/PDF/Button%20Grid.pdf	"EpicToast, Asew54321"	11/06/2019	1
-Find The Date	DateFinder	2	https://ktane.timwi.de/PDF/Find%20The%20Date.pdf	Diavo	12/06/2019	1
-Misordered Keys	misorderedKeys	4	https://ktane.timwi.de/PDF/Misordered%20Keys.pdf	Speakingevil	14/06/2019	1
-The Matrix	matrix	2	https://ktane.timwi.de/PDF/The%20Matrix.pdf	Royal_Flu$h	15/06/2019	1
-Purple Arrows	purpleArrowsModule	2	https://ktane.timwi.de/PDF/Purple%20Arrows.pdf	eXish	16/06/2019	1
-Bordered Keys	borderedKeys	3	https://ktane.timwi.de/PDF/Bordered%20Keys.pdf	Speakingevil	17/06/2019	1
-The Dealmaker	thedealmaker	3	https://ktane.timwi.de/PDF/The%20Dealmaker.pdf	GHXX	19/06/2019	1
-Seven Deadly Sins	sevenDeadlySins	3	https://ktane.timwi.de/PDF/Seven%20Deadly%20Sins.pdf	"Blananas2, TheThirdMan"	22/06/2019	1
-The Ultracube	TheUltracubeModule	2	https://ktane.timwi.de/PDF/The%20Ultracube.pdf	"Timwi, GHXX"	23/06/2019	1
-Symbolic Colouring	symbolicColouring	2	https://ktane.timwi.de/PDF/Symbolic%20Colouring.pdf	"Kusane, TheThirdMan"	24/06/2019	1
-Recorded Keys	recordedKeys	4	https://ktane.timwi.de/PDF/Recorded%20Keys.pdf	Speakingevil	26/06/2019	1
-The Deck Of Many Things	deckOfManyThings	3	https://ktane.timwi.de/PDF/The%20Deck%20of%20Many%20Things.pdf	TheThirdMan	29/06/2019	1
+Colour Flash	ColourFlash	2	https://ktane.timwi.de/PDF/Colour%20Flash.pdf	Bashly	2016-06-19	1
+Piano Keys	PianoKeys	2	https://ktane.timwi.de/PDF/Piano%20Keys.pdf	Bashly	2016-06-26	1
+Semaphore	Semaphore	3	https://ktane.timwi.de/PDF/Semaphore.pdf	Bashly	2016-07-13	1
+Emoji Math	Emoji Math	1	https://ktane.timwi.de/PDF/Emoji%20Math.pdf	Mock Army	2016-07-21	1
+Switches	switchModule	3	https://ktane.timwi.de/PDF/Switches.pdf	Brian Fetter	2016-07-25	1
+Two Bits	TwoBits	2	https://ktane.timwi.de/PDF/Two%20Bits.pdf	kaneb	2016-07-26	1
+Anagrams	AnagramsModule	1	https://ktane.timwi.de/PDF/Anagrams.pdf	Mock Army	2016-07-28	1
+Word Scramble	WordScrambleModule	1	https://ktane.timwi.de/PDF/Word%20Scramble.pdf	Mock Army	2016-07-28	1
+Combination Lock	combinationLock	2	https://ktane.timwi.de/PDF/Combination%20Lock.pdf	Mock Army	2016-08-03	1
+Square Button	ButtonV2	2	https://ktane.timwi.de/PDF/Square%20Button.pdf	Hexicube	2016-08-13	1
+Simon States	SimonV2	2	https://ktane.timwi.de/PDF/Simon%20States.pdf	Hexicube	2016-08-13	1
+Round Keypad	KeypadV2	2	https://ktane.timwi.de/PDF/Round%20Keypad.pdf	Hexicube	2016-08-13	1
+Listening	Listening	2	https://ktane.timwi.de/PDF/Listening.pdf	Perky	2016-08-13	1
+Foreign Exchange Rates	ForeignExchangeRates	2	https://ktane.timwi.de/PDF/Foreign%20Exchange%20Rates.pdf	Perky	2016-08-13	1
+Orientation Cube	OrientationCube	3	https://ktane.timwi.de/PDF/Orientation%20Cube.pdf	Perky	2016-08-14	1
+Morsematics	MorseV2	4	https://ktane.timwi.de/PDF/Morsematics.pdf	Hexicube	2016-08-14	1
+Connection Check	graphModule	2	https://ktane.timwi.de/PDF/Connection%20Check.pdf	clutterArranger	2016-08-14	1
+Letter Keys	LetterKeys	1	https://ktane.timwi.de/PDF/Letter%20Keys.pdf	Mage of R. Jelly	2016-08-15	1
+Forget Me Not	MemoryV2	4	https://ktane.timwi.de/PDF/Forget%20Me%20Not.pdf	Hexicube	2016-08-15	1
+Astrology	spwizAstrology	3	https://ktane.timwi.de/PDF/Astrology.pdf	Spare Wizard	2016-08-16	1
+Logic	Logic	4	https://ktane.timwi.de/PDF/Logic.pdf	SL7205	2016-08-17	1
+Crazy Talk	CrazyTalk	2	https://ktane.timwi.de/PDF/Crazy%20Talk.pdf	Perky	2016-08-19	1
+Adventure Game	spwizAdventureGame	3	https://ktane.timwi.de/PDF/Adventure%20Game.pdf	Spare Wizard	2016-08-19	1
+Turn The Key	TurnTheKey	1	https://ktane.timwi.de/PDF/Turn%20The%20Key.pdf	Perky	2016-08-20	1
+Turn The Keys	TurnTheKeyAdvanced	2	https://ktane.timwi.de/PDF/Turn%20The%20Keys.pdf	Perky	2016-08-20	1
+Mystic Square	MysticSquareModule	3	https://ktane.timwi.de/PDF/Mystic%20Square.pdf	Konqi	2016-08-20	1
+Plumbing	MazeV2	3	https://ktane.timwi.de/PDF/Plumbing.pdf	Hexicube	2016-08-21	1
+Safety Safe	PasswordV2	3	https://ktane.timwi.de/PDF/Safety%20Safe.pdf	Hexicube	2016-08-22	1
+Cryptography	CryptModule	4	https://ktane.timwi.de/PDF/Cryptography.pdf	Perky	2016-08-24	1
+Chess	ChessModule	3	https://ktane.timwi.de/PDF/Chess.pdf	"MoMo, Flamanis"	2016-08-24	1
+Mouse In The Maze	MouseInTheMaze	3	https://ktane.timwi.de/PDF/Mouse%20In%20The%20Maze.pdf	Konqi	2016-08-26	1
+3D Maze	spwiz3DMaze	4	https://ktane.timwi.de/PDF/3D%20Maze.pdf	Spare Wizard	2016-08-26	1
+Silly Slots	SillySlots	4	https://ktane.timwi.de/PDF/Silly%20Slots.pdf	Perky	2016-08-29	1
+Number Pad	NumberPad	4	https://ktane.timwi.de/PDF/Number%20Pad.pdf	mitterdoo	2016-08-30	1
+Laundry	Laundry	4	https://ktane.timwi.de/PDF/Laundry.pdf	"Hendruid, AcrylicStain, Flamanis"	2016-08-31	1
+Probing	Probing	3	https://ktane.timwi.de/PDF/Probing.pdf	Perky	2016-09-02	1
+Resistors	resistors	3	https://ktane.timwi.de/PDF/Resistors.pdf	Onyxite	2016-09-12	1
+Skewed Slots	SkewedSlotsModule	4	https://ktane.timwi.de/PDF/Skewed%20Slots.pdf	samfun123	2016-09-15	1
+Caesar Cipher	CaesarCipherModule	1	https://ktane.timwi.de/PDF/Caesar%20Cipher.pdf	Eluminate	2016-09-18	1
+Perspective Pegs	spwizPerspectivePegs	3	https://ktane.timwi.de/PDF/Perspective%20Pegs.pdf	Spare Wizard	2016-09-24	1
+Microcontroller	Microcontroller	3	https://ktane.timwi.de/PDF/Microcontroller.pdf	Flush	2016-09-24	1
+Murder	murder	3	https://ktane.timwi.de/PDF/Murder.pdf	Asimir	2016-09-26	1
+The Gamepad	TheGamepadModule	3	https://ktane.timwi.de/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
+Tic-Tac-Toe	TicTacToeModule	4	https://ktane.timwi.de/PDF/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07	1
+"Monsplode, Fight!"	monsplodeFight	4	https://ktane.timwi.de/PDF/Monsplode%2C%20Fight!.pdf	clutterArranger	2016-10-08	1
+Shape Shift	shapeshift	3	https://ktane.timwi.de/PDF/Shape%20Shift.pdf	Asimir	2016-10-10	1
+Follow The Leader	FollowTheLeaderModule	3	https://ktane.timwi.de/PDF/Follow%20the%20Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18	1
+Friendship	FriendshipModule	3	https://ktane.timwi.de/PDF/Friendship.pdf	Timwi	2016-10-24	1
+The Bulb	TheBulbModule	2	https://ktane.timwi.de/PDF/The%20Bulb.pdf	Timwi	2016-10-28	1
+Alphabet	alphabet	1	https://ktane.timwi.de/PDF/Alphabet.pdf	mitterdoo	2016-10-30	1
+Blind Alley	BlindAlleyModule	2	https://ktane.timwi.de/PDF/Blind%20Alley.pdf	Timwi	2016-11-03	1
+Sea Shells	SeaShells	3	https://ktane.timwi.de/PDF/Sea%20Shells.pdf	Asimir	2016-11-06	1
+English Test	EnglishTest	1	https://ktane.timwi.de/PDF/English%20Test.pdf	"theFIZZYnator, Lupo511"	2016-11-06	1
+Rock-Paper-Scissors-Lizard-Spock	RockPaperScissorsLizardSpockModule	2	https://ktane.timwi.de/PDF/Rock-Paper-Scissors-Lizard-Spock.pdf	Timwi	2016-11-12	1
+Hexamaze	HexamazeModule	4	https://ktane.timwi.de/PDF/Hexamaze.pdf	Timwi	2016-11-21	1
+Bitmaps	BitmapsModule	4	https://ktane.timwi.de/PDF/Bitmaps.pdf	"Timwi, Lumbud84"	2016-11-23	1
+Colored Squares	ColoredSquaresModule	1	https://ktane.timwi.de/PDF/Colored%20Squares.pdf	"TheAuthorOfOZ, Timwi"	2016-11-24	1
+Adjacent Letters	AdjacentLettersModule	3	https://ktane.timwi.de/PDF/Adjacent%20Letters.pdf	"Lumbud84, Timwi"	2016-11-25	1
+Third Base	ThirdBase	4	https://ktane.timwi.de/PDF/Third%20Base.pdf	Asimir	2016-11-27	1
+Souvenir	SouvenirModule	4	https://ktane.timwi.de/PDF/Souvenir.pdf	"Timwi, Andrio Celos"	2016-12-02	1
+Word Search	WordSearchModule	2	https://ktane.timwi.de/PDF/Word%20Search.pdf	"TheAuthorOfOZ, Timwi"	2016-12-07	1
+Broken Buttons	BrokenButtonsModule	2	https://ktane.timwi.de/PDF/Broken%20Buttons.pdf	samfun123	2016-12-12	1
+Simon Screams	SimonScreamsModule	4	https://ktane.timwi.de/PDF/Simon%20Screams.pdf	Timwi	2016-12-20	1
+Modules Against Humanity	ModuleAgainstHumanity	2	https://ktane.timwi.de/PDF/Modules%20Against%20Humanity.pdf	"catnip, Flamanis"	2016-12-24	1
+Complicated Buttons	complicatedButtonsModule	2	https://ktane.timwi.de/PDF/Complicated%20Buttons.pdf	ZekNikZ	2016-12-31	1
+Battleship	BattleshipModule	4	https://ktane.timwi.de/PDF/Battleship.pdf	Timwi	2017-01-03	1
+Text Field	TextField	2	https://ktane.timwi.de/PDF/Text%20Field.pdf	SL7205	2017-01-05	1
+Symbolic Password	symbolicPasswordModule	2	https://ktane.timwi.de/PDF/Symbolic%20Password.pdf	ZekNikZ	2017-01-05	1
+Wire Placement	WirePlacementModule	2	https://ktane.timwi.de/PDF/Wire%20Placement.pdf	"Lumbud84, Timwi"	2017-01-06	1
+Double-Oh	DoubleOhModule	2	https://ktane.timwi.de/PDF/Double-Oh.pdf	ZekNikZ	2017-01-15	1
+Cheap Checkout	CheapCheckoutModule	4	https://ktane.timwi.de/PDF/Cheap%20Checkout.pdf	samfun123	2017-01-16	1
+Coordinates	CoordinatesModule	4	https://ktane.timwi.de/PDF/Coordinates.pdf	Timwi	2017-01-20	1
+Light Cycle	LightCycleModule	4	https://ktane.timwi.de/PDF/Light%20Cycle.pdf	"Rexkix, Timwi"	2017-01-23	1
+Rhythms	MusicRhythms	3	https://ktane.timwi.de/PDF/Rhythms.pdf	"Riverbui, Trainzack"	2017-03-05	1
+Color Math	colormath	3	https://ktane.timwi.de/PDF/Color%20Math.pdf	SL7205	2017-03-05	1
+Only Connect	OnlyConnectModule	4	https://ktane.timwi.de/PDF/Only%20Connect.pdf	Timwi	2017-03-17	1
+Neutralization	neutralization	4	https://ktane.timwi.de/PDF/Neutralization.pdf	"Nanthelas, SL7205"	2017-03-23	1
+Web Design	webDesign	4	https://ktane.timwi.de/PDF/Web%20Design.pdf	"theFIZZYnator, SL7205"	2017-04-03	1
+Chord Qualities	ChordQualities	4	https://ktane.timwi.de/PDF/Chord%20Qualities.pdf	"Riverbui, Trainzack"	2017-04-07	1
+Creation	CreationModule	3	https://ktane.timwi.de/PDF/Creation.pdf	"Grybo, samfun123"	2017-04-17	1
+Rubik's Cube	RubiksCubeModule	4	https://ktane.timwi.de/PDF/Rubik%E2%80%99s%20Cube.pdf	"Timwi, Freelancer1025"	2017-04-30	1
+FizzBuzz	fizzBuzzModule	4	https://ktane.timwi.de/PDF/FizzBuzz.pdf	ZekNikZ	2017-05-10	1
+The Clock	TheClockModule	2	https://ktane.timwi.de/PDF/The%20Clock.pdf	"TheAuthorOfOZ, Timwi"	2017-05-11	1
+LED Encryption	LEDEnc	3	https://ktane.timwi.de/PDF/LED%20Encryption.pdf	Virepri	2017-05-12	1
+Bitwise Operations	BitOps	3	https://ktane.timwi.de/PDF/Bitwise%20Operations.pdf	Virepri	2017-05-14	1
+Fast Math	fastMath	4	https://ktane.timwi.de/PDF/Fast%20Math.pdf	"LeGeND, SL7205"	2017-05-25	1
+Minesweeper	MinesweeperModule	2	https://ktane.timwi.de/PDF/Minesweeper.pdf	samfun123	2017-06-12	1
+Zoo	ZooModule	4	https://ktane.timwi.de/PDF/Zoo.pdf	Timwi	2017-06-13	1
+Binary LEDs	BinaryLeds	3	https://ktane.timwi.de/PDF/Binary%20LEDs.pdf	Willowyn	2017-06-18	1
+Boolean Venn Diagrams	booleanVennModule	4	https://ktane.timwi.de/PDF/Boolean%20Venn%20Diagram.pdf	ZekNikZ	2017-06-22	1
+Point Of Order	PointOfOrderModule	4	https://ktane.timwi.de/PDF/Point%20of%20Order.pdf	Timwi	2017-06-25	1
+Ice Cream	iceCreamModule	3	https://ktane.timwi.de/PDF/Ice%20Cream.pdf	"SKIPP, LeGeND, ZekNikZ"	2017-06-26	1
+The Screw	screw	3	https://ktane.timwi.de/PDF/The%20Screw.pdf	"Ezekiel, SL7205"	2017-07-01	1
+Yahtzee	YahtzeeModule	3	https://ktane.timwi.de/PDF/Yahtzee.pdf	"Timwi, Rexkix"	2017-07-02	1
+German Button	BigButtonTranslated	1	https://ktane.timwi.de/PDF/The%20Button%20translated%20(Deutsch%20%E2%80%94%20Der%20Knopf).pdf	"Malde, Tharagon"	2017-01-25	1
+German Morse Code	MorseCodeTranslated	2	https://ktane.timwi.de/PDF/Morse%20Code%20translated%20(Deutsch%20%E2%80%94%20Morsecode).pdf	"Malde, Tharagon"	2017-01-25	1
+German Password	PasswordsTranslated	2	https://ktane.timwi.de/PDF/Password%20translated%20(Deutsch%20%E2%80%94%20Passw%C3%B6rter).pdf	"Malde, Tharagon"	2017-01-25	1
+German Who's On First	WhosOnFirstTranslated	2	https://ktane.timwi.de/PDF/Who%E2%80%99s%20on%20First%20translated%20(Deutsch%20%E2%80%94%20Who%E2%80%99s%20on%20First).pdf	"Malde, Tharagon"	2017-01-25	1
+Wires	Wires	1	https://ktane.timwi.de/PDF/Wires.pdf	Steel Crate Games	2015-10-08	0
+The Button	BigButton	1	https://ktane.timwi.de/PDF/The%20Button.pdf	Steel Crate Games	2015-10-08	0
+Keypad	Keypad	2	https://ktane.timwi.de/PDF/Keypad.pdf	Steel Crate Games	2015-10-08	0
+Simon Says	Simon	1	https://ktane.timwi.de/PDF/Simon%20Says.pdf	Steel Crate Games	2015-10-08	0
+Who's On First	WhosOnFirst	2	https://ktane.timwi.de/PDF/Who%E2%80%99s%20on%20First.pdf	Steel Crate Games	2015-10-08	0
+Memory	Memory	2	https://ktane.timwi.de/PDF/Memory.pdf	Steel Crate Games	2015-10-08	0
+Morse Code	Morse	3	https://ktane.timwi.de/PDF/Morse%20Code.pdf	Steel Crate Games	2015-10-08	0
+Complicated Wires	Venn	3	https://ktane.timwi.de/PDF/Complicated%20Wires.pdf	Steel Crate Games	2015-10-08	0
+Wire Sequence	WireSequence	3	https://ktane.timwi.de/PDF/Wire%20Sequence.pdf	Steel Crate Games	2015-10-08	0
+Maze	Maze	2	https://ktane.timwi.de/PDF/Maze.pdf	Steel Crate Games	2015-10-08	0
+Password	Password	2	https://ktane.timwi.de/PDF/Password.pdf	Steel Crate Games	2015-10-08	0
+Capacitor Discharge	NeedyCapacitor	1	https://ktane.timwi.de/PDF/Capacitor%20Discharge.pdf	Steel Crate Games	2015-10-08	2
+Knob	NeedyKnob	1	https://ktane.timwi.de/PDF/Knob.pdf	Steel Crate Games	2015-10-08	2
+Venting Gas	NeedyVentGas	1	https://ktane.timwi.de/PDF/Venting%20Gas.pdf	Steel Crate Games	2015-10-08	2
+Refill That Beer!	NeedyBeer	1	https://ktane.timwi.de/PDF/Refill%20that%20Beer!.pdf	scripto	2017-09-23	2
+Math	Needy Math	1	https://ktane.timwi.de/PDF/Math.pdf	Mock Army	2016-07-21	2
+Lights Out	LightsOut	1	https://ktane.timwi.de/PDF/Lights%20Out.pdf	Bashly	2016-07-22	2
+Filibuster	Filibuster	1	https://ktane.timwi.de/PDF/Filibuster.pdf	Mock Army	2016-08-07	2
+Motion Sense	MotionSense	1	https://ktane.timwi.de/PDF/Motion%20Sense.pdf	Bashly	2016-08-11	2
+Answering Questions	NeedyVentV2	1	https://ktane.timwi.de/PDF/Answering%20Questions.pdf	Hexicube	2016-08-13	2
+Rotary Phone	NeedyKnobV2	2	https://ktane.timwi.de/PDF/Rotary%20Phone.pdf	Hexicube	2016-08-16	2
+Cruel Piano Keys	CruelPianoKeys	4	https://ktane.timwi.de/PDF/Cruel%20Piano%20Keys.pdf	Bashly	2016-08-21	1
+Tetris	spwizTetris	1	https://ktane.timwi.de/PDF/Tetris.pdf	Spare Wizard	2016-08-23	2
+Who's That Monsplode	monsplodeWho	2	https://ktane.timwi.de/PDF/Who%E2%80%99s%20That%20Monsplode.pdf	clutterArranger	2016-10-08	2
+HTTP Response	http	1	https://ktane.timwi.de/PDF/HTTP%20Response.pdf	SL7205	2017-01-24	2
+Edgework	EdgeworkModule	1	https://ktane.timwi.de/PDF/Edgework.pdf	"Ion Lee, ZekNikZ"	2017-05-14	2
+Hex To Decimal	EternitySDec	3	https://ktane.timwi.de/PDF/Hex%20To%20Decimal.pdf	EternityShack	2017-06-30	2
+X-Ray	XRayModule	2	https://ktane.timwi.de/PDF/X-Ray.pdf	Timwi	2017-07-14	1
+QR Code	QRCode	1	https://ktane.timwi.de/PDF/QR%20Code.pdf	SL7205	2017-07-17	2
+Button Masher	buttonMasherNeedy	1	https://ktane.timwi.de/PDF/Button%20Masher.pdf	McDude73	2017-07-19	2
+Random Number Generator	rng	1	https://ktane.timwi.de/PDF/Random%20Number%20Generator.pdf	"Lumbud84, McDude73"	2017-07-21	2
+Color Morse	ColorMorseModule	3	https://ktane.timwi.de/PDF/Color%20Morse.pdf	"SKiPP, Ezekiel, ZekNikZ"	2017-07-31	1
+Mastermind Simple	Mastermind Simple	1	https://ktane.timwi.de/PDF/Mastermind%20Simple.pdf	Eotall	2017-08-06	1
+Mastermind Cruel	Mastermind Cruel	5	https://ktane.timwi.de/PDF/Mastermind%20Cruel.pdf	Eotall	2017-08-06	1
+Gridlock	GridlockModule	3	https://ktane.timwi.de/PDF/Gridlock.pdf	"Elias, Timwi"	2017-08-11	1
+Big Circle	BigCircle	3	https://ktane.timwi.de/PDF/Big%20Circle.pdf	"Ezekiel, Hendruid, CaitSith2"	2017-08-14	1
+Morse-A-Maze	MorseAMaze	3	https://ktane.timwi.de/PDF/Morse-A-Maze.pdf	CaitSith2	2017-08-21	1
+Colored Switches	ColoredSwitchesModule	3	https://ktane.timwi.de/PDF/Colored%20Switches.pdf	Timwi	2017-09-03	1
+Perplexing Wires	PerplexingWiresModule	4	https://ktane.timwi.de/PDF/Perplexing%20Wires.pdf	"MarAyzex, Ezekiel, Timwi"	2017-09-06	1
+Monsplode Trading Cards	monsplodeCards	4	https://ktane.timwi.de/PDF/Monsplode%20Trading%20Cards.pdf	"clutterArranger, Grybo"	2017-09-10	1
+Game Of Life Simple	GameOfLifeSimple	4	https://ktane.timwi.de/PDF/Game%20of%20Life%20Simple.pdf	"Eotall, WarioLGP, samfun123"	2017-09-12	1
+Game Of Life Cruel	GameOfLifeCruel	5	https://ktane.timwi.de/PDF/Game%20of%20Life%20Cruel.pdf	"Eotall, WarioLGP, samfun123"	2017-09-12	1
+Nonogram	NonogramModule	4	https://ktane.timwi.de/PDF/Nonogram.pdf	Piggered	2017-09-19	1
+S.E.T.	SetModule	4	https://ktane.timwi.de/PDF/S.E.T..pdf	"Zawu, Timwi"	2017-09-23	1
+Painting	Painting	2	https://ktane.timwi.de/PDF/Painting.pdf	"Hendruid, Bashly"	2017-09-24	1
+Color Generator	Color Generator	3	https://ktane.timwi.de/PDF/Color%20Generator.pdf	EternityShack	2017-09-24	1
+Shape Memory	needyShapeMemory	1	https://ktane.timwi.de/PDF/Shape%20Memory.pdf	UltraCboy	2017-09-28	2
+Symbol Cycle	SymbolCycleModule	4	https://ktane.timwi.de/PDF/Symbol%20Cycle.pdf	Timwi	2017-10-05	1
+Hunting	hunting	3	https://ktane.timwi.de/PDF/Hunting.pdf	taggedjc	2017-10-09	1
+Extended Password	ExtendedPassword	3	https://ktane.timwi.de/PDF/Extended%20Password.pdf	"taggedjc, TWGaming"	2017-10-24	1
+Curriculum	curriculum	3	https://ktane.timwi.de/PDF/Curriculum.pdf	Fixdoll	2017-10-30	1
+Braille	BrailleModule	4	https://ktane.timwi.de/PDF/Braille.pdf	Timwi	2017-10-31	1
+Mafia	MafiaModule	4	https://ktane.timwi.de/PDF/Mafia.pdf	"MarioXTurn, Ezekiel, Timwi"	2017-11-04	1
+Festive Piano Keys	FestivePianoKeys	2	https://ktane.timwi.de/PDF/Festive%20Piano%20Keys.pdf	Bashly	2017-12-07	1
+Flags	FlagsModule	3	https://ktane.timwi.de/PDF/Flags.pdf	"Monopoly, Piggered"	2017-12-24	1
+Timezone	timezone	3	https://ktane.timwi.de/PDF/Timezone.pdf	federan	2017-12-30	1
+Polyhedral Maze	PolyhedralMazeModule	5	https://ktane.timwi.de/PDF/Polyhedral%20Maze.pdf	Timwi	2018-01-01	1
+Symbolic Coordinates	symbolicCoordinates	2	https://ktane.timwi.de/PDF/Symbolic%20Coordinates.pdf	Royal_Flu$h	2018-01-09	1
+Poker	Poker	3	https://ktane.timwi.de/PDF/Poker.pdf	Royal_Flu$h	2018-01-09	1
+Sonic the Hedgehog	sonic	3	https://ktane.timwi.de/PDF/Sonic%20the%20Hedgehog.pdf	Royal_Flu$h	2018-01-14	1
+Poetry	poetry	3	https://ktane.timwi.de/PDF/Poetry.pdf	clutterArranger	2018-01-14	1
+Button Sequence	buttonSequencesModule	3	https://ktane.timwi.de/PDF/Button%20Sequence.pdf	ZekNikZ	2018-01-15	1
+Algebra	algebra	3	https://ktane.timwi.de/PDF/Algebra.pdf	Royal_Flu$h	2018-01-17	1
+Visual Impairment	visual_impairment	3	https://ktane.timwi.de/PDF/Visual%20Impairment.pdf	KingBranBran	2018-01-20	1
+Jukebox	jukebox	2	https://ktane.timwi.de/PDF/The%20Jukebox.pdf	Royal_Flu$h	2018-01-23	1
+Identity Parade	identityParade	2	https://ktane.timwi.de/PDF/Identity%20Parade.pdf	Royal_Flu$h	2018-01-25	1
+Maintenance	maintenance	4	https://ktane.timwi.de/PDF/Maintenance.pdf	Royal_Flu$h	2018-01-30	1
+Blind Maze	BlindMaze	4	https://ktane.timwi.de/PDF/Blind%20Maze.pdf	"Riverbui, McNiko67"	2018-01-30	1
+Backgrounds	Backgrounds	2	https://ktane.timwi.de/PDF/Backgrounds.pdf	McNiko67	2018-01-30	1
+Mortal Kombat	mortalKombat	3	https://ktane.timwi.de/PDF/Mortal%20Kombat.pdf	Royal_Flu$h	2018-02-02	1
+Mashematics	mashematics	2	https://ktane.timwi.de/PDF/Mashematics.pdf	Marksam32	2018-02-03	1
+Faulty Backgrounds	FaultyBackgrounds	2	https://ktane.timwi.de/PDF/Faulty%20Backgrounds.pdf	McNiko67	2018-02-03	1
+Radiator	radiator	2	https://ktane.timwi.de/PDF/Radiator.pdf	"red031000, Inova"	2018-02-04	1
+Modern Cipher	modernCipher	3	https://ktane.timwi.de/PDF/Modern%20Cipher.pdf	TheFe	2018-02-04	1
+LED Grid	LED Grid	2	https://ktane.timwi.de/PDF/LED%20Grid.pdf	Royal_Flu$h	2018-02-06	1
+Sink	Sink	2	https://ktane.timwi.de/PDF/Sink.pdf	McNiko67	2018-02-09	1
+The iPhone	iPhone	4	https://ktane.timwi.de/PDF/The%20iPhone.pdf	Royal_Flu$h	2018-02-20	1
+The Swan	theSwan	4	https://ktane.timwi.de/PDF/The%20Swan.pdf	Royal_Flu$h	2018-02-22	1
+Waste Management	wastemanagement	4	https://ktane.timwi.de/PDF/Waste%20Management.pdf	"red031000, Inova, AppleSlice"	2018-02-23	1
+Human Resources	HumanResourcesModule	3	https://ktane.timwi.de/PDF/Human%20Resources.pdf	"Elias, Timwi"	2018-02-26	1
+Skyrim	skyrim	4	https://ktane.timwi.de/PDF/Skyrim.pdf	Royal_Flu$h	2018-03-02	1
+Burglar Alarm	burglarAlarm	3	https://ktane.timwi.de/PDF/Burglar%20Alarm.pdf	Marksam32	2018-03-03	1
+Press X	PressX	3	https://ktane.timwi.de/PDF/Press%20X.pdf	ThatGuyCalledJules	2018-03-07	1
+European Travel	europeanTravel	2	https://ktane.timwi.de/PDF/European%20Travel.pdf	"Monopoly, Royal_Flu$h"	2018-03-10	1
+Error Codes	errorCodes	2	https://ktane.timwi.de/PDF/Error%20Codes.pdf	mookieg849	2018-03-10	1
+Rapid Buttons	rapidButtons	2	https://ktane.timwi.de/PDF/Rapid%20Buttons.pdf	"CoolkibKakadu, Bashly, Royal_Flu$h"	2018-03-12	2
+LEGOs	LEGOModule	5	https://ktane.timwi.de/PDF/LEGOs.pdf	ZekNikZ	2018-03-13	1
+Rubik's Clock	rubiksClock	5	https://ktane.timwi.de/PDF/Rubik%E2%80%99s%20Clock.pdf	Groover	2018-03-16	1
+Font Select	FontSelect	3	https://ktane.timwi.de/PDF/Font%20Select.pdf	McNiko67	2018-03-18	1
+The Stopwatch	stopwatch	3	https://ktane.timwi.de/PDF/The%20Stopwatch.pdf	"SpaceScrew, Royal_Flu$h"	2018-03-19	1
+Pie	pieModule	3	https://ktane.timwi.de/PDF/Pie.pdf	KingBranBran	2018-03-19	1
+The Wire	wire	4	https://ktane.timwi.de/PDF/The%20Wire.pdf	Royal_Flu$h	2018-04-04	1
+The London Underground	londonUnderground	3	https://ktane.timwi.de/PDF/The%20London%20Underground.pdf	Royal_Flu$h	2018-04-04	1
+Logic Gates	logicGates	4	https://ktane.timwi.de/PDF/Logic%20Gates.pdf	"Groover, Maca"	2018-04-04	1
+Forget Everything	HexiEvilFMN	5	https://ktane.timwi.de/PDF/Forget%20Everything.pdf	Hexicube	2018-04-04	1
+Grid Matching	GridMatching	4	https://ktane.timwi.de/PDF/Grid%20Matching.pdf	Windesign	2018-04-07	1
+Color Decoding	Color Decoding	3	https://ktane.timwi.de/PDF/Color%20Decoding.pdf	Windesign	2018-04-07	1
+The Sun	sun	4	https://ktane.timwi.de/PDF/The%20Sun.pdf	"Pruz, Royal_Flu$h"	2018-04-09	1
+Playfair Cipher	Playfair	4	https://ktane.timwi.de/PDF/Playfair%20Cipher.pdf	"Maca, Groover"	2018-04-10	1
+Tangrams	Tangrams	5	https://ktane.timwi.de/PDF/Tangrams.pdf	Bashly	2018-04-12	1
+The Number	theNumber	3	https://ktane.timwi.de/PDF/The%20Number.pdf	"red031000, Felix"	2018-04-13	1
+Cooking	cooking	3	https://ktane.timwi.de/PDF/Cooking.pdf	"Marksam32, James"	2018-04-13	1
+Superlogic	SuperlogicModule	5	https://ktane.timwi.de/PDF/Superlogic.pdf	Timwi	2018-04-17	1
+The Moon	moon	4	https://ktane.timwi.de/PDF/The%20Moon.pdf	"Pruz, Royal_Flu$h"	2018-04-20	1
+The Cube	cube	5	https://ktane.timwi.de/PDF/The%20Cube.pdf	Royal_Flu$h	2018-04-22	1
+Dr. Doctor	DrDoctorModule	3	https://ktane.timwi.de/PDF/Dr.%20Doctor.pdf	"Timwi, Daniell, Livio, Rexkix"	2018-04-23	1
+Tax Returns	taxReturns	4	https://ktane.timwi.de/PDF/Tax%20Returns.pdf	Royal_Flu$h	2018-04-25	1
+The Jewel Vault	jewelVault	3	https://ktane.timwi.de/PDF/The%20Jewel%20Vault.pdf	"MarioXTurn, Royal_Flu$h"	2018-05-02	1
+Digital Root	digitalRoot	1	https://ktane.timwi.de/PDF/Digital%20Root.pdf	"red031000, CyanLights"	2018-05-03	1
+Graffiti Numbers	graffitiNumbers	3	https://ktane.timwi.de/PDF/Graffiti%20Numbers.pdf	Royal_Flu$h	2018-05-04	1
+Marble Tumble	MarbleTumbleModule	4	https://ktane.timwi.de/PDF/Marble%20Tumble.pdf	Timwi	2018-05-07	1
+X01	X01	4	https://ktane.timwi.de/PDF/X01.pdf	SillyPuppy	2018-05-09	1
+Logical Buttons	logicalButtonsModule	4	https://ktane.timwi.de/PDF/Logical%20Buttons.pdf	"Marksam32, SpaceScrew"	2018-05-11	1
+The Code	theCodeModule	2	https://ktane.timwi.de/PDF/The%20Code.pdf	"LeGeND, Livio"	2018-05-11	1
+Tap Code	tapCode	3	https://ktane.timwi.de/PDF/Tap%20Code.pdf	KingBranBran	2018-05-24	1
+Simon Sings	SimonSingsModule	3	https://ktane.timwi.de/PDF/Simon%20Sings.pdf	"MarioXTurn, Timwi"	2018-05-29	1
+Simon Sends	SimonSendsModule	5	https://ktane.timwi.de/PDF/Simon%20Sends.pdf	Timwi	2018-05-29	1
+Synonyms	synonyms	2	https://ktane.timwi.de/PDF/Synonyms.pdf	"ThatGuyCalledJules, limbojim"	2018-05-31	1
+Greek Calculus	greekCalculus	4	https://ktane.timwi.de/PDF/Greek%20Calculus.pdf	billy_bao	2018-05-31	1
+Simon Shrieks	SimonShrieksModule	3	https://ktane.timwi.de/PDF/Simon%20Shrieks.pdf	"IFBeetle, Timwi"	2018-06-01	1
+Complex Keypad	complexKeypad	2	https://ktane.timwi.de/PDF/Complex%20Keypad.pdf	AAces	2018-06-03	1
+Subways	subways	1	https://ktane.timwi.de/PDF/Subways.pdf	AAces	2018-06-06	1
+Lasers	lasers	3	https://ktane.timwi.de/PDF/Lasers.pdf	"Elias, Riverbui, Timwi"	2018-06-06	1
+Turtle Robot	turtleRobot	5	https://ktane.timwi.de/PDF/Turtle%20Robot.pdf	Groover	2018-06-08	1
+Guitar Chords	guitarChords	3	https://ktane.timwi.de/PDF/Guitar%20Chords.pdf	Royal_Flu$h	2018-06-13	1
+Calendar	calendar	2	https://ktane.timwi.de/PDF/Calendar.pdf	"MarioXTurn, AAces"	2018-06-14	1
+USA Maze	USA	3	https://ktane.timwi.de/PDF/USA%20Maze.pdf	"Blananas2, Riverbui"	2018-06-17	1
+Binary Tree	binaryTree	3	https://ktane.timwi.de/PDF/Binary%20Tree.pdf	billy_bao	2018-06-18	1
+The Time Keeper	timeKeeper	4	https://ktane.timwi.de/PDF/The%20Time%20Keeper.pdf	AAces	2018-06-21	1
+Lightspeed	lightspeed	4	https://ktane.timwi.de/PDF/Lightspeed.pdf	Royal_Flu$h	2018-06-22	1
+Black Hole	BlackHoleModule	3	https://ktane.timwi.de/PDF/Black%20Hole.pdf	Timwi	2018-06-22	1
+Simon's Star	simonsStar	3	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Star.pdf	Royal_Flu$h	2018-06-25	1
+Morse War	MorseWar	2	https://ktane.timwi.de/PDF/Morse%20War.pdf	"Brandon, Flamanis"	2018-06-27	1
+The Stock Market	stockMarket	4	https://ktane.timwi.de/PDF/The%20Stock%20Market.pdf	Royal_Flu$h	2018-06-29	1
+Mineseeker	mineseeker	3	https://ktane.timwi.de/PDF/Mineseeker.pdf	"Riverbui, Pruz"	2018-06-29	1
+Maze Scrambler	MazeScrambler	2	https://ktane.timwi.de/PDF/Maze%20Scrambler.pdf	"McNiko67, Riverbui"	2018-06-29	1
+The Number Cipher	numberCipher	3	https://ktane.timwi.de/PDF/The%20Number%20Cipher.pdf	Royal_Flu$h	2018-07-01	1
+Alphabet Numbers	alphabetNumbers	3	https://ktane.timwi.de/PDF/Alphabet%20Numbers.pdf	"WhiteShadowZz, Royal_Flu$h"	2018-07-02	1
+British Slang	britishSlang	2	https://ktane.timwi.de/PDF/British%20Slang.pdf	Royal_Flu$h	2018-07-04	1
+Double Color	doubleColor	1	https://ktane.timwi.de/PDF/Double%20Color.pdf	"Brandon, AAces"	2018-07-06	1
+Maritime Flags	MaritimeFlagsModule	3	https://ktane.timwi.de/PDF/Maritime%20Flags.pdf	Timwi	2018-07-10	1
+Equations	equations	3	https://ktane.timwi.de/PDF/Equations.pdf	AAces	2018-07-10	1
+Determinants	determinant	3	https://ktane.timwi.de/PDF/Determinants.pdf	sw3aterCS	2018-07-22	2
+Pattern Cube	PatternCubeModule	5	https://ktane.timwi.de/PDF/Pattern%20Cube.pdf	Timwi	2018-07-28	1
+Know Your Way	KnowYourWay	4	https://ktane.timwi.de/PDF/Know%20Your%20Way.pdf	"Blananas2, Joostoos"	2018-08-01	1
+Splitting The Loot	SplittingTheLootModule	5	https://ktane.timwi.de/PDF/Splitting%20The%20Loot.pdf	"Marksam32, Elias"	2018-08-04	1
+Simon Samples	simonSamples	2	https://ktane.timwi.de/PDF/Simon%20Samples.pdf	Groover	2018-08-07	1
+Character Shift	characterShift	3	https://ktane.timwi.de/PDF/Character%20Shift.pdf	"AAces, Vantastic"	2018-08-07	1
+Uncolored Squares	UncoloredSquaresModule	2	https://ktane.timwi.de/PDF/Uncolored%20Squares.pdf	Timwi	2018-08-08	1
+Dragon Energy	dragonEnergy	5	https://ktane.timwi.de/PDF/Dragon%20Energy.pdf	"Brandon, AAces"	2018-08-08	1
+Flashing Lights	flashingLights	2	https://ktane.timwi.de/PDF/Flashing%20Lights.pdf	Royal_Flu$h	2018-08-09	1
+3D Tunnels	3dTunnels	5	https://ktane.timwi.de/PDF/3D%20Tunnels.pdf	"Groover, Timwi"	2018-08-13	1
+Synchronization	SynchronizationModule	2	https://ktane.timwi.de/PDF/Synchronization.pdf	"TheAuthorOfOZ, samfun123"	2018-08-17	1
+The Switch	BigSwitch	1	https://ktane.timwi.de/PDF/The%20Switch.pdf	McNiko67	2018-08-18	1
+Reverse Morse	reverseMorse	3	https://ktane.timwi.de/PDF/Reverse%20Morse.pdf	Royal_Flu$h	2018-08-23	1
+Manometers	manometers	3	https://ktane.timwi.de/PDF/Manometers.pdf	ThePhenix33	2018-09-03	1
+Shikaku	shikaku	2	https://ktane.timwi.de/PDF/Shikaku.pdf	Groover	2018-09-04	1
+Wire Spaghetti	wireSpaghetti	4	https://ktane.timwi.de/PDF/Wire%20Spaghetti.pdf	Royal_Flu$h	2018-09-05	1
+Tennis	TennisModule	4	https://ktane.timwi.de/PDF/Tennis.pdf	Timwi	2018-09-08	1
+Module Homework	KritHomework	4	https://ktane.timwi.de/PDF/Module%20Homework.pdf	Kritzy	2018-09-08	1
+Benedict Cumberbatch	benedictCumberbatch	3	https://ktane.timwi.de/PDF/Benedict%20Cumberbatch.pdf	"Arlas, Royal_Flu$h"	2018-09-11	1
+Signals	Signals	3	https://ktane.timwi.de/PDF/Signals.pdf	mkmk	2018-09-14	1
+Horrible Memory	horribleMemory	3	https://ktane.timwi.de/PDF/Horrible%20Memory.pdf	Royal_Flu$h	2018-09-14	1
+Boggle	boggle	3	https://ktane.timwi.de/PDF/Boggle.pdf	AAces	2018-09-14	1
+Command Prompt	KritCMDPrompt	2	https://ktane.timwi.de/PDF/Command%20Prompt.pdf	Kritzy	2018-09-15	2
+Boolean Maze	boolMaze	3	https://ktane.timwi.de/PDF/Boolean%20Maze.pdf	Theta	2018-09-17	1
+Sonic & Knuckles	sonicKnuckles	3	https://ktane.timwi.de/PDF/Sonic%20%26%20Knuckles.pdf	Royal_Flu$h	2018-09-19	1
+Quintuples	quintuples	4	https://ktane.timwi.de/PDF/Quintuples.pdf	Royal_Flu$h	2018-09-23	1
+The Sphere	sphere	4	https://ktane.timwi.de/PDF/The%20Sphere.pdf	Royal_Flu$h	2018-09-29	1
+Coffeebucks	coffeebucks	3	https://ktane.timwi.de/PDF/Coffeebucks.pdf	Royal_Flu$h	2018-10-03	1
+Colorful Madness	ColorfulMadness	3	https://ktane.timwi.de/PDF/Colorful%20Madness.pdf	KingSlendy	2018-10-05	1
+Bases	bases	3	https://ktane.timwi.de/PDF/Bases.pdf	AAces	2018-10-06	1
+Lion's Share	LionsShareModule	4	https://ktane.timwi.de/PDF/Lion%E2%80%99s%20Share.pdf	Timwi	2018-10-08	1
+Snooker	snooker	3	https://ktane.timwi.de/PDF/Snooker.pdf	Royal_Flu$h	2018-10-10	1
+Blackjack	KritBlackjack	3	https://ktane.timwi.de/PDF/Blackjack.pdf	Kritzy	2018-10-17	1
+Party Time	PartyTime	1	https://ktane.timwi.de/PDF/Party%20Time.pdf	KingSlendy	2018-10-18	1
+Accumulation	accumulation	3	https://ktane.timwi.de/PDF/Accumulation.pdf	Royal_Flu$h	2018-10-19	1
+The Plunger Button	plungerButton	2	https://ktane.timwi.de/PDF/The%20Plunger%20Button.pdf	Royal_Flu$h	2018-10-21	1
+The Digit	TheDigitModule	2	https://ktane.timwi.de/PDF/The%20Digit.pdf	"Marksam32, Danny7007"	2018-10-23	1
+The Jack-O'-Lantern	jackOLantern	2	https://ktane.timwi.de/PDF/The%20Jack-O%E2%80%99-Lantern.pdf	"LeGeND, Royal_Flu$h"	2018-10-24	1
+T-Words	tWords	3	https://ktane.timwi.de/PDF/T-Words.pdf	Royal_Flu$h	2018-10-25	1
+Divided Squares	DividedSquaresModule	2	https://ktane.timwi.de/PDF/Divided%20Squares.pdf	Timwi	2018-10-30	1
+Connection Device	KritConnectionDev	2	https://ktane.timwi.de/PDF/Connection%20Device.pdf	Kritzy	2018-10-31	1
+Instructions	instructions	1	https://ktane.timwi.de/PDF/Instructions.pdf	EpicToast	2018-11-03	1
+Valves	valves	3	https://ktane.timwi.de/PDF/Valves.pdf	KingBranBran	2018-11-05	1
+Encrypted Morse	crystalMaze	5	https://ktane.timwi.de/PDF/The%20Crystal%20Maze.pdf	BlockWorker	2018-11-06	1
+The Crystal Maze	EncryptedMorse	3	https://ktane.timwi.de/PDF/Encrypted%20Morse.pdf	Royal_Flu$h	2018-11-06	1
+Countdown	countdown	2	https://ktane.timwi.de/PDF/Countdown.pdf	Royal_Flu$h	2018-11-06	1
+Cruel Countdown	cruelCountdown	4	https://ktane.timwi.de/PDF/Cruel%20Countdown.pdf	Royal_Flu$h	2018-11-06	1
+Catchphrase	catchphrase	3	https://ktane.timwi.de/PDF/Catchphrase.pdf	Royal_Flu$h	2018-11-06	1
+Blockbusters	blockbusters	2	https://ktane.timwi.de/PDF/Blockbusters.pdf	Royal_Flu$h	2018-11-06	1
+IKEA	qSwedishMaze	4	https://ktane.timwi.de/PDF/IKEA.pdf	JerryEris	2018-11-07	1
+Retirement	retirement	3	https://ktane.timwi.de/PDF/Retirement.pdf	Royal_Flu$h	2018-11-08	1
+Periodic Table	periodicTable	3	https://ktane.timwi.de/PDF/Periodic%20Table.pdf	MrSpekCraft	2018-11-12	1
+101 Dalmations	OneHundredAndOneDalmationsModule	3	https://ktane.timwi.de/PDF/101%20Dalmatians.pdf	Timwi	2018-11-12	1
+Schlag den Bomb	qSchlagDenBomb	4	https://ktane.timwi.de/PDF/101%20Dalmatians.pdf	JerryEris	2018-11-13	1
+Mahjong	MahjongModule	4	https://ktane.timwi.de/PDF/Mahjong.pdf	Timwi	2018-11-20	1
+Kudosudoku	KudosudokuModule	4	https://ktane.timwi.de/PDF/Kudosudoku.pdf	Timwi	2018-11-21	1
+The Radio	KritRadio	2	https://ktane.timwi.de/PDF/The%20Radio.pdf	Kritzy	2018-11-26	1
+Modulo	modulo	1	https://ktane.timwi.de/PDF/Modulo.pdf	Royal_Flu$h	2018-11-28	1
+Number Nimbleness	numberNimbleness	2	https://ktane.timwi.de/PDF/Number%20Nimbleness.pdf	"KingBranBran, Elias"	2018-11-29	1
+Pay Respects	lgndPayRespects	1	https://ktane.timwi.de/PDF/Pay%20Respects.pdf	LeGeND	2018-11-30	2
+Challenge & Contact	challengeAndContact	2	https://ktane.timwi.de/PDF/Challenge%20%26%20Contact.pdf	EpicToast	2018-11-30	1
+The Triangle	triangle	2	https://ktane.timwi.de/PDF/The%20Triangle.pdf	Royal_Flu$h	2018-12-01	1
+Sueet Wall	SueetWall	2	https://ktane.timwi.de/PDF/Sueet%20Wall.pdf	KingSlendy	2018-12-02	1
+Hot Potato	HotPotato	1	https://ktane.timwi.de/PDF/Hot%20Potato.pdf	"red031000, yabbaguy"	2018-12-03	2
+Christmas Presents	christmasPresents	3	https://ktane.timwi.de/PDF/Christmas%20Presents.pdf	Royal_Flu$h	2018-12-03	1
+Hieroglyphics	hieroglyphics	4	https://ktane.timwi.de/PDF/Hieroglyphics.pdf	"Royal_Flu$h, Elias"	2018-12-05	1
+Functions	qFunctions	4	https://ktane.timwi.de/PDF/Functions.pdf	JerryEris	2018-12-05	1
+Scripting	KritScripts	4	https://ktane.timwi.de/PDF/Scripting.pdf	Kritzy	2018-12-06	1
+Needy Mrs Bob	needyMrsBob	2	https://ktane.timwi.de/PDF/Needy%20Mrs%20Bob.pdf	"Royal_Flu$h, Mrs_Flu$h"	2018-12-06	2
+Simon Spins	SimonSpinsModule	4	https://ktane.timwi.de/PDF/Simon%20Spins.pdf	Timwi	2018-12-09	1
+Ten-Button Color Code	TenButtonColorCode	3	https://ktane.timwi.de/PDF/Ten-Button%20Color%20Code.pdf	"KingSlendy, Lumbud84"	2018-12-10	1
+Cursed Double-Oh	CursedDoubleOhModule	4	https://ktane.timwi.de/PDF/Cursed%20Double-Oh.pdf	"Elias, Timwi"	2018-12-10	1
+Crackbox	CrackboxModule	3	https://ktane.timwi.de/PDF/Crackbox.pdf	"Marksam32, Pruz"	2018-12-15	1
+Street Fighter	streetFighter	3	https://ktane.timwi.de/PDF/Street%20Fighter.pdf	Royal_Flu$h	2018-12-17	1
+The Labyrinth	labyrinth	3	https://ktane.timwi.de/PDF/The%20Labyrinth.pdf	Royal_Flu$h	2018-12-18	1
+Spinning Buttons	spinningButtons	2	https://ktane.timwi.de/PDF/Spinning%20Buttons.pdf	Royal_Flu$h	2018-12-19	1
+Color Match	lgndColorMatch	1	https://ktane.timwi.de/PDF/Color%20Match.pdf	LeGeND	2018-12-19	2
+The Festive Jukebox	festiveJukebox	2	https://ktane.timwi.de/PDF/The%20Festive%20Jukebox.pdf	Royal_Flu$h	2018-12-21	1
+Skinny Wires	skinnyWires	2	https://ktane.timwi.de/PDF/Skinny%20Wires.pdf	Royal_Flu$h	2018-12-24	1
+The Hangover	hangover	3	https://ktane.timwi.de/PDF/The%20Hangover.pdf	Royal_Flu$h	2018-12-26	1
+Factory Maze	factoryMaze	5	https://ktane.timwi.de/PDF/Factory%20Maze.pdf	EpicToast	2018-12-27	1
+Binary Puzzle	BinaryPuzzleModule	3	https://ktane.timwi.de/PDF/Binary%20Puzzle.pdf	Timwi	2018-12-27	1
+Broken Guitar Chords	BrokenGuitarChordsModule	3	https://ktane.timwi.de/PDF/Broken%20Guitar%20Chords.pdf	"Timwi, Royal_Flu$h"	2018-12-28	1
+Regular Crazy Talk	RegularCrazyTalkModule	3	https://ktane.timwi.de/PDF/Regular%20Crazy%20Talk.pdf	Timwi	2018-12-29	1
+Hogwarts	HogwartsModule	3	https://ktane.timwi.de/PDF/Hogwarts.pdf	"Timwi, Mickeylover, J?m??H"	2018-12-29	1
+Dominoes	dominoes	2	https://ktane.timwi.de/PDF/Dominoes.pdf	"Gee, Blananas2"	2018-12-29	1
+Simon Speaks	SimonSpeaksModule	3	https://ktane.timwi.de/PDF/Simon%20Speaks.pdf	"Timwi, Danny7007"	2018-12-30	1
+Discolored Squares	DiscoloredSquaresModule	4	https://ktane.timwi.de/PDF/Discolored%20Squares.pdf	Timwi	2018-12-31	1
+Krazy Talk	krazyTalk	3	https://ktane.timwi.de/PDF/Krazy%20Talk.pdf	EpicToast	2019-01-01	1
+Numbers	Numbers	2	https://ktane.timwi.de/PDF/Numbers.pdf	Waluigi	2019-01-02	1
+Flip The Coin	KritFlipTheCoin	2	https://ktane.timwi.de/PDF/Flip%20The%20Coin.pdf	Kritzy	2019-01-02	2
+Varicolored Squares	VaricoloredSquaresModule	3	https://ktane.timwi.de/PDF/Varicolored%20Squares.pdf	ZekNikZ	2019-01-03	1
+Simon's Stages	simonsStages	5	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Stages.pdf	Royal_Flu$h	2019-01-03	1
+Free Parking	freeParking	3	https://ktane.timwi.de/PDF/Free%20Parking.pdf	"StKildaFan, Royal_Flu$h"	2019-01-03	1
+Cookie Jars	cookieJars	2	https://ktane.timwi.de/PDF/Cookie%20Jars.pdf	EpicToast	2019-01-03	1
+Alchemy	JuckAlchemy	2	https://ktane.timwi.de/PDF/Alchemy.pdf	"Juck869, KingSlendy"	2019-01-03	1
+Zoni	lgndZoni	2	https://ktane.timwi.de/PDF/Zoni.pdf	LeGeND	2019-01-05	1
+Simon Squawks	simonSquawks	2	https://ktane.timwi.de/PDF/Simon%20Squawks.pdf	Royal_Flu$h	2019-01-05	2
+Unrelated Anagrams	unrelatedAnagrams	2	https://ktane.timwi.de/PDF/Unrelated%20Anagrams.pdf	"DVD, eXish"	2019-01-06	1
+Mad Memory	madMemory	3	https://ktane.timwi.de/PDF/Mad%20Memory.pdf	"DVD, eXish"	2019-01-06	1
+Bartending	BartendingModule	3	https://ktane.timwi.de/PDF/Bartending.pdf	Rockdood	2019-01-07	1
+Question Mark	QuestionMark	2	https://ktane.timwi.de/PDF/Question%20Mark.pdf	"DVD, Mirage Xel, eXish"	2019-01-08	1
+Shapes And Bombs	ShapesBombs	4	https://ktane.timwi.de/PDF/Shapes%20And%20Bombs.pdf	KingSlendy	2019-01-09	1
+Flavor Text	FlavorText	2	https://ktane.timwi.de/PDF/Flavor%20Text.pdf	"DVD, eXish"	2019-01-09	1
+Flavor Text EX	FlavorTextCruel	2	https://ktane.timwi.de/PDF/Flavor%20Text%20EX.pdf	"DVD, eXish"	2019-01-09	1
+Decolored Squares	DecoloredSquaresModule	2	https://ktane.timwi.de/PDF/Decolored%20Squares.pdf	Timwi	2019-01-09	1
+Homophones	homophones	2	https://ktane.timwi.de/PDF/Homophones.pdf	Royal_Flu$h	2019-01-10	1
+DetoNATO	Detonato	2	https://ktane.timwi.de/PDF/DetoNATO.pdf	"DVD, Kusane, eXish"	2019-01-11	1
+Air Traffic Controller	NeedyAirTrafficController	4	https://ktane.timwi.de/PDF/Air%20Traffic%20Controller.pdf	Incognito	2019-01-12	2
+SYNC-125 [3]	sync125_3	3	https://ktane.timwi.de/PDF/SYNC-125%20%5B3%5D.pdf	"DVD, eXish"	2019-01-13	1
+Westeros	westeros	3	https://ktane.timwi.de/PDF/Westeros.pdf	Royal_Flu$h	2019-01-14	1
+Morse Identification	lgndMorseIdentification	1	https://ktane.timwi.de/PDF/Morse%20Identification.pdf	"Draykien Cyndrak, LeGeND"	2019-01-14	2
+Pigpen Rotations	pigpenRotations	3	https://ktane.timwi.de/PDF/Pigpen%20Rotations.pdf	noahcoolboy	2019-01-17	1
+LED Math	lgndLEDMath	2	https://ktane.timwi.de/PDF/LED%20Math.pdf	LeGeND	2019-01-17	1
+Alphabetical Order	alphabeticOrder	1	https://ktane.timwi.de/PDF/Alphabetical%20Order.pdf	noahcoolboy	2019-01-19	2
+Simon Sounds	simonSounds	2	https://ktane.timwi.de/PDF/Simon%20Sounds.pdf	Goofy	2019-01-20	1
+The Fidget Spinner	theFidgetSpinner	1	https://ktane.timwi.de/PDF/The%20Fidget%20Spinner.pdf	noahcoolboy	2019-01-20	2
+Simon's Sequence	simonsSequence	1	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Sequence.pdf	noahcoolboy	2019-01-21	2
+Simon Scrambles	simonScrambles	3	https://ktane.timwi.de/PDF/Simon%20Scrambles.pdf	noahcoolboy	2019-01-22	1
+Harmony Sequence	harmonySequence	3	https://ktane.timwi.de/PDF/Harmony%20Sequence.pdf	Goofy	2019-01-22	1
+Unfair Cipher	unfairCipher	5	https://ktane.timwi.de/PDF/Unfair%20Cipher.pdf	Maca	2019-01-23	1
+Melody Sequencer	melodySequencer	3	https://ktane.timwi.de/PDF/Melody%20Sequencer.pdf	Goofy	2019-01-27	1
+Colorful Insanity	ColorfulInsanity	3	https://ktane.timwi.de/PDF/Colorful%20Insanity.pdf	KingSlendy	2019-01-29	1
+Passport Control	passportControl	3	https://ktane.timwi.de/PDF/Passport%20Control.pdf	Crystlack	2019-01-30	1
+Left and Right	leftandRight	3	https://ktane.timwi.de/PDF/Left%20and%20Right.pdf	Goofy	2019-01-30	1
+Gadgetron Vendor	lgndGadgetronVendor	2	https://ktane.timwi.de/PDF/Gadgetron%20Vendor.pdf	LeGeND	2019-01-30	1
+Wingdings	WingdingsModule	3	https://ktane.timwi.de/PDF/Wingdings.pdf	Crystlack	2019-01-31	2
+The Hexabutton	hexabutton	3	https://ktane.timwi.de/PDF/The%20Hexabutton.pdf	"EpicToast, ryaninator81"	2019-02-05	1
+Genetic Sequence	geneticSequence	4	https://ktane.timwi.de/PDF/Genetic%20Sequence.pdf	"Vflyer, TheThirdMan"	2019-02-07	1
+Micro-Modules	KritMicroModules	4	https://ktane.timwi.de/PDF/Micro-Modules.pdf	Kritzy	2019-02-08	1
+Module Maze	ModuleMaze	3	https://ktane.timwi.de/PDF/Module%20Maze.pdf	"Blananas2, Riverbui"	2019-02-09	1
+Elder Futhark	elderFuthark	4	https://ktane.timwi.de/PDF/Elder%20Futhark.pdf	Goofy	2019-02-09	1
+Tasha Squeals	tashaSqueals	2	https://ktane.timwi.de/PDF/Tasha%20Squeals.pdf	"EpicToast, Pruz"	2019-02-11	1
+Forget This	forgetThis	4	https://ktane.timwi.de/PDF/Forget%20This.pdf	JerryEris	2019-02-12	1
+Digital Cipher	digitalCipher	2	https://ktane.timwi.de/PDF/Digital%20Cipher.pdf	Goofy	2019-02-16	1
+Subscribe to Pewdiepie	subscribeToPewdiepie	2	https://ktane.timwi.de/PDF/Subscribe%20to%20Pewdiepie.pdf	EpicToast	2019-02-18	1
+Grocery Store	groceryStore	2	https://ktane.timwi.de/PDF/Grocery%20Store.pdf	TheRealWitch	2019-02-18	1
+Draw	draw	1	https://ktane.timwi.de/PDF/Draw.pdf	TheRealWitch	2019-02-18	2
+Burger Alarm	burgerAlarm	4	https://ktane.timwi.de/PDF/Burger%20Alarm.pdf	EpicToast	2019-02-18	1
+Purgatory	PurgatoryModule	3	https://ktane.timwi.de/PDF/Purgatory.pdf	"red031000, 3D, cerulean"	2019-02-20	1
+Mega Man 2	megaMan2	2	https://ktane.timwi.de/PDF/Mega%20Man%202.pdf	Goofy	2019-02-20	1
+Lombax Cubes	lgndlLombaxCubes	4	https://ktane.timwi.de/PDF/Lombax%20Cubes.pdf	LeGeND	2019-02-20	1
+The Stare	StareModule	4	https://ktane.timwi.de/PDF/The%20Stare.pdf	"DVD, eXish"	2019-02-22	1
+Graphic Memory	graphicMemory	3	https://ktane.timwi.de/PDF/Graphic%20Memory.pdf	TheThirdMan	2019-02-23	1
+Quiz Buzz	quizBuzz	3	https://ktane.timwi.de/PDF/Quiz%20Buzz.pdf	JerryEris	2019-02-24	1
+Wavetapping	Wavetapping	4	https://ktane.timwi.de/PDF/Wavetapping.pdf	"KingSlendy, Lumbud84"	2019-02-25	1
+The Hypercube	TheHypercubeModule	2	https://ktane.timwi.de/PDF/The%20Hypercube.pdf	Timwi	2019-02-26	1
+Speak English	speakEnglish	2	https://ktane.timwi.de/PDF/Speak%20English.pdf	"TheRealWitch, Blananas2"	2019-02-27	2
+Stack'em	stackem	2	https://ktane.timwi.de/PDF/Stack%E2%80%98em.pdf	Goofy	2019-03-02	1
+Seven Wires	sevenWires	2	https://ktane.timwi.de/PDF/Seven%20Wires.pdf	"Atomik, ryaninator81"	2019-03-02	1
+Colored Keys	lgndColoredKeys	2	https://ktane.timwi.de/PDF/Colored%20Keys.pdf	LeGeND	2019-03-05	1
+The Troll	troll	3	https://ktane.timwi.de/PDF/The%20Troll.pdf	Royal_Flu$h	2019-03-09	1
+Planets	planets	3	https://ktane.timwi.de/PDF/Planets.pdf	"MrMelon, KingSlendy"	2019-03-10	1
+The Necronomicon	necronomicon	3	https://ktane.timwi.de/PDF/The%20Necronomicon.pdf	TheThirdMan	2019-03-20	1
+Four-Card Monte	Krit4CardMonte	4	https://ktane.timwi.de/PDF/Four-Card%20Monte.pdf	"Qkrisi, Kritzy"	2019-03-24	1
+Aa	aa	4	https://ktane.timwi.de/PDF/Aa.pdf	"Riverbui, Ryaninator81"	2019-03-27	2
+The Giant's Drink	giantsDrink	2	https://ktane.timwi.de/PDF/The%20Giant%E2%80%99s%20Drink.pdf	TheThirdMan	2019-04-03	1
+Digit String	digitString	2	https://ktane.timwi.de/PDF/Digit%20String.pdf	JerryEris	2019-04-03	1
+Alpha	lgndAlpha	1	https://ktane.timwi.de/PDF/Alpha.pdf	"edderiofer, LeGeND"	2019-04-03	2
+Snap!	lgndSnap	1	https://ktane.timwi.de/PDF/Snap!.pdf	LeGeND	2019-04-05	2
+Hidden Colors	lgndHiddenColors	2	https://ktane.timwi.de/PDF/Hidden%20Colors.pdf	LeGeND	2019-04-05	1
+Colour Code	colourcode	4	https://ktane.timwi.de/PDF/Colour%20Code.pdf	"MrMelon, TheBrewer32, KingSlendy"	2019-04-06	1
+Vexillology	vexillology	3	https://ktane.timwi.de/PDF/Vexillology.pdf	MrSpekCraft	2019-04-07	1
+Brush Strokes	brushStrokes	3	https://ktane.timwi.de/PDF/Brush%20Strokes.pdf	"EpicToast, Blananas2, TasThing"	2019-04-07	1
+Odd One Out	OddOneOutModule	4	https://ktane.timwi.de/PDF/Odd%20One%20Out.pdf	Timwi	2019-04-08	1
+The Triangle Button	theTriangleButton	2	https://ktane.timwi.de/PDF/The%20Triangle%20Button.pdf	JerryEris	2019-04-11	1
+Mazematics	mazematics	3	https://ktane.timwi.de/PDF/Mazematics.pdf	Skyeward	2019-04-11	1
+Equations X	equationsXModule	3	https://ktane.timwi.de/PDF/Equations%20X.pdf	eXish	2019-04-13	1
+Maze?	maze3	4	https://ktane.timwi.de/PDF/Maze%C2%B3.pdf	"Pruz, TheThirdMan"	2019-04-19	1
+Gryphons	gryphons	3	https://ktane.timwi.de/PDF/Gryphons.pdf	JerryEris	2019-04-28	1
+Arithmelogic	arithmelogic	4	https://ktane.timwi.de/PDF/Arithmelogic.pdf	JerryEris	2019-05-03	1
+Roman Art	romanArtModule	4	https://ktane.timwi.de/PDF/Roman%20Art.pdf	eXish	2019-05-05	1
+Faulty Sink	FaultySink	2	https://ktane.timwi.de/PDF/Faulty%20Sink.pdf	Riverbui	2019-05-06	1
+Simon Stops	simonStops	3	https://ktane.timwi.de/PDF/Simon%20Stops.pdf	JerryEris	2019-05-07	1
+Morse Buttons	morseButtons	3	https://ktane.timwi.de/PDF/Morse%20Buttons.pdf	"TheThirdMan, Vflyer"	2019-05-09	1
+Terraria Quiz	lgndTerrariaQuiz	2	https://ktane.timwi.de/PDF/Terraria%20Quiz.pdf	"TasThing, LeGeND"	2019-05-11	2
+Baba Is Who?	babaIsWho	3	https://ktane.timwi.de/PDF/Baba%20Is%20Who.pdf	Haddad5	2019-05-13	1
+Triangle Buttons	triangleButtons	2	https://ktane.timwi.de/PDF/Triangle%20Buttons.pdf	"hockeygoalie78, Pruz"	2019-05-16	2
+Simon Stores	simonStores	5	https://ktane.timwi.de/PDF/Simon%20Stores.pdf	Speakingevil	2019-05-16	1
+Risky Wires	riskyWires	3	https://ktane.timwi.de/PDF/Risky%20Wires.pdf	hockeygoalie78	2019-05-16	1
+Modulus Manipulation	modulusManipulation	4	https://ktane.timwi.de/PDF/Modulus%20Manipulation.pdf	hockeygoalie78	2019-05-16	1
+Daylight Directions	daylightDirections	2	https://ktane.timwi.de/PDF/Daylight%20Directions.pdf	hockeygoalie78	2019-05-16	1
+Cryptic Password	CrypticPassword	2	https://ktane.timwi.de/PDF/Cryptic%20Password.pdf	"hockeygoalie78, KingSlendy"	2019-05-19	1
+Stained Glass	stainedGlass	2	https://ktane.timwi.de/PDF/Stained%20Glass.pdf	"Pruz, Royal_Flu$h"	2019-05-21	1
+The Block	theBlock	2	https://ktane.timwi.de/PDF/The%20Block.pdf	EggFriedCheese	2019-05-22	1
+Bamboozling Button	bamboozlingButton	4	https://ktane.timwi.de/PDF/Bamboozling%20Button.pdf	Speakingevil	2019-05-23	1
+Insane Talk	insaneTalk	3	https://ktane.timwi.de/PDF/Insane%20Talk.pdf	"Riverbui, Ryaninator81"	2019-05-26	1
+Transmitted Morse	transmittedMorseModule	3	https://ktane.timwi.de/PDF/Transmitted%20Morse.pdf	eXish	2019-05-27	1
+A Mistake	MistakeModule	2	https://ktane.timwi.de/PDF/A%20Mistake.pdf	Espik	2019-05-30	1
+Red Arrows	redArrowsModule	1	https://ktane.timwi.de/PDF/Red%20Arrows.pdf	"Kusane, eXish"	2019-05-31	1
+Green Arrows	greenArrowsModule	1	https://ktane.timwi.de/PDF/Green%20Arrows.pdf	"Kusane, eXish"	2019-05-31	1
+Yellow Arrows	yellowArrowsModule	2	https://ktane.timwi.de/PDF/Yellow%20Arrows.pdf	"Kusane, eXish"	2019-06-01	1
+Encrypted Values	EncryptedValuesModule	2	https://ktane.timwi.de/PDF/Encrypted%20Values.pdf	"Lumbud84, samfun123"	2019-06-01	2
+Encrypted Equations	EncryptedEquationsModule	3	https://ktane.timwi.de/PDF/Encrypted%20Equations.pdf	"Lumbud84, samfun123"	2019-06-01	1
+Forget Them All	forgetThemAll	4	https://ktane.timwi.de/PDF/Forget%20Them%20All.pdf	"TheThirdMan, Vflyer"	2019-06-03	1
+Ordered Keys	orderedKeys	3	https://ktane.timwi.de/PDF/Ordered%20Keys.pdf	Speakingevil	2019-06-05	1
+Blue Arrows	blueArrowsModule	4	https://ktane.timwi.de/PDF/Blue%20Arrows.pdf	eXish	2019-06-06	1
+Sticky Notes	stickyNotes	3	https://ktane.timwi.de/PDF/Sticky%20Notes.pdf	EggFriedCheese	2019-06-07	1
+Unordered Keys	unorderedKeys	3	https://ktane.timwi.de/PDF/Unordered%20Keys.pdf	Speakingevil	2019-06-08	1
+Orange Arrows	orangeArrowsModule	1	https://ktane.timwi.de/PDF/Orange%20Arrows.pdf	eXish	2019-06-08	1
+Hyperactive Numbers	lgndHyperactiveNumbers	1	https://ktane.timwi.de/PDF/Hyperactive%20Numbers.pdf	LeGeND	2019-06-08	1
+Reordered Keys	reorderedKeys	4	https://ktane.timwi.de/PDF/Reordered%20Keys.pdf	Speakingevil	2019-06-10	1
+Button Grid	buttonGrid	1	https://ktane.timwi.de/PDF/Button%20Grid.pdf	"EpicToast, Asew54321"	2019-06-11	1
+Find The Date	DateFinder	2	https://ktane.timwi.de/PDF/Find%20The%20Date.pdf	Diavo	2019-06-12	1
+Misordered Keys	misorderedKeys	4	https://ktane.timwi.de/PDF/Misordered%20Keys.pdf	Speakingevil	2019-06-14	1
+The Matrix	matrix	2	https://ktane.timwi.de/PDF/The%20Matrix.pdf	Royal_Flu$h	2019-06-15	1
+Purple Arrows	purpleArrowsModule	2	https://ktane.timwi.de/PDF/Purple%20Arrows.pdf	eXish	2019-06-16	1
+Bordered Keys	borderedKeys	3	https://ktane.timwi.de/PDF/Bordered%20Keys.pdf	Speakingevil	2019-06-17	1
+The Dealmaker	thedealmaker	3	https://ktane.timwi.de/PDF/The%20Dealmaker.pdf	GHXX	2019-06-19	1
+Seven Deadly Sins	sevenDeadlySins	3	https://ktane.timwi.de/PDF/Seven%20Deadly%20Sins.pdf	"Blananas2, TheThirdMan"	2019-06-22	1
+The Ultracube	TheUltracubeModule	2	https://ktane.timwi.de/PDF/The%20Ultracube.pdf	"Timwi, GHXX"	2019-06-23	1
+Symbolic Colouring	symbolicColouring	2	https://ktane.timwi.de/PDF/Symbolic%20Colouring.pdf	"Kusane, TheThirdMan"	2019-06-24	1
+Recorded Keys	recordedKeys	4	https://ktane.timwi.de/PDF/Recorded%20Keys.pdf	Speakingevil	2019-06-26	1
+The Deck Of Many Things	deckOfManyThings	3	https://ktane.timwi.de/PDF/The%20Deck%20of%20Many%20Things.pdf	TheThirdMan	2019-06-29	1
+Disordered Keys	disorderedKeys	4	https://ktane.timwi.de/PDF/Disordered%20Keys.pdf	Speakingevil	2019-07-02	1
+Character Codes	characterCodes	1	https://ktane.timwi.de/PDF/Character%20Codes.pdf	"GHXX, Pruz"	2019-07-02	1
+Raiding Temples	raidingTemples	3	https://ktane.timwi.de/PDF/Raiding%20Temples.pdf	"ConManAU, TheThirdMan"	2019-07-03	1
+Bomb Diffusal	bombDiffusal	3	https://ktane.timwi.de/PDF/Bomb%20Diffusal.pdf	"EpicToast, TheThirdMan"	2019-07-04	1
+Tallordered Keys	tallorderedKeys	4	https://ktane.timwi.de/PDF/Tallordered%20Keys.pdf	Speakingevil	2019-07-07	1
+Pong	NeedyPong	1	https://ktane.timwi.de/PDF/Pong.pdf	IQuick 143	2019-07-07	2
+Ten Seconds	10seconds	1	https://ktane.timwi.de/PDF/Ten%20Seconds.pdf	nasko222	2019-07-08	2
+Cruel Ten Seconds	cruel10sec	1	https://ktane.timwi.de/PDF/Cruel%20Ten%20Seconds.pdf	nasko222	2019-07-08	2
+Double Expert	doubleExpert	3	https://ktane.timwi.de/PDF/Double%20Expert.pdf	"VFlyer, Kusane, TheThirdMan"	2019-07-09	1
+Calculus	calcModule	3	https://ktane.timwi.de/PDF/Calculus.pdf	"catcraze777, eXish"	2019-07-09	1
+Boolean Keypad	BooleanKeypad	2	https://ktane.timwi.de/PDF/Boolean%20Keypad.pdf	"Iquick 143, Mirage Xel"	2019-07-09	1
+Toon Enough	toonEnough	4	https://ktane.timwi.de/PDF/Toon%20Enough.pdf	"Sean Obach, Prissy"	2019-07-10	1
+Pictionary	pictionaryModule	2	https://ktane.timwi.de/PDF/Pictionary.pdf	catcraze777	2019-07-10	1
+Qwirkle	qwirkle	3	https://ktane.timwi.de/PDF/Qwirkle.pdf	"TasThing, TheThirdMan"	2019-07-11	1
+Antichamber	antichamber	2	https://ktane.timwi.de/PDF/Antichamber.pdf	nasko222	2019-07-12	1
+Simon Simons	simonSimons	2	https://ktane.timwi.de/PDF/Simon%20Simons.pdf	Red Penguin	2019-07-14	1
+Lucky Dice	luckyDice	2	https://ktane.timwi.de/PDF/Lucky%20Dice.pdf	"Mirage Xel, TheThirdMan"	2019-07-15	1
+Forget Enigma	forgetEnigma	5	https://ktane.timwi.de/PDF/Forget%20Enigma.pdf	Sean Obach	2019-07-15	1
+Constellations	constellations	2	https://ktane.timwi.de/PDF/Constellations.pdf	TheThirdMan	2019-07-15	1
+Prime Checker	PrimeChecker	1	https://ktane.timwi.de/PDF/Prime%20Checker.pdf	"Devster_LP, eXish"	2019-07-17	1
+Cruel Digital Root	cruelDigitalRootModule	1	https://ktane.timwi.de/PDF/Cruel%20Digital%20Root.pdf	"RubyBfdi, eXish"	2019-07-17	1
+Faulty Digital Root	faultyDigitalRootModule	1	https://ktane.timwi.de/PDF/Faulty%20Digital%20Root.pdf	"EpicToast, eXish"	2019-07-18	1
+The Crafting Table	needycrafting	3	https://ktane.timwi.de/PDF/The%20Crafting%20Table.pdf	nasko222	2019-07-18	2
+Boot Too Big	bootTooBig	1	https://ktane.timwi.de/PDF/Boot%20Too%20Big.pdf	"Blananas2, TheThirdMan"	2019-07-19	1
+Vigenère Cipher	vignereCipher	2	https://ktane.timwi.de/PDF/Vigen%C3%A8re%20Cipher.pdf	DevExit	2019-07-20	1
+Langton's Ant	langtonAnt	4	https://ktane.timwi.de/PDF/Langton%E2%80%99s%20Ant.pdf	"Pruz, TheThirdMan"	2019-07-22	1
+Old Fogey	oldFogey	4	https://ktane.timwi.de/PDF/Old%20Fogey.pdf	TheThirdMan	2019-07-23	1
+Insanagrams	insanagrams	3	https://ktane.timwi.de/PDF/Insanagrams.pdf	"AAces, Blananas2, TasThing"	2019-07-24	1
+Treasure Hunt	treasureHunt	2	https://ktane.timwi.de/PDF/Treasure%20Hunt.pdf	TheThirdMan	2019-07-26	1
+Snakes and Ladders	snakesAndLadders	2	https://ktane.timwi.de/PDF/Snakes%20and%20Ladders.pdf	"Blananas2, MrMelon"	2019-07-27	1
+Module Movements	moduleMovements	3	https://ktane.timwi.de/PDF/Module%20Movements.pdf	Red Penguin	2019-07-28	1
+Bamboozled Again	bamboozledAgain	5	https://ktane.timwi.de/PDF/Bamboozled%20Again.pdf	Speakingevil	2019-07-29	1
+Safety Square	safetySquare	3	https://ktane.timwi.de/PDF/Safety%20Square.pdf	Magejd	2019-07-30	1
+Roman Numerals	romanNumeralsModule	2	https://ktane.timwi.de/PDF/Roman%20Numerals.pdf	eXish	2019-07-30	2
+Colo(u)r Talk	colourTalk	3	https://ktane.timwi.de/PDF/Colo(u)r%20Talk.pdf	Blananas2	2019-07-31	1
+Annoying Arrows	lgndAnnoyingArrows	1	https://ktane.timwi.de/PDF/Annoying%20Arrows.pdf	LeGeND	2019-08-01	2
+Double Arrows	doubleArrows	3	https://ktane.timwi.de/PDF/Double%20Arrows.pdf	Speakingevil	2019-08-03	1
+Boolean Wires	booleanWires	3	https://ktane.timwi.de/PDF/Boolean%20Wires.pdf	Qkrisi	2019-08-03	1
+Block Stacks	blockStacks	1	https://ktane.timwi.de/PDF/Block%20Stacks.pdf	Blananas2	2019-08-03	2
+Vectors	vectorsModule	3	https://ktane.timwi.de/PDF/Vectors.pdf	eXish	2019-08-04	1
+Partial Derivatives	partialDerivatives	3	https://ktane.timwi.de/PDF/Partial%20Derivatives.pdf	Procyon	2019-08-04	1
+Caesar Cycle	caesarCycle	2	https://ktane.timwi.de/PDF/Caesar%20Cycle.pdf	Speakingevil	2019-08-04	1
+Needy Piano	needyPiano	2	https://ktane.timwi.de/PDF/Needy%20Piano.pdf	Red Penguin	2019-08-05	2
+Forget Us Not	forgetUsNot	4	https://ktane.timwi.de/PDF/Forget%20Us%20Not.pdf	"epictho, MarioXTurn"	2019-08-05	1
+Affine Cycle	affineCycle	3	https://ktane.timwi.de/PDF/Affine%20Cycle.pdf	Speakingevil	2019-08-06	1
+Pigpen Cycle	pigpenCycle	3	https://ktane.timwi.de/PDF/Pigpen%20Cycle.pdf	Speakingevil	2019-08-07	1
+Flower Patch	flowerPatch	3	https://ktane.timwi.de/PDF/Flower%20Patch.pdf	Blananas2	2019-08-08	1
+Playfair Cycle	playfairCycle	4	https://ktane.timwi.de/PDF/Playfair%20Cycle.pdf	Speakingevil	2019-08-09	1
+Jumble Cycle	jumbleCycle	4	https://ktane.timwi.de/PDF/Jumble%20Cycle.pdf	Speakingevil	2019-08-10	1
+Organization	organizationModule	4	https://ktane.timwi.de/PDF/Organization.pdf	eXish	2019-08-11	1
+Forget Perspective	qkForgetPerspective	5	https://ktane.timwi.de/PDF/Forget%20Perspective.pdf	Qkrisi	2019-08-11	1
+Alpha-Bits	alphaBits	3	https://ktane.timwi.de/PDF/Alpha-Bits.pdf	Procyon	2019-08-11	1
+Jack Attack	jackAttack	2	https://ktane.timwi.de/PDF/Jack%20Attack.pdf	"Blananas2, Deaf"	2019-08-15	1
+Ultimate Cycle	ultimateCycle	5	https://ktane.timwi.de/PDF/Ultimate%20Cycle.pdf	Speakingevil	2019-08-17	1
+Needlessly Complicated Button	needlesslyComplicatedButton	4	https://ktane.timwi.de/PDF/Needlessly%20Complicated%20Button.pdf	whamer100	2019-08-17	1
+Hill Cycle	hillCycle	4	https://ktane.timwi.de/PDF/Hill%20Cycle.pdf	Speakingevil	2019-08-17	1
+Binary	Binary	1	https://ktane.timwi.de/PDF/Binary.pdf	lexa	2019-08-17	1
+Chord Progressions	chordProgressions	3	https://ktane.timwi.de/PDF/Chord%20Progressions.pdf	Ultimate Mikey	2019-08-18	1
+Matchematics	matchematics	2	https://ktane.timwi.de/PDF/Matchematics.pdf	"IQuick 143, Blananas2"	2019-08-19	1
+Bob Barks	ksmBobBarks	3	https://ktane.timwi.de/PDF/Bob%20Barks.pdf	Kaito Sinclaire	2019-08-21	1
+Simon's On First	simonsOnFirst	3	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20On%20First.pdf	Royal_Flu$h	2019-08-23	1
+Weird Al Yankovic	weirdAlYankovic	2	https://ktane.timwi.de/PDF/Weird%20Al%20Yankovic.pdf	"StKildaFan, Royal_Flu$h, Blananas2"	2019-08-24	1
+Forget Me Now	ForgetMeNow	5	https://ktane.timwi.de/PDF/Forget%20Me%20Now.pdf	Espik	2019-08-24	1
+Simon Selects	simonSelectsModule	3	https://ktane.timwi.de/PDF/Simon%20Selects.pdf	"EpicToast, eXish"	2019-08-25	1
+The Witness	theWitness	3	https://ktane.timwi.de/PDF/The%20Witness.pdf	"Vflyer, bmo22xd"	2019-08-27	1
+Simon Literally Says	ksmSimonLitSays	1	https://ktane.timwi.de/PDF/Simon%20Literally%20Says.pdf	Kaito Sinclaire	2019-08-27	2
+Cryptic Cycle	crypticCycle	4	https://ktane.timwi.de/PDF/Cryptic%20Cycle.pdf	"Speakingevil, Sean Obach"	2019-08-27	1
+Bone Apple Tea	boneAppleTea	1	https://ktane.timwi.de/PDF/Bone%20Apple%20Tea.pdf	"technoturquoise, Blananas2"	2019-08-28	1
+Robot Programming	robotProgramming	3	https://ktane.timwi.de/PDF/Robot%20Programming.pdf	"Red Penguin, MarioXTurn"	2019-08-31	1
+Masyu	masyuModule	2	https://ktane.timwi.de/PDF/Masyu.pdf	"Ben, eXish"	2019-08-31	1
+Hold Ups	KritHoldUps	3	https://ktane.timwi.de/PDF/Hold%20Ups.pdf	Kritzy	2019-09-01	1
+Red Cipher	redCipher	4	https://ktane.timwi.de/PDF/Red%20Cipher.pdf	Sean Obach	2019-09-02	1
+Flash Memory	FlashMemory	1	https://ktane.timwi.de/PDF/Flash%20Memory.pdf	"KingSlendy, Lumbud84"	2019-09-03	1
+A-maze-ing Buttons	ksmAmazeingButtons	4	https://ktane.timwi.de/PDF/A-maze-ing%20Buttons.pdf	Kaito Sinclaire	2019-09-03	1
+Desert Bus	desertBus	1	https://ktane.timwi.de/PDF/Desert%20Bus.pdf	JerryEris	2019-09-06	2
+Orange Cipher	orangeCipher	4	https://ktane.timwi.de/PDF/Orange%20Cipher.pdf	Sean Obach	2019-09-07	1
+Common Sense	commonSense	1	https://ktane.timwi.de/PDF/Common%20Sense.pdf	Blananas2	2019-09-07	2
+The Very Annoying Button	veryAnnoyingButton	2	https://ktane.timwi.de/PDF/The%20Very%20Annoying%20Button.pdf	Speakingevil	2019-09-08	1
+Unown Cipher	UnownCipher	3	https://ktane.timwi.de/PDF/Unown%20Cipher.pdf	Espik	2019-09-08	1
+Needy Flower Mash	R4YNeedyFlowerMash	1	https://ktane.timwi.de/PDF/Needy%20Flower%20Mash.pdf	"R4Y, Rubybfdi"	2019-09-08	2
+TetraVex	ksmTetraVex	1	https://ktane.timwi.de/PDF/TetraVex.pdf	Kaito Sinclaire	2019-09-10	1
+Meter	meter	3	https://ktane.timwi.de/PDF/Meter.pdf	"Koscie, Alice"	2019-09-11	1
+Timing is Everything	timingIsEverything	1	https://ktane.timwi.de/PDF/Timing%20is%20Everything.pdf	"TheRealWitch, Blananas2"	2019-09-12	1
+The Modkit	modkit	3	https://ktane.timwi.de/PDF/The%20Modkit.pdf	TheThirdMan	2019-09-12	1
+Red Buttons	SamRedButtons	2	https://ktane.timwi.de/PDF/Red%20Buttons.pdf	Eltrick	2019-09-14	1
+The Rule	theRule	2	https://ktane.timwi.de/PDF/The%20Rule.pdf	Procyon	2019-09-15	1
+Fruits	fruits	2	https://ktane.timwi.de/PDF/Fruits.pdf	Red Penguin	2019-09-15	1
+Bamboozling Button Grid	bamboozlingButtonGrid	4	https://ktane.timwi.de/PDF/Bamboozling%20Button%20Grid.pdf	Speakingevil	2019-09-15	1
+Footnotes	footnotes	2	https://ktane.timwi.de/PDF/Footnotes.pdf	JerryEris	2019-09-16	1
+Lousy Chess	lousyChess	3	https://ktane.timwi.de/PDF/Lousy%20Chess.pdf	Groover	2019-09-18	1
+Module Listening	moduleListening	2	https://ktane.timwi.de/PDF/Module%20Listening.pdf	"Asew54321, TheThirdMan, VFlyer"	2019-09-20	1
+Garfield Kart	garfieldKart	3	https://ktane.timwi.de/PDF/Garfield%20Kart.pdf	"Deaf, Blananas2"	2019-09-21	1
+Yellow Cipher	yellowCipher	4	https://ktane.timwi.de/PDF/Yellow%20Cipher.pdf	Sean Obach	2019-09-22	1
+Kooky Keypad	kookyKeypadModule	3	https://ktane.timwi.de/PDF/Kooky%20Keypad.pdf	eXish	2019-09-22	1
+Green Cipher	greenCipher	3	https://ktane.timwi.de/PDF/Green%20Cipher.pdf	Sean Obach	2019-09-22	1
+RGB Maze	rgbMaze	4	https://ktane.timwi.de/PDF/RGB%20Maze.pdf	Speakingevil	2019-09-24	1
+Blue Cipher	blueCipher	3	https://ktane.timwi.de/PDF/Blue%20Cipher.pdf	Sean Obach	2019-09-26	1
+The Legendre Symbol	legendreSymbol	4	https://ktane.timwi.de/PDF/The%20Legendre%20Symbol.pdf	lingomaniac88	2019-09-27	1
+Keypad Lock	keypadLock	2	https://ktane.timwi.de/PDF/Keypad%20Lock.pdf	short_c1rcuit	2019-09-28	1
+Forget Me Later	forgetMeLater	4	https://ktane.timwi.de/PDF/Forget%20Me%20Later.pdf	Speakingevil	2019-09-28	1
+Übermodule	ubermodule	3	https://ktane.timwi.de/PDF/%C3%9Cbermodule.pdf	"VFlyer, Blananas2"	2019-09-29	1
+Heraldry	heraldry	3	https://ktane.timwi.de/PDF/Heraldry.pdf	TheThirdMan	2019-10-02	1
+Faulty RGB Maze	faultyrgbMaze	5	https://ktane.timwi.de/PDF/Faulty%20RGB%20Maze.pdf	Speakingevil	2019-10-04	1
+Indigo Cipher	indigoCipher	4	https://ktane.timwi.de/PDF/Indigo%20Cipher.pdf	Sean Obach	2019-10-07	1
+Violet Cipher	violetCipher	4	https://ktane.timwi.de/PDF/Violet%20Cipher.pdf	Sean Obach	2019-10-09	1
+Encryption Bingo	encryptionBingo	3	https://ktane.timwi.de/PDF/Encryption%20Bingo.pdf	"TasThing, Red Penguin"	2019-10-11	1
+Color Addition	colorAddition	2	https://ktane.timwi.de/PDF/Color%20Addition.pdf	KingBranBran	2019-10-11	1
+Chinese Counting	chineseCounting	2	https://ktane.timwi.de/PDF/Chinese%20Counting.pdf	TasThing	2019-10-11	1
+Tower Of Hanoi	towerOfHanoi	1	https://ktane.timwi.de/PDF/Tower%20of%20Hanoi.pdf	TheThirdMan	2019-10-13	1
+Keypad Combinations	keypadCombinations	3	https://ktane.timwi.de/PDF/Keypad%20Combinations.pdf	"short_c1rcuit, Pruz"	2019-10-14	1
+UltraStores	UltraStores	5	https://ktane.timwi.de/PDF/UltraStores.pdf	Speakingevil	2019-10-16	1
+Kanji	KanjiModule	2	https://ktane.timwi.de/PDF/Kanji.pdf	"Strike_Kaboom, LeGeND"	2019-10-16	1
+Geometry Dash	geometryDashModule	3	https://ktane.timwi.de/PDF/Geometry%20Dash.pdf	eXish	2019-10-17	1
+Ternary Converter	qkTernaryConverter	3	https://ktane.timwi.de/PDF/Ternary%20Converter.pdf	Qkrisi	2019-10-18	1
+N&Ms	NandMs	1	https://ktane.timwi.de/PDF/N%26Ms.pdf	"TasThing, Pruz"	2019-10-19	1
+Eight Pages	lgndEightPages	2	https://ktane.timwi.de/PDF/Eight%20Pages.pdf	"LeGeND, Strike_Kaboom"	2019-10-20	2
+The Colored Maze	coloredMaze	1	https://ktane.timwi.de/PDF/The%20Colored%20Maze.pdf	Red Penguin	2019-10-20	1
+White Cipher	whiteCipher	4	https://ktane.timwi.de/PDF/White%20Cipher.pdf	Sean Obach	2019-10-21	1
+Gray Cipher	grayCipher	3	https://ktane.timwi.de/PDF/Gray%20Cipher.pdf	Sean Obach	2019-10-22	1
+The Hyperlink	hyperlink	3	https://ktane.timwi.de/PDF/The%20Hyperlink.pdf	"Blananas2, Deaf"	2019-10-25	1
+Black Cipher	blackCipher	4	https://ktane.timwi.de/PDF/Black%20Cipher.pdf	Sean Obach	2019-10-25	1
+Loopover	loopover	1	https://ktane.timwi.de/PDF/Loopover.pdf	TasThing	2019-11-01	1
+Divisible Numbers	divisibleNumbers	2	https://ktane.timwi.de/PDF/Divisible%20Numbers.pdf	"short_c1rcuit, Rdzanu"	2019-11-03	1
+Corners	CornersModule	2	https://ktane.timwi.de/PDF/Corners.pdf	"Timwi, Pruz"	2019-11-03	1
+The High Score	ksmHighScore	3	https://ktane.timwi.de/PDF/The%20High%20Score.pdf	Kaito Sinclaire	2019-11-06	1
+Ingredients	ingredients	3	https://ktane.timwi.de/PDF/Ingredients.pdf	lingomaniac88	2019-11-09	1
+Jenga	jenga	2	https://ktane.timwi.de/PDF/Jenga.pdf	"nasko222, Pruz"	2019-11-11	1
+Intervals	intervals	1	https://ktane.timwi.de/PDF/Intervals.pdf	KingBranBran	2019-11-11	1
+Cruel Boolean Maze	boolMazeCruel	4	https://ktane.timwi.de/PDF/Cruel%20Boolean%20Maze.pdf	Theta	2019-11-11	1
+Cheep Checkout	cheepCheckout	2	https://ktane.timwi.de/PDF/Cheep%20Checkout.pdf	"Blananas2, EpicToast"	2019-11-14	1
+Spelling Bee	spellingBee	2	https://ktane.timwi.de/PDF/Spelling%20Bee.pdf	"Asew54321, Blananas2"	2019-11-15	1
+Memorable Buttons	memorableButtons	3	https://ktane.timwi.de/PDF/Memorable%20Buttons.pdf	Royal_Flu$h	2019-11-16	1
+Thinking Wires	thinkingWiresModule	3	https://ktane.timwi.de/PDF/Thinking%20Wires.pdf	"kavinkul, Blananas2"	2019-11-17	1
+Seven Choose Four	sevenChooseFour	4	https://ktane.timwi.de/PDF/Seven%20Choose%20Four.pdf	Theta	2019-11-19	1
+Object Shows	objectShows	3	https://ktane.timwi.de/PDF/Object%20Shows.pdf	TasThing	2019-11-19	1
+Lunchtime	lunchtime	4	https://ktane.timwi.de/PDF/Lunchtime.pdf	nasko222	2019-11-23	1
+Natures	mcdNatures	2	https://ktane.timwi.de/PDF/Natures.pdf	mcd573	2019-11-26	1
+Neutrinos	neutrinos	4	https://ktane.timwi.de/PDF/Neutrinos.pdf	Theta	2019-11-27	1
+Scavenger Hunt	scavengerHunt	2	https://ktane.timwi.de/PDF/Scavenger%20Hunt.pdf	TasThing	2019-11-29	1
+Polygons	polygons	2	https://ktane.timwi.de/PDF/Polygons.pdf	TasThing	2019-12-05	1
+Ultimate Cipher	ultimateCipher	5	https://ktane.timwi.de/PDF/Ultimate%20Cipher.pdf	Sean Obach	2019-12-09	1
+Codenames	codenames	4	https://ktane.timwi.de/PDF/Codenames.pdf	TasThing	2019-12-12	1
+Odd Mod Out	lgndOddModOut	1	https://ktane.timwi.de/PDF/Odd%20Mod%20Out.pdf	LeGeND	2019-12-13	2
+Logic Statement	logicStatement	2	https://ktane.timwi.de/PDF/Logic%20Statement.pdf	"short_c1rcuit, Rdzanu"	2019-12-15	2
+Blinkstop	blinkstopModule	3	https://ktane.timwi.de/PDF/Blinkstop.pdf	"Pruz, eXish"	2019-12-15	1
+Ultimate Custom Night	qkUCN	1	https://ktane.timwi.de/PDF/Ultimate%20Custom%20Night.pdf	Qkrisi	2019-12-16	1
+Hinges	hinges	4	https://ktane.timwi.de/PDF/Hinges.pdf	KingBranBran	2019-12-17	1
+Time Accumulation	timeAccumulation	2	https://ktane.timwi.de/PDF/Time%20Accumulation.pdf	"VFlyer, Kusane"	2019-12-18	1
+?	nonverbalSimon	2	https://ktane.timwi.de/PDF/%E2%9D%96.pdf	"VFlyer, Mirage Xel"	2019-12-18	1
+Forget It Not	forgetItNot	2	https://ktane.timwi.de/PDF/Forget%20It%20Not.pdf	"VFlyer, RubyBfdi"	2019-12-18	1
+egg	bigegg	1	https://ktane.timwi.de/PDF/egg.pdf	"Danny7007, Red Penguin, eXish"	2019-12-18	1
+BuzzFizz	buzzfizz	2	https://ktane.timwi.de/PDF/BuzzFizz.pdf	"VFlyer, Blananas2"	2019-12-18	2
+Answering Can Be Fun	AnsweringCanBeFun	3	https://ktane.timwi.de/PDF/Answering%20Can%20Be%20Fun.pdf	Espik	2019-12-18	1
+3x3 Grid	3x3Grid	2	https://ktane.timwi.de/PDF/3x3%20Grid.pdf	"VFlyer, Lumbud84"	2019-12-18	2
+15 Mystic Lights	15MysticLights	1	https://ktane.timwi.de/PDF/15%20Mystic%20Lights.pdf	VFlyer	2019-12-18	1
+14	14	5	https://ktane.timwi.de/PDF/14.pdf	Speakingevil	2019-12-18	1
+Rainbow Arrows	ksmRainbowArrows	4	https://ktane.timwi.de/PDF/Rainbow%20Arrows.pdf	Kaito Sinclaire	2019-12-19	1
+Time Signatures	timeSignatures	2	https://ktane.timwi.de/PDF/Time%20Signatures.pdf	KingBranBran	2019-12-21	1
+Multi-Colored Switches	R4YMultiColoredSwitches	3	https://ktane.timwi.de/PDF/Multi-Colored%20Switches.pdf	"R4Y, Danny7007"	2019-12-21	1
+Digital Dials	digitalDials	3	https://ktane.timwi.de/PDF/Digital%20Dials.pdf	Sean Obach	2019-12-21	1
+Passcodes	xtrpasscodes	2	https://ktane.timwi.de/PDF/Passcodes.pdf	Xtrouble835	2019-12-22	1
+Hereditary Base Notation	hereditaryBaseNotationModule	4	https://ktane.timwi.de/PDF/Hereditary%20Base%20Notation.pdf	kavinkul	2019-12-22	1
+Lines Of Code	linesOfCode	3	https://ktane.timwi.de/PDF/Lines%20of%20Code.pdf	Blananas2	2019-12-23	1
+The cRule	the_cRule	4	https://ktane.timwi.de/PDF/The%20cRule.pdf	Procyon	2019-12-23	1
+Prime Encryption	primeEncryption	5	https://ktane.timwi.de/PDF/Prime%20Encryption.pdf	Royal_Flu$h	2019-12-24	1
+Encrypted Dice	EncryptedDice	2	https://ktane.timwi.de/PDF/Encrypted%20Dice.pdf	Espik	2019-12-24	1
+Colorful Dials	colorfulDials	3	https://ktane.timwi.de/PDF/Colorful%20Dials.pdf	Sean Obach	2019-12-24	1
+Naughty Or Nice	lgndNaughtyOrNice	2	https://ktane.timwi.de/PDF/Naughty%20or%20Nice.pdf	LeGeND	2019-12-26	2
+Following Orders	FollowingOrders	3	https://ktane.timwi.de/PDF/Following%20Orders.pdf	"Espik, MarioXTurn, Noah, Sean"	2019-12-27	1
+Atbash Cipher	AtbashCipherModule	3	https://ktane.timwi.de/PDF/Atbash%20Cipher.pdf	"Eltrick, cerulean"	2019-12-27	1
+Addition	AdditionModule	2	https://ktane.timwi.de/PDF/Addition.pdf	"Eltrick, Mirage Xel"	2019-12-27	1
+Binary Grid	binaryGrid	3	https://ktane.timwi.de/PDF/Binary%20Grid.pdf	Betshet	2019-12-28	1
+Matrices	MatrixQuiz	5	https://ktane.timwi.de/PDF/Matrices.pdf	IQuick 143	2019-12-29	1
+Cruel Keypads	CruelKeypads	4	https://ktane.timwi.de/PDF/Cruel%20Keypads.pdf	Marksam32	2019-12-29	1
+The Black Page	TheBlackPage	2	https://ktane.timwi.de/PDF/The%20Black%20Page.pdf	Espik	2019-12-29	1
+64	64	4	https://ktane.timwi.de/PDF/64.pdf	KingBranBran	2019-12-29	1
+% Grey	PercentageGreyModule	1	https://ktane.timwi.de/PDF/%25%20Grey.pdf	"Eltrick, Pruz"	2019-12-29	1
+Simon Forgets	simonForgets	5	https://ktane.timwi.de/PDF/Simon%20Forgets.pdf	"Kusane, nol2coco"	2019-12-30	1
+Greek Letter Grid	greekLetterGrid	2	https://ktane.timwi.de/PDF/Greek%20Letter%20Grid.pdf	IcyPenguin_	2020-01-04	1
+Bamboozling Time Keeper	bamboozlingTimeKeeper	5	https://ktane.timwi.de/PDF/Bamboozling%20Time%20Keeper.pdf	"VFlyer, Speakingevil"	2020-01-08	1
+Going Backwards	GoingBackwardsModule	1	https://ktane.timwi.de/PDF/Going%20Backwards.pdf	"Eltrick, TechnoTurquoise"	2020-01-10	1
+Scalar Dials	scalarDials	4	https://ktane.timwi.de/PDF/Scalar%20Dials.pdf	Sean Obach	2020-01-11	1
+The World's Largest Button	WorldsLargestButton	3	https://ktane.timwi.de/PDF/The%20World%E2%80%99s%20Largest%20Button.pdf	Espik	2020-01-13	1
+Keywords	xtrkeywords	2	https://ktane.timwi.de/PDF/Keywords.pdf	Xtrouble835	2020-01-15	1
+State Of Aggregation	stateOfAggregation	3	https://ktane.timwi.de/PDF/State%20of%20Aggregation.pdf	Sir Bl4ckL1on	2020-01-15	1
+Dreamcipher	ksmDreamcipher	4	https://ktane.timwi.de/PDF/Dreamcipher.pdf	Kaito Sinclaire	2020-01-16	1
+Brainf----	brainf	4	https://ktane.timwi.de/PDF/Brainf---.pdf	"short_c1rcuit, IQuick 143"	2020-01-18	1
+Rotating Squares	rotatingSquares	3	https://ktane.timwi.de/PDF/Rotating%20Squares.pdf	"TasThing, Kusane"	2020-01-20	2
+Red Light Green Light	redLightGreenLight	2	https://ktane.timwi.de/PDF/Red%20Light%20Green%20Light.pdf	"TasThing, Pruz"	2020-01-20	2
+Marco Polo	marcoPolo	1	https://ktane.timwi.de/PDF/Marco%20Polo.pdf	TasThing	2020-01-20	2
+Hyperneedy	hyperneedy	5	https://ktane.timwi.de/PDF/Hyperneedy.pdf	TasThing	2020-01-20	2
+Echolocation	echolocation	4	https://ktane.timwi.de/PDF/Echolocation.pdf	"Blananas2, Deaf"	2020-01-20	1
+Boozleglyph Identification	boozleglyphIdentification	2	https://ktane.timwi.de/PDF/Boozleglyph%20Identification.pdf	TasThing	2020-01-20	2
+Boxing	boxing	3	https://ktane.timwi.de/PDF/Boxing.pdf	TasThing	2020-01-21	1
+Topsy Turvy	topsyTurvy	2	https://ktane.timwi.de/PDF/Topsy%20Turvy.pdf	"TasThing, Pruz"	2020-01-22	1
+Railway Cargo Loading	RailwayCargoLoading	3	https://ktane.timwi.de/PDF/Railway%20Cargo%20Loading.pdf	S.	2020-01-23	1
+Conditional Buttons	conditionalButtons	2	https://ktane.timwi.de/PDF/Conditional%20Buttons.pdf	HammerPiano	2020-01-24	1
+ASCII Art	asciiArt	3	https://ktane.timwi.de/PDF/ASCII%20Art.pdf	Betshet	2020-01-24	1
+Semamorse	semamorse	3	https://ktane.timwi.de/PDF/Semamorse.pdf	TasThing	2020-01-25	1
+Hide and Seek	hideAndSeek	1	https://ktane.timwi.de/PDF/Hide%20and%20Seek.pdf	Red Penguin	2020-01-27	2
+Symbolic Tasha	symbolicTasha	2	https://ktane.timwi.de/PDF/Symbolic%20Tasha.pdf	"TasThing, Pruz"	2020-01-29	1
+Alphabetical Ruling	alphabeticalRuling	3	https://ktane.timwi.de/PDF/Alphabetical%20Ruling.pdf	"Finder, eXish"	2020-01-30	1
+Microphone	Microphone	3	https://ktane.timwi.de/PDF/Microphone.pdf	S.	2020-02-01	1
+Widdershins	widdershins	1	https://ktane.timwi.de/PDF/Widdershins.pdf	"TasThing, EpicToast"	2020-02-02	1
+Lockpick Maze	KritLockpickMaze	3	https://ktane.timwi.de/PDF/Lockpick%20Maze.pdf	Kritzy	2020-02-04	1
+Dimension Disruption	dimensionDisruption	2	https://ktane.timwi.de/PDF/Dimension%20Disruption.pdf	Blananas2	2020-02-04	1
+V	V	3	https://ktane.timwi.de/PDF/V.pdf	"Qkrisi, Cyber28"	2020-02-07	1
+Silhouettes	silhouettes	2	https://ktane.timwi.de/PDF/Silhouettes.pdf	Speakingevil	2020-02-08	2
+A Message	AMessage	3	https://ktane.timwi.de/PDF/A%20Message.pdf	BigCrunch22	2020-02-08	1
+Alliances	alliances	4	https://ktane.timwi.de/PDF/Alliances.pdf	TWGaming	2020-02-08	1
+Dungeon	dungeon	4	https://ktane.timwi.de/PDF/Dungeon.pdf	Betshet	2020-02-09	1
+Unicode	UnicodeModule	3	https://ktane.timwi.de/PDF/Unicode.pdf	"Marksam32, Danny7007"	2020-02-11	1
+Password Generator	pwGenerator	2	https://ktane.timwi.de/PDF/Password%20Generator.pdf	Fang	2020-02-13	1
+Baccarat	baccarat	4	https://ktane.timwi.de/PDF/Baccarat.pdf	lingomaniac88	2020-02-14	1
+Guess Who?	GuessWho	2	https://ktane.timwi.de/PDF/Guess%20Who.pdf	"BigCrunch22, Blananas2"	2020-02-15	1
+Reverse Alphabetize	ReverseAlphabetize	2	https://ktane.timwi.de/PDF/Reverse%20Alphabetize.pdf	"BigCrunch22, Pruz, Devster_LP"	2020-02-17	1
+Alphabetize	Alphabetize	2	https://ktane.timwi.de/PDF/Alphabetize.pdf	"BigCrunch22, Pruz, Devster_LP"	2020-02-17	1
+Gatekeeper	gatekeeper	1	https://ktane.timwi.de/PDF/Gatekeeper.pdf	Lapraniteon	2020-02-20	1
+Light Bulbs	LightBulbs	1	https://ktane.timwi.de/PDF/Light%20Bulbs.pdf	"BigCrunch22, Devster_LP"	2020-02-22	1
+1000 Words	OneThousandWords	2	https://ktane.timwi.de/PDF/1000%20Words.pdf	"BigCrunch22, Pruz"	2020-02-24	1
+Five Letter Words	FiveLetterWords	2	https://ktane.timwi.de/PDF/Five%20Letter%20Words.pdf	"BigCrunch22, Pruz"	2020-02-25	1
+Settlers Of KTaNE	SettlersOfKTaNE	3	https://ktane.timwi.de/PDF/Settlers%20of%20KTaNE.pdf	"GeekYiwen, ConManAU"	2020-02-26	1
+The Hidden Value	theHiddenValue	2	https://ktane.timwi.de/PDF/The%20Hidden%20Value.pdf	"Sean Obach, Pruz, KingBranBran"	2020-02-28	1
+Red	RedNeedy	2	https://ktane.timwi.de/PDF/Red.pdf	Pruz	2020-02-29	2
+Blue	BlueNeedy	2	https://ktane.timwi.de/PDF/Blue.pdf	Pruz	2020-02-29	2
+Directional Button	directionalButton	1	https://ktane.timwi.de/PDF/Directional%20Button.pdf	Cooldoom5	2020-03-01	1
+…?	punctuationMarks	2	https://ktane.timwi.de/PDF/Punctuation%20Marks.pdf	"Red Penguin, Asew54321"	2020-03-01	1
+The Simpleton	SimpleButton	1	https://ktane.timwi.de/PDF/The%20Simpleton.pdf	BigCrunch22	2020-03-02	1
+Misery Squares	SquaresOfMisery	5	https://ktane.timwi.de/PDF/Misery%20Squares.pdf	BigCrunch22	2020-03-02	1
+Not Wiresword	NotWiresword	2	https://ktane.timwi.de/PDF/Not%20Wiresword.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Wire Sequence	NotWireSequence	4	https://ktane.timwi.de/PDF/Not%20Wire%20Sequence.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Who's On First	NotWhosOnFirst	4	https://ktane.timwi.de/PDF/Not%20Who%E2%80%99s%20on%20First.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Simaze	NotSimaze	2	https://ktane.timwi.de/PDF/Not%20Simaze.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Password	NotPassword	2	https://ktane.timwi.de/PDF/Not%20Password.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Morse Code	NotMorseCode	2	https://ktane.timwi.de/PDF/Not%20Morse%20Code.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Memory	NotMemory	2	https://ktane.timwi.de/PDF/Not%20Memory.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Maze	NotMaze	2	https://ktane.timwi.de/PDF/Not%20Maze.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Keypad	NotKeypad	2	https://ktane.timwi.de/PDF/Not%20Keypad.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Complicated Wires	NotComplicatedWires	3	https://ktane.timwi.de/PDF/Not%20Complicated%20Wires.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Not Capacitor Discharge	NotCapacitorDischarge	2	https://ktane.timwi.de/PDF/Not%20Capacitor%20Discharge.pdf	"Kusane, Andrio Celos"	2020-03-06	2
+Not The Button	NotButton	3	https://ktane.timwi.de/PDF/Not%20the%20Button.pdf	"Kusane, Andrio Celos"	2020-03-06	1
+Sequences	sequencesModule	3	https://ktane.timwi.de/PDF/Sequences.pdf	eXish	2020-03-07	1
+Dungeon 2nd Floor	dungeon2	4	https://ktane.timwi.de/PDF/Dungeon%202nd%20Floor.pdf	Betshet	2020-03-07	1
+Wire Ordering	kataWireOrdering	2	https://ktane.timwi.de/PDF/Wire%20Ordering.pdf	"Katarina, EpicToast"	2020-03-08	1
+Vcrcs	VCRCS	2	https://ktane.timwi.de/PDF/Vcrcs.pdf	"BigCrunch22, Pruz"	2020-03-08	1
+Quaternions	quaternions	3	https://ktane.timwi.de/PDF/Quaternions.pdf	lingomaniac88	2020-03-09	1
+Abstract Sequences	abstractSequences	4	https://ktane.timwi.de/PDF/Abstract%20Sequences.pdf	TWGaming	2020-03-10	1
+osu!	osu	2	https://ktane.timwi.de/PDF/osu!.pdf	Limeboy	2020-03-12	1
+Shifting Maze	MazeShifting	3	https://ktane.timwi.de/PDF/Shifting%20Maze.pdf	BigCrunch22	2020-03-13	1
+Banana	bananaNeedy	1	https://ktane.timwi.de/PDF/Banana.pdf	"Pruz, Eltrick"	2020-03-13	2
+Sorting	sorting	2	https://ktane.timwi.de/PDF/Sorting.pdf	Emik	2020-03-14	1
+Role Reversal	roleReversal	2	https://ktane.timwi.de/PDF/Role%20Reversal.pdf	Emik	2020-03-14	1
+Placeholder Talk	placeholderTalk	3	https://ktane.timwi.de/PDF/Placeholder%20Talk.pdf	Emik	2020-03-14	1
+Art Appreciation	AppreciateArt	2	https://ktane.timwi.de/PDF/Art%20Appreciation.pdf	Bashly	2020-03-14	1
+Cruel Boolean Math	cruelBoolMathNeedy	1	https://ktane.timwi.de/PDF/Cruel%20Boolean%20Math.pdf	"Danny7007, Eltrick"	2020-03-15	2
+Boolean Math	boolMathNeedy	1	https://ktane.timwi.de/PDF/Boolean%20Math.pdf	"Danny7007, Eltrick"	2020-03-15	2
+Shell Game	shellGame	2	https://ktane.timwi.de/PDF/Shell%20Game.pdf	"TasThing, Zawu"	2020-03-16	1
+Pattern Lock	patternLock	2	https://ktane.timwi.de/PDF/Pattern%20Lock.pdf	ComputerCow	2020-03-16	1
+Quick Arithmetic	QuickArithmetic	2	https://ktane.timwi.de/PDF/Quick%20Arithmetic.pdf	"Deaf, Blananas2"	2020-03-17	1
+Minecraft Cipher	minecraftCipher	4	https://ktane.timwi.de/PDF/Minecraft%20Cipher.pdf	"Limeboy, Katarina, BananaLord"	2020-03-17	1
+Cheat Checkout	kataCheatCheckout	3	https://ktane.timwi.de/PDF/Cheat%20Checkout.pdf	"Katarina, BigCrunch22"	2020-03-17	1
+The Samsung	theSamsung	4	https://ktane.timwi.de/PDF/The%20Samsung.pdf	"TasThing, Deaf"	2020-03-18	1
+Forget The Colors	ForgetTheColors	5	https://ktane.timwi.de/PDF/Forget%20The%20Colors.pdf	"Cooldoom5, Emik"	2020-03-18	1
+Colour Flash PL	ColourFlashPL	2	https://ktane.timwi.de/PDF/Colour%20Flash%20translated%20(Polski%20%E2%80%94%20Color%20Flash).pdf	gaddemytx	2020-03-22	1
+Word Search PL	WordSearchPL	2	https://ktane.timwi.de/PDF/Word%20Search%20translated%20(Polski%20%E2%80%94%20Wykre%C5%9Blanka).pdf	gaddemytx	2020-03-22	1
+Etterna	etterna	1	https://ktane.timwi.de/PDF/Etterna.pdf	Emik	2020-03-23	1
+Recolored Switches	R4YRecoloredSwitches	2	https://ktane.timwi.de/PDF/Recolored%20Switches.pdf	"R4Y, Danny7007"	2020-03-24	1
+Cruel Garfield Kart	CruelGarfieldKart	4	https://ktane.timwi.de/PDF/Cruel%20Garfield%20Kart.pdf	Deaf	2020-03-24	1
+1D Maze	OneDimensionalMaze	3	https://ktane.timwi.de/PDF/1D%20Maze.pdf	Deaf	2020-03-25	1
+Reverse Polish Notation	revPolNot	4	https://ktane.timwi.de/PDF/Reverse%20Polish%20Notation.pdf	"short_c1rcuit, Rdzanu"	2020-03-26	1
+Snowflakes	snowflakes	4	https://ktane.timwi.de/PDF/Snowflakes.pdf	TasThing	2020-03-27	1
+Funny Numbers	FunnyNumbers	2	https://ktane.timwi.de/PDF/Funny%20Numbers.pdf	"Deaf, Blananas2"	2020-03-28	1
+Label Priorities	LabelPrioritiesModule	2	https://ktane.timwi.de/PDF/Label%20Priorities.pdf	"Kusane, Eltrick"	2020-03-29	1
+Numbered Buttons	numberedButtonsModule	2	https://ktane.timwi.de/PDF/Numbered%20Buttons.pdf	"Kusane, Eltrick"	2020-03-30	1
+Exoplanets	exoplanets	4	https://ktane.timwi.de/PDF/Exoplanets.pdf	"TasThing, EpicToast"	2020-03-30	1
+Insane Talk PL	insaneTalkPL	3	https://ktane.timwi.de/PDF/Insane%20Talk%20translated%20(Polski%20%E2%80%94%20Szalona%20Gadka).pdf	gaddemytx	2020-03-30	1
+Simon Stages	simonStages	5	https://ktane.timwi.de/PDF/Simon%20Stages.pdf	"VFlyer, Madela"	2020-03-31	1
+Not Venting Gas	NotVentingGas	2	https://ktane.timwi.de/PDF/Not%20Venting%20Gas.pdf	"Kusane, Andrio Celos"	2020-03-31	2
+Forget Infinity	forgetInfinity	3	https://ktane.timwi.de/PDF/Forget%20Infinity.pdf	"VFlyer, ry00001, Oshisure"	2020-03-31	1
+Faulty Seven Segment Displays	faulty7SegmentDisplays	1	https://ktane.timwi.de/PDF/Faulty%20Seven%20Segment%20Displays.pdf	VFlyer	2020-03-31	2
+Stock Images	StockImages	2	https://ktane.timwi.de/PDF/Stock%20Images.pdf	Deaf	2020-04-01	1
+Roger	roger	3	https://ktane.timwi.de/PDF/Roger.pdf	Blananas2	2020-04-01	1
+Malfunctions	malfunctions	5	https://ktane.timwi.de/PDF/Malfunctions.pdf	JerryEris	2020-04-01	1
+Minecraft Parody	minecraftParody	2	https://ktane.timwi.de/PDF/Minecraft%20Parody.pdf	Limeboy	2020-04-02	1
+Shuffled Strings	shuffledStrings	2	https://ktane.timwi.de/PDF/Shuffled%20Strings.pdf	"TechnoTurquoise, ExE"	2020-04-04	2
+NumberWang	kikiNumberWang	2	https://ktane.timwi.de/PDF/NumberWang.pdf	Kiki	2020-04-04	1
+Minecraft Survival	kataMinecraftSurvival	3	https://ktane.timwi.de/PDF/Minecraft%20Survival.pdf	Katarina	2020-04-04	1
+RPS Judging	RPSJudging	3	https://ktane.timwi.de/PDF/RPS%20Judging.pdf	BigCrunch22	2020-04-05	1
+Fencing	fencing	3	https://ktane.timwi.de/PDF/Fencing.pdf	sgnurf	2020-04-05	1
+Strike/Solve	strikeSolve	1	https://ktane.timwi.de/PDF/StrikeSolve.pdf	"Porta, mcd573"	2020-04-07	1
+Uncolored Switches	R4YUncoloredSwitches	3	https://ktane.timwi.de/PDF/Uncolored%20Switches.pdf	"R4Y, Danny7007"	2020-04-09	1
+The Twin	TheTwinModule	5	https://ktane.timwi.de/PDF/The%20Twin.pdf	kavinkul	2020-04-09	1
+Name Changer	nameChanger	1	https://ktane.timwi.de/PDF/Name%20Changer.pdf	Finder	2020-04-10	1
+Just Numbers	JustNumbersModule	1	https://ktane.timwi.de/PDF/Just%20Numbers.pdf	"bomberjack, Eltrick"	2020-04-11	1
+Lying Indicators	lyingIndicators	3	https://ktane.timwi.de/PDF/Lying%20Indicators.pdf	Emik	2020-04-13	1
+Flag Identification	needyFlagIdentification	2	https://ktane.timwi.de/PDF/Flag%20Identification.pdf	"GeekYiwen, weird"	2020-04-13	2
+Training Text	TrainingText	4	https://ktane.timwi.de/PDF/Training%20Text.pdf	Espik	2020-04-14	1
+Wonder Cipher	WonderCipher	5	https://ktane.timwi.de/PDF/Wonder%20Cipher.pdf	Espik	2020-04-15	1
+Caesar's Maths	caesarsMaths	3	https://ktane.timwi.de/PDF/Caesar%E2%80%99s%20Maths.pdf	calvenable	2020-04-15	1
+Random Access Memory	RAM	1	https://ktane.timwi.de/PDF/Random%20Access%20Memory.pdf	Fang	2020-04-18	1
+Triamonds	triamonds	2	https://ktane.timwi.de/PDF/Triamonds.pdf	Obvious	2020-04-19	1
+Stars	stars	2	https://ktane.timwi.de/PDF/Stars.pdf	"Cyber12, BigCrunch22"	2020-04-20	1
+Button Order	buttonOrder	1	https://ktane.timwi.de/PDF/Button%20Order.pdf	Samlooper	2020-04-20	1
+Jukebox.WAV	JukeboxWAV	4	https://ktane.timwi.de/PDF/Jukebox.WAV.pdf	Deaf	2020-04-21	1
+Elder Password	elderPassword	3	https://ktane.timwi.de/PDF/Elder%20Password.pdf	Goofy	2020-04-21	1
+Switching Maze	MazeSwitching	3	https://ktane.timwi.de/PDF/Switching%20Maze.pdf	BigCrunch22	2020-04-22	1
+Iconic	iconic	1	https://ktane.timwi.de/PDF/Iconic.pdf	Blananas2	2020-04-22	1
+Mystery Module	mysterymodule	3	https://ktane.timwi.de/PDF/Mystery%20Module.pdf	"Goofy, Irkkanu, samfun123"	2020-04-23	1
+Ladder Lottery	ladderLottery	1	https://ktane.timwi.de/PDF/Ladder%20Lottery.pdf	"ConManAU, noi2coco"	2020-04-23	1
+Co-op Harmony Sequence	coopharmonySequence	2	https://ktane.timwi.de/PDF/Co-op%20Harmony%20Sequence.pdf	Goofy	2020-04-24	1
+Standard Crazy Talk	StandardCrazyTalk	1	https://ktane.timwi.de/PDF/Standard%20Crazy%20Talk.pdf	"Deaf, Blananas2, Xmaster6726"	2020-04-26	1
+Quote Crazy Talk End Quote	QuoteCrazyTalkEndQuote	2	https://ktane.timwi.de/PDF/Quote%20Crazy%20Talk%20End%20Quote.pdf	Deaf	2020-04-26	1
+Kilo Talk	KiloTalk	3	https://ktane.timwi.de/PDF/Kilo%20Talk.pdf	"Deaf, Blananas2"	2020-04-26	1
+KayMazey Talk	KMazeyTalk	2	https://ktane.timwi.de/PDF/KayMazey%20Talk.pdf	"Deaf, Blananas2"	2020-04-26	1
+Jaden Smith Talk	JadenSmithTalk	2	https://ktane.timwi.de/PDF/Jaden%20Smith%20Talk.pdf	Deaf	2020-04-26	1
+Deck Creating	kataDeckCreating	4	https://ktane.timwi.de/PDF/Deck%20Creating.pdf	"Katarina, SuDo"	2020-04-26	1
+Crazy Talk With A K	CrazyTalkWithAK	2	https://ktane.timwi.de/PDF/Crazy%20Talk%20With%20A%20K.pdf	Deaf	2020-04-26	1
+BoozleTalk	BoozleTalk	3	https://ktane.timwi.de/PDF/BoozleTalk.pdf	Deaf	2020-04-26	1
+Arrow Talk	ArrowTalk	1	https://ktane.timwi.de/PDF/Arrow%20Talk.pdf	Deaf	2020-04-26	1
+Siffron	siffron	3	https://ktane.timwi.de/PDF/Siffron.pdf	Piissii	2020-04-27	1
+Red Herring	RedHerring	1	https://ktane.timwi.de/PDF/Red%20Herring.pdf	Deaf	2020-04-27	1
+Audio Morse	lgndAudioMorse	1	https://ktane.timwi.de/PDF/Audio%20Morse.pdf	LeGeND	2020-04-28	1
+Palindromes	palindromes	4	https://ktane.timwi.de/PDF/Palindromes.pdf	Emik	2020-04-29	1
+Pow	powModule	2	https://ktane.timwi.de/PDF/Pow.pdf	eXish	2020-04-30	1
+Type Racer	typeRacer	2	https://ktane.timwi.de/PDF/Type%20Racer.pdf	JakkOfKlubs	2020-05-03	1
+Chicken Nuggets	ChickenNuggets	2	https://ktane.timwi.de/PDF/Chicken%20Nuggets.pdf	Deaf	2020-05-03	1
+Badugi	ksmBadugi	3	https://ktane.timwi.de/PDF/Badugi.pdf	Kaito Sinclaire	2020-05-03	1
+Tetriamonds	tetriamonds	3	https://ktane.timwi.de/PDF/Tetriamonds.pdf	Obvious	2020-05-05	1
+Spot The Difference	SpotTheDifference	3	https://ktane.timwi.de/PDF/Spot%20The%20Difference.pdf	"Deaf, eXish"	2020-05-05	1
+Negativity	Negativity	3	https://ktane.timwi.de/PDF/Negativity.pdf	"BigCrunch22, ktane1"	2020-05-05	1
+Masher The Bottun	masherTheBottun	3	https://ktane.timwi.de/PDF/Masher%20The%20Bottun.pdf	"EpicToast, FNLamaCool13"	2020-05-05	1
+Yes and No	yesandno	2	https://ktane.timwi.de/PDF/Yes%20and%20No.pdf	Goofy	2020-05-09	1
+M&Ns	MandNs	2	https://ktane.timwi.de/PDF/M%26Ns.pdf	"TasThing, Procyon"	2020-05-09	1
+Plant Identification	PlantIdentification	4	https://ktane.timwi.de/PDF/Plant%20Identification.pdf	BigCrunch22	2020-05-10	1
+Integer Trees	IntegerTrees	4	https://ktane.timwi.de/PDF/Integer%20Trees.pdf	Deaf	2020-05-10	1
+Goofy's Game	goofysgame	2	https://ktane.timwi.de/PDF/Goofy%E2%80%99s%20Game.pdf	Goofy	2020-05-10	1
+Module Rick	ModuleRick	1	https://ktane.timwi.de/PDF/Module%20Rick.pdf	"Deaf, Kiki"	2020-05-12	1
+Pickup Identification	PickupIdentification	4	https://ktane.timwi.de/PDF/Pickup%20Identification.pdf	BigCrunch22	2020-05-13	1
+Earthbound	EarthboundModule	3	https://ktane.timwi.de/PDF/Earthbound.pdf	Usernam3	2020-05-13	1
+3 LEDs	threeLEDsModule	1	https://ktane.timwi.de/PDF/3%20LEDs.pdf	eXish	2020-05-13	1
+Life Iteration	LifeIteration	4	https://ktane.timwi.de/PDF/Life%20Iteration.pdf	"Eotall, WarioLGP, samfun123, BigCrunch22"	2020-05-14	1
+Thread The Needle	threadTheNeedle	5	https://ktane.timwi.de/PDF/Thread%20the%20Needle.pdf	gamma-delta	2020-05-15	1
+Encrypted Hangman	encryptedHangman	4	https://ktane.timwi.de/PDF/Encrypted%20Hangman.pdf	GeekYiwen	2020-05-15	1
+Accelerando	accelerando	2	https://ktane.timwi.de/PDF/Accelerando.pdf	"Goofy, JakkOfKlubs"	2020-05-15	1
+Reaction		2	https://ktane.timwi.de/PDF/Reaction.pdf	Xtrouble835	2020-05-16	2
+The Heart	TheHeart	1	https://ktane.timwi.de/PDF/The%20Heart.pdf	S.	2020-05-16	1
+Color Braille	ColorBrailleModule	3	https://ktane.timwi.de/PDF/Color%20Braille.pdf	Timwi	2020-05-16	1
+Remote Math	remotemath	3	https://ktane.timwi.de/PDF/Remote%20Math.pdf	MrMelon	2020-05-17	1
+Reflex	lgndReflex	1	https://ktane.timwi.de/PDF/Reflex.pdf	LeGeND	2020-05-21	1
+Password Destroyer	pwDestroyer	4	https://ktane.timwi.de/PDF/Password%20Destroyer.pdf	Fang	2020-05-22	1
+Typing Tutor		1	https://ktane.timwi.de/PDF/Typing%20Tutor.pdf	UltraCboy	2020-05-24	2
+Multitask	multitask	1	https://ktane.timwi.de/PDF/Multitask.pdf	Speakingevil	2020-05-24	1
+hexOS	hexOS	4	https://ktane.timwi.de/PDF/hexOS.pdf	Emik	2020-05-24	1
+Simon Stashes		3	https://ktane.timwi.de/PDF/Simon%20Stashes.pdf	TasThing	2020-05-25	2
+Kyudoku	kyudoku	1	https://ktane.timwi.de/PDF/Kyudoku.pdf	"Goofy, Timwi"	2020-05-25	1
+Brawler Database	brawlerDatabaseModule	1	https://ktane.timwi.de/PDF/Brawler%20Database.pdf	eXish	2020-05-25	1
+Shortcuts	shortcuts	1	https://ktane.timwi.de/PDF/Shortcuts.pdf	Goofy	2020-05-27	1
+More Code	MoreCode	2	https://ktane.timwi.de/PDF/More%20Code.pdf	"Deaf, MrPeanut1028"	2020-05-28	1
+7	7	3	https://ktane.timwi.de/PDF/7.pdf	VFlyer	2020-05-28	1
+OmegaForget	omegaForget	5	https://ktane.timwi.de/PDF/OmegaForget.pdf	Cooldoom5	2020-05-29	1
+Needy Game Of Life		4	https://ktane.timwi.de/PDF/Needy%20Game%20of%20Life.pdf	Red Penguin	2020-05-30	2
+Mental Math	MentalMath	2	https://ktane.timwi.de/PDF/Mental%20Math.pdf	Deaf	2020-05-30	1
+Kugelblitz	kugelblitz	5	https://ktane.timwi.de/PDF/Kugelblitz.pdf	Obvious	2020-05-30	1
+Dictation	Dictation	5	https://ktane.timwi.de/PDF/Dictation.pdf	Deaf	2020-05-30	1
+Bloxx	bloxx	1	https://ktane.timwi.de/PDF/Bloxx.pdf	Goofy	2020-05-30	1
+Basic Morse	BasicMorse	3	https://ktane.timwi.de/PDF/Basic%20Morse.pdf	Deaf	2020-05-30	1
+The Arena	TheArena	2	https://ktane.timwi.de/PDF/The%20Arena.pdf	Deaf	2020-05-30	1
+IPA	ipa	2	https://ktane.timwi.de/PDF/IPA.pdf	"TasThing, ItzShaun"	2020-05-31	1
+Emotiguy Identification	EmotiguyIdentification	3	https://ktane.timwi.de/PDF/Emotiguy%20Identification.pdf	"Dead, Danny7007, BigCrunch22"	2020-05-31	1
+Cookie Clicker	Cookieclicker	2	https://ktane.timwi.de/PDF/Cookie%20Clicker.pdf	BananaLord	2020-05-31	1
+Audio Keypad	AudioKeypad	1	https://ktane.timwi.de/PDF/Audio%20Keypad.pdf	"Eltrick, Danny7007"	2020-05-31	1
+100 Levels Of Defusal	100LevelsOfDefusal	3	https://ktane.timwi.de/PDF/100%20Levels%20of%20Defusal.pdf	Espik	2020-06-01	1
+NeeDeez Nuts	NeeDeezNuts	5	https://ktane.timwi.de/PDF/NeeDeez%20Nuts.pdf	Deaf	2020-06-02	2
+Jailbreak	Jailbreak	4	https://ktane.timwi.de/PDF/Jailbreak.pdf	Deaf	2020-06-02	1
+Dumb Waiters	dumbWaiters	3	https://ktane.timwi.de/PDF/Dumb%20Waiters.pdf	TasThing	2020-06-02	1
+DACH Maze	DACH	3	https://ktane.timwi.de/PDF/DACH%20Maze.pdf	"Riverbui, Timwi"	2020-06-02	1
+Birthdays	birthdays	1	https://ktane.timwi.de/PDF/Birthdays.pdf	"TasThing, Jenny"	2020-06-04	2
+Match 'em	matchem	4	https://ktane.timwi.de/PDF/Match%20%E2%80%99em.pdf	Speakingevil	2020-06-06	1
+Navinums	navinums	2	https://ktane.timwi.de/PDF/Navinums.pdf	"Goofy, Pruz"	2020-06-07	1
+Gnomish Puzzle	qkGnomishPuzzle	4	https://ktane.timwi.de/PDF/Gnomish%20Puzzle.pdf	Qkrisi	2020-06-07	1
+RGB Logic	rgbLogic	1	https://ktane.timwi.de/PDF/RGB%20Logic.pdf	Speakingevil	2020-06-08	2
+Bridges	bridges	2	https://ktane.timwi.de/PDF/Bridges.pdf	AAces	2020-06-08	1
+A>N<D	ANDmodule	3	https://ktane.timwi.de/PDF/A_N_D.pdf	"Rdzanu, Pruz, epictho, short_c1rcuit"	2020-06-08	1
+Shifted Maze	shiftedMaze	3	https://ktane.timwi.de/PDF/Shifted%20Maze.pdf	jimmythelynx	2020-06-10	1
+Juxtacolored Squares	JuxtacoloredSquaresModule	2	https://ktane.timwi.de/PDF/Juxtacolored%20Squares.pdf	"Asew, Goofy"	2020-06-10	1
+"Wolf, Goat, and Cabbage"	wolfGoatCabbageModule	3	https://ktane.timwi.de/PDF/Wolf%2C%20Goat%2C%20and%20Cabbage.pdf	kavinkul	2020-06-11	1
+The Missing Letter	theMissingLetter	3	https://ktane.timwi.de/PDF/The%20Missing%20Letter.pdf	"Goofy, Asew"	2020-06-11	1
+Amnesia	Amnesia	2	https://ktane.timwi.de/PDF/Amnesia.pdf	Deaf	2020-06-11	1
+Plug-Ins	plugins	2	https://ktane.timwi.de/PDF/Plug-Ins.pdf	"Goofy, Asew"	2020-06-12	1
+Synesthesia	synesthesia	1	https://ktane.timwi.de/PDF/Synesthesia.pdf	Obvious	2020-06-13	1
+English Entries	EnglishEntries	5	https://ktane.timwi.de/PDF/English%20Entries.pdf	"Deaf, Fish, Usernam3"	2020-06-15	1
+The Duck	theDuck	2	https://ktane.timwi.de/PDF/The%20Duck.pdf	"EpicToast, 3D"	2020-06-15	1
+The Cruel Duck	theCruelDuck	3	https://ktane.timwi.de/PDF/The%20Cruel%20Duck.pdf	"EpicToast, cerulean"	2020-06-15	1
