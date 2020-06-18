@@ -41,7 +41,7 @@ Perspective Pegs	spwizPerspectivePegs	3	https://ktane.timwi.de/PDF/Perspective%2
 Microcontroller	Microcontroller	3	https://ktane.timwi.de/PDF/Microcontroller.pdf	Flush	2016-09-24	1
 Murder	murder	3	https://ktane.timwi.de/PDF/Murder.pdf	Asimir	2016-09-26	1
 The Gamepad	TheGamepadModule	3	https://ktane.timwi.de/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
-Tic-Tac-Toe	TicTacToeModule	4	https://ktane.timwi.de/PDF/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07	1
+Tic-Tac-Toe	TicTacToeModule	4	https://ktane.timwi.de/PDF/Tic%20Tac%20Toe.pdf	"Moon, Timwi"	2016-10-07	1
 "Monsplode, Fight!"	monsplodeFight	4	https://ktane.timwi.de/PDF/Monsplode%2C%20Fight!.pdf	clutterArranger	2016-10-08	1
 Shape Shift	shapeshift	3	https://ktane.timwi.de/PDF/Shape%20Shift.pdf	Asimir	2016-10-10	1
 Follow The Leader	FollowTheLeaderModule	3	https://ktane.timwi.de/PDF/Follow%20the%20Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18	1
@@ -386,7 +386,7 @@ Quiz Buzz	quizBuzz	3	https://ktane.timwi.de/PDF/Quiz%20Buzz.pdf	JerryEris	2019-0
 Wavetapping	Wavetapping	4	https://ktane.timwi.de/PDF/Wavetapping.pdf	"KingSlendy, Lumbud84"	2019-02-25	1
 The Hypercube	TheHypercubeModule	2	https://ktane.timwi.de/PDF/The%20Hypercube.pdf	Timwi	2019-02-26	1
 Speak English	speakEnglish	2	https://ktane.timwi.de/PDF/Speak%20English.pdf	"TheRealWitch, Blananas2"	2019-02-27	2
-Stack'em	stackem	2	https://ktane.timwi.de/PDF/Stack%E2%80%98em.pdf	Goofy	2019-03-02	1
+Stack'em	stackem	2	https://ktane.timwi.de/PDF/Stack%u2019em.pdf	Goofy	2019-03-02	1
 Seven Wires	sevenWires	2	https://ktane.timwi.de/PDF/Seven%20Wires.pdf	"Atomik, ryaninator81"	2019-03-02	1
 Colored Keys	lgndColoredKeys	2	https://ktane.timwi.de/PDF/Colored%20Keys.pdf	LeGeND	2019-03-05	1
 The Troll	troll	3	https://ktane.timwi.de/PDF/The%20Troll.pdf	Royal_Flu$h	2019-03-09	1
@@ -506,7 +506,6 @@ Forget Perspective	qkForgetPerspective	5	https://ktane.timwi.de/PDF/Forget%20Per
 Alpha-Bits	alphaBits	3	https://ktane.timwi.de/PDF/Alpha-Bits.pdf	Procyon	2019-08-11	1
 Jack Attack	jackAttack	2	https://ktane.timwi.de/PDF/Jack%20Attack.pdf	"Blananas2, Deaf"	2019-08-15	1
 Ultimate Cycle	ultimateCycle	5	https://ktane.timwi.de/PDF/Ultimate%20Cycle.pdf	Speakingevil	2019-08-17	1
-Needlessly Complicated Button	needlesslyComplicatedButton	4	https://ktane.timwi.de/PDF/Needlessly%20Complicated%20Button.pdf	whamer100	2019-08-17	1
 Hill Cycle	hillCycle	4	https://ktane.timwi.de/PDF/Hill%20Cycle.pdf	Speakingevil	2019-08-17	1
 Binary	Binary	1	https://ktane.timwi.de/PDF/Binary.pdf	lexa	2019-08-17	1
 Chord Progressions	chordProgressions	3	https://ktane.timwi.de/PDF/Chord%20Progressions.pdf	Ultimate Mikey	2019-08-18	1
@@ -796,23 +795,23 @@ Life Iteration	LifeIteration	4	https://ktane.timwi.de/PDF/Life%20Iteration.pdf	"
 Thread The Needle	threadTheNeedle	5	https://ktane.timwi.de/PDF/Thread%20the%20Needle.pdf	gamma-delta	2020-05-15	1
 Encrypted Hangman	encryptedHangman	4	https://ktane.timwi.de/PDF/Encrypted%20Hangman.pdf	GeekYiwen	2020-05-15	1
 Accelerando	accelerando	2	https://ktane.timwi.de/PDF/Accelerando.pdf	"Goofy, JakkOfKlubs"	2020-05-15	1
-Reaction		2	https://ktane.timwi.de/PDF/Reaction.pdf	Xtrouble835	2020-05-16	2
+Reaction	xtrreaction	2	https://ktane.timwi.de/PDF/Reaction.pdf	Xtrouble835	2020-05-16	2
 The Heart	TheHeart	1	https://ktane.timwi.de/PDF/The%20Heart.pdf	S.	2020-05-16	1
 Color Braille	ColorBrailleModule	3	https://ktane.timwi.de/PDF/Color%20Braille.pdf	Timwi	2020-05-16	1
 Remote Math	remotemath	3	https://ktane.timwi.de/PDF/Remote%20Math.pdf	MrMelon	2020-05-17	1
 Reflex	lgndReflex	1	https://ktane.timwi.de/PDF/Reflex.pdf	LeGeND	2020-05-21	1
 Password Destroyer	pwDestroyer	4	https://ktane.timwi.de/PDF/Password%20Destroyer.pdf	Fang	2020-05-22	1
-Typing Tutor		1	https://ktane.timwi.de/PDF/Typing%20Tutor.pdf	UltraCboy	2020-05-24	2
+Typing Tutor	needyTypingTutor	1	https://ktane.timwi.de/PDF/Typing%20Tutor.pdf	UltraCboy	2020-05-24	2
 Multitask	multitask	1	https://ktane.timwi.de/PDF/Multitask.pdf	Speakingevil	2020-05-24	1
 hexOS	hexOS	4	https://ktane.timwi.de/PDF/hexOS.pdf	Emik	2020-05-24	1
-Simon Stashes		3	https://ktane.timwi.de/PDF/Simon%20Stashes.pdf	TasThing	2020-05-25	2
+Simon Stashes	simonStashes	3	https://ktane.timwi.de/PDF/Simon%20Stashes.pdf	TasThing	2020-05-25	2
 Kyudoku	kyudoku	1	https://ktane.timwi.de/PDF/Kyudoku.pdf	"Goofy, Timwi"	2020-05-25	1
 Brawler Database	brawlerDatabaseModule	1	https://ktane.timwi.de/PDF/Brawler%20Database.pdf	eXish	2020-05-25	1
 Shortcuts	shortcuts	1	https://ktane.timwi.de/PDF/Shortcuts.pdf	Goofy	2020-05-27	1
 More Code	MoreCode	2	https://ktane.timwi.de/PDF/More%20Code.pdf	"Deaf, MrPeanut1028"	2020-05-28	1
 7	7	3	https://ktane.timwi.de/PDF/7.pdf	VFlyer	2020-05-28	1
 OmegaForget	omegaForget	5	https://ktane.timwi.de/PDF/OmegaForget.pdf	Cooldoom5	2020-05-29	1
-Needy Game Of Life		4	https://ktane.timwi.de/PDF/Needy%20Game%20of%20Life.pdf	Red Penguin	2020-05-30	2
+Needy Game Of Life	gameOfLifeNeedy	4	https://ktane.timwi.de/PDF/Needy%20Game%20of%20Life.pdf	Red Penguin	2020-05-30	2
 Mental Math	MentalMath	2	https://ktane.timwi.de/PDF/Mental%20Math.pdf	Deaf	2020-05-30	1
 Kugelblitz	kugelblitz	5	https://ktane.timwi.de/PDF/Kugelblitz.pdf	Obvious	2020-05-30	1
 Dictation	Dictation	5	https://ktane.timwi.de/PDF/Dictation.pdf	Deaf	2020-05-30	1
