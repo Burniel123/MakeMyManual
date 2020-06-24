@@ -21,7 +21,8 @@ public class ManualListReader
         ArrayList<Module> modules = new ArrayList<Module>();
         try
         {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/modules-config-details.txt")));
+            //BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/modules-config-details.txt")));
+            BufferedReader reader = new BufferedReader(new FileReader("module-config-details.txt"));
             String line = null;
 
             while((line = reader.readLine()) != null)
