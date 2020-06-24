@@ -19,6 +19,7 @@ import org.makemymanual.manual.ProfileReader;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.concurrent.Flow;
 
 /**
  * Wraps a VBox to design and manage the main frontend for the application.
@@ -42,6 +43,8 @@ public class RootPane extends VBox implements Sortable
 
     private static final Font TITLES_FONT = new Font("Arial Bold", 16);
     static final String DEFAULT_BACK_STYLE = "-fx-background-color: #A9A9A9";
+    private ModulePane lastSelected = null;
+    private boolean shiftKeyDown = false;
 
     /**
      * Creates an instance of the RootPane.
@@ -239,6 +242,16 @@ public class RootPane extends VBox implements Sortable
             Main.numSelected = 0;
             //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
         });
+        setOnKeyPressed(e ->
+        {
+            if(e.getCode().equals(KeyCode.SHIFT))
+                shiftKeyDown = true;
+        });
+        setOnKeyReleased(e ->
+        {
+            if(e.getCode().equals(KeyCode.SHIFT))
+                shiftKeyDown = false;
+        });
 
         Main.numSelectedProperty.addListener(new ChangeListener<Number>()
         {//Update the "Num Selected" label whenever the numSelectedProperty changes.
@@ -271,6 +284,60 @@ public class RootPane extends VBox implements Sortable
                     (module.getCategory() == 2 && i >= Main.MODULES_DISPLAYED.size()))
             {//If this isn't a needy module, display it in the top half. If it is, put it in the bottom half.
                 ModulePane modulePane = new ModulePane(module);
+
+                //Event handler for clicking on this module pane:
+                modulePane.setOnMouseClicked(e ->
+                {
+                    if(shiftKeyDown)
+                    {//If the shift key is being held, all modules from the previously selected module to the selected module must be selected.
+                        boolean startingModulePassed = false;
+                        FlowPane fp = new FlowPane();
+
+                        if(module.getCategory() != 2)
+                            fp = modulesPane;//Only apply the shift-click feature if we're selecting in the correct category of module.
+                        else
+                            fp = needyPane;
+
+                        for(Object obj : fp.getChildren())
+                        {//Work through all module panes and highlight those between the previous select and this select.
+                            ModulePane mp = (ModulePane)obj;
+                            if(mp.getModuleCodeContent().equals(lastSelected.getModuleCodeContent()))
+                                startingModulePassed = true; //Flags that we've hit the previously-selected module.
+                            else if(mp.getModuleCodeContent().equals(modulePane.getModuleCodeContent()) && !modulePane.isSelected())
+                            {//If we've hit the module that was clicked, select it and stop going through modules.
+                                module.activate();
+                                Main.numSelectedProperty.set(Main.numSelectedProperty.get() + 1);
+                                mp.invertCol();
+                                lastSelected = modulePane;
+                                break;
+                            }
+                            else if(mp.getModuleCodeContent().equals(modulePane.getModuleCodeContent()))
+                                break; //If we've hit the module that was clicked and it has already been selected, stop going through modules.
+                            else if(startingModulePassed && !mp.isSelected())
+                            {//Select all deselected modules between the previous and current modules.
+                                module.activate();
+                                Main.numSelectedProperty.set(Main.numSelectedProperty.get() + 1);
+                                mp.invertCol();
+                            }
+                        }
+                    }
+                    else
+                    {//If shift was not held, select normally.
+                        if(!modulePane.isSelected())
+                        {
+                            module.activate();
+                            Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
+                            lastSelected = modulePane;
+                        }
+                        else
+                        {
+                            module.deactivate();
+                            Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
+                        }
+                        modulePane.invertCol();
+                    }
+                });
+
                 if(module.isActive())
                     modulePane.invertCol();
                 if(module.getCategory() == 2)

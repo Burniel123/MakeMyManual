@@ -43,22 +43,6 @@ public class ModulePane extends StackPane
         moduleCodeLabel.setFont(new Font(7));
         moduleCodeLabel.setText(module.getModuleCode());
 
-        //Event handler for clicking on this module pane:
-        setOnMouseClicked(e ->
-        {
-            if(!isSelected())
-            {
-                module.activate();
-                Main.numSelectedProperty.set(Main.numSelectedProperty.get()+1);
-            }
-            else
-            {
-                module.deactivate();
-                Main.numSelectedProperty.set(Main.numSelectedProperty.get()-1);
-            }
-            invertCol();
-        });
-
         //Configure module pane as a whole:
         setAlignment(Pos.BOTTOM_CENTER);
         getChildren().addAll(moduleRegion, moduleNameLabel, moduleCodeLabel);
