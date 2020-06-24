@@ -41,7 +41,7 @@ Perspective Pegs	spwizPerspectivePegs	3	https://ktane.timwi.de/PDF/Perspective%2
 Microcontroller	Microcontroller	3	https://ktane.timwi.de/PDF/Microcontroller.pdf	Flush	2016-09-24	1
 Murder	murder	3	https://ktane.timwi.de/PDF/Murder.pdf	Asimir	2016-09-26	1
 The Gamepad	TheGamepadModule	3	https://ktane.timwi.de/PDF/The%20Gamepad.pdf	"theFIZZYnator, samfun123"	2016-10-06	1
-Tic-Tac-Toe	TicTacToeModule	4	https://ktane.timwi.de/PDF/Tic%20Tac%20Toe.pdf	"Moon, Timwi"	2016-10-07	1
+Tic-Tac-Toe	TicTacToeModule	4	https://ktane.timwi.de/PDF/Tic-Tac-Toe.pdf	"Moon, Timwi"	2016-10-07	1
 "Monsplode, Fight!"	monsplodeFight	4	https://ktane.timwi.de/PDF/Monsplode%2C%20Fight!.pdf	clutterArranger	2016-10-08	1
 Shape Shift	shapeshift	3	https://ktane.timwi.de/PDF/Shape%20Shift.pdf	Asimir	2016-10-10	1
 Follow The Leader	FollowTheLeaderModule	3	https://ktane.timwi.de/PDF/Follow%20the%20Leader.pdf	"TheAuthorOfOZ, Timwi"	2016-10-18	1
@@ -844,3 +844,13 @@ Synesthesia	synesthesia	1	https://ktane.timwi.de/PDF/Synesthesia.pdf	Obvious	202
 English Entries	EnglishEntries	5	https://ktane.timwi.de/PDF/English%20Entries.pdf	"Deaf, Fish, Usernam3"	2020-06-15	1
 The Duck	theDuck	2	https://ktane.timwi.de/PDF/The%20Duck.pdf	"EpicToast, 3D"	2020-06-15	1
 The Cruel Duck	theCruelDuck	3	https://ktane.timwi.de/PDF/The%20Cruel%20Duck.pdf	"EpicToast, cerulean"	2020-06-15	1
+Ultimate Tic Tac Toe	ultimateTicTacToe	4	https://ktane.timwi.de/PDF/Ultimate%20Tic%20Tac%20Toe.pdf	"Goofy, Timwi"	2020-06-18	1
+Factoring	factoring	1	https://ktane.timwi.de/PDF/Factoring.pdf	"TheRealWitch, Blananas2"	2020-06-18	1
+Lyrical Nonsense	lyricalNonsense	1	https://ktane.timwi.de/PDF/Lyrical%20Nonsense.pdf	Finder	2020-06-19	1
+RGB Sequences	RGBSequences	3	https://ktane.timwi.de/PDF/RGB%20Sequences.pdf	"Deaf, Blananas2"	2020-06-20	1
+Puzzword	PuzzwordModule	5	https://ktane.timwi.de/PDF/Puzzword.pdf	Timwi	2020-06-20	1
+NOT NOT	notnot	1	https://ktane.timwi.de/PDF/NOT%20NOT.pdf	Obvious	2020-06-20	1
+Repo Selector	qkRepoSelector	5	https://ktane.timwi.de/PDF/Repo%20Selector.pdf	"Qkrisi, Fang"	2020-06-21	1
+int##	int##	3	https://ktane.timwi.de/PDF/int%23%23.pdf	Cooldoom5	2020-06-21	1
+Deaf Alley	deafAlleyModule	1	https://ktane.timwi.de/PDF/Deaf%20Alley.pdf	"Blananas2, eXish"	2020-06-21	1
+Blind Arrows	blindArrows	3	https://ktane.timwi.de/PDF/Blind%20Arrows.pdf	"Aero, Katarina, Sean Obach"	2020-06-23	1
