@@ -599,7 +599,7 @@ Blinkstop	blinkstopModule	3	https://ktane.timwi.de/PDF/Blinkstop.pdf	"Pruz, eXis
 Ultimate Custom Night	qkUCN	1	https://ktane.timwi.de/PDF/Ultimate%20Custom%20Night.pdf	Qkrisi	2019-12-16	1
 Hinges	hinges	4	https://ktane.timwi.de/PDF/Hinges.pdf	KingBranBran	2019-12-17	1
 Time Accumulation	timeAccumulation	2	https://ktane.timwi.de/PDF/Time%20Accumulation.pdf	"VFlyer, Kusane"	2019-12-18	1
-?	nonverbalSimon	2	https://ktane.timwi.de/PDF/%E2%9D%96.pdf	"VFlyer, Mirage Xel"	2019-12-18	1
+U+2756	nonverbalSimon	2	https://ktane.timwi.de/PDF/%E2%9D%96.pdf	"VFlyer, Mirage Xel"	2019-12-18	1
 Forget It Not	forgetItNot	2	https://ktane.timwi.de/PDF/Forget%20It%20Not.pdf	"VFlyer, RubyBfdi"	2019-12-18	1
 egg	bigegg	1	https://ktane.timwi.de/PDF/egg.pdf	"Danny7007, Red Penguin, eXish"	2019-12-18	1
 BuzzFizz	buzzfizz	2	https://ktane.timwi.de/PDF/BuzzFizz.pdf	"VFlyer, Blananas2"	2019-12-18	2
@@ -854,3 +854,7 @@ Repo Selector	qkRepoSelector	5	https://ktane.timwi.de/PDF/Repo%20Selector.pdf	"Q
 int##	int##	3	https://ktane.timwi.de/PDF/int%23%23.pdf	Cooldoom5	2020-06-21	1
 Deaf Alley	deafAlleyModule	1	https://ktane.timwi.de/PDF/Deaf%20Alley.pdf	"Blananas2, eXish"	2020-06-21	1
 Blind Arrows	blindArrows	3	https://ktane.timwi.de/PDF/Blind%20Arrows.pdf	"Aero, Katarina, Sean Obach"	2020-06-23	1
+Sound Design	soundDesign	1	https://ktane.timwi.de/PDF/Sound%20Design.pdf	"Aero, Katarina"	2020-06-24	1
+RGB Arithmetic	rgbArithmetic	5	https://ktane.timwi.de/PDF/RGB%20Arithmetic.pdf	Speakingevil	2020-06-24	1
+D-CODE	xelDcode	2	https://ktane.timwi.de/PDF/D-CODE.pdf	Mirage Xel	2020-06-24	1
+Fifteen	fifteen	4	https://ktane.timwi.de/PDF/Fifteen.pdf	Goofy	2020-06-25	1

@@ -20,7 +20,8 @@ import java.util.ArrayList;
  *
  * @author Daniel Burton
  */
-public class Main extends Application implements Sortable {
+public class Main extends Application implements Sortable
+{
     static RootPane ROOT_PANE = null;
     static final Image DEFAULT_ICON = new Image(Main.class.getResource("/icon.png").toExternalForm());
     private static final String CONFIG_FILE = "https://raw.githubusercontent.com/Burniel123/MakeMyManual/master/src/main/resources/modules-config-details.txt";
