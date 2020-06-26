@@ -22,7 +22,7 @@ public class ManualListReader
         try
         {
             //BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/modules-config-details.txt")));
-            BufferedReader reader = new BufferedReader(new FileReader("module-config-details.txt"));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("module-config-details.txt")), "ISO-8859-1"));
             String line = null;
 
             while((line = reader.readLine()) != null)
@@ -36,6 +36,9 @@ public class ManualListReader
                 String moduleCreatorsStr = removeQuotes(detailElements[4]);
                 String moduleCreationDateStr = removeQuotes(detailElements[5]);
                 String categoryStr = detailElements[6];
+
+                if(moduleCode.equals("nonverbalSimon"))
+                    moduleName = "\u2756";
 
                 int difficulty = Integer.parseInt(difficultyStr);
                 String[] moduleCreators = moduleCreatorsStr.split(",");

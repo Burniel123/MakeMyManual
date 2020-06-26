@@ -599,7 +599,7 @@ Blinkstop	blinkstopModule	3	https://ktane.timwi.de/PDF/Blinkstop.pdf	"Pruz, eXis
 Ultimate Custom Night	qkUCN	1	https://ktane.timwi.de/PDF/Ultimate%20Custom%20Night.pdf	Qkrisi	2019-12-16	1
 Hinges	hinges	4	https://ktane.timwi.de/PDF/Hinges.pdf	KingBranBran	2019-12-17	1
 Time Accumulation	timeAccumulation	2	https://ktane.timwi.de/PDF/Time%20Accumulation.pdf	"VFlyer, Kusane"	2019-12-18	1
-U+2756	nonverbalSimon	2	https://ktane.timwi.de/PDF/%E2%9D%96.pdf	"VFlyer, Mirage Xel"	2019-12-18	1
+	nonverbalSimon	2	https://ktane.timwi.de/PDF/%E2%9D%96.pdf	"VFlyer, Mirage Xel"	2019-12-18	1
 Forget It Not	forgetItNot	2	https://ktane.timwi.de/PDF/Forget%20It%20Not.pdf	"VFlyer, RubyBfdi"	2019-12-18	1
 egg	bigegg	1	https://ktane.timwi.de/PDF/egg.pdf	"Danny7007, Red Penguin, eXish"	2019-12-18	1
 BuzzFizz	buzzfizz	2	https://ktane.timwi.de/PDF/BuzzFizz.pdf	"VFlyer, Blananas2"	2019-12-18	2
@@ -677,7 +677,7 @@ The Hidden Value	theHiddenValue	2	https://ktane.timwi.de/PDF/The%20Hidden%20Valu
 Red	RedNeedy	2	https://ktane.timwi.de/PDF/Red.pdf	Pruz	2020-02-29	2
 Blue	BlueNeedy	2	https://ktane.timwi.de/PDF/Blue.pdf	Pruz	2020-02-29	2
 Directional Button	directionalButton	1	https://ktane.timwi.de/PDF/Directional%20Button.pdf	Cooldoom5	2020-03-01	1
-…?	punctuationMarks	2	https://ktane.timwi.de/PDF/Punctuation%20Marks.pdf	"Red Penguin, Asew54321"	2020-03-01	1
+...?	punctuationMarks	2	https://ktane.timwi.de/PDF/Punctuation%20Marks.pdf	"Red Penguin, Asew54321"	2020-03-01	1
 The Simpleton	SimpleButton	1	https://ktane.timwi.de/PDF/The%20Simpleton.pdf	BigCrunch22	2020-03-02	1
 Misery Squares	SquaresOfMisery	5	https://ktane.timwi.de/PDF/Misery%20Squares.pdf	BigCrunch22	2020-03-02	1
 Not Wiresword	NotWiresword	2	https://ktane.timwi.de/PDF/Not%20Wiresword.pdf	"Kusane, Andrio Celos"	2020-03-06	1
