@@ -3,9 +3,11 @@ package org.makemymanual.manual;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
- * Used to read the config TSV file, containing a list of available modules and their info/source.
+ * Used to read the config TSV files, containing a list of available modules and their info/source,
+ * and a mapping of module dependencies.
  *
  * Eventually to be refactored to obtain this file from the repository.
  */
@@ -50,23 +52,48 @@ public class ManualListReader
                 modules.add(module);
             }
         }
-        catch(IOException e)
+        catch(Exception e)
         {//Throw with false if some kind of input exception.
             InputIOException iioe = new InputIOException();
-            iioe.addPossibleCause("Module config file has been incorrectly moved or removed.");
-            iioe.addPossibleResolution("Reinstall the application.");
-            iioe.addPossibleResolution("Try again later.");
-            throw iioe;
-        }
-        catch(Exception e)
-        {//Throw with true if some kind of formatting or miscellaneous exception.
-            InputIOException iioe = new InputIOException();
-            iioe.addPossibleCause("Module config file has been incorrectly edited or removed.");
+            iioe.addPossibleCause("Module config file has been incorrectly moved or edited.");
             iioe.addPossibleResolution("Reinstall the application.");
             iioe.addPossibleResolution("Try again later.");
             throw iioe;
         }
         return modules;
+    }
+
+    /**
+     * Reads a dependency config file and creates a mapping from modules to other modules whose manual pages these
+     * modules also require.
+     * @return a HashMap mapping module codes to a list of module codes which the module relies on.
+     * @throws InputIOException - in the event of an I/O Error when reading the dependency file.
+     */
+    public HashMap<String, String[]> readDependenciesList() throws InputIOException
+    {
+        HashMap<String, String[]> dependencies = new HashMap<String, String[]>();
+        try
+        {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("module-dependencies.txt")), "ISO-8859-1"));
+            String line = null;
+
+            while((line = reader.readLine()) != null)
+            {
+                String[] depList = line.split("\t");
+                String mainCode = depList[0];
+                String[] deps = (line.substring(line.indexOf("\t") + 1).split("\t"));
+                dependencies.put(mainCode, deps);
+            }
+        }
+        catch(Exception e)
+        {//Throw with false if some kind of input exception.
+            InputIOException iioe = new InputIOException();
+            iioe.addPossibleCause("Module dependencies file has been incorrectly moved or edited.");
+            iioe.addPossibleResolution("Reinstall the application.");
+            iioe.addPossibleResolution("Try again later.");
+            throw iioe;
+        }
+        return dependencies;
     }
 
     /**

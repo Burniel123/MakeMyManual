@@ -17,6 +17,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Holds functionality relating to the creation and operation of a dialog to create a manual for the selected modules.
@@ -154,9 +155,15 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                         manual.setVanillaToEnd(true);
                     }
                     sortModules(0, false);
+                    ArrayList<String> dependencyModules = new ArrayList<String>();
+                    for(Module dependentModule : Main.MODULES_DISPLAYED)
+                    {
+                        if(dependentModule.isActive() && Main.MODULE_DEPENDENCIES.get(dependentModule.getModuleCode()).length != 0)
+                            dependencyModules.addAll(Arrays.asList(Main.MODULE_DEPENDENCIES.get(dependentModule.getModuleCode())));
+                    }
                     for (Module module : Main.MODULES_DISPLAYED)
                     {
-                        if (module.isActive())
+                        if (module.isActive() || dependencyModules.contains(module.getModuleCode()))
                         {
                             manual.addModule(module);
                         }

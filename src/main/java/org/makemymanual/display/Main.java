@@ -14,6 +14,7 @@ import org.makemymanual.manual.UrlFileCloner;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Main application class for MakeMyManual.
@@ -25,6 +26,7 @@ public class Main extends Application implements Sortable
     static RootPane ROOT_PANE = null;
     static final Image DEFAULT_ICON = new Image(Main.class.getResource("/icon.png").toExternalForm());
     private static final String CONFIG_FILE = "https://raw.githubusercontent.com/Burniel123/MakeMyManual/master/src/main/resources/modules-config-details.txt";
+    private static final String DEPENDENCIES_FILE = "https://raw.githubusercontent.com/Burniel123/MakeMyManual/master/src/main/resources/module-dependencies.txt";
 
     private static boolean exceptionOnBoot = false;
     private static InputIOException bootException = null;
@@ -33,6 +35,7 @@ public class Main extends Application implements Sortable
 
     static ArrayList<Module> MODULES_AVAILABLE = new ArrayList<Module>();//Please don't change after init.
     static ArrayList<Module> MODULES_DISPLAYED = new ArrayList<Module>();
+    static HashMap<String, String[]> MODULE_DEPENDENCIES = new HashMap<String, String[]>();
 
     /**
      * Starts the application, setting up and displaying the stage.
@@ -91,6 +94,8 @@ public class Main extends Application implements Sortable
         {
             updateLatexPackages();
             updateModules();
+            updateDependencies();
+            MODULE_DEPENDENCIES = reader.readDependenciesList();
             MODULES_AVAILABLE = reader.readModuleList();
             MODULES_DISPLAYED = new ArrayList<Module>(MODULES_AVAILABLE);
             sortModules(0, false);
@@ -155,6 +160,17 @@ public class Main extends Application implements Sortable
     private void updateModules() throws IOException
     {
         UrlFileCloner ufc = new UrlFileCloner(CONFIG_FILE, "module-config-details.txt");
+        ufc.cloneFile();
+    }
+
+    /**
+     * To be called at the init() stage, downloads the latest module dependencies from the repository.
+     *
+     * @throws IOException - in the event of a standard input error.
+     */
+    private void updateDependencies() throws IOException
+    {
+        UrlFileCloner ufc = new UrlFileCloner(DEPENDENCIES_FILE, "module-dependencies.txt");
         ufc.cloneFile();
     }
 
