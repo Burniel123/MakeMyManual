@@ -158,12 +158,12 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
                     ArrayList<String> dependencyModules = new ArrayList<String>();
                     for(Module dependentModule : Main.MODULES_DISPLAYED)
                     {
-                        if(dependentModule.isActive() && Main.MODULE_DEPENDENCIES.get(dependentModule.getModuleCode()).length != 0)
+                        if(dependentModule.isActive() && Main.MODULE_DEPENDENCIES.get(dependentModule.getModuleCode()) != null)
                             dependencyModules.addAll(Arrays.asList(Main.MODULE_DEPENDENCIES.get(dependentModule.getModuleCode())));
                     }
                     for (Module module : Main.MODULES_DISPLAYED)
                     {
-                        if (module.isActive() || dependencyModules.contains(module.getModuleCode()))
+                        if (module.isActive() || (!dependencyModules.isEmpty() && dependencyModules.contains(module.getModuleCode())))
                         {
                             manual.addModule(module);
                         }

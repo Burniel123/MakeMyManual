@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Reads and manages a profile.json file, to be used as module input.
@@ -37,18 +38,17 @@ public class ProfileReader
         BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
         String line = null;
         String innerLine = null;
+        String fullProfile = null;
         ArrayList<String> moduleCodesEnabled = new ArrayList<String>();
         while((line = reader.readLine()) != null)
-        {
-            if(line.contains("\"EnabledList\": "))
-            {
-                while(!(innerLine = reader.readLine()).contains("]"))
-                {//The presence of a ] indicates the end of this JSON object and hence the end of the enabled list.
-                    moduleCodesEnabled.add(innerLine.substring(innerLine.indexOf("\"")+1, innerLine.lastIndexOf("\"")));
-                }
-                break;
-            }
+        {//Obtain the full profile in a single String.
+            fullProfile += line;
         }
+
+        String fromEnabled = fullProfile.substring(fullProfile.indexOf("\"EnabledList\":[") + 16);
+        String enabledList = fromEnabled.substring(0, fromEnabled.indexOf("]")-1);
+
+        moduleCodesEnabled.addAll(Arrays.asList(enabledList.split("\",\"")));
 
         if(moduleCodesEnabled.isEmpty())
         {//Unable to use the profile unless it has an enabled list, so an exception must be thrown.
