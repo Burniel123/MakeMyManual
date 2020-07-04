@@ -861,4 +861,9 @@ D-CODE	xelDcode	2	https://ktane.timwi.de/PDF/D-CODE.pdf	Mirage Xel	2020-06-24	1
 Rapid Subtraction	rapidSubtraction	2	https://ktane.timwi.de/PDF/Rapid%20Subtraction.pdf	VFlyer	2020-06-25	2
 Fifteen	fifteen	4	https://ktane.timwi.de/PDF/Fifteen.pdf	Goofy	2020-06-25	1
 Pixel Cipher	pixelcipher	3	https://ktane.timwi.de/PDF/Pixel%20Cipher.pdf	Piissii	2020-06-27	1
+Don't Touch Anything	dontTouchAnything	1	https://ktane.timwi.de/PDF/Don't%20Touch%20Anything.pdf	AnAverageArceus	2020-06-27	1
 The Great Void	greatVoid	5	https://ktane.timwi.de/PDF/The%20Great%20Void.pdf	Cooldoom5	2020-06-28	1
+21	TwennyWan	4	https://ktane.timwi.de/PDF/21.pdf	"Deaf, Danny7007, KingBranBran"	2020-06-29	1
+The Calculator	TheCalculator	1	https://ktane.timwi.de/PDF/The%20Calculator.pdf	"Deaf, Blananas2"	2020-06-30	1
+Ultralogic	Ultralogic	3	https://ktane.timwi.de/PDF/Ultralogic.pdf	"Deaf, EpicToast"	2020-07-03	1
+Digital Clock	digitalClock	2	https://ktane.timwi.de/PDF/Digital%20Clock.pdf	Fang	2020-07-05	1
