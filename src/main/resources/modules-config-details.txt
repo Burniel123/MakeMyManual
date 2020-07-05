@@ -170,7 +170,7 @@ Mashematics	mashematics	2	https://ktane.timwi.de/PDF/Mashematics.pdf	Marksam32	2
 Faulty Backgrounds	FaultyBackgrounds	2	https://ktane.timwi.de/PDF/Faulty%20Backgrounds.pdf	McNiko67	2018-02-03	1
 Radiator	radiator	2	https://ktane.timwi.de/PDF/Radiator.pdf	"red031000, Inova"	2018-02-04	1
 Modern Cipher	modernCipher	3	https://ktane.timwi.de/PDF/Modern%20Cipher.pdf	TheFe	2018-02-04	1
-LED Grid	LED Grid	2	https://ktane.timwi.de/PDF/LED%20Grid.pdf	Royal_Flu$h	2018-02-06	1
+LED Grid	ledGrid	2	https://ktane.timwi.de/PDF/LED%20Grid.pdf	Royal_Flu$h	2018-02-06	1
 Sink	Sink	2	https://ktane.timwi.de/PDF/Sink.pdf	McNiko67	2018-02-09	1
 The iPhone	iPhone	4	https://ktane.timwi.de/PDF/The%20iPhone.pdf	Royal_Flu$h	2018-02-20	1
 The Swan	theSwan	4	https://ktane.timwi.de/PDF/The%20Swan.pdf	Royal_Flu$h	2018-02-22	1
