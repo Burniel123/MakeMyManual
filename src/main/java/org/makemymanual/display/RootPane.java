@@ -315,7 +315,15 @@ public class RootPane extends VBox implements Sortable
                                 break; //If we've hit the module that was clicked and it has already been selected, stop going through modules.
                             else if(startingModulePassed && !mp.isSelected())
                             {//Select all deselected modules between the previous and current modules.
-                                module.activate();
+                                //module.activate();
+                                for(Module mod : Main.MODULES_DISPLAYED)
+                                {
+                                    if(mod.getModuleCode().equals(mp.getModuleCodeContent()))
+                                    {
+                                        mod.activate();
+                                        break;
+                                    }
+                                }
                                 Main.numSelectedProperty.set(Main.numSelectedProperty.get() + 1);
                                 mp.invertCol();
                             }
