@@ -281,8 +281,8 @@ Divided Squares	DividedSquaresModule	2	https://ktane.timwi.de/PDF/Divided%20Squa
 Connection Device	KritConnectionDev	2	https://ktane.timwi.de/PDF/Connection%20Device.pdf	Kritzy	2018-10-31	1
 Instructions	instructions	1	https://ktane.timwi.de/PDF/Instructions.pdf	EpicToast	2018-11-03	1
 Valves	valves	3	https://ktane.timwi.de/PDF/Valves.pdf	KingBranBran	2018-11-05	1
-Encrypted Morse	crystalMaze	5	https://ktane.timwi.de/PDF/The%20Crystal%20Maze.pdf	BlockWorker	2018-11-06	1
-The Crystal Maze	EncryptedMorse	3	https://ktane.timwi.de/PDF/Encrypted%20Morse.pdf	Royal_Flu$h	2018-11-06	1
+Encrypted Morse	crystalMaze	3	https://ktane.timwi.de/PDF/Encrypted%20Morse.pdf	BlockWorker	2018-11-06	1
+The Crystal Maze	EncryptedMorse	3	https://ktane.timwi.de/PDF/The%20Crystal%20Maze.pdf	Royal_Flu$h	2018-11-06	1
 Countdown	countdown	2	https://ktane.timwi.de/PDF/Countdown.pdf	Royal_Flu$h	2018-11-06	1
 Cruel Countdown	cruelCountdown	4	https://ktane.timwi.de/PDF/Cruel%20Countdown.pdf	Royal_Flu$h	2018-11-06	1
 Catchphrase	catchphrase	3	https://ktane.timwi.de/PDF/Catchphrase.pdf	Royal_Flu$h	2018-11-06	1
@@ -627,7 +627,6 @@ Matrices	MatrixQuiz	5	https://ktane.timwi.de/PDF/Matrices.pdf	IQuick 143	2019-12
 Cruel Keypads	CruelKeypads	4	https://ktane.timwi.de/PDF/Cruel%20Keypads.pdf	Marksam32	2019-12-29	1
 The Black Page	TheBlackPage	2	https://ktane.timwi.de/PDF/The%20Black%20Page.pdf	Espik	2019-12-29	1
 64	64	4	https://ktane.timwi.de/PDF/64.pdf	KingBranBran	2019-12-29	1
-% Grey	PercentageGreyModule	1	https://ktane.timwi.de/PDF/%25%20Grey.pdf	"Eltrick, Pruz"	2019-12-29	1
 Simon Forgets	simonForgets	5	https://ktane.timwi.de/PDF/Simon%20Forgets.pdf	"Kusane, nol2coco"	2019-12-30	1
 Greek Letter Grid	greekLetterGrid	2	https://ktane.timwi.de/PDF/Greek%20Letter%20Grid.pdf	IcyPenguin_	2020-01-04	1
 Bamboozling Time Keeper	bamboozlingTimeKeeper	5	https://ktane.timwi.de/PDF/Bamboozling%20Time%20Keeper.pdf	"VFlyer, Speakingevil"	2020-01-08	1
@@ -854,6 +853,7 @@ NOT NOT	notnot	1	https://ktane.timwi.de/PDF/NOT%20NOT.pdf	Obvious	2020-06-20	1
 Repo Selector	qkRepoSelector	5	https://ktane.timwi.de/PDF/Repo%20Selector.pdf	"Qkrisi, Fang"	2020-06-21	1
 int##	int##	3	https://ktane.timwi.de/PDF/int%23%23.pdf	Cooldoom5	2020-06-21	1
 Deaf Alley	deafAlleyModule	1	https://ktane.timwi.de/PDF/Deaf%20Alley.pdf	"Blananas2, eXish"	2020-06-21	1
+Town of KTaNE	townofKTaNE	3	https://ktane.timwi.de/PDF/Town%20of%20KTaNE.pdf	"BananaLord, EpicToast"	2020-06-23	1
 Blind Arrows	blindArrows	3	https://ktane.timwi.de/PDF/Blind%20Arrows.pdf	"Aero, Katarina, Sean Obach"	2020-06-23	1
 Sound Design	soundDesign	1	https://ktane.timwi.de/PDF/Sound%20Design.pdf	"Aero, Katarina"	2020-06-24	1
 RGB Arithmetic	rgbArithmetic	5	https://ktane.timwi.de/PDF/RGB%20Arithmetic.pdf	Speakingevil	2020-06-24	1
@@ -864,6 +864,23 @@ Pixel Cipher	pixelcipher	3	https://ktane.timwi.de/PDF/Pixel%20Cipher.pdf	Piissii
 Don't Touch Anything	dontTouchAnything	1	https://ktane.timwi.de/PDF/Don't%20Touch%20Anything.pdf	AnAverageArceus	2020-06-27	1
 The Great Void	greatVoid	5	https://ktane.timwi.de/PDF/The%20Great%20Void.pdf	Cooldoom5	2020-06-28	1
 21	TwennyWan	4	https://ktane.timwi.de/PDF/21.pdf	"Deaf, Danny7007, KingBranBran"	2020-06-29	1
+Prime Time	primeTime	4	https://ktane.timwi.de/PDF/Prime%20Time.pdf	"Obvious, ktane1"	2020-06-30	1
+Negation	xelNegation	2	https://ktane.timwi.de/PDF/Negation.pdf	Mirage Xel	2020-06-30	1
 The Calculator	TheCalculator	1	https://ktane.timwi.de/PDF/The%20Calculator.pdf	"Deaf, Blananas2"	2020-06-30	1
+SixTen	sixten	3	https://ktane.timwi.de/PDF/SixTen.pdf	Goofy	2020-07-02	1
+ASCII Maze	asciiMaze	5	https://ktane.timwi.de/PDF/ASCII%20Maze.pdf	Speakingevil	2020-07-02	1
 Ultralogic	Ultralogic	3	https://ktane.timwi.de/PDF/Ultralogic.pdf	"Deaf, EpicToast"	2020-07-03	1
+Spangled Stars	spangledStars	2	https://ktane.timwi.de/PDF/Spangled%20Stars.pdf	Blananas2	2020-07-04	1
+Busy Beaver	busyBeaver	3	https://ktane.timwi.de/PDF/Busy%20Beaver.pdf	Cooldoom5	2020-07-04	1
 Digital Clock	digitalClock	2	https://ktane.timwi.de/PDF/Digital%20Clock.pdf	Fang	2020-07-05	1
+Cruel Match'em	matchemcruel	4	https://ktane.timwi.de/PDF/Cruel%20Match%20%E2%80%99em.pdf	Speakingevil	2020-07-06	1
+Assembly Code	assemblyCode	1	https://ktane.timwi.de/PDF/Assembly%20Code.pdf	Finder	2020-07-06	1
+Simon's Ultimate Showdown	simonsUltimateShowdownModule	5	https://ktane.timwi.de/PDF/Simon%E2%80%99s%20Ultimate%20Showdown.pdf	eXish	2020-07-08	1
+Boomdas	boomdas	4	https://ktane.timwi.de/PDF/Boomdas.pdf	Obvious	2020-07-09	1
+Needlessly Complicated Button	needlesslyComplicatedButton	4	https://ktane.timwi.de/PDF/Needlessly%20Complicated%20Button.pdf	"whamer100, Blananas2, Danny7007"	2020-07-12	1
+Color Numbers	colorNumbers	1	https://ktane.timwi.de/PDF/Color%20Numbers.pdf	R3Ked	2020-07-12	1
+Chinese Strokes	zhStrokes	3	https://ktane.timwi.de/PDF/Chinese%20Strokes.pdf	Fang	2020-07-12	1
+Chalices	Chalices	3	https://ktane.timwi.de/PDF/Chalices.pdf	"Deaf, EpicToast"	2020-07-13	1
+Reversed Edgework	ReversedEdgework	1	https://ktane.timwi.de/PDF/Reversed%20Edgework.pdf	"Livio, ktane1, Marksam32"	2020-07-14	2
+Pixel Art	PixelArt	1	https://ktane.timwi.de/PDF/Pixel%20Art.pdf	Deaf	2020-07-14	1
+Faulty Accelerando	faultyAccelerandoModule	3	https://ktane.timwi.de/PDF/Faulty%20Accelerando.pdf	"Goofy, eXish"	2020-07-15	1
