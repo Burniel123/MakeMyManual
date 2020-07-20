@@ -884,3 +884,9 @@ Chalices	Chalices	3	https://ktane.timwi.de/PDF/Chalices.pdf	"Deaf, EpicToast"	20
 Reversed Edgework	ReversedEdgework	1	https://ktane.timwi.de/PDF/Reversed%20Edgework.pdf	"Livio, ktane1, Marksam32"	2020-07-14	2
 Pixel Art	PixelArt	1	https://ktane.timwi.de/PDF/Pixel%20Art.pdf	Deaf	2020-07-14	1
 Faulty Accelerando	faultyAccelerandoModule	3	https://ktane.timwi.de/PDF/Faulty%20Accelerando.pdf	"Goofy, eXish"	2020-07-15	1
+0	0	3	https://ktane.timwi.de/PDF/0.pdf	"Sean Obach, Pruz"	2020-07-16	1
+Increasing Indices	increasingIndices	2	https://ktane.timwi.de/PDF/Increasing%20Indices.pdf	"Burniel, Chestnut"	2020-07-19	1
+Faulty Binary	Faulty Binary	2	https://ktane.timwi.de/PDF/Faulty%20Binary.pdf	lexa	2020-07-19	1
+Cruel Binary	CruelBinary	3	https://ktane.timwi.de/PDF/Cruel%20Binary.pdf	lexa	2020-07-19	1
+Connected Monitors	ConnectedMonitorsModule	5	https://ktane.timwi.de/PDF/Connected%20Monitors.pdf	"Marksam32, Lumbud84"	2020-07-19	1
+Broken Binary	BrokenBinary	2	https://ktane.timwi.de/PDF/Broken%20Binary.pdf	lexa	2020-07-19	1
