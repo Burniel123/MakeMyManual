@@ -885,8 +885,17 @@ Reversed Edgework	ReversedEdgework	1	https://ktane.timwi.de/PDF/Reversed%20Edgew
 Pixel Art	PixelArt	1	https://ktane.timwi.de/PDF/Pixel%20Art.pdf	Deaf	2020-07-14	1
 Faulty Accelerando	faultyAccelerandoModule	3	https://ktane.timwi.de/PDF/Faulty%20Accelerando.pdf	"Goofy, eXish"	2020-07-15	1
 0	0	3	https://ktane.timwi.de/PDF/0.pdf	"Sean Obach, Pruz"	2020-07-16	1
+Pitch Perfect	pitchPerfect	1	https://ktane.timwi.de/PDF/Pitch%20Perfect.pdf	"UltraCboy, ktane1"	2020-07-19	1
 Increasing Indices	increasingIndices	2	https://ktane.timwi.de/PDF/Increasing%20Indices.pdf	"Burniel, Chestnut"	2020-07-19	1
 Faulty Binary	Faulty Binary	2	https://ktane.timwi.de/PDF/Faulty%20Binary.pdf	lexa	2020-07-19	1
 Cruel Binary	CruelBinary	3	https://ktane.timwi.de/PDF/Cruel%20Binary.pdf	lexa	2020-07-19	1
 Connected Monitors	ConnectedMonitorsModule	5	https://ktane.timwi.de/PDF/Connected%20Monitors.pdf	"Marksam32, Lumbud84"	2020-07-19	1
 Broken Binary	BrokenBinary	2	https://ktane.timwi.de/PDF/Broken%20Binary.pdf	lexa	2020-07-19	1
+Totally Accurate Minecraft Simulator	tams	2	https://ktane.timwi.de/PDF/Totally%20Accurate%20Minecraft%20Simulator.pdf	TracksJosh	2020-07-20	1
+Tell Me When	GSTellMeWhen	2	https://ktane.timwi.de/PDF/Tell%20Me%20When.pdf	GhostSalt	2020-07-20	1
+ReGret-B Filtering	regretbFiltering	5	https://ktane.timwi.de/PDF/ReGret-B%20Filtering.pdf	Obvious	2020-07-20	1
+D-CRYPT	xelDcrypt	3	https://ktane.timwi.de/PDF/D-CRYPT.pdf	Mirage Xel	2020-07-20	1
+Color-Cycle Button	colorCyclebutton	2	https://ktane.timwi.de/PDF/Color-Cycle%20Button.pdf	wow its a logan	2020-07-20	1
+Alien Filing Colors	AlienModule	4	https://ktane.timwi.de/PDF/Alien%20Filing%20Colors.pdf	"TheDarkSid3r, Charlie9631"	2020-07-21	1
+The Kanye Encounter	TheKanyeEncounter	2	https://ktane.timwi.de/PDF/The%20Kanye%20Encounter.pdf	"Deaf, Kanye West, Danny7007"	2020-07-23	1
+Entry Number Four	GSEntryNumberFour	3	https://ktane.timwi.de/PDF/Entry%20Number%20Four.pdf	GhostSalt	2020-07-23	1
