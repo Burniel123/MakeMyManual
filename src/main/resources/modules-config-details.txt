@@ -899,3 +899,10 @@ Color-Cycle Button	colorCyclebutton	2	https://ktane.timwi.de/PDF/Color-Cycle%20B
 Alien Filing Colors	AlienModule	4	https://ktane.timwi.de/PDF/Alien%20Filing%20Colors.pdf	"TheDarkSid3r, Charlie9631"	2020-07-21	1
 The Kanye Encounter	TheKanyeEncounter	2	https://ktane.timwi.de/PDF/The%20Kanye%20Encounter.pdf	"Deaf, Kanye West, Danny7007"	2020-07-23	1
 Entry Number Four	GSEntryNumberFour	3	https://ktane.timwi.de/PDF/Entry%20Number%20Four.pdf	GhostSalt	2020-07-23	1
+501	FiveZeroOne	1	https://ktane.timwi.de/PDF/501.pdf	"AnAverageArceus, ktane1"	2020-07-24	1
+42	FourtyTwo	1	https://ktane.timwi.de/PDF/42.pdf	"AnAverageArceus, ktane1"	2020-07-24	1
+Color One Two	colorOneTwo	2	https://ktane.timwi.de/PDF/Color%20One%20Two.pdf	R3Ked	2020-07-25	1
+Toolmods	toolmods	1	https://ktane.timwi.de/PDF/Toolmods.pdf	Fang	2020-07-26	1
+Spelling Buzzed	SpellingBuzzed	3	https://ktane.timwi.de/PDF/Spelling%20Buzzed.pdf	knawk	2020-07-26	1
+Mystic Maze	mysticmaze	5	https://ktane.timwi.de/PDF/Mystic%20Maze.pdf	Piisii	2020-07-27	1
+Not Knob	NotKnob	3	https://ktane.timwi.de/PDF/Not%20Knob.pdf	Andrio Celos	2020-07-29	2
