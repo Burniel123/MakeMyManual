@@ -17,7 +17,7 @@ Features of the software, in its current state, include:
 ### What does it not do?
 To avoid any suspicion that this software violates the rules of the game or attempts to replace existing solutions, the software is not (and probably never will be) capable of the following:
 * Adapt existing manual pages in any way - doing so would be heavily against common opinion on how the game should be played, and would be insulting to members of the community who have worked hard on the manual pages.
-* Produce a profile.json file based on your selected modules - tools to do this already exist: see [here](https://ktane.timwi.de/More/Profile%20Editor.html). A sensible order would be to first create a profile using an existing tool and then to use this software to create a manual based upon it.
+* Produce a profile.json file based on your selected modules - tools to do this already exist: see [here](https://ktane.timwi.de/More/Profile%20Editor.html) and [here](https://github.com/Burniel123/KTANEProfileCalculator). A sensible order would be to first create a profile using an existing tool and then to use this software to create a manual based upon it.
 * Act as a manual page repository in its own right - this software relies on the community repository, which many people work diligently on, and thus it shall remain impossible to use this application to quickly view a single manual page "on-the-fly".
 
 ### What will it do in the future?
