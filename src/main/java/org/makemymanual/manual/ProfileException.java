@@ -8,7 +8,7 @@ package org.makemymanual.manual;
 public class ProfileException extends ManualException
 {
     /**
-     * Creates a ProfileException to be thrown with appropriate title.
+     * Creates a ManualException with a relevant title for this type of error.
      */
     public ProfileException()
     {

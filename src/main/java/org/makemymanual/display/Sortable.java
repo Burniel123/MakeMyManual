@@ -1,7 +1,5 @@
 package org.makemymanual.display;
 
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
 import org.makemymanual.manual.Module;
 
 import java.util.ArrayList;

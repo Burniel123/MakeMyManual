@@ -19,7 +19,6 @@ import org.makemymanual.manual.ProfileReader;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.concurrent.Flow;
 
 /**
  * Wraps a VBox to design and manage the main frontend for the application.
@@ -242,6 +241,8 @@ public class RootPane extends VBox implements Sortable
             Main.numSelected = 0;
             //numSelectedLabel.setText("Modules Selected: " + Main.numSelected + "/" + Main.MODULES_AVAILABLE.size());
         });
+
+        //Shift-click functionality:
         setOnKeyPressed(e ->
         {
             if(e.getCode().equals(KeyCode.SHIFT))

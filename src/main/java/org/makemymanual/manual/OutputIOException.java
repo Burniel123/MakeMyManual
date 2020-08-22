@@ -6,7 +6,7 @@ package org.makemymanual.manual;
 public class OutputIOException extends ManualException
 {
     /**
-     * Creates an instance of OutputIOException with an appropriate title.
+     * Creates a ManualException with a relevant title for this type of error.
      */
     public OutputIOException()
     {

@@ -23,7 +23,6 @@ public class ManualListReader
         ArrayList<Module> modules = new ArrayList<Module>();
         try
         {
-            //BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/modules-config-details.txt")));
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("module-config-details.txt")), "ISO-8859-1"));
             String line = null;
 
@@ -40,7 +39,7 @@ public class ManualListReader
                 String categoryStr = detailElements[6];
 
                 if(moduleCode.equals("nonverbalSimon"))
-                    moduleName = "\u2756";
+                    moduleName = "\u2756"; //Deals with the awkward nonverbalSimon symbol.
 
                 int difficulty = Integer.parseInt(difficultyStr);
                 String[] moduleCreators = moduleCreatorsStr.split(",");

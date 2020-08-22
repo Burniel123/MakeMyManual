@@ -37,7 +37,7 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
 
 
     /**
-     * Creates the dialog to generate a manual, to be rendered by the event handler associated with a button.
+     * Creates the dialog to generate a manual, to be rendered by the event handler associated with the create button.
      */
     MakeManualDialog()
     {
@@ -291,7 +291,6 @@ public class MakeManualDialog extends Dialog<Void> implements Sortable
             {//These exceptions will be thrown if there was an error downloading manuals or writing to the tex file.
                 displayExceptionAlert(e);
             }
-            //This exception will be thrown if there was an error downloading manual pages.
             catch (IOException e)
             {//This exception will be thrown if there was an error compiling the pdf.
                 resetWhenCompleteOrException();

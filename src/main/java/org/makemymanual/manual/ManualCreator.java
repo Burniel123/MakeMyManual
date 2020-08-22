@@ -142,7 +142,7 @@ public class ManualCreator implements Sortable
      * and ending the document.
      * @param pm - ProgressManager to report progress to the progress bar.
      * @param logWriter - FileWriter to write updates to the log file.
-     * @throws OutputIOException in the event of an IOException.
+     * @throws OutputIOException,IOException,FileDownloadException -  in the event of an IO-related problem.
      */
     public void writeManual(ProgressManager pm, FileWriter logWriter) throws FileDownloadException, OutputIOException, IOException
     {

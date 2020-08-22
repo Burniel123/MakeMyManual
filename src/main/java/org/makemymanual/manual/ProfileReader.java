@@ -37,7 +37,6 @@ public class ProfileReader
     {
         BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
         String line = null;
-        String innerLine = null;
         String fullProfile = null;
         ArrayList<String> moduleCodesEnabled = new ArrayList<String>();
         while((line = reader.readLine()) != null)

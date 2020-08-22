@@ -53,7 +53,7 @@ public class ModulePane extends StackPane
      */
     void invertCol()
     {
-        if(!isSelected())//If module is not already selected, select it.
+        if(!isSelected())//If module is not already selected, it should be selected.
             moduleRegion.setBackground(SELECTED_MODULE_BACK);
         else //If module is already selected, deselect it.
             moduleRegion.setBackground(DEFAULT_MODULE_BACK);

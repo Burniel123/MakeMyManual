@@ -8,7 +8,7 @@ package org.makemymanual.manual;
 public class InputIOException extends ManualException
 {
     /**
-     * Creates an instance of InputIOException, setting an appropriate title.
+     * Creates a ManualException with a relevant title for this type of error.
      */
     public InputIOException()
     {
